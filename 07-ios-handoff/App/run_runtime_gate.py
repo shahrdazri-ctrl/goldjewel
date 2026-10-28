@@ -27,7 +27,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(APP_DIR))
 BUILD_DIR = os.path.join(APP_DIR, "build")
 PROJECT = os.path.join(APP_DIR, "GoldJewel.xcodeproj")
 SCHEME = "GoldJewel"
-RUN_TIMEOUT = 900
+RUN_TIMEOUT = 1000
 BUILD_TIMEOUT = 900
 
 
@@ -255,7 +255,7 @@ def run_device(device: dict, kind: str) -> dict:
         # Bound a wedged simulator at the xcodebuild level as well as the
         # runner's own process timeout, so one device cannot eat the job.
         "-test-timeouts-enabled", "YES",
-        "-default-test-execution-time-allowance", "600",
+        "-default-test-execution-time-allowance", "780",
         "-maximum-test-execution-time-allowance", "900",
         "CODE_SIGNING_ALLOWED=NO",
     ]

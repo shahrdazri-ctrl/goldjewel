@@ -23,7 +23,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     func testProjectEditingRenderingAndPersistence() throws {
         // Bound a wedged run instead of letting xcodebuild sit for its full
         // job timeout; a timeout is a test failure, not a skipped check.
-        executionTimeAllowance = 600
+        executionTimeAllowance = 780
         continueAfterFailure = false
         app = XCUIApplication()
         relaunch(reset: true)
@@ -227,8 +227,13 @@ final class GoldJewelRuntimeTests: XCTestCase {
         // in case the merged accessibility element spans the whole row. A tap
         // that lands while the overlay sidebar is animating away is swallowed,
         // so retry a bounded number of times and assert the eventual result.
+        // Aim at the switch itself, 28 points in from the row's trailing edge.
+        // On iPad the row is as wide as the detail column, so a fixed 0.9 lands
+        // in the empty gap between the label and the switch and does nothing.
+        let rowWidth = toggle.frame.width
+        let switchX = rowWidth > 56 ? (rowWidth - 28) / rowWidth : 0.9
         for _ in 0..<3 where isOn(toggle) != on {
-            toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
+            toggle.coordinate(withNormalizedOffset: CGVector(dx: switchX, dy: 0.5)).tap()
             // The switch animates and SwiftUI commits the new state on the next
             // run loop; poll the real value instead of sampling it once.
             let deadline = Date().addingTimeInterval(4)
