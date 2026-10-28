@@ -291,32 +291,37 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// preview, and never at the centre of the screen.
     private func scrollTo(_ element: XCUIElement) {
         scrollToTop()
-        for _ in 0..<4 {
+        // Search in half-page steps. A full-page jump can carry a short row
+        // (a bare toggle) past the viewport between two hittability checks.
+        for _ in 0..<12 {
             if element.exists && element.isHittable { return }
-            scrollDownOnePage()
+            dragWithinMargin(fromY: 0.80, toY: 0.34)
         }
-        XCTFail("\(deviceName): could not scroll to \(element)")
+        attachFullScreen("scroll-failed")
+        XCTFail("\(deviceName): could not scroll to \(element) "
+                + "(exists=\(element.exists), hittable=\(element.isHittable), "
+                + "frame=\(element.frame), window=\(app.frame))")
     }
 
+    /// Scrolls until the head preview is actually on screen. The status-bar tap
+    /// is not reliable on iPad, and the preview is the only element that is
+    /// hittable at the top and nowhere else, so it anchors the search instead.
     private func scrollToTop() {
-        // Tapping the status bar asks the system to scroll the active scroll
-        // view to the top without touching the preview's drag gesture. Two
-        // margin drags are the fallback if the system ignores it.
-        if app.statusBars.firstMatch.exists {
-            app.statusBars.firstMatch.tap()
-            Thread.sleep(forTimeInterval: 0.6)
-        }
-        for _ in 0..<2 {
+        let preview = app.descendants(matching: .any)["head-preview"]
+        for _ in 0..<12 {
+            if preview.exists && preview.isHittable {
+                // One more pull guarantees the preview's top is inside the
+                // viewport rather than merely its centre; at the top this is
+                // just the usual bounce.
+                dragWithinMargin(fromY: 0.30, toY: 0.72)
+                return
+            }
             scrollUpOnePage()
         }
     }
 
-    private func scrollDownOnePage() {
-        dragWithinMargin(fromY: 0.88, toY: 0.12)
-    }
-
     private func scrollUpOnePage() {
-        dragWithinMargin(fromY: 0.25, toY: 0.88)
+        dragWithinMargin(fromY: 0.28, toY: 0.86)
     }
 
     /// Drag inside the editor's left margin. The preview's drag gesture covers
