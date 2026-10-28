@@ -13,6 +13,7 @@ final class ProjectStore: ObservableObject {
     @Published private(set) var statusMessage: String?
 
     private let fileURL: URL
+    private var pendingSave: Task<Void, Never>?
 
     var selectedProject: JewelryProject? {
         projects.first { $0.id == selectedID }
@@ -77,7 +78,32 @@ final class ProjectStore: ObservableObject {
         save()
     }
 
+    /// Coalesces the saves triggered by typing and slider drags. Writing on
+    /// every keystroke published `lastSaved` mid-edit, which re-rendered the
+    /// split view and could drop the name field's focus mid-word.
+    func scheduleSave() {
+        pendingSave?.cancel()
+        pendingSave = Task { [weak self] in
+            try? await Task.sleep(for: .milliseconds(450))
+            guard !Task.isCancelled else { return }
+            self?.write()
+        }
+    }
+
+    /// Writes any coalesced change before the app leaves the foreground.
+    func flushPendingSave() {
+        pendingSave?.cancel()
+        pendingSave = nil
+        write()
+    }
+
     func save() {
+        pendingSave?.cancel()
+        pendingSave = nil
+        write()
+    }
+
+    private func write() {
         do {
             let payload = Payload(projects: projects, savedAt: Date())
             let encoder = JSONEncoder()

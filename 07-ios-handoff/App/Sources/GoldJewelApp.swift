@@ -14,6 +14,7 @@ struct GoldJewelApp: App {
 
 struct RootView: View {
     @ObservedObject var store: ProjectStore
+    @Environment(\.scenePhase) private var scenePhase
     @State private var columnVisibility: NavigationSplitViewVisibility = .all
     @State private var showOperations = false
 
@@ -35,7 +36,7 @@ struct RootView: View {
             if let id = store.selectedID, let index = store.index(of: id) {
                 ProjectEditorView(
                     project: $store.projects[index],
-                    onSave: { store.save() },
+                    onSave: { store.scheduleSave() },
                     onOpenOperations: { showOperations = true }
                 )
             } else {
@@ -48,6 +49,11 @@ struct RootView: View {
         }
         .sheet(isPresented: $showOperations) {
             OperationsView(store: store)
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase != .active {
+                store.flushPendingSave()
+            }
         }
         .alert(
             "GoldJewel",

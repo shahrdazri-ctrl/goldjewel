@@ -52,6 +52,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         }
         XCTAssertTrue(preview.waitForExistence(timeout: 30),
                       "\(deviceName): editor did not show the head preview")
+        revealEditor(preview)
         waitForPreviewGeometry(preview)
         step("preview ready")
 
@@ -66,9 +67,18 @@ final class GoldJewelRuntimeTests: XCTestCase {
         let nameField = app.textFields["project-name"]
         scrollTo(nameField)
         nameField.tap()
-        nameField.typeText(" Runtime Gate")
+        let keyboard = app.keyboards.firstMatch
+        if !keyboard.waitForExistence(timeout: 5) {
+            nameField.tap()
+        }
+        XCTAssertTrue(keyboard.waitForExistence(timeout: 10),
+                      "\(deviceName): the name field did not take keyboard focus")
+        nameField.typeText(" Gate")
         nameField.typeText("\n")
         dismissKeyboard()
+        let editedName = nameField.value as? String ?? ""
+        XCTAssertTrue(editedName.contains("Gate"),
+                      "\(deviceName): typing into the name field produced \(editedName.debugDescription)")
         XCTAssertFalse(app.keyboards.firstMatch.exists,
                        "\(deviceName): keyboard stayed up and would cover the controls")
         step("name edited")
@@ -133,9 +143,9 @@ final class GoldJewelRuntimeTests: XCTestCase {
         step("relaunched")
         let savedRow = app.descendants(matching: .any)
             .matching(identifier: "project-row")
-            .matching(NSPredicate(format: "label CONTAINS 'Runtime Gate'"))
+            .matching(NSPredicate(format: "label CONTAINS %@", "Gate"))
             .firstMatch
-        if !savedRow.waitForExistence(timeout: 6) {
+        if !savedRow.waitForExistence(timeout: 8) {
             returnToProjectList()
         }
         XCTAssertTrue(savedRow.waitForExistence(timeout: 20),
@@ -145,6 +155,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         let restoredPreview = app.descendants(matching: .any)["head-preview"]
         XCTAssertTrue(restoredPreview.waitForExistence(timeout: 20),
                       "\(deviceName): restored project has no preview")
+        revealEditor(restoredPreview)
         let restored = try capture("13-relaunch", preview: restoredPreview)
         XCTAssertGreaterThan(restored.goldRatio, 0.02,
                              "\(deviceName): restored preview is blank (\(restored.goldRatio) metal pixels)")
@@ -152,8 +163,8 @@ final class GoldJewelRuntimeTests: XCTestCase {
         step("restored preview captured")
         let restoredName = app.textFields["project-name"]
         scrollTo(restoredName)
-        XCTAssertTrue((restoredName.value as? String)?.contains("Runtime Gate") == true,
-                      "\(deviceName): edited name was not persisted")
+        XCTAssertEqual(restoredName.value as? String ?? "", editedName,
+                       "\(deviceName): edited name was not persisted")
 
         // Rail and dome were left off; bezel and halo were switched on. Both
         // directions must survive the relaunch.
@@ -213,13 +224,20 @@ final class GoldJewelRuntimeTests: XCTestCase {
         guard isOn(toggle) != on else { return }
         let before = preview.value as? String
         // Aim at the control at the trailing edge rather than the row's centre,
-        // in case the merged accessibility element spans the whole row.
-        toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
-        // The switch animates and SwiftUI commits the new state on the next
-        // run loop; poll the real value instead of sampling it once.
-        let deadline = Date().addingTimeInterval(5)
-        while Date() < deadline && isOn(toggle) != on {
-            Thread.sleep(forTimeInterval: 0.1)
+        // in case the merged accessibility element spans the whole row. A tap
+        // that lands while the overlay sidebar is animating away is swallowed,
+        // so retry a bounded number of times and assert the eventual result.
+        for _ in 0..<3 where isOn(toggle) != on {
+            toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
+            // The switch animates and SwiftUI commits the new state on the next
+            // run loop; poll the real value instead of sampling it once.
+            let deadline = Date().addingTimeInterval(4)
+            while Date() < deadline && isOn(toggle) != on {
+                Thread.sleep(forTimeInterval: 0.1)
+            }
+            if isOn(toggle) != on {
+                Thread.sleep(forTimeInterval: 0.5)
+            }
         }
         if isOn(toggle) != on {
             attachFullScreen("stuck-\(identifier)")
@@ -306,7 +324,15 @@ final class GoldJewelRuntimeTests: XCTestCase {
         // the window, because a scroll view's frame may report its content.
         let preview = app.descendants(matching: .any)["head-preview"]
         let window = app.frame
-        let x = preview.exists ? preview.frame.minX - 8 : editorScrollView.frame.minX + 10
+        // Stay in the content's right-hand margin. On iPad the left edge
+        // belongs to the sidebar reveal gesture, so dragging there opens the
+        // overlay instead of scrolling; the preview itself consumes drags to
+        // rotate the head. This margin is outside both.
+        var x = window.maxX - 14
+        if preview.exists && preview.frame.width > 1 {
+            x = min(x, preview.frame.maxX + 6)
+        }
+        x = max(x, window.minX + 12)
         let start = app.coordinate(withNormalizedOffset: .zero)
             .withOffset(CGVector(dx: x, dy: window.minY + window.height * fromY))
         let end = app.coordinate(withNormalizedOffset: .zero)
@@ -325,12 +351,50 @@ final class GoldJewelRuntimeTests: XCTestCase {
         return all.max { $0.frame.width < $1.frame.width } ?? app.scrollViews.firstMatch
     }
 
+    /// On iPadOS the sidebar can be presented over the detail, dimming and
+    /// swallowing taps. Tapping the dimmed detail dismisses it. iPhone is
+    /// already a single column, so this is a no-op there.
+    private func revealEditor(_ preview: XCUIElement) {
+        guard preview.waitForExistence(timeout: 20) else {
+            XCTFail("\(deviceName): editor preview never appeared")
+            return
+        }
+        for _ in 0..<3 where !preview.isHittable {
+            let window = app.frame
+            app.coordinate(withNormalizedOffset: .zero)
+                .withOffset(CGVector(dx: window.width * 0.92, dy: window.height * 0.5))
+                .tap()
+            Thread.sleep(forTimeInterval: 0.8)
+        }
+        XCTAssertTrue(preview.isHittable,
+                      "\(deviceName): the editor is covered and cannot be reached")
+    }
+
     private func returnToProjectList() {
         let back = app.navigationBars.buttons.matching(
             NSPredicate(format: "label == 'Projects' OR label BEGINSWITH 'Back'")
         ).firstMatch
         if back.waitForExistence(timeout: 4) {
             back.tap()
+        } else if UIDevice.current.userInterfaceIdiom != .pad {
+            // The navigation bar's leading item is the back button even when
+            // its accessibility label differs from the visible title. Never do
+            // this on iPad: there the leading item is the New Project button.
+            let leading = app.navigationBars.buttons.element(boundBy: 0)
+            if leading.exists && leading.isHittable {
+                leading.tap()
+            }
+        }
+        // The edge-swipe back gesture is the last fallback on iPhone; on iPad
+        // the same gesture opens the sidebar instead of navigating.
+        if !app.buttons["new-project"].waitForExistence(timeout: 5),
+           UIDevice.current.userInterfaceIdiom != .pad {
+            let window = app.frame
+            let start = app.coordinate(withNormalizedOffset: .zero)
+                .withOffset(CGVector(dx: window.minX + 2, dy: window.height * 0.5))
+            let end = app.coordinate(withNormalizedOffset: .zero)
+                .withOffset(CGVector(dx: window.width * 0.7, dy: window.height * 0.5))
+            start.press(forDuration: 0.1, thenDragTo: end)
         }
     }
 
@@ -349,6 +413,12 @@ final class GoldJewelRuntimeTests: XCTestCase {
         scrollToTop()
         XCTAssertTrue(preview.waitForExistence(timeout: 30),
                       "\(deviceName): preview disappeared before \(name)")
+        if !preview.isHittable {
+            scrollToTop()
+            Thread.sleep(forTimeInterval: 0.5)
+        }
+        XCTAssertTrue(preview.isHittable,
+                      "\(deviceName): preview is not on screen for \(name)")
         let screenshot = preview.screenshot()
         attach(screenshot, name: "\(deviceName)-\(name)")
         return try PreviewFrame(screenshot: screenshot)

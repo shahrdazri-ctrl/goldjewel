@@ -8,6 +8,10 @@ struct ProjectEditorView: View {
 
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @FocusState private var nameFieldFocused: Bool
+    /// The name is edited as a draft and committed on submit or focus loss.
+    /// Writing through on every keystroke rebuilt the split view while the
+    /// keyboard was still typing and could drop the field's focus mid-word.
+    @State private var nameDraft = ""
 
     private var assembly: HeadAssembly? { project.assembly }
 
@@ -117,11 +121,19 @@ struct ProjectEditorView: View {
     private var projectSection: some View {
         GroupBox("Project") {
             VStack(alignment: .leading, spacing: 10) {
-                TextField("Name", text: $project.name)
+                TextField("Name", text: $nameDraft)
                     .textFieldStyle(.roundedBorder)
                     .focused($nameFieldFocused)
                     .submitLabel(.done)
-                    .onSubmit { nameFieldFocused = false }
+                    .onAppear { nameDraft = project.name }
+                    .onChange(of: project.id) { _, _ in nameDraft = project.name }
+                    .onChange(of: nameFieldFocused) { _, focused in
+                        if !focused { commitName() }
+                    }
+                    .onSubmit {
+                        commitName()
+                        nameFieldFocused = false
+                    }
                     .accessibilityIdentifier("project-name")
                 HStack {
                     Text("Saved documents")
@@ -296,6 +308,15 @@ struct ProjectEditorView: View {
                 project.halo = settings
             }
         )
+    }
+
+    private func commitName() {
+        let trimmed = nameDraft.trimmingCharacters(in: .whitespacesAndNewlines)
+        let final = trimmed.isEmpty ? project.name : trimmed
+        nameDraft = final
+        if final != project.name {
+            project.name = final
+        }
     }
 
     private var provenanceSection: some View {
