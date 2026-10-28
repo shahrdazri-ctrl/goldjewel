@@ -48,6 +48,12 @@ def run(cmd: list[str], timeout: int, log_path: str | None = None):
     )
     try:
         stdout, _ = process.communicate(timeout=timeout)
+        if log_path:
+            try:
+                with open(log_path, encoding="utf-8", errors="replace") as handle:
+                    stdout = handle.read()[-8000:]
+            except OSError:
+                stdout = ""
         return process.returncode, stdout or ""
     except subprocess.TimeoutExpired:
         os.killpg(os.getpgid(process.pid), signal.SIGTERM)
@@ -95,7 +101,13 @@ def pick_device(devices: list[dict], kind: str) -> dict:
     return candidates[0]
 
 
-def build_for_testing() -> None:
+def build_for_testing(device: dict) -> None:
+    """Build app and XCTest bundles once, for a concrete simulator.
+
+    A generic iOS Simulator destination is enough for a plain build but not for
+    a test bundle, so the build targets the same iPhone the runtime test uses.
+    The resulting bundle is installed on both device families.
+    """
     os.makedirs(BUILD_DIR, exist_ok=True)
     log = os.path.join(BUILD_DIR, "runtime-build.log")
     code, output = run(
@@ -104,7 +116,7 @@ def build_for_testing() -> None:
             "build-for-testing",
             "-project", PROJECT,
             "-scheme", SCHEME,
-            "-destination", "generic/platform=iOS Simulator",
+            "-destination", f"platform=iOS Simulator,id={device['udid']}",
             "-derivedDataPath", BUILD_DIR,
             "CODE_SIGNING_ALLOWED=NO",
         ],
@@ -112,8 +124,8 @@ def build_for_testing() -> None:
         log_path=log,
     )
     if code != 0:
-        print(output[-4000:] if output else "")
-        print(f"runtime gate: build-for-testing failed; see {log}", file=sys.stderr)
+        print(output[-8000:] if output else "")
+        print(f"runtime gate: build-for-testing failed (exit {code}); log at {log}", file=sys.stderr)
         raise SystemExit(1)
     print("runtime gate: built test bundle")
 
@@ -226,7 +238,7 @@ def main() -> int:
     for kind, device in selected.items():
         print(f"runtime gate: {kind} -> {device['name']} ({device['runtime']})")
 
-    build_for_testing()
+    build_for_testing(selected["iphone"])
     results = [run_device(selected[kind], kind) for kind in ("iphone", "ipad")]
 
     summary = {
@@ -242,6 +254,10 @@ def main() -> int:
 
     failed = [result for result in results if result["status"] != "passed"]
     if failed:
+        for log_name in ("runtime-build.log", "runtime-iphone.log", "runtime-ipad.log"):
+            source = os.path.join(BUILD_DIR, log_name)
+            if os.path.exists(source):
+                shutil.copy2(source, os.path.join(evidence_dir, log_name))
         for result in failed:
             print(f"runtime gate: FAILED {result['kind']} on {result['device']} ({result['status']})",
                   file=sys.stderr)

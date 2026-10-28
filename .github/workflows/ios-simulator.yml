@@ -45,7 +45,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: GoldJewel-runtime-screenshots
-          path: 07-ios-handoff/App/build/runtime-evidence/
+          path: |
+            07-ios-handoff/App/build/runtime-evidence/
+            07-ios-handoff/App/build/runtime-build.log
           if-no-files-found: warn
       - name: Upload runtime result bundles
         if: always()
