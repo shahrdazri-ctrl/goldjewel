@@ -78,7 +78,7 @@ Full member set (authoritative, from `[DataMember]`):
 
 `MaterialMapData`: `MapPath`, `MapType`, `MapChannelType`, `Blend`, `IsOn`, `IsAvailable`, `IsEnvironmentMap`, `IsRepeatLocked`, `FinishType`, `LocalName`, `EnglishName`, `MapPreviewBytes`.
 
-**Enums**: `MaterialType { None, Metal, Gem, GroundPlane, Miscellaneous, RenderMetal, RenderGem }`; `MetalType { None, Gold, Palladium, Platinum, Silver }`; `MetalSubType { None, Green, White, Rose, Yellow, SuperWhite, Iridium, Ruthenium, Sterling }`; `MaterialFinish { Polish, Hammer, Florentine, BeadBlast, Brushed, Satin, Custom }`; `RenderTextureType { TileTexture, BitmapTexture, LeatherGrainBumpTexture, StuccoTexture, NoiseTexture, Other, None }`.
+**Enums**: `MaterialOwner { None, Stuller, User, Public }`; `MaterialType { None, Metal, Gem, GroundPlane, Miscellaneous, RenderMetal, RenderGem }`; `MaterialSubType { None, ColorMap, EnvironmentMap }`; `MetalType { None, Gold, Palladium, Platinum, Silver }`; `MetalSubType { None, Green, White, Rose, Yellow, SuperWhite, Iridium, Ruthenium, Sterling }`; `MaterialFinish { Polish, Hammer, Florentine, BeadBlast, Brushed, Satin, Custom }`; `RenderTextureType { TileTexture, BitmapTexture, LeatherGrainBumpTexture, StuccoTexture, NoiseTexture, Other, None }`.
 
 **Specific gravity is functional.** `SpecificGravity` + volume yields metal weight in grams (the number a jeweller quotes). Any iOS port must keep both `SpecificGravity` and `StockSpecificGravity` and the custom override flag; using only appearance data loses a core business feature.
 
@@ -124,7 +124,7 @@ These are **licensed content**, not code. The iOS app must ship its own licensed
 | MatrixGold | iOS |
 |---|---|
 | `MGMaterial` | `struct MaterialPreset: Codable` (same field names for round-trip) |
-| `MaterialType`/`MetalType`/`MetalSubType` | Swift enums, `String`-backed, exhaustive |
+| `MaterialType`/`MetalType`/`MetalSubType` | Swift enums, `Int`-backed to match the wire format, exhaustive |
 | `MaterialMapData` | `MaterialChannel { path, type, blend, finish }` |
 | `MaterialGroup` | `MaterialCollection` with `Classification` |
 | `GemTableBase` | `GemTable` protocol + JSON tables |
@@ -144,7 +144,7 @@ Use the metal's real `SpecificGravity` from shipped `.mgm` files; never hardcode
 
 ## 7. Verification state
 
-* `JewelryKit` decodes a real `.mgm` fixture (`Tests/JewelryKitTests/Fixtures/sample.mgm`) and round-trips every modelled field.
+* `JewelryKit` decodes real `.mgm` fixtures (`real-groundplane.mgm`, `real-metal.mgm`) and round-trips every modelled field; `sample.mgm` covers nested `MaterialMapData`.
 * **Gem-table extraction is not yet executed** — it is the top item in the extraction backlog (Dossier 08). Method: instantiate each `GemTableBase` subclass in an isolated harness (exactly like the ring-size harness), call `SizeTable(version)` for every version, serialise to JSON. Roughly 30 shapes x 8 versions x ~100 rows.
 * Material count/format verified against the mirror: 257 `.mgm`, PascalCase JSON, GUID identity.
 

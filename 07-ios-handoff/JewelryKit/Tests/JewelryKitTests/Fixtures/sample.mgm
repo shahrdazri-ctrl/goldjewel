@@ -51,7 +51,7 @@
   "IsRenderMetalMaterial": true,
   "IsUserMaterial": true,
   "Luminance": 0.0,
-  "MaterialOwner": null,
+  "MaterialOwner": 1,
   "MaterialSubType": 1,
   "MaterialType": 1,
   "MaterialXml": null,

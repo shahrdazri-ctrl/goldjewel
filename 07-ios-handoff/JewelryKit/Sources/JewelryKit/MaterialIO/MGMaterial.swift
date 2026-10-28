@@ -32,7 +32,7 @@ public struct MGMaterial: Codable, Sendable, Equatable {
     public var isModified: Bool?
     public var isUserMaterial: Bool?
     public var luminance: Double?
-    public var materialOwner: String?
+    public var materialOwner: MaterialOwner?
     public var materialSubType: Int?
     public var materialType: Int?
     public var materialXml: String?
@@ -190,6 +190,13 @@ public struct MaterialMapData: Codable, Sendable, Equatable {
         case hue = "Hue"
         case reflectivity = "Reflectivity"
     }
+}
+
+/// Who supplied the material (`Common.CyclesModels.MaterialOwner`).
+/// The wire format is a bare integer, not a name; `JSONDecoder` cannot decode
+/// it into a `String`.
+public enum MaterialOwner: Int, Codable, Sendable, CaseIterable {
+    case none = 0, stuller, user, publicMaterial
 }
 
 public enum MaterialType: Int, Codable, Sendable, CaseIterable {

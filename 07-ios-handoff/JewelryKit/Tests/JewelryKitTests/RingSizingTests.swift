@@ -5,7 +5,7 @@ final class RingSizingTests: XCTestCase {
     private let catalog = RingSizeCatalog.bundled
 
     func testCatalogCoverage() {
-        XCTAssertEqual(catalog.regions.count, 23)
+        XCTAssertEqual(catalog.regions.count, 22)
         XCTAssertEqual(catalog.totalSizeCount, 7005)
         XCTAssertEqual(catalog.table(for: .us)?.count, 65)
         XCTAssertEqual(catalog.table(for: .uk)?.count, 66)

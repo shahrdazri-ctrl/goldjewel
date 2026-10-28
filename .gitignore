@@ -8,6 +8,7 @@
 !05-evidence/rea/*.csv
 !05-evidence/rea/*.patch
 09-logs/
+__pycache__/
 04-index/errors.log
 _snapshots/
 04-index/raw/
@@ -20,5 +21,9 @@ _snapshots/
 *.mgm
 ._*
 
-# Test fixture is a tiny synthetic material, not licensed content
+# Test fixtures: one synthetic material and two real materials with their
+# embedded preview images removed. These exercise the decoder; they are not
+# distributable content libraries.
 !07-ios-handoff/JewelryKit/Tests/JewelryKitTests/Fixtures/sample.mgm
+!07-ios-handoff/JewelryKit/Tests/JewelryKitTests/Fixtures/real-groundplane.mgm
+!07-ios-handoff/JewelryKit/Tests/JewelryKitTests/Fixtures/real-metal.mgm

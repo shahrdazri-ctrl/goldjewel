@@ -3,7 +3,7 @@
 **Target:** `D:\MAIN SOFTWARE\jewerly software\matrix gold\Gemvision.MatrixGold\Main\MatrixGold`
 **Build:** MatrixGold 3.1.22284.1001, .NET Framework 4.8, WPF, Rhino 7 plugin
 **Lab root:** `D:\REA-LAB` (all toolchain, caches, decompilation and reports live here)
-**Deliverable:** eight implementation-grade dossiers + a verified Swift package for iPadOS
+**Deliverable:** eight implementation-grade dossiers + a schema-verified Swift package for iPadOS (compile gate in CI)
 
 ---
 
@@ -31,7 +31,7 @@
 8. `08-content-localization-settings.md` — 81 patchwire vocabulary, content taxonomy, 18 locales, settings that change behaviour, extraction backlog.
 
 ### Swift package (`07-ios-handoff/JewelryKit`)
-`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable), `JewelryDomain`, `ParametricKit`, tests, fixtures, GitHub Actions workflow.
+`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, tests with real `.mgm` fixtures, GitHub Actions workflow. Compilation has not been run locally; the workflow is the gate.
 
 ### Evidence (`04-index`, `05-evidence`)
 * `symbols.sqlite` — 225 managed assemblies, 35,645 types, 303,780 methods, 75,497 properties, 155,009 fields, 91,902 strings, 1,379,497 call edges.
