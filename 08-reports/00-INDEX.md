@@ -38,6 +38,10 @@
 * `xaml-bindings.csv` — 4,353 binding/command facts from 123 decompiled BAML files.
 * `05-evidence/vectors/ring-sizes.json` — 7,005 sizes executed from the real assembly.
 * `05-evidence/rea/` — PE/CLI evidence bundles for the 14 core assemblies, all `coverage=complete` (31,875 methods).
+* `05-evidence/corpus/v1/` — IL corpus for the head builder (35 types / 185 methods) and prong family (7 / 49): every string, numeric constant, call edge and parameter default with IL offsets, plus a hash-verified manifest.
+* `08-reports/triage-ledger.csv` — all 50,134 first-party methods classified, each with the rule that decided it.
+* `08-reports/capability-matrix.csv` — all 254 service operations with a v1 / defer / drop disposition.
+* `08-reports/m2-report.md` — the measured M2 counts and the reproduce commands.
 * `03-decompiled/il/` — per-assembly CIL for all 35 first-party assemblies (41,460 `.method` directives, 111.6 MB).
 
 ---
@@ -59,6 +63,7 @@ Run from `D:\REA-LAB`. Each row is one stage and one entry point. Run the ledger
 | BAML -> XAML + bindings | `00-control/baml.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\baml.ps1` | `03-decompiled/xaml/`, `04-index/xaml-bindings.csv` |
 | REA evidence | `00-control/rea-evidence.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\rea-evidence.ps1` | `05-evidence/rea/*.artifact.json`, `*.members.json`, indexes |
 | Golden vectors | `02-toolchain/RingVectors/build.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\02-toolchain\RingVectors\build.ps1` | `05-evidence/vectors/ring-sizes.json` |
+| Oracle corpus + ledgers (M2) | `Tools/m2.py` | `python Tools/m2.py` (capture) / `python Tools/m2.py --check` (verify) | `05-evidence/corpus/v1/`, `08-reports/triage-*`, `capability-matrix.csv`, `m2-report.md` |
 | Validation | `04-index/validate_handoff.py` | `python D:\REA-LAB\04-index\validate_handoff.py` | console report; exit 0 on success |
 | Dossiers | `06-dossiers/*.md` | none — authored from the index and evidence | eight dossier files |
 

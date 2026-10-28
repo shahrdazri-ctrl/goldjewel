@@ -1,0 +1,113 @@
+{
+  "schema": "goldjewel.oracle.corpus/1",
+  "generated_at_utc": "2026-10-28T04:36:25.729913+00:00",
+  "mode": "il-static-no-execution",
+  "execution": {
+    "status": "not-run",
+    "reason": "CSBlocks.mgp is a mixed-mode Rhino plugin. Loading it outside Rhino fails in Rhino_DotNet.dll initialisation with 0x8007045A (ERROR_DLL_INIT_FAILED). No vendor method is executed by this capture; IL operands are the ground truth."
+  },
+  "assembly": {
+    "name": "CSBlocks",
+    "file": "01-target/mirror/Main/C46E9C27-4A0F-4A5E-86E8-18F7094A7461.mgp",
+    "sha256": "ddd92dc8c7e53ba31ca9b13cbb83c04fd37f040aead78103431fa6768d04c6fc",
+    "bytes": 3070976,
+    "il": "03-decompiled/il/CSBlocks/C46E9C27-4A0F-4A5E-86E8-18F7094A7461.il"
+  },
+  "tool": {
+    "name": "OracleCapture",
+    "dll": "Tools/oracle/OracleCapture/bin/Release/net8.0/OracleCapture.dll",
+    "dotnet": "8.0.423",
+    "captured_on": "win32"
+  },
+  "corpora": {
+    "head-builder": {
+      "path": "05-evidence/corpus/v1/head-builder.il.json",
+      "sha256": "691df39e8f8d35d8e645d87475d980b5757feb507cbd6a80fa38fd354805ef3f",
+      "bytes": 4008058,
+      "targets": [
+        "CSBlocks.Settings.Heads.CSHeadBuilderV2"
+      ],
+      "summary": {
+        "types": 35,
+        "methods": 185,
+        "instructions": 43207,
+        "strings": 84,
+        "numeric_constants": 1576,
+        "call_edges": 11289
+      }
+    },
+    "prong-family": {
+      "path": "05-evidence/corpus/v1/prong-family.il.json",
+      "sha256": "79282f3b69d647ba7478e860b4627494aeab381d24456089dd47a6c15d149fae",
+      "bytes": 1149308,
+      "targets": [
+        "CSBlocks.Settings.CSProngPlacerGC",
+        "CSBlocks.Settings.CSProng",
+        "CSBlocks.Settings.CSClusterProngPlacer"
+      ],
+      "summary": {
+        "types": 7,
+        "methods": 49,
+        "instructions": 14839,
+        "strings": 64,
+        "numeric_constants": 628,
+        "call_edges": 3207
+      }
+    }
+  },
+  "d_only": {
+    "policy": "All writes resolve under D:; the harness refuses any other output root.",
+    "guard": {
+      "attempted": "C:\\REA-LAB-guard-test.json",
+      "exit_code": 3,
+      "refused": true
+    },
+    "roots_before": [
+      {
+        "path": "C:\\Users\\shahr\\.dotnet",
+        "exists": false,
+        "files": 0,
+        "bytes": 0,
+        "truncated": false
+      },
+      {
+        "path": "C:\\Users\\shahr\\.nuget",
+        "exists": false,
+        "files": 0,
+        "bytes": 0,
+        "truncated": false
+      },
+      {
+        "path": "C:\\Users\\shahr\\AppData\\Local\\Temp",
+        "exists": true,
+        "files": 1663,
+        "bytes": 315746089,
+        "truncated": false
+      }
+    ],
+    "roots_after": [
+      {
+        "path": "C:\\Users\\shahr\\.dotnet",
+        "exists": false,
+        "files": 0,
+        "bytes": 0,
+        "truncated": false
+      },
+      {
+        "path": "C:\\Users\\shahr\\.nuget",
+        "exists": false,
+        "files": 0,
+        "bytes": 0,
+        "truncated": false
+      },
+      {
+        "path": "C:\\Users\\shahr\\AppData\\Local\\Temp",
+        "exists": true,
+        "files": 1663,
+        "bytes": 315746089,
+        "truncated": false
+      }
+    ],
+    "violations": []
+  }
+}

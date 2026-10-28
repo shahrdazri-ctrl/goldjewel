@@ -1,0 +1,255 @@
+operation,cluster,disposition,rule,reason
+AbortRunningCommand,Other,drop,contains:AbortRunningCommand,desktop command host
+ActivateBuilderFrom3dm,Builders,v1,explicit-v1,core design loop
+AddRole,Other,drop,contains:Role,CounterSketch pricing roles
+AddSelectionToLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+AddToExistingGroup,Groups,defer,unmatched-defer,"product scope, not the first release"
+AdjustGroundPlaneAppearance,Other,defer,unmatched-defer,"product scope, not the first release"
+AdjustMaterialHueSatLum,Materials,v1,explicit-v1,core design loop
+AdjustMetalFinish,Materials,v1,explicit-v1,core design loop
+AdjustReflectiveColor,Materials,v1,explicit-v1,core design loop
+AdjustShine,Materials,v1,explicit-v1,core design loop
+AdjustSpecificGravity,Weights,v1,explicit-v1,core design loop
+AdvancedOpenEnvironmentInRhinoEditor,Materials,defer,unmatched-defer,"product scope, not the first release"
+AdvancedOpenMaterialInRhinoEditor,Materials,defer,unmatched-defer,"product scope, not the first release"
+AfterUILoadedSettings,Settings,defer,unmatched-defer,"product scope, not the first release"
+ApplyBackdropEnvironment,Materials,defer,unmatched-defer,"product scope, not the first release"
+ApplyGroundPlane,Other,defer,unmatched-defer,"product scope, not the first release"
+ApplyMGMaterialGroundPlane,Materials,defer,unmatched-defer,"product scope, not the first release"
+ApplyMGRenderStyle,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+ApplyMaterial,Materials,v1,explicit-v1,core design loop
+ApplySavedViewportInfo,Viewport,defer,unmatched-defer,"product scope, not the first release"
+ApplySelectedEnvironment,Materials,defer,unmatched-defer,"product scope, not the first release"
+ApplyUserMaterial,Materials,v1,explicit-v1,core design loop
+AssignDefaultRenderMaterialsToLayers,Materials,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+AssignRoles,Other,drop,contains:Role,CounterSketch pricing roles
+CanRunTechReport,Diagnostics,drop,contains:TechReport,desktop diagnostics
+CaptureRhinoViewToBitmap,Other,drop,contains:CaptureRhinoView,desktop capture pipeline
+ChangeGroundPlaneImage,Other,defer,unmatched-defer,"product scope, not the first release"
+ChangeMapType,Materials,v1,explicit-v1,core design loop
+ChangeMaterialMap,Materials,v1,explicit-v1,core design loop
+ClearCommandPrompt,Other,drop,contains:CommandPrompt,desktop command prompt
+ClearInbox,Other,defer,unmatched-defer,"product scope, not the first release"
+ClearRoles,Other,drop,contains:Role,CounterSketch pricing roles
+CloseGemMap,Gems,v1,explicit-v1,core design loop
+CloseRenderAlphaViewport,Viewport,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+ConnectToRhinoAppIdleForStartup,Other,drop,contains:AppIdle,Rhino host lifecycle
+CreateAnimation,Animation,drop,contains:CreateAnimation,animation is out of v1 scope
+CreateCallbackChannel,Other,drop,contains:CallbackChannel,WCF plumbing between the WPF shell and Rhino
+CreatePresetPreview,Document,defer,unmatched-defer,"product scope, not the first release"
+DeleteBuilder,Builders,v1,explicit-v1,core design loop
+DeleteProfile,Styles,defer,unmatched-defer,"product scope, not the first release"
+DeleteRenderMaterialFromDocument,Materials,v1,explicit-v1,core design loop
+DeselectObjects,Selection,v1,explicit-v1,core design loop
+DisconnectToRhinoAppIdleForStartup,Other,drop,contains:AppIdle,Rhino host lifecycle
+DuplicateRenderMaterial,Materials,v1,explicit-v1,core design loop
+ExecuteBuilderCommand,Builders,v1,explicit-v1,core design loop
+ExecuteScript,Other,drop,contains:ExecuteScript,user scripting host is not part of v1
+ExecuteScriptAsAlias,Other,drop,contains:ExecuteScript,user scripting host is not part of v1
+ExecuteScriptSynchronous,Other,drop,contains:ExecuteScript,user scripting host is not part of v1
+GetActiveBuilderId,Builders,v1,explicit-v1,core design loop
+GetActiveDocPath,Document,v1,explicit-v1,core design loop
+GetAllBuilderGuids,Builders,v1,explicit-v1,core design loop
+GetAllObjectsVolumeSum,Weights,v1,explicit-v1,core design loop
+GetAllSavedViewportInfosFromActiveDocument,Document,defer,unmatched-defer,"product scope, not the first release"
+GetBackDropColors,Other,defer,unmatched-defer,"product scope, not the first release"
+GetBitmapImageBytesFromGemMap,Gems,v1,explicit-v1,core design loop
+GetBuilderCommands,Builders,v1,explicit-v1,core design loop
+GetCaratWeightByGravity,Gems,v1,explicit-v1,core design loop
+GetCommandBarLocation,Other,drop,contains:CommandBar,desktop command bar
+GetCurrentFileIsModified,Document,v1,explicit-v1,core design loop
+GetCyclesRenderDevice,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+GetDefaultRingSizeRegionAbrv,Rings,v1,explicit-v1,core design loop
+GetDisplayModeNames,Viewport,defer,unmatched-defer,"product scope, not the first release"
+GetDocumentLayers,Document,defer,unmatched-defer,"product scope, not the first release"
+GetDocumentSuperSelectInfo,Document,defer,unmatched-defer,"product scope, not the first release"
+GetErroredPatchwires,Builders,v1,explicit-v1,core design loop
+GetFilePreview,Document,defer,unmatched-defer,"product scope, not the first release"
+GetFirstSetLayersId,Layers,defer,unmatched-defer,"product scope, not the first release"
+GetGemsForReport,Gems,drop,contains:GemsForReport,desktop reporting
+GetGemsInfo,Gems,v1,explicit-v1,core design loop
+GetGramsAndDwtFromMaterial,Materials,v1,explicit-v1,core design loop
+GetGridSnapSpacing,Viewport,defer,unmatched-defer,"product scope, not the first release"
+GetGumballAlignment,Viewport,defer,unmatched-defer,"product scope, not the first release"
+GetHistorySettings,Settings,v1,explicit-v1,core design loop
+GetImageAndDescriptionFromJson,Document,defer,unmatched-defer,"product scope, not the first release"
+GetInternalCommands,Other,drop,contains:GetInternalCommands,desktop command host
+GetJsonCenterPointFromObjects,Document,v1,explicit-v1,core design loop
+GetLegacyObjectTypesInDocument,Document,defer,unmatched-defer,"product scope, not the first release"
+GetMGMaterialsInDocument,Materials,v1,explicit-v1,core design loop
+GetMGRenderStyles,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+GetNewDynamicGroup,Groups,defer,unmatched-defer,"product scope, not the first release"
+GetNewMGMaterialsInDocument,Materials,v1,explicit-v1,core design loop
+GetObjectsInDocument,Document,v1,explicit-v1,core design loop
+GetObjectsVolume,Weights,v1,explicit-v1,core design loop
+GetObjectsWeight,Weights,v1,explicit-v1,core design loop
+GetObjectsWeightByGravity,Weights,v1,explicit-v1,core design loop
+GetPatchwireHasGumball,Builders,v1,explicit-v1,core design loop
+GetPatchwireNameFromInstanceGuid,Builders,v1,explicit-v1,core design loop
+GetPathFileBlank,Document,defer,unmatched-defer,"product scope, not the first release"
+GetPathFileTemplate,Document,defer,unmatched-defer,"product scope, not the first release"
+GetPreviewForSelectedObjectsInAllViews,Document,drop,contains:PreviewForSelectedObjects,desktop preview pipeline
+GetPreviewImageByteArrayFromBuilder,Builders,v1,explicit-v1,core design loop
+GetRelatedPatchwires,Builders,v1,explicit-v1,core design loop
+GetRenderGuidFromObject,Selection,v1,explicit-v1,core design loop
+GetRhinoServerProcessId,Other,drop,contains:RhinoServer,Rhino host identity
+GetRhinoVersionString,Diagnostics,drop,contains:RhinoVersion,Rhino host identity
+GetRhinoWindowHandle,Other,drop,contains:RhinoWindowHandle,Rhino host identity
+GetRingRailInfoFromDocument,Rings,v1,explicit-v1,core design loop
+GetRingSizeRegionAbrvs,Rings,v1,explicit-v1,core design loop
+GetRingSizesFromRegionAbrv,Rings,v1,explicit-v1,core design loop
+GetRunningCommandName,Other,drop,contains:GetRunningCommandName,desktop command host
+GetSavedViewportInfoFromActiveViewport,Viewport,defer,unmatched-defer,"product scope, not the first release"
+GetSelectedObjectsPreviewBytes,Document,drop,contains:SelectedObjectsPreviewBytes,desktop preview pipeline
+GetSelectedRhinoObjects,Selection,v1,explicit-v1,core design loop
+GetSnappyGumball,Viewport,defer,unmatched-defer,"product scope, not the first release"
+GetStatusBarInfos,Other,drop,contains:StatusBar,desktop status bar
+GetStockEnvironments,Materials,defer,unmatched-defer,"product scope, not the first release"
+GetStockMapDataList,Materials,v1,explicit-v1,core design loop
+GetSystemPath,Other,drop,contains:GetSystemPath,installation path discovery
+GetUIClassificationForCommandId,Other,v1,explicit-v1,core design loop
+GetUIControlsForCSValueGemParamListInstance,Builders,v1,explicit-v1,core design loop
+GetUIControlsFromGraph,Builders,v1,explicit-v1,core design loop
+GetUIControlsRelatedToPatchwire,Builders,v1,explicit-v1,core design loop
+GetUpdatedImageBytesFromGemMap,Gems,v1,explicit-v1,core design loop
+GetUserMaterials,Materials,v1,explicit-v1,core design loop
+GetViewportCaptures,Viewport,drop,contains:ViewportCaptures,desktop capture pipeline
+GetVisibleObjectsPreview,Document,drop,contains:VisibleObjectsPreview,desktop preview pipeline
+GetVisiblePatchwireIdentifiers,Builders,v1,explicit-v1,core design loop
+HasHiddenOutput,Other,v1,explicit-v1,core design loop
+HideLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+HideObjects,Selection,v1,explicit-v1,core design loop
+HidePatchwireOutput,Builders,v1,explicit-v1,core design loop
+HideStandardToolbar,Selection,drop,contains:StandardToolbar,desktop toolbar
+HighlightBuilderInViewport,Builders,v1,explicit-v1,core design loop
+HighlightObjectsInConduit,Selection,defer,unmatched-defer,"product scope, not the first release"
+ImportLegacyObjectTypes,Selection,defer,unmatched-defer,"product scope, not the first release"
+ImportLegacyProfiles,Styles,defer,unmatched-defer,"product scope, not the first release"
+ImportRenderMaterialsFromFile,Materials,v1,explicit-v1,core design loop
+InterrogateImportedGroups,Groups,defer,unmatched-defer,"product scope, not the first release"
+IsGridSnapsEnabled,Viewport,defer,unmatched-defer,"product scope, not the first release"
+IsRhinoAppIdleForStartup,Other,drop,contains:AppIdle,Rhino host lifecycle
+LoadCameraPathFromPreset,Animation,drop,contains:CameraPath,animation is out of v1 scope
+LoadDisplayModes,Viewport,defer,unmatched-defer,"product scope, not the first release"
+LoadRenderPlugin,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+LoadRhinoMaterialFromFile,Materials,v1,explicit-v1,core design loop
+LoadStyleFromFilePath,Document,defer,unmatched-defer,"product scope, not the first release"
+LockLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+MGEnvironmentFromDocument,Materials,defer,unmatched-defer,"product scope, not the first release"
+MatchAttributesWfc,Other,drop,contains:MatchAttributesWfc,CounterSketch attribute matching
+MaterialsForReport,Materials,drop,contains:MaterialsForReport,desktop reporting
+ModifyCameraPath,Animation,drop,contains:ModifyCameraPath,animation is out of v1 scope
+OpenProfileEditor,Styles,defer,unmatched-defer,"product scope, not the first release"
+Ping,Diagnostics,defer,unmatched-defer,"product scope, not the first release"
+PopulateStaticPaths,Other,drop,contains:PopulateStaticPaths,installation path discovery
+PopulateUserLayers,Layers,defer,unmatched-defer,"product scope, not the first release"
+ReadContentManagerInfoFromFile,Document,defer,unmatched-defer,"product scope, not the first release"
+ReadJsonFromDocument,Document,v1,explicit-v1,core design loop
+RefreshGroupsImages,Groups,defer,unmatched-defer,"product scope, not the first release"
+RemoveFromExistingGroup,Groups,defer,unmatched-defer,"product scope, not the first release"
+RemoveNonVolumizableItemsFromList,Other,v1,explicit-v1,core design loop
+RemoveRole,Other,drop,contains:Role,CounterSketch pricing roles
+Render,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+RenderAnimationFrame,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+RenderBatch,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+RenderWithAlphaObjects,Selection,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+RenderWithFocalDistance,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+ResetDisplayModesToDefault,Viewport,defer,unmatched-defer,"product scope, not the first release"
+ResetGumball,Viewport,defer,unmatched-defer,"product scope, not the first release"
+ResetGumballFromPatchwire,Builders,defer,unmatched-defer,"product scope, not the first release"
+ResetRenderMaterial,Materials,v1,explicit-v1,core design loop
+ResizeRing,Rings,v1,explicit-v1,core design loop
+RestoreMacro,Other,drop,contains:Macro,desktop macro recording
+SaveDocumentAsCounterSketchFile,Document,drop,contains:CounterSketch,CounterSketch job-bag integration
+SaveEditedStyleFromUI,Styles,defer,unmatched-defer,"product scope, not the first release"
+SaveNewMGRenderStyle,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+SaveProfileToLibrary,Styles,defer,unmatched-defer,"product scope, not the first release"
+SaveRenderMaterial,Materials,v1,explicit-v1,core design loop
+SaveStyleFromUI,Styles,defer,unmatched-defer,"product scope, not the first release"
+SaveTemporaryStyle,Styles,defer,unmatched-defer,"product scope, not the first release"
+SaveToJobBag,Other,drop,contains:JobBag,CounterSketch job-bag integration
+ScrubAnimation,Animation,drop,contains:ScrubAnimation,animation is out of v1 scope
+SelectObjectsById,Selection,v1,explicit-v1,core design loop
+SelectObjectsByMaterial,Materials,defer,unmatched-defer,"product scope, not the first release"
+SelectObjectsDocument,Document,v1,explicit-v1,core design loop
+SelectObjectsInLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+SendKeyStroke,Other,drop,contains:SendKeyStroke,synthetic input into the desktop shell
+SetActiveLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+SetAutoGumball,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetAutoHide,Selection,v1,explicit-v1,core design loop
+SetAutosaveSettings,Settings,v1,explicit-v1,core design loop
+SetBackdropColors,Materials,defer,unmatched-defer,"product scope, not the first release"
+SetBackdropMode,Materials,defer,unmatched-defer,"product scope, not the first release"
+SetBeta,Other,drop,contains:SetBeta,developer switch
+SetCategoryChangedEvent,Other,defer,unmatched-defer,"product scope, not the first release"
+SetCommandBarLocation,Other,drop,contains:CommandBar,desktop command bar
+SetCore,Other,drop,contains:SetCore,developer switch
+SetCurrentFileAsNoModified,Document,v1,explicit-v1,core design loop
+SetCurrentRenderPasses,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+SetCurrentRenderSize,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+SetCyclesRenderDevice,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+SetDefaultRingSizeRegionAbrv,Rings,v1,explicit-v1,core design loop
+SetDev,Other,drop,contains:SetDev,developer switch
+SetEnableAutosave,Settings,v1,explicit-v1,core design loop
+SetEnableControlPointsOnCurveSelection,Selection,v1,explicit-v1,core design loop
+SetEnablePreviewBackfaces,Document,defer,unmatched-defer,"product scope, not the first release"
+SetEnablePreviewRenderShading,Document,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+SetEnableSmartTrack,Settings,defer,unmatched-defer,"product scope, not the first release"
+SetEnvironmentChange,Materials,defer,unmatched-defer,"product scope, not the first release"
+SetEnvironmentHdr,Materials,defer,unmatched-defer,"product scope, not the first release"
+SetFocusToRhino,Other,drop,contains:SetFocusToRhino,window focus is a desktop concern
+SetGridSnapSpacing,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetGridSnaps,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetGroundPlane,Other,defer,unmatched-defer,"product scope, not the first release"
+SetGumballAlignment,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetImageToFilePreview,Document,defer,unmatched-defer,"product scope, not the first release"
+SetImageToFilePreviewFromPath,Document,defer,unmatched-defer,"product scope, not the first release"
+SetLanguage,Other,defer,unmatched-defer,"product scope, not the first release"
+SetOrtho,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetOsnaps,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetParametricRegenerationFull,Other,v1,explicit-v1,core design loop
+SetPatchwireNameFromInstanceGuid,Builders,v1,explicit-v1,core design loop
+SetPlanar,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetProfileEditorPreference,Styles,defer,unmatched-defer,"product scope, not the first release"
+SetProfileLibraryPaths,Styles,defer,unmatched-defer,"product scope, not the first release"
+SetProject,Other,defer,unmatched-defer,"product scope, not the first release"
+SetRecordHistory,Settings,v1,explicit-v1,core design loop
+SetRhinoMenu,Other,drop,contains:RhinoMenu,desktop menu
+SetRingResizerData,Rings,v1,explicit-v1,core design loop
+SetScaleViewportRing,Rings,v1,explicit-v1,core design loop
+SetSingleMapValue,Materials,v1,explicit-v1,core design loop
+SetSmartTrack,Settings,defer,unmatched-defer,"product scope, not the first release"
+SetSnappyGumball,Viewport,defer,unmatched-defer,"product scope, not the first release"
+SetUniqueVisibleLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+SetVPCHScale,Viewport,v1,explicit-v1,core design loop
+SetVisibleViewportRing,Rings,v1,explicit-v1,core design loop
+SetWireframeMode,Viewport,defer,unmatched-defer,"product scope, not the first release"
+ShadeActiveViewport,Viewport,defer,unmatched-defer,"product scope, not the first release"
+ShadeAllViewports,Viewport,defer,unmatched-defer,"product scope, not the first release"
+ShowHelp,Selection,drop,contains:ShowHelp,desktop help window
+ShowLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+ShowObjects,Selection,v1,explicit-v1,core design loop
+ShowPatchwireOutput,Builders,v1,explicit-v1,core design loop
+ShowPatchwireOutputForAll,Builders,v1,explicit-v1,core design loop
+Shutdown,Other,defer,unmatched-defer,"product scope, not the first release"
+Startup,Other,defer,unmatched-defer,"product scope, not the first release"
+StopAnimation,Animation,drop,contains:StopAnimation,animation is out of v1 scope
+StoreMacroFromKey,Other,drop,contains:Macro,desktop macro recording
+SwapToHidden,Other,defer,unmatched-defer,"product scope, not the first release"
+TestRender,Render,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+ToggleAlpha,Render,defer,unmatched-defer,"product scope, not the first release"
+ToggleFocalPointVisibility,Render,drop,contains:Focal,render camera controls are out of v1 scope
+TogglePreviewRender,Document,drop,contains:Render,offline/Cycles rendering is out of v1 scope
+ToggleSafeFrame,Render,drop,contains:SafeFrame,render compositing is out of v1 scope
+TryReApplyFirstRunScheme,Other,drop,contains:FirstRunScheme,desktop first-run theme
+UnlockLayer,Layers,defer,unmatched-defer,"product scope, not the first release"
+UpdateFocalBlur,Render,drop,contains:Focal,render camera controls are out of v1 scope
+UpdateGraphFromUIControl,Builders,v1,explicit-v1,core design loop
+UpdateGroupsFromUndo,Groups,defer,unmatched-defer,"product scope, not the first release"
+UpdateHasRhinoObjectsSelected,Selection,v1,explicit-v1,core design loop
+UpdateHistorySettings,Settings,v1,explicit-v1,core design loop
+UpdateLayerMaterial,Materials,defer,unmatched-defer,"product scope, not the first release"
+UpdateUIControlForCSValueGemParamListInstance,Builders,v1,explicit-v1,core design loop
+WriteContentManagerInfoToFile,Document,defer,unmatched-defer,"product scope, not the first release"
+WriteGroupsToDocument,Document,defer,unmatched-defer,"product scope, not the first release"
+WriteJsonToDocument,Document,v1,explicit-v1,core design loop
