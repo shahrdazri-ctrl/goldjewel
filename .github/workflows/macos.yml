@@ -3,7 +3,7 @@ name: macos
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - "07-ios-handoff/**"
       - ".github/workflows/macos.yml"
