@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import JewelryKit
 
 /// Loads and autosaves the project list. The desktop product persists designs
 /// as JSON in the document; this shell uses the same idea in Application
