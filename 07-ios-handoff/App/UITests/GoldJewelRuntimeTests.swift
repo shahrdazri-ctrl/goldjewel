@@ -425,71 +425,127 @@ final class GoldJewelRuntimeTests: XCTestCase {
 
     /// The editor is a single long scroll view and the controls are exercised
     /// out of document order, so every lookup starts by returning to the top
-    /// and then scrolls down. Scrolling only downward could never reach a
-    /// control that sits above the current position.
+    /// and then moves toward the control in whichever direction it lies. An
+    /// overshoot is therefore corrected on the next pass instead of being
+    /// permanent, which is how the old downward-only hunt skipped the bezel
+    /// toggle and then kept dragging away from it.
     ///
-    /// The head preview consumes drags to rotate the model, and it covers the
-    /// window centre on iPad, so `app.swipeUp()` rotates the head instead of
-    /// scrolling. These drags start in the lower content area, below the
-    /// preview, and never at the centre of the screen.
+    /// The drags are anchored to the editor's identified scroll view and stay
+    /// in the content's right-hand padding: the head preview consumes drags to
+    /// rotate the model, and on iPad the left edge opens the sidebar.
     private func scrollTo(_ element: XCUIElement) {
+        let scroll = editorScrollView
+        XCTAssertTrue(scroll.waitForExistence(timeout: 10),
+                      "\(deviceName): the editor scroll view did not appear")
+        guard scroll.exists else { return }
         scrollToTop()
-        // Search in half-page steps. A full-page jump can carry a short row
-        // (a bare toggle) past the viewport between two hittability checks.
-        for _ in 0..<12 {
-            if element.exists && element.isHittable { return }
-            dragWithinMargin(fromY: 0.80, toY: 0.34)
+        var previousFrame = CGRect.zero
+        var stationaryPasses = 0
+        var lastDrag = "none"
+        var viewport = editorViewport
+        for pass in 0..<14 {
+            guard element.exists else {
+                lastDrag = "down"
+                dragEditor(fromY: 0.70, toY: 0.32)
+                continue
+            }
+            viewport = editorViewport
+            if isFullyVisible(element, in: viewport) { return }
+            if element.frame.midY < viewport.midY {
+                lastDrag = "up"
+                dragEditor(fromY: 0.30, toY: 0.68)
+            } else {
+                lastDrag = "down"
+                dragEditor(fromY: 0.70, toY: 0.32)
+            }
+            // A scroll view at its limit stops moving the control. Fail after
+            // two passes without movement instead of dragging into the stops.
+            if pass > 0 && element.frame == previousFrame {
+                stationaryPasses += 1
+                if stationaryPasses >= 2 { break }
+            } else {
+                stationaryPasses = 0
+            }
+            previousFrame = element.frame
         }
         attachFullScreen("scroll-failed")
+        let preview = app.descendants(matching: .any)["head-preview"]
         XCTFail("\(deviceName): could not scroll to \(element) "
                 + "(exists=\(element.exists), hittable=\(element.isHittable), "
-                + "frame=\(element.frame), window=\(app.frame))")
+                + "elementFrame=\(element.frame), viewport=\(viewport), "
+                + "previewFrame=\(preview.frame), lastDrag=\(lastDrag), "
+                + "window=\(app.frame))")
     }
 
-    /// Scrolls until the head preview is actually on screen. The status-bar tap
-    /// is not reliable on iPad, and the preview is the only element that is
-    /// hittable at the top and nowhere else, so it anchors the search instead.
+    /// Reached means the whole control sits inside the editor viewport with a
+    /// margin, not merely that its centre is tappable at the clipped edge.
+    private func isFullyVisible(_ element: XCUIElement, in viewport: CGRect) -> Bool {
+        guard element.exists, element.isHittable, !viewport.isNull else { return false }
+        let frame = element.frame
+        let margin: CGFloat = 8
+        if frame.height > viewport.height - 2 * margin {
+            return frame.midY >= viewport.minY + margin
+                && frame.midY <= viewport.maxY - margin
+        }
+        return frame.minY >= viewport.minY + margin
+            && frame.maxY <= viewport.maxY - margin
+            && frame.minX >= viewport.minX
+            && frame.maxX <= viewport.maxX
+    }
+
+    /// Returns to the top by pulling the identified scroll view down until the
+    /// preview is hittable and its top is inside the viewport. The status-bar
+    /// tap is not reliable on iPad; the preview is the content's first element
+    /// and anchors the search on both form factors.
     private func scrollToTop() {
         let preview = app.descendants(matching: .any)["head-preview"]
+        let scroll = editorScrollView
+        guard scroll.exists else {
+            XCTFail("\(deviceName): the editor scroll view did not appear")
+            return
+        }
         for _ in 0..<12 {
             if preview.exists && preview.isHittable {
-                // One more pull guarantees the preview's top is inside the
-                // viewport rather than merely its centre; at the top this is
-                // just the usual bounce.
-                dragWithinMargin(fromY: 0.30, toY: 0.72)
+                // One more pull removes the bounce and brings the content's
+                // first row to the top; the search itself corrects direction
+                // if the scroll was not exactly at the top yet.
+                dragEditor(fromY: 0.28, toY: 0.70)
                 return
             }
-            scrollUpOnePage()
+            dragEditor(fromY: 0.26, toY: 0.84)
         }
+        XCTFail("\(deviceName): could not reach the editor top "
+                + "(previewFrame=\(preview.frame), viewport=\(editorViewport), "
+                + "window=\(app.frame))")
     }
 
-    private func scrollUpOnePage() {
-        dragWithinMargin(fromY: 0.28, toY: 0.86)
+    /// The visible part of the identified editor scroll view. A SwiftUI scroll
+    /// view can report a content-sized frame, so the gesture stays inside the
+    /// intersection with the window without reverting to a window-wide guess.
+    private var editorViewport: CGRect {
+        let frame = editorScrollView.frame
+        let visible = frame.intersection(app.frame)
+        return visible.isNull || visible.height < 44 ? frame : visible
     }
 
-    /// Drag inside the editor's left margin. The preview's drag gesture covers
-    /// the content and its centre, so a gesture there rotates the head; the
-    /// margin is a few points left of the preview and of every slider.
-    private func dragWithinMargin(fromY: CGFloat, toY: CGFloat) {
-        // Horizontal position comes from the preview, which is always in the
-        // editor column, so the drag stays in its left margin on both the
-        // single-column iPhone and the split-view iPad. Vertical positions use
-        // the window, because a scroll view's frame may report its content.
-        let preview = app.descendants(matching: .any)["head-preview"]
-        let window = app.frame
-        // Stay in the content's right-hand margin. On iPad the left edge
-        // belongs to the sidebar reveal gesture, so dragging there opens the
-        // overlay instead of scrolling; the preview itself consumes drags to
-        // rotate the head. This margin is outside both.
-        var x = window.maxX - 14
-        if preview.exists && preview.frame.width > 1 {
-            x = min(x, preview.frame.maxX + 6)
+    /// Drag inside the editor scroll view's own padding. The x is 8 pt inside
+    /// the scroll view's trailing edge, to the right of the 18 pt content
+    /// padding, so neither the preview's rotate gesture nor a control receives
+    /// it. Offsets are relative to the scroll view's frame, so the gesture
+    /// follows the editor in the iPhone and split-view layouts alike.
+    private func dragEditor(fromY: CGFloat, toY: CGFloat) {
+        let scroll = editorScrollView
+        let viewport = editorViewport
+        guard !viewport.isNull, viewport.height > 44 else {
+            XCTFail("\(deviceName): the editor scroll view has no usable frame")
+            return
         }
-        x = max(x, window.minX + 12)
-        let start = app.coordinate(withNormalizedOffset: .zero)
-            .withOffset(CGVector(dx: x, dy: window.minY + window.height * fromY))
-        let end = app.coordinate(withNormalizedOffset: .zero)
-            .withOffset(CGVector(dx: x, dy: window.minY + window.height * toY))
+        let dx = viewport.maxX - 8 - scroll.frame.minX
+        let baseY = viewport.minY - scroll.frame.minY
+        let start = scroll.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: dx, dy: baseY + viewport.height * fromY))
+        let end = scroll.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: dx, dy: baseY + viewport.height * toY))
         start.press(forDuration: 0.2, thenDragTo: end)
         Thread.sleep(forTimeInterval: 0.5)
     }
@@ -499,7 +555,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// identifier and fall back to the widest scroll view if it is flattened.
     private var editorScrollView: XCUIElement {
         let named = app.scrollViews["editor-scroll"]
-        if named.exists { return named }
+        if named.exists && named.frame.height > 44 { return named }
         let all = app.scrollViews.allElementsBoundByIndex
         return all.max { $0.frame.width < $1.frame.width } ?? app.scrollViews.firstMatch
     }
