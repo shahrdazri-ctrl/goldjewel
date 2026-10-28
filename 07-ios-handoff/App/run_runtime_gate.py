@@ -198,6 +198,10 @@ def run_device(device: dict, kind: str) -> dict:
     attempt = 1
     code = 1
     while attempt <= 2:
+        # A retry must not fail because the previous attempt left a bundle at
+        # the result path; xcodebuild refuses to overwrite one.
+        if os.path.exists(result_bundle):
+            shutil.rmtree(result_bundle)
         print(f"runtime gate: {kind} attempt {attempt} on {device['name']} ({device['udid']})")
         code, output = run(command, timeout=RUN_TIMEOUT, log_path=log_path)
         if code == 0:
@@ -215,12 +219,17 @@ def run_device(device: dict, kind: str) -> dict:
             time.sleep(5)
 
     if code != 0:
+        # Export what the failing run managed to attach. A red gate should still
+        # show the screen it was looking at, not just an assertion message.
+        failed_shots = export_screenshots(result_bundle, kind) if os.path.exists(result_bundle) else []
+        for path in failed_shots:
+            print(f"runtime gate: failure screenshot {os.path.relpath(path, REPO_ROOT)}")
         return {
             "kind": kind,
             "device": device["name"],
             "udid": device["udid"],
             "status": "failed",
-            "screenshots": [],
+            "screenshots": [os.path.relpath(path, REPO_ROOT) for path in failed_shots],
         }
 
     screenshots = export_screenshots(result_bundle, kind)

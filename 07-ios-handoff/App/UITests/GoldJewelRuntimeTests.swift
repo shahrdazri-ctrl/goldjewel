@@ -50,8 +50,8 @@ final class GoldJewelRuntimeTests: XCTestCase {
         waitForPreviewGeometry(preview)
 
         let base = try capture("01-base", preview: preview)
-        XCTAssertGreaterThan(base.inkRatio, 0.02,
-                             "\(deviceName): preview rendered as a blank/background image")
+        XCTAssertGreaterThan(base.goldRatio, 0.02,
+                             "\(deviceName): preview contains almost no metal pixels (\(base.goldRatio)); it is blank or background-only")
         attachFullScreen("01-start")
 
         // Edit the document name. Appending is enough to prove the text field
@@ -60,7 +60,10 @@ final class GoldJewelRuntimeTests: XCTestCase {
         scrollTo(nameField)
         nameField.tap()
         nameField.typeText(" Runtime Gate")
+        nameField.typeText("\n")
         dismissKeyboard()
+        XCTAssertFalse(app.keyboards.firstMatch.exists,
+                       "\(deviceName): keyboard stayed up and would cover the controls")
 
         // Gallery rail.
         let beforeRail = try capture("02-before-rail", preview: preview)
@@ -123,8 +126,8 @@ final class GoldJewelRuntimeTests: XCTestCase {
         XCTAssertTrue(restoredPreview.waitForExistence(timeout: 20),
                       "\(deviceName): restored project has no preview")
         let restored = try capture("13-relaunch", preview: restoredPreview)
-        XCTAssertGreaterThan(restored.inkRatio, 0.02,
-                             "\(deviceName): restored preview is blank")
+        XCTAssertGreaterThan(restored.goldRatio, 0.02,
+                             "\(deviceName): restored preview is blank (\(restored.goldRatio) metal pixels)")
 
         let restoredName = app.textFields["project-name"]
         scrollTo(restoredName)
@@ -153,13 +156,14 @@ final class GoldJewelRuntimeTests: XCTestCase {
     }
 
     private func dismissKeyboard() {
-        let done = app.buttons["dismiss-keyboard"]
-        if done.waitForExistence(timeout: 2) {
-            done.tap()
-            return
+        guard app.keyboards.count > 0 else { return }
+        let toolbarDone = app.buttons["dismiss-keyboard"]
+        if toolbarDone.exists && toolbarDone.isHittable {
+            toolbarDone.tap()
         }
         if app.keyboards.count > 0 {
-            app.keyboards.buttons["Done"].tap()
+            let keyboardDone = app.keyboards.buttons["Done"]
+            if keyboardDone.exists { keyboardDone.tap() }
         }
     }
 
@@ -169,8 +173,14 @@ final class GoldJewelRuntimeTests: XCTestCase {
         guard isOn(toggle) != on else { return }
         let before = preview.value as? String
         toggle.tap()
+        // The switch animates and SwiftUI commits the new state on the next
+        // run loop; poll the real value instead of sampling it once.
+        let deadline = Date().addingTimeInterval(5)
+        while Date() < deadline && isOn(toggle) != on {
+            Thread.sleep(forTimeInterval: 0.1)
+        }
         XCTAssertEqual(isOn(toggle), on,
-                       "\(deviceName): \(identifier) did not switch")
+                       "\(deviceName): \(identifier) did not switch after a tap")
         if let before {
             let predicate = NSPredicate(format: "value != %@", before)
             let changed = XCTNSPredicateExpectation(predicate: predicate, object: preview)
@@ -195,21 +205,40 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// out of document order, so every lookup starts by returning to the top
     /// and then scrolls down. Scrolling only downward could never reach a
     /// control that sits above the current position.
+    ///
+    /// The head preview consumes drags to rotate the model, and it covers the
+    /// window centre on iPad, so `app.swipeUp()` rotates the head instead of
+    /// scrolling. These drags start in the lower content area, below the
+    /// preview, and never at the centre of the screen.
     private func scrollTo(_ element: XCUIElement) {
         scrollToTop()
-        for _ in 0..<16 {
+        for _ in 0..<12 {
             if element.exists && element.isHittable { return }
-            app.swipeUp()
+            scrollDownOnePage()
         }
         XCTFail("\(deviceName): could not scroll to \(element)")
     }
 
     private func scrollToTop() {
-        let preview = app.descendants(matching: .any)["head-preview"]
-        for _ in 0..<12 {
-            if preview.isHittable { return }
-            app.swipeDown()
+        for _ in 0..<8 {
+            scrollUpOnePage()
         }
+    }
+
+    private func scrollDownOnePage() {
+        drag(from: 0.85, to: 0.42)
+    }
+
+    private func scrollUpOnePage() {
+        drag(from: 0.74, to: 0.96)
+    }
+
+    private func drag(from: CGFloat, to: CGFloat) {
+        // Stay in the right-hand padding: a drag that starts on a slider would
+        // move that slider instead of scrolling the editor.
+        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.96, dy: from))
+        let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.96, dy: to))
+        start.press(forDuration: 0.05, thenDragTo: end)
     }
 
     private func returnToProjectList() {
@@ -256,12 +285,14 @@ final class GoldJewelRuntimeTests: XCTestCase {
     }
 }
 
-/// A 48×48 luminance sample of the preview plus the fraction of cells bright
-/// enough to be metal or a gem rather than the dark canvas background.
+/// A 48×48 luminance sample of the preview plus the fraction of cells that
+/// carry the preview's gold colouring. The gold ratio, not raw brightness,
+/// proves the head itself drew: the surrounding chrome and a white split-view
+/// sidebar are bright but unsaturated, so they cannot satisfy it.
 @MainActor
 struct PreviewFrame {
     let luminance: [UInt8]
-    let inkRatio: Double
+    let goldRatio: Double
 
     init(screenshot: XCUIScreenshot) throws {
         guard let image = screenshot.image.cgImage else {
@@ -286,17 +317,19 @@ struct PreviewFrame {
         guard drawn else { throw RuntimeGateError.noPixels }
 
         var values = [UInt8](repeating: 0, count: side * side)
-        var ink = 0
+        var gold = 0
         for index in 0..<(side * side) {
             let r = Double(pixels[index * 4])
             let g = Double(pixels[index * 4 + 1])
             let b = Double(pixels[index * 4 + 2])
             let value = UInt8(min(255, (0.2126 * r + 0.7152 * g + 0.0722 * b).rounded()))
             values[index] = value
-            if value >= 45 { ink += 1 }
+            if value >= 45 && r > g && g > b && (r - b) > 25 {
+                gold += 1
+            }
         }
         self.luminance = values
-        self.inkRatio = Double(ink) / Double(side * side)
+        self.goldRatio = Double(gold) / Double(side * side)
     }
 
     func difference(from other: PreviewFrame) -> Double {
