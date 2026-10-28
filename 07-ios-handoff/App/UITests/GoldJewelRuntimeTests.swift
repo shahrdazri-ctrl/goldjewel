@@ -287,12 +287,17 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// the content and its centre, so a gesture there rotates the head; the
     /// margin is a few points left of the preview and of every slider.
     private func dragWithinMargin(fromY: CGFloat, toY: CGFloat) {
-        let frame = editorScrollView.frame
-        let x = frame.minX + 10
+        // Horizontal position comes from the preview, which is always in the
+        // editor column, so the drag stays in its left margin on both the
+        // single-column iPhone and the split-view iPad. Vertical positions use
+        // the window, because a scroll view's frame may report its content.
+        let preview = app.descendants(matching: .any)["head-preview"]
+        let window = app.frame
+        let x = preview.exists ? preview.frame.minX - 8 : editorScrollView.frame.minX + 10
         let start = app.coordinate(withNormalizedOffset: .zero)
-            .withOffset(CGVector(dx: x, dy: frame.minY + frame.height * fromY))
+            .withOffset(CGVector(dx: x, dy: window.minY + window.height * fromY))
         let end = app.coordinate(withNormalizedOffset: .zero)
-            .withOffset(CGVector(dx: x, dy: frame.minY + frame.height * toY))
+            .withOffset(CGVector(dx: x, dy: window.minY + window.height * toY))
         start.press(forDuration: 0.2, thenDragTo: end)
         Thread.sleep(forTimeInterval: 0.5)
     }
