@@ -6,26 +6,54 @@ assert behaviour, not just survival.
 
 ## The run
 
-| | iPhone | iPad |
+| | iPhone SE (3rd generation) | iPad mini (A17 Pro) |
 |---|---|---|
-| Simulator | iPhone SE (3rd generation) | iPad mini (A17 Pro) |
 | OS | iOS 18.6 | iOS 18.6 |
-| Attempt 1 | **passed**, 670.9 s (820.3 s gate) | **passed**, 615.3 s (726.2 s gate) |
-| Attempt 2 | — | — |
-| Screenshots exported | 14 | 14 |
+| Run A `40772020852`, attempt 1 | **passed**, 715.6 s test / 860.9 s gate | **passed**, 615.9 s test / 721.7 s gate |
+| Run B `40776723264`, attempt 1 | **passed**, 790.8 s test / 947.9 s gate | **passed**, 554.1 s test / 747.3 s gate |
+| Device attempts retried | none | none |
+| Screenshots exported | 14 per run | 14 per run |
 
-Both devices passed on their first attempt in run `40739496475` (job
-`122996921831`) at commit `ed3562b`. The linux (`40739497026`) and macos
-(`40739496461`) jobs are green on the same commit; the iOS job took 27 minutes.
-The devices are pinned to an iPhone SE (3rd generation) and an iPad mini
+Both runs are on commit `e8fe648` and back to back: four device attempts, every
+one of them attempt 1, none retried, none failing at a scroll step. The test
+durations are XCTest's case times; the gate times are each device's
+`summary.json` duration, which adds boot, shutdown and the screenshot export.
+The linux (`40772020851`) and macos (`40772020819`) jobs are green on the same
+commit. The devices are pinned to an iPhone SE (3rd generation) and an iPad mini
 (A17 Pro) on iOS 18.6, and the gate fails loudly if either pin is missing rather
 than silently taking whatever the runner image has.
 
-A confirmation run `40751909986` (job `123040542848`) on `9025a8d`, the revert
-of the temporary proof commit, is also green. Its iPad passed first attempt in
-737.9 s. Its iPhone attempt 1 failed after 833.0 s in the existing
-scroll-to-control helper (`could not scroll to "bezel-toggle"`, which was
-off-screen), not in the operations checks; the gate's retry passed in 720.5 s.
+### The scroll flake, and why it is gone
+
+The earlier confirmation run `40751909986` (job `123040542848`) on `9025a8d`
+went green only because the gate retried it: iPhone attempt 1 failed after
+833.0 s with `could not scroll to "bezel-toggle"`. That was an instrument
+defect, not an app defect — the toggle existed, and the editor's single scroll
+view could still reach it. The old helper hunted downward from a coordinate
+guess in half-page drags; once an overshoot put the control above the viewport,
+its next drag moved further away, so reaching a control depended on where the
+previous drag happened to end.
+
+`b6c1791` replaces the hunt with a search that cannot keep moving the wrong way:
+it anchors on the editor's identified scroll view (`editor-scroll`), returns to
+the top, and on each pass drags toward the control using the sign of
+`element.frame.midY − viewport.midY`, so an overshoot is undone on the next
+pass. A control counts as reached only when its whole frame is inside the
+viewport with an 8 pt margin and the element is hittable, not when its centre is
+tappable at the clip edge. The search stops after two passes in which the
+element's frame does not move — the scroll view is at its limit — and then fails
+with the element frame, the viewport, the preview frame, the last drag direction
+and the window frame in the message, plus a `scroll-failed` screenshot.
+
+The two runs above are that fix's evidence. The gate's log prints one line per
+device attempt; the only retry in either log is run B's bounded `simctl list`
+discovery call (attempt 1 of 3 hit its 120 s timeout, attempt 2 answered), which
+runs before the app is installed and retries no device test.
+
+The slowest device pass observed with the new search is 947.9 s, so `e8fe648`
+raised `RUN_TIMEOUT` from 1100 s to 1150 s and moved nothing else: no assertion,
+threshold or check was touched, and `--check-budget` recomputes the worst case
+below from that constant.
 
 ### The check can fail
 
@@ -35,21 +63,22 @@ the catalogue and the summary still counted 12 wired operations. Run
 `40746345537` (job `123021042639`) went red on both devices and both attempts at
 `GoldJewelRuntimeTests.swift:106` with `"wired" is not equal to
 "entry-point" — ResizeRing is presented as wired`. The change was reverted in
-`9025a8d`; the confirmation run above is on that tree.
+`9025a8d`; the two runs above are on a tree that contains that revert.
 
-The gate's bounded worst case is 104 m 40 s: 6 m 10 s of simctl discovery,
-15 minutes of `build-for-testing`, and two devices at 41 m 45 s each (two
-1100 s attempts, two 60 s shutdowns, one 5 s retry delay and one 180 s
+The gate's bounded worst case is 108 m 0 s: 6 m 10 s of simctl discovery,
+15 minutes of `build-for-testing`, and two devices at 43 m 25 s each (two
+1150 s attempts, two 60 s shutdowns, one 5 s retry delay and one 180 s
 screenshot export). With 20 minutes of workflow overhead and a required
-10-minute margin, that needs a 134 m 40 s job; the workflow declares 140. The
-runtime step needs 114 m 40 s and declares 130.
+10-minute margin, that needs a 138 m 0 s job; the workflow declares 140. The
+runtime step needs 118 m 0 s and declares 130.
 `python3 run_runtime_gate.py --check-budget` runs before the build and fails
 if any constant or either timeout drifts. A deliberately reduced 40-minute job
 fails the check with both job and step errors.
 
-Artifact: `GoldJewel-runtime-screenshots` on run `40739496475`
-(`07-ios-handoff/App/build/runtime-evidence/{iphone,ipad}/`). Each device has 14
-PNGs, including `iPhone-00-project-list-screen.png`,
+Artifact: `GoldJewel-runtime-screenshots` on runs `40776723264` and
+`40772020852` (`07-ios-handoff/App/build/runtime-evidence/{iphone,ipad}/`). Each
+device has 14 PNGs in both runs, including
+`iPhone-00-project-list-screen.png`,
 `iPhone-01-project-created-screen.png`, `iPhone-07-operations-sheet-screen.png`
 and `iPhone-08-operations-entry-point-screen.png` (and the iPad equivalents).
 XCTest's GUID names are mapped from the attachment manifest to these readable
@@ -112,8 +141,11 @@ The earlier attempts found real interaction defects rather than assertion noise.
 * The iPad toggle row spans the whole detail column, so a tap at 90 % of the
   row fell in the gap beside the switch. Taps now target 28 pt from the
   trailing edge.
-* The status-bar scroll-to-top does not work on iPad. Scrolling is now anchored
-  on the preview becoming hittable, then searches in half-page steps.
+* The status-bar scroll-to-top does not work on iPad, and the original
+  coordinate-anchored, downward-only hunt for a control could overshoot and
+  never come back — the last flake in the instrument. `b6c1791` anchors the
+  search on the editor's scroll view and corrects its direction from the
+  control's frame; see *The scroll flake, and why it is gone*.
 * The name was written through on every keystroke and autosaved immediately;
   the resulting re-render could drop keyboard focus mid-word. The editor keeps a
   draft and commits on submit/focus loss, and autosave is coalesced (450 ms) and
