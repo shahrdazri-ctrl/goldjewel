@@ -73,47 +73,41 @@ final class GoldJewelRuntimeTests: XCTestCase {
                        "\(deviceName): keyboard stayed up and would cover the controls")
         step("name edited")
 
-        // Gallery rail.
-        let beforeRail = try capture("02-before-rail", preview: preview)
-        step("rail before")
+        // Each state is compared with the previous one, which isolates the
+        // change made by the switch that was just toggled while halving the
+        // number of round trips to the top of the editor.
+
+        // Gallery rail (on by default).
         setToggle("rail-toggle", on: false, preview: preview)
         step("rail off")
-        let withoutRail = try capture("03-rail-off", preview: preview)
-        XCTAssertGreaterThan(withoutRail.difference(from: beforeRail), 0.005,
-                             "\(deviceName): switching the gallery off changed only \(withoutRail.difference(from: beforeRail)) of the preview")
-        setToggle("rail-toggle", on: true, preview: preview)
-        step("rail restored")
+        let withoutRail = try capture("02-rail-off", preview: preview)
+        assertChanged(withoutRail, from: base, atLeast: 0.005,
+                      "switching the gallery off")
 
         // Prong domes (on by default).
-        let beforeDome = try capture("04-before-dome", preview: preview)
         setToggle("dome-toggle", on: false, preview: preview)
         step("dome off")
-        let withoutDome = try capture("05-dome-off", preview: preview)
-        XCTAssertGreaterThan(withoutDome.difference(from: beforeDome), 0.005,
-                             "\(deviceName): switching the dome off changed only \(withoutDome.difference(from: beforeDome)) of the preview")
-        setToggle("dome-toggle", on: true, preview: preview)
-        step("dome restored")
+        let withoutDome = try capture("03-dome-off", preview: preview)
+        assertChanged(withoutDome, from: withoutRail, atLeast: 0.005,
+                      "switching the dome off")
 
         // Bezel (off by default).
-        let beforeBezel = try capture("06-before-bezel", preview: preview)
         setToggle("bezel-toggle", on: true, preview: preview)
         step("bezel on")
-        let withBezel = try capture("07-bezel-on", preview: preview)
-        XCTAssertGreaterThan(withBezel.difference(from: beforeBezel), 0.005,
-                             "\(deviceName): enabling the bezel changed only \(withBezel.difference(from: beforeBezel)) of the preview")
+        let withBezel = try capture("04-bezel-on", preview: preview)
+        assertChanged(withBezel, from: withoutDome, atLeast: 0.005,
+                      "enabling the bezel")
 
         // Halo (off by default).
-        let beforeHalo = try capture("08-before-halo", preview: preview)
         setToggle("halo-toggle", on: true, preview: preview)
         step("halo on")
-        let withHalo = try capture("09-halo-on", preview: preview)
-        XCTAssertGreaterThan(withHalo.difference(from: beforeHalo), 0.005,
-                             "\(deviceName): enabling the halo changed only \(withHalo.difference(from: beforeHalo)) of the preview")
+        let withHalo = try capture("05-halo-on", preview: preview)
+        assertChanged(withHalo, from: withBezel, atLeast: 0.005,
+                      "enabling the halo")
 
         // A parameter change that keeps the topology but moves the geometry.
         let gemSlider = app.sliders["gem-diameter"]
         scrollTo(gemSlider)
-        let beforeGem = try capture("10-before-gem", preview: preview)
         let beforeGemValue = preview.value as? String
         gemSlider.adjust(toNormalizedSliderPosition: 0.72)
         // A jump from 6.5 mm to nearly 10 mm rebuilds every family. Wait for
@@ -125,9 +119,9 @@ final class GoldJewelRuntimeTests: XCTestCase {
         XCTAssertEqual(XCTWaiter.wait(for: [rebuilt], timeout: 30), .completed,
                        "\(deviceName): the preview did not rebuild after the gem diameter changed")
         step("gem moved")
-        let afterGem = try capture("11-gem-larger", preview: preview)
-        XCTAssertGreaterThan(afterGem.difference(from: beforeGem), 0.01,
-                             "\(deviceName): moving the gem slider changed only \(afterGem.difference(from: beforeGem)) of the head")
+        let afterGem = try capture("06-gem-larger", preview: preview)
+        assertChanged(afterGem, from: withHalo, atLeast: 0.01,
+                      "moving the gem slider")
 
         attachFullScreen("12-final")
         step("editing complete")
@@ -161,11 +155,19 @@ final class GoldJewelRuntimeTests: XCTestCase {
         XCTAssertTrue((restoredName.value as? String)?.contains("Runtime Gate") == true,
                       "\(deviceName): edited name was not persisted")
 
-        for identifier in ["rail-toggle", "dome-toggle", "bezel-toggle", "halo-toggle"] {
+        // Rail and dome were left off; bezel and halo were switched on. Both
+        // directions must survive the relaunch.
+        let persisted: [(String, Bool)] = [
+            ("rail-toggle", false),
+            ("dome-toggle", false),
+            ("bezel-toggle", true),
+            ("halo-toggle", true)
+        ]
+        for (identifier, expected) in persisted {
             let toggle = app.switches[identifier]
             scrollTo(toggle)
-            XCTAssertTrue(isOn(toggle),
-                          "\(deviceName): \(identifier) was not persisted as on")
+            XCTAssertEqual(isOn(toggle), expected,
+                           "\(deviceName): \(identifier) was not persisted as \(expected)")
         }
         attachFullScreen("14-relaunch")
         step("persistence verified")
@@ -232,6 +234,17 @@ final class GoldJewelRuntimeTests: XCTestCase {
         }
     }
 
+    private func assertChanged(
+        _ new: PreviewFrame,
+        from old: PreviewFrame,
+        atLeast threshold: Double,
+        _ action: String
+    ) {
+        let difference = new.difference(from: old)
+        XCTAssertGreaterThan(difference, threshold,
+                             "\(deviceName): \(action) changed only \(difference) of the preview")
+    }
+
     private func isOn(_ toggle: XCUIElement) -> Bool {
         let value = (toggle.value as? String ?? "").lowercased()
         return value == "1" || value == "on" || value == "true"
@@ -255,7 +268,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// preview, and never at the centre of the screen.
     private func scrollTo(_ element: XCUIElement) {
         scrollToTop()
-        for _ in 0..<5 {
+        for _ in 0..<4 {
             if element.exists && element.isHittable { return }
             scrollDownOnePage()
         }

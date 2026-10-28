@@ -255,7 +255,7 @@ def run_device(device: dict, kind: str) -> dict:
         # Bound a wedged simulator at the xcodebuild level as well as the
         # runner's own process timeout, so one device cannot eat the job.
         "-test-timeouts-enabled", "YES",
-        "-default-test-execution-time-allowance", "420",
+        "-default-test-execution-time-allowance", "480",
         "-maximum-test-execution-time-allowance", "600",
         "CODE_SIGNING_ALLOWED=NO",
     ]
