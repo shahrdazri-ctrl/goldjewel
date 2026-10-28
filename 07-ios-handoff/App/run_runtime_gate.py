@@ -117,10 +117,29 @@ def capture(cmd: list[str], timeout: int = 60):
 
 
 def simulator_devices() -> list[dict]:
-    code, output = capture(
-        ["xcrun", "simctl", "list", "devices", "available", "-j"],
-        timeout=60,
-    )
+    # CoreSimulatorService can be slow to answer on a cold runner. A hung list
+    # is retried a bounded number of times rather than failing the gate or
+    # waiting forever.
+    code = 1
+    output = ""
+    for attempt in range(3):
+        try:
+            code, output = capture(
+                ["xcrun", "simctl", "list", "devices", "available", "-j"],
+                timeout=120,
+            )
+        except subprocess.TimeoutExpired:
+            print(f"runtime gate: simctl list timed out (attempt {attempt + 1}/3)",
+                  file=sys.stderr)
+            time.sleep(5)
+            continue
+        if code == 0:
+            break
+        print(f"runtime gate: simctl list failed (attempt {attempt + 1}/3, exit {code})",
+              file=sys.stderr)
+        time.sleep(5)
+    else:
+        raise RuntimeError(f"simctl list did not answer after 3 attempts: {output[-2000:]}")
     if code != 0:
         raise RuntimeError(f"simctl list failed: {output[-2000:]}")
     try:
