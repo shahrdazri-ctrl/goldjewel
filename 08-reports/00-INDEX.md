@@ -31,7 +31,7 @@
 8. `08-content-localization-settings.md` — 81 patchwire vocabulary, content taxonomy, 18 locales, settings that change behaviour, extraction backlog.
 
 ### Swift package (`07-ios-handoff/JewelryKit`) and app (`07-ios-handoff/App`)
-`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, `HeadGeometry` (recovered cage and rails; reconstructed domes, bezels and halo seats), tests with real `.mgm` fixtures. The app is a project-based iPhone/iPad shell: JSON-backed projects, live head/gem/ring/rail/dome/bezel/halo controls and a generated catalog of all 88 v1 operations (14 wired). CI compiles and tests the package on Linux and macOS 15 and builds the app for the iPhone/iPad simulator; device builds need a signing team and no runtime test has been performed.
+`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, `HeadGeometry` (recovered cage and rails; reconstructed domes, bezels and halo seats), tests with real `.mgm` fixtures. The app is a project-based iPhone/iPad shell: JSON-backed projects, live head/gem/ring/rail/dome/bezel/halo controls and a generated catalog of all 88 v1 operations (14 wired). CI compiles and tests the package on Linux and macOS 15 and runs the app on an iPhone SE and an iPad mini simulator, asserting create/edit, every geometry family, pixel-level render changes and relaunch persistence; physical-device builds still need a signing team.
 
 ### Evidence (`04-index`, `05-evidence`)
 * `symbols.sqlite` — 225 managed assemblies, 35,645 types, 303,780 methods, 75,497 properties, 155,009 fields, 91,902 strings, 1,379,497 call edges.
@@ -47,6 +47,7 @@
 * `08-reports/m3-report.md` — the head slice: what renders, what was checked against IL, and the explicit inference list.
 * `08-reports/m4-report.md` — gallery rail, the stopped families, and the app-shell boundary.
 * `08-reports/m5-report.md` — corpus v2, the grounded dome/bezel/halo families, provenance grades and the final gates.
+* `08-reports/m6-runtime-gate.md` — the first executed iPhone/iPad runtime gate: assertions, screenshots and what a simulator cannot prove.
 * `03-decompiled/il/` — per-assembly CIL for all 35 first-party assemblies (41,460 `.method` directives, 111.6 MB).
 
 ---

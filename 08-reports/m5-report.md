@@ -82,8 +82,10 @@ The green run for the geometry and app commit is `548a01b` (linux
 40645122595, macos 40645122756, ios-simulator 40645122734). The report and
 wired-operation commit `90b24a2` is also green on all three gates (linux
 40645522493, macos 40645522375, ios-simulator 40645522505). The simulator job
-builds and uploads the `.app`; it does **not** launch it, so this is a compile
-gate, not a runtime pass. There is no macOS host on this machine.
+builds and uploads the `.app`; at the time of M5 it did **not** launch it, so
+this was a compile gate, not a runtime pass. M6 closed that gap: the app now
+runs on both simulators and passes create/edit, family, pixel-change and
+relaunch-persistence assertions — see `08-reports/m6-runtime-gate.md`.
 
 Offline inspection used `09-logs/render_check.py` with the golden data. The
 first halo pass read as a solid washer from above; the band was narrowed to
@@ -122,9 +124,10 @@ graded family.
 4. Halo melee stones are proxies; `CSGemInstance` faceting is not ported.
 5. The M3/M4 inference list still applies to the prong section, spline solver
    and gallery band.
-6. Nothing has been run on a simulator or device. The app compiles for both
-   device families; navigation, persistence and rendering remain runtime
-   unverified.
+6. ~~Nothing has been run on a simulator or device.~~ M6 ran the app on an
+   iPhone SE and an iPad mini and verified navigation, editing, every family
+   toggle, pixel changes and relaunch persistence. Physical-device and
+   hardware-renderer behaviour remain unverified (`m6-runtime-gate.md`).
 
 ## Reproduce
 
