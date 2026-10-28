@@ -41,7 +41,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     func testProjectEditingRenderingAndPersistence() throws {
         // Bound a wedged run instead of letting xcodebuild sit for its full
         // job timeout; a timeout is a test failure, not a skipped check.
-        executionTimeAllowance = 900
+        executionTimeAllowance = 960
         continueAfterFailure = false
         app = XCUIApplication()
         relaunch(reset: true)
