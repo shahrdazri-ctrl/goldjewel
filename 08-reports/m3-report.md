@@ -42,6 +42,19 @@ dependency was added.
   flat blades; the render exposed it and the frame was rebuilt so sections are
   perpendicular to the rail.
 
+## CI evidence
+
+At commit `7054d7e`:
+
+| Gate | Run | Result |
+|---|---|---|
+| linux (validator, M2 corpus, geometry vectors, Swift tests) | 40635971561 | success |
+| macos (package build + 28 tests, 5 in `HeadGeometryTests`) | 40635971460 | success |
+| ios-simulator (iPhone + iPad app with the preview) | 40635971522 | success |
+
+The macOS log shows `HeadGeometryTests` executing five cases, including the
+point-by-point golden comparison and the 4/6/8-prong parametric test.
+
 ## Recovered, with provenance
 
 | Behaviour | Source |
