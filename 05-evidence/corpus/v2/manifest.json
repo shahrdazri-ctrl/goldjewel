@@ -1,0 +1,152 @@
+{
+  "schema": "goldjewel.oracle.corpus/2",
+  "generated_at_utc": "2026-10-28T05:57:17.818855+00:00",
+  "mode": "il-static-no-execution",
+  "hash_mode": "sha256 over canonical LF text; sha256_raw is the on-disk bytes",
+  "execution": {
+    "status": "not-run",
+    "reason": "CSBlocks.mgp and its helper DLLs are Rhino assemblies. Loading CSBlocks outside Rhino fails in Rhino_DotNet.dll initialisation with 0x8007045A (ERROR_DLL_INIT_FAILED). No vendor method is executed; IL operands are the ground truth. RhinoCommon is not in the mirrored product."
+  },
+  "assemblies": {
+    "CSBlockUtil": {
+      "name": "CSBlockUtil",
+      "file": "01-target/mirror/Main/MatrixGold/MatrixGoldPlugin/CSBlockUtil.dll",
+      "sha256": "d788111bf66bea210a64429c902b3bf922ceac965cc2863a7a6d2b3f40c66fc1",
+      "bytes": 273912,
+      "il": "03-decompiled/il/CSBlockUtil/CSBlockUtil.il"
+    },
+    "CSBlockDataUtils": {
+      "name": "CSBlockDataUtils",
+      "file": "01-target/mirror/Main/MatrixGold/MatrixGoldPlugin/CSBlockDataUtils.dll",
+      "sha256": "06b5b1eb0661248e53386c9bc398b29bf539fd039aa4d3f79890f80811755c08",
+      "bytes": 92152,
+      "il": "03-decompiled/il/CSBlockDataUtils/CSBlockDataUtils.il"
+    },
+    "CSBlocks": {
+      "name": "CSBlocks",
+      "file": "01-target/mirror/Main/C46E9C27-4A0F-4A5E-86E8-18F7094A7461.mgp",
+      "sha256": "ddd92dc8c7e53ba31ca9b13cbb83c04fd37f040aead78103431fa6768d04c6fc",
+      "bytes": 3070976,
+      "il": "03-decompiled/il/CSBlocks/C46E9C27-4A0F-4A5E-86E8-18F7094A7461.il"
+    },
+    "CSGemInstance": {
+      "name": "CSGemInstance",
+      "file": "01-target/mirror/Main/MatrixGold/MatrixGoldPlugin/CSGemInstance.dll",
+      "sha256": "ece02a4d3e42d1420690554a555e5812dc9b4794e88a2a1a94632ad12143bc0c",
+      "bytes": 283640,
+      "il": "03-decompiled/il/CSGemInstance/CSGemInstance.il"
+    },
+    "CSDatas": {
+      "name": "CSDatas",
+      "file": "01-target/mirror/Main/MatrixGold/MatrixGoldPlugin/CSDatas.dll",
+      "sha256": "c8e50642e7ba72508881c18f3b79a7e742077917c77e3abab3a8326300baac39",
+      "bytes": 91640,
+      "il": "03-decompiled/il/CSDatas/CSDatas.il"
+    }
+  },
+  "corpora": {
+    "csblockutil": {
+      "assembly": "CSBlockUtil",
+      "path": "05-evidence/corpus/v2/csblockutil.il.json",
+      "sha256": "b5474ea929918694629d5a9e201d6b55efc8a7d5dc1d0ff921ae9bffd117affe",
+      "sha256_raw": "1cde8e4b575b6354f69f3a1f269252a8ca62da6c4af5ed5c85c6e657f691abc0",
+      "bytes": 1392365,
+      "targets": [
+        "CSBlockUtil.CSUtilCurves",
+        "CSBlockUtil.CSUtilSweepRC",
+        "CSBlockUtil.CSUtilGeometry",
+        "CSBlockUtil.CSUtilMath"
+      ],
+      "summary": {
+        "types": 8,
+        "methods": 236,
+        "instructions": 19067,
+        "strings": 68,
+        "numeric_constants": 966,
+        "call_edges": 3942
+      }
+    },
+    "csblockdatautils": {
+      "assembly": "CSBlockDataUtils",
+      "path": "05-evidence/corpus/v2/csblockdatautils.il.json",
+      "sha256": "a4edf646ce78a4515654404ad8e59cd6df7020397300972c7b75ffd322eb5b04",
+      "sha256_raw": "ba0b20fa43d7d4dd81006cdeaac0458df6d08494927de3d27dc94b05464a17df",
+      "bytes": 700656,
+      "targets": [
+        "CSBlockDataUtils.CSGemOffsetCurves"
+      ],
+      "summary": {
+        "types": 19,
+        "methods": 51,
+        "instructions": 9782,
+        "strings": 124,
+        "numeric_constants": 1124,
+        "call_edges": 2037
+      }
+    },
+    "csblocks-families": {
+      "assembly": "CSBlocks",
+      "path": "05-evidence/corpus/v2/csblocks-families.il.json",
+      "sha256": "5f4008e2f8a080c442c75530e004beaf07c7e73d06de451012222da26c7a7e0b",
+      "sha256_raw": "54e7069c67979adcacbab2413f52f216687a67008791bfe6d039d0b822d82c7f",
+      "bytes": 9567948,
+      "targets": [
+        "CSBlocks.Settings.Heads.CSHeadBuilderV2",
+        "CSBlocks.GemClusters",
+        "CSBlocks.Settings.CSClusterProngPlacer"
+      ],
+      "summary": {
+        "types": 87,
+        "methods": 859,
+        "instructions": 115844,
+        "strings": 716,
+        "numeric_constants": 4502,
+        "call_edges": 24851
+      }
+    },
+    "csgeminstance": {
+      "assembly": "CSGemInstance",
+      "path": "05-evidence/corpus/v2/csgeminstance.il.json",
+      "sha256": "ada537a887484b601ef901bc553b7a145f473801ff30b4bd81600f8d5e43928a",
+      "sha256_raw": "ea2621992b125d1e33927c35988f89e2add1321eed51afbff246d41bea8e2bd2",
+      "bytes": 5920106,
+      "targets": [
+        "CSGemInstance"
+      ],
+      "summary": {
+        "types": 99,
+        "methods": 484,
+        "instructions": 45910,
+        "strings": 117,
+        "numeric_constants": 15002,
+        "call_edges": 12486
+      }
+    },
+    "csdatas": {
+      "assembly": "CSDatas",
+      "path": "05-evidence/corpus/v2/csdatas.il.json",
+      "sha256": "27a52ccd5d57838aff09a84bb71ec0586534b2a1f179ee722623ec9f76c7cfe0",
+      "sha256_raw": "e1ca0555cace1302f6c62f579604a253ad77c476c01a92c3fe670e3060e3ff41",
+      "bytes": 1447637,
+      "targets": [
+        "CSDatas"
+      ],
+      "summary": {
+        "types": 55,
+        "methods": 612,
+        "instructions": 12470,
+        "strings": 74,
+        "numeric_constants": 285,
+        "call_edges": 2789
+      }
+    }
+  },
+  "d_only": {
+    "policy": "All writes resolve under D:; the harness refuses any other output root.",
+    "guard": {
+      "attempted": "C:\\REA-LAB-v2-guard-test.json",
+      "exit_code": 3,
+      "refused": true
+    }
+  }
+}
