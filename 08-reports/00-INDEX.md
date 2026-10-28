@@ -31,7 +31,7 @@
 8. `08-content-localization-settings.md` — 81 patchwire vocabulary, content taxonomy, 18 locales, settings that change behaviour, extraction backlog.
 
 ### Swift package (`07-ios-handoff/JewelryKit`)
-`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, tests with real `.mgm` fixtures, GitHub Actions workflow. Compilation has not been run locally; the workflow is the gate.
+`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, tests with real `.mgm` fixtures. CI compiles and tests the package on Linux and macOS 15 and builds the app for the iPhone/iPad simulator; device builds need a signing team.
 
 ### Evidence (`04-index`, `05-evidence`)
 * `symbols.sqlite` — 225 managed assemblies, 35,645 types, 303,780 methods, 75,497 properties, 155,009 fields, 91,902 strings, 1,379,497 call edges.
