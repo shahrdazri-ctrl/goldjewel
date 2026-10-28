@@ -7,6 +7,11 @@ import XCTest
 /// creates and edits a project, toggles every geometry family, proves the
 /// preview's accessibility geometry and sampled pixels changed, then relaunches
 /// and proves the document and the toggles came back.
+///
+/// XCTest's UI APIs are main-actor isolated in the Swift 6 SDK, so the whole
+/// case runs on the main actor. Setup happens inside the test rather than in
+/// `setUpWithError`, whose override must stay nonisolated.
+@MainActor
 final class GoldJewelRuntimeTests: XCTestCase {
     private var app: XCUIApplication!
 
@@ -14,13 +19,11 @@ final class GoldJewelRuntimeTests: XCTestCase {
         UIDevice.current.userInterfaceIdiom == .pad ? "iPad" : "iPhone"
     }
 
-    override func setUpWithError() throws {
+    func testProjectEditingRenderingAndPersistence() throws {
         continueAfterFailure = false
         app = XCUIApplication()
         relaunch(reset: true)
-    }
 
-    func testProjectEditingRenderingAndPersistence() throws {
         let newProject = app.buttons["new-project"]
         XCTAssertTrue(newProject.waitForExistence(timeout: 30),
                       "\(deviceName): project list never appeared")

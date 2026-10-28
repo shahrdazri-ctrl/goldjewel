@@ -68,6 +68,19 @@ def run(cmd: list[str], timeout: int, log_path: str | None = None):
             handle.close()
 
 
+def compiler_errors(log_path: str) -> list[str]:
+    """Return the compiler diagnostics from a full xcodebuild log."""
+    try:
+        with open(log_path, encoding="utf-8", errors="replace") as handle:
+            lines = handle.readlines()
+    except OSError:
+        return []
+    selected = [line.rstrip() for line in lines if "error:" in line]
+    if not selected:
+        selected = [line.rstrip() for line in lines if "TEST BUILD FAILED" in line]
+    return selected[-40:]
+
+
 def simulator_devices() -> list[dict]:
     code, output = run(
         ["xcrun", "simctl", "list", "devices", "available", "-j"],
@@ -124,7 +137,10 @@ def build_for_testing(device: dict) -> None:
         log_path=log,
     )
     if code != 0:
-        print(output[-8000:] if output else "")
+        errors = compiler_errors(log)
+        if errors:
+            print("\n".join(errors), file=sys.stderr)
+        print(output[-4000:] if output else "")
         print(f"runtime gate: build-for-testing failed (exit {code}); log at {log}", file=sys.stderr)
         raise SystemExit(1)
     print("runtime gate: built test bundle")
