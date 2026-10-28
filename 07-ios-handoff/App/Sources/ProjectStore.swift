@@ -132,7 +132,11 @@ final class ProjectStore: ObservableObject {
             guard let project = selectedProject, let assembly = project.assembly else {
                 return "The selected project does not build"
             }
-            return "Rebuilt \(assembly.triangleCount.formatted()) triangles"
+            return "Rebuilt \(assembly.triangleCount.formatted()) triangles across \(assembly.partTiers.count) graded families"
+        case "GetActiveBuilderId":
+            return selectedID?.uuidString ?? "No active builder"
+        case "GetAllBuilderGuids":
+            return projects.map(\.id.uuidString).joined(separator: ", ")
         case "GetRingSizeRegionAbrvs":
             return RingSizeCatalog.bundled.regions.map(\.abbreviation).joined(separator: ", ")
         case "GetRingSizesFromRegionAbrv":

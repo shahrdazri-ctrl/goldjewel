@@ -24,6 +24,8 @@ OUTPUT = os.path.join(ROOT, "07-ios-handoff", "App", "Sources", "OperationCatalo
 WIRED = {
     "ExecuteBuilderCommand",
     "DeleteBuilder",
+    "GetActiveBuilderId",
+    "GetAllBuilderGuids",
     "ReadJsonFromDocument",
     "WriteJsonToDocument",
     "GetActiveDocPath",

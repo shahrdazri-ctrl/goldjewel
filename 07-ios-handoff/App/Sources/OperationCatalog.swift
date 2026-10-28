@@ -14,7 +14,9 @@ enum OperationCatalog {
     static let wired: Set<String> = [
         "DeleteBuilder",
         "ExecuteBuilderCommand",
+        "GetActiveBuilderId",
         "GetActiveDocPath",
+        "GetAllBuilderGuids",
         "GetCurrentFileIsModified",
         "GetDefaultRingSizeRegionAbrv",
         "GetRingSizeRegionAbrvs",
