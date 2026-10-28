@@ -91,6 +91,9 @@ final class GoldJewelRuntimeTests: XCTestCase {
         XCTAssertEqual(summary.label,
                        "88 v1 operations · 12 wired · 76 entry points",
                        "\(deviceName): the operations summary does not match the catalogue")
+        let operationsDone = app.buttons["operations-done"]
+        XCTAssertTrue(operationsDone.waitForExistence(timeout: 10),
+                      "\(deviceName): the operations sheet has no Done button")
         attachFullScreen("07-operations-sheet")
 
         for id in Self.wiredOperations {
@@ -135,9 +138,14 @@ final class GoldJewelRuntimeTests: XCTestCase {
                       "\(deviceName): running a wired operation produced no result")
         leaveOperationDetail()
 
-        let operationsDone = app.buttons["operations-done"]
+        // Search mode replaces the navigation bar's trailing item, so leave it
+        // before dismissing the sheet.
+        let cancelSearch = app.buttons["Cancel"]
+        if cancelSearch.exists && cancelSearch.isHittable {
+            cancelSearch.tap()
+        }
         XCTAssertTrue(operationsDone.waitForExistence(timeout: 10),
-                      "\(deviceName): the operations sheet has no Done button")
+                      "\(deviceName): the operations sheet has no Done button after searching")
         operationsDone.tap()
         XCTAssertTrue(summary.waitForNonExistence(timeout: 15),
                       "\(deviceName): the operations sheet did not close")
