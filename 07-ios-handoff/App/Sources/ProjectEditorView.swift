@@ -26,8 +26,11 @@ struct ProjectEditorView: View {
             }
             .frame(maxWidth: 760, alignment: .leading)
             .padding(18)
-            .frame(maxWidth: .infinity)
         }
+        // The fill belongs on the scroll view, not its content: inside the
+        // scroll view it can resolve against the content's ideal width and let
+        // the editor overflow a narrow detail column on iPad.
+        .frame(maxWidth: .infinity)
         .accessibilityIdentifier("editor-scroll")
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.inline)
