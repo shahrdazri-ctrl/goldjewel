@@ -1,0 +1,22 @@
+--- 02-toolchain/npm-global/node_modules/rea-agents/dist/dotnet/ManagedDecodeBudget.js.orig
++++ 02-toolchain/npm-global/node_modules/rea-agents/dist/dotnet/ManagedDecodeBudget.js
+@@ -2,7 +2,7 @@
+ import { jsonStringByteLength } from "../domain/jsonStringByteLength.js";
+ import { ManagedReaderFailure } from "./ManagedReaderFailure.js";
+ /** Per-inspection capacity for eagerly retained metadata and its JSON projection. */
+-const MAX_METADATA_REPRESENTATION_BYTES = 64 * 1024 * 1024;
++const MAX_METADATA_REPRESENTATION_BYTES = 1024 * 1024 * 1024;
+ /** The capacity owner's diagnostic, also used to admit a recovery envelope. */
+ export class ManagedRepresentationFailure extends ManagedReaderFailure {
+     constructor(offset) {
+--- 02-toolchain/npm-global/node_modules/rea-agents/dist/cli-runtime/ManagedSnapshot-C5h4avgc.js.orig
++++ 02-toolchain/npm-global/node_modules/rea-agents/dist/cli-runtime/ManagedSnapshot-C5h4avgc.js
+@@ -61,7 +61,7 @@
+ 	return (init_ManagedDecodeBudget = __esmMin((() => {
+ 		init_jsonStringByteLength();
+ 		init_ManagedReaderFailure();
+-		MAX_METADATA_REPRESENTATION_BYTES = 64 * 1024 * 1024;
++		MAX_METADATA_REPRESENTATION_BYTES = 1024 * 1024 * 1024;
+ 		ManagedRepresentationFailure = class extends ManagedReaderFailure {
+ 			constructor(offset) {
+ 				super({

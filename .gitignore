@@ -2,8 +2,13 @@
 01-target/
 02-toolchain/
 03-decompiled/
-05-evidence/rea/
+05-evidence/rea/*.json
+05-evidence/rea/_superseded/
+!05-evidence/rea/README.md
+!05-evidence/rea/*.csv
+!05-evidence/rea/*.patch
 09-logs/
+04-index/errors.log
 _snapshots/
 04-index/raw/
 04-index/symbols.sqlite

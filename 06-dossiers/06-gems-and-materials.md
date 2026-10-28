@@ -30,7 +30,7 @@ public DiamondRound() : base(GemTableType.Diamond, GemTableShape.Round,
                              new List<int> { -6, -5, -4, -3, -2, -1, 1, 2 }) { }
 ```
 
-Each version returns its own `IEnumerable<GemSizeBase>`. Entries are `GemSizeRectangle`/`GemSizeRectanglePercent(width, height, depthPercent)`; round brilliant uses a constant **61.5 %** depth across sizes 0.8–... mm. Version selection matters: designs saved by older MatrixGold reference older table versions, and the same "1 ct round" can differ by tenths of a millimetre between versions.
+Each version returns its own `IEnumerable<GemSizeBase>`. Entries are `GemSizeRectangle`/`GemSizeRectanglePercent(width, height, depthPercent)`; round brilliant uses a constant **61.5 %** depth across the size range (starting at 1.0 mm in three table versions and 0.8 mm in the other five). Version selection matters: designs saved by older MatrixGold reference older table versions, and the same "1 ct round" can differ by tenths of a millimetre between versions.
 
 **Recovered data contract**
 
@@ -109,7 +109,7 @@ Full member set (authoritative, from `[DataMember]`):
 
 | Asset | Count | Notes |
 |---|---:|---|
-| `.mgm` materials | 257 | PascalCase JSON, `Id` GUIDs, ~584 KB each for render gems |
+| `.mgm` materials | 257 | PascalCase JSON, `Id` GUIDs, ~590 KB average for render gems |
 | `.mgstyle` stylesheets | 25 | 30 MB total stylesheet content |
 | `.mge` environments | 16 | render environment definitions |
 | `.3dm` gem/component models | 903 | 1.14 GB |

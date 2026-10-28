@@ -25,7 +25,7 @@
 2. `02-document-model-persistence.md` — **designs are JSON/gzip**, exact file format and schema, import/GUID remap, undo.
 3. `03-presentation-layer.md` — 4,205 binding facts, 117 XAML files, screen weights, the single `CommandUpdateGraphFromUI` contract, SwiftUI architecture.
 4. `04-geometry-kernel.md` — Rhino call profile, Clipper 2D layer, NURBS contract, transform nodes, tolerance model, iOS kernel options.
-5. `05-parametric-construction.md` — the block graph contract, 300-node taxonomy, head/prong/bezel/halo algorithms, cutters, JSON persistence, porting order.
+5. `05-parametric-construction.md` — the block graph contract, 408-node taxonomy (731 with legacy), head/prong/bezel/halo algorithms, cutters, JSON persistence, porting order.
 6. `06-gems-and-materials.md` — versioned gem size tables, 55-field `.mgm` material model, metal identity, specific gravity, PBR mapping.
 7. `07-ring-sizing.md` — 22 regions, exact closed-form formulas, table semantics, **7,005 executed golden vectors**.
 8. `08-content-localization-settings.md` — 81 patchwire vocabulary, content taxonomy, 18 locales, settings that change behaviour, extraction backlog.
@@ -37,7 +37,8 @@
 * `symbols.sqlite` — 225 managed assemblies, 35,645 types, 303,780 methods, 75,497 properties, 155,009 fields, 91,902 strings, 1,379,497 call edges.
 * `xaml-bindings.csv` — 4,205 binding/command facts from 117 decompiled BAML files.
 * `05-evidence/vectors/ring-sizes.json` — 7,005 sizes executed from the real assembly.
-* `05-evidence/rea/` — PE/CLI evidence bundles for the 14 core assemblies.
+* `05-evidence/rea/` — PE/CLI evidence bundles for the 14 core assemblies, all `coverage=complete` (31,875 methods).
+* `03-decompiled/il/` — per-assembly CIL for all 35 first-party assemblies (41,460 `.method` directives, 111.6 MB).
 
 ---
 
@@ -53,6 +54,7 @@ python D:\REA-LAB\04-index\build_ledger.py
 
 # 3. decompile + XAML
 powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\decompile.ps1
+powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\emit-il.ps1
 powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\baml.ps1
 python D:\REA-LAB\04-index\xaml_bindings.py
 
@@ -65,7 +67,7 @@ python D:\REA-LAB\04-index\validate_handoff.py
 
 ## Ground truth
 
-* Target frozen read-only at `01-target/mirror`; `01-target/target-manifest.csv` holds SHA-256 per file (2,688 files, 1.81 GB).
+* Target frozen read-only at `01-target/mirror`; `01-target/target-manifest.csv` holds SHA-256 per file (2,688 files, 1.81 GiB).
 * No PDBs ship with the product: dossiers cite **types, methods, IL evidence and file paths**, never invented source line numbers.
 * Obfuscation: Red Gate SmartAssembly. Method names are mangled; **namespaces, type names (44.8 %), property names, field names, strings, XAML and all data formats survive**. Dossiers are built on the surviving surface plus call-graph and behavioural evidence.
 * Licensing/auth code is a stated boundary and is not analysed (Dossier 01, section 6).

@@ -156,4 +156,4 @@ select p.name, p.type from properties p join types t on t.id=p.type_id
 where t.full_name='CS.CSApplication' and p.name like 'CS%Path%';
 ```
 
-Sources: `03-decompiled/raw/MatrixGold/MatrixGold/App.cs`, `MatrixGold/MainWindow.cs`, `03-decompiled/raw/Common/Common.Helpers/RhinoStartup*.cs` (duplicated across three Common copies), `03-decompiled/raw/MatrixGoldPlugin/**`.
+Sources: `03-decompiled/raw/MatrixGold/MatrixGold/App.cs`, `MatrixGold/MatrixGold/MainWindow.cs`, `03-decompiled/raw/Common/Common.Helpers/RhinoStartup*.cs` (duplicated across three Common copies), `03-decompiled/raw/MatrixGoldPlugin/**`.

@@ -61,7 +61,7 @@ Main/MatrixGold/
 | `.3dm` component/collection files | 903 | 1.14 GB, Rhino geometry |
 | `.mgm` materials | 257 | Dossier 06 |
 | `.mgstyle` style sheets | 25 | saved graph fragments |
-| `.pat` patterns | 61 | pattern definitions for `SmartPattern`/texture |
+| `.pat` patterns | 62 | pattern definitions for `SmartPattern`/texture |
 | locale resource assemblies | 91 | 18 locales across assemblies |
 
 **Style sheets are documents.** `JSonDocumentWriter.WriteCSFile(..., styleSheetSave: true)` writes `PreviewBitmap` + `StyleSheetDescription` and the same `Graph`/`MaterialGroups`/`GemTable` sections. A `.mgstyle` is therefore a **saved graph fragment**, not a theme file. Import = the `ImportCSFile` merge path (Dossier 02). This is how "apply a style" works: merge a prepared sub-graph into the current design.

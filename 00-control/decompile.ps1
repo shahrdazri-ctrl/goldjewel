@@ -10,8 +10,13 @@ $outRoot = 'D:\REA-LAB\03-decompiled\raw'
 $log = 'D:\REA-LAB\09-logs\decompile.log'
 New-Item -ItemType Directory -Force -Path $outRoot | Out-Null
 
-$pattern = '^(MatrixGold|SharedTypes|MatrixCommon|Common(\..*)?|Localization(Core)?|CS[A-Z].*|CS|GV[A-Z].*|Gemvision.*|SuperView|Viewport2D|MeshAPI|DebugDraw|ToastNotifications.*|Stuller.*|EventSystemNuGetPackage|MatrixGoldSkin)$'
+$pattern = '^(MatrixGold|MatrixGoldPlugin|MatrixGoldRenderPlugin|CommonServiceLocator|SharedTypes|MatrixCommon|Common(\..*)?|Localization(Core)?|CS[A-Z].*|CS|GV[A-Z].*|Gemvision.*|SuperView|Viewport2D|MeshAPI|DebugDraw|ToastNotifications.*|Stuller.*|EventSystemNuGetPackage|MatrixGoldSkin)$'
 $summary = Import-Csv 'D:\REA-LAB\04-index\summary.csv'
+$summaryPath = 'D:\REA-LAB\03-decompiled\decompile-summary.csv'
+$existing = @{}
+if (Test-Path $summaryPath) {
+    foreach ($r in (Import-Csv $summaryPath)) { $existing[$r.assembly] = $r }
+}
 
 $candidates = @{}
 foreach ($row in $summary) {
@@ -26,7 +31,7 @@ foreach ($row in $summary) {
     }
 }
 
-$rows = @()
+$rows = @($existing.Values)
 foreach ($c in ($candidates.Values | Sort-Object assembly)) {
     $out = Join-Path $outRoot $c.assembly
     if (Test-Path (Join-Path $out "$($c.assembly).csproj")) {
@@ -50,12 +55,14 @@ foreach ($c in ($candidates.Values | Sort-Object assembly)) {
         $xaml = @(Get-ChildItem $out -Recurse -File -Filter *.xaml).Count
         $bytes = (Get-ChildItem $out -Recurse -File | Measure-Object Length -Sum).Sum
     }
+    $rows = @($rows | Where-Object { $_.assembly -ne $c.assembly })
     $rows += [pscustomobject]@{ assembly = $c.assembly; exit = $code; cs = $cs; xaml = $xaml; bytes = $bytes; seconds = $elapsed }
     "=== $($c.assembly) exit=$code cs=$cs xaml=$xaml bytes=$bytes ${elapsed}s ===" | Out-File -FilePath $log -Append -Encoding utf8
     if ($output.Trim().Length -gt 0) { $output | Out-File -FilePath $log -Append -Encoding utf8 }
     if ($code -ne 0) { Write-Warning "ilspycmd exit $code for $($c.assembly)" }
 }
 
-$rows | Export-Csv -LiteralPath 'D:\REA-LAB\03-decompiled\decompile-summary.csv' -NoTypeInformation -Encoding UTF8
+$rows = @($rows | Sort-Object assembly)
+$rows | Export-Csv -LiteralPath $summaryPath -NoTypeInformation -Encoding UTF8
 $rows | Format-Table -AutoSize | Out-String -Width 140 | Write-Host
-Write-Host ("TOTAL cs={0} xaml={1} bytes={2:N1}MB" -f (($rows | Measure-Object cs -Sum).Sum), (($rows | Measure-Object xaml -Sum).Sum), (($rows | Measure-Object bytes -Sum).Sum / 1MB))
+Write-Host ("TOTAL assemblies={0} cs={1} xaml={2} bytes={3:N1}MB" -f $rows.Count, (($rows | Measure-Object cs -Sum).Sum), (($rows | Measure-Object xaml -Sum).Sum), (($rows | Measure-Object bytes -Sum).Sum / 1MB))

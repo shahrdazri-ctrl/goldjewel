@@ -13,7 +13,7 @@ MatrixGold does not store finished meshes. It stores a **directed graph of param
 Two consequences the iOS team must internalise:
 
 1. **The unit of persistence is the graph, not the mesh.** Meshes are a cache. Any iOS design that saves only geometry cannot support parameter editing and will not match MatrixGold's behaviour.
-2. **Block granularity is the product's vocabulary.** There is no "make ring" function; there are ~300 block types (heads, prong placers, bezels, halo builders, channel cutters, shanks, rails), each independently parameterised.
+2. **Block granularity is the product's vocabulary.** There is no "make ring" function; there are **408 current-generation block types** (731 including obsolete/legacy namespaces) — heads, prong placers, bezels, halo builders, channel cutters, shanks, rails — each independently parameterised.
 
 ---
 
@@ -97,7 +97,7 @@ Current-generation anchors to port, with method counts:
 
 | Type | Methods | Why it matters |
 |---|---:|---|
-| `CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder` | 21 + `Update` | The head/basket generator used by the current UI |
+| `CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder` | 5 (incl. `Update`, `CSHeadFinish`) | The head/basket generator used by the current UI |
 | `CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam` | 54 | Prong parameterisation (tip, dome, rail, blend) |
 | `CSBlocks.Settings.CSProngPlacerGC` | 19 | Generic prong placement along a curve/rail |
 | `CSBlocks.Settings.CSClusterProngPlacer` | 16 | Cluster/halo prong placement |
@@ -113,7 +113,7 @@ Current-generation anchors to port, with method counts:
 
 ## 4. The head builder (the most valuable algorithm)
 
-`CSHeadBuilderV2.CSHeadBuilder` declares only 21 methods but the file is 99 KB — the work lives in `Update()` and in `CSHeadFinish`. Recovered control flow:
+`CSHeadBuilderV2.CSHeadBuilder` declares only **5 methods** (`.ctor`, `Update`, `CSHeadFinish`, two `PullToBase` overloads) but the file is 99 KB — the work lives in `Update()` and in `CSHeadFinish`. Recovered control flow:
 
 ```
 Update()

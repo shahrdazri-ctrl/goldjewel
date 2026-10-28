@@ -11,7 +11,7 @@
 |---|---:|
 | BAML -> XAML files decompiled | **117 / 117** (zero failures) |
 | Extracted binding/command facts | **4,205** |
-| Distinct binding paths | **1,169** |
+| Distinct binding paths | **1,168** non-empty |
 | Distinct commands | **366** (`Command*` identifiers: 286) |
 | Views (`MatrixGold.Views`) | 55 |
 | View-models (`MatrixGold.ViewModels`) | 39 |
@@ -116,7 +116,7 @@ App
  ├ ViewportView (RealityKit / Metal)    // tessellated B-rep cache
  ├ InspectorPanel                       // builder parameters
  ├ BlockOutliner                        // layers/categories
- ├ CommandPalette                       // 1,169 binding paths -> actions
+ ├ CommandPalette                       // 1,168 binding paths -> actions
  └ Reports (weights, gems, cost)
 ```
 
@@ -136,7 +136,7 @@ Layout for iPadOS:
 The original ships **18 locales** and every enum is localised through `EnumToLocalizedStringConverter` / `ContextActionNameLocalizationConverter`. Two consequences:
 
 1. Design strings as `LocalizedStringKey` from day one; do not hardcode English labels in views.
-2. Dynamic Type: 1,169 binding paths include fixed widths (`BuilderWidthConverter`, `ElementWidthConverter`). Replace fixed widths with layout priorities so accessibility sizes do not clip.
+2. Dynamic Type: 1,168 binding paths include fixed widths (`BuilderWidthConverter`, `ElementWidthConverter`). Replace fixed widths with layout priorities so accessibility sizes do not clip.
 
 ---
 
