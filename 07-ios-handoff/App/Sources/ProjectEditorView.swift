@@ -28,6 +28,7 @@ struct ProjectEditorView: View {
             .padding(18)
             .frame(maxWidth: .infinity)
         }
+        .accessibilityIdentifier("editor-scroll")
         .navigationTitle(project.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {

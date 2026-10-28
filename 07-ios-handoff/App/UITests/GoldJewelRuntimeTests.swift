@@ -114,8 +114,16 @@ final class GoldJewelRuntimeTests: XCTestCase {
         let gemSlider = app.sliders["gem-diameter"]
         scrollTo(gemSlider)
         let beforeGem = try capture("10-before-gem", preview: preview)
+        let beforeGemValue = preview.value as? String
         gemSlider.adjust(toNormalizedSliderPosition: 0.72)
-        Thread.sleep(forTimeInterval: 0.8)
+        // A jump from 6.5 mm to nearly 10 mm rebuilds every family. Wait for
+        // the new mesh to be published instead of assuming a fixed pause.
+        let rebuilt = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "exists == true AND value != %@", beforeGemValue ?? ""),
+            object: preview
+        )
+        XCTAssertEqual(XCTWaiter.wait(for: [rebuilt], timeout: 30), .completed,
+                       "\(deviceName): the preview did not rebuild after the gem diameter changed")
         step("gem moved")
         let afterGem = try capture("11-gem-larger", preview: preview)
         XCTAssertGreaterThan(afterGem.difference(from: beforeGem), 0.01,
@@ -279,7 +287,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// the content and its centre, so a gesture there rotates the head; the
     /// margin is a few points left of the preview and of every slider.
     private func dragWithinMargin(fromY: CGFloat, toY: CGFloat) {
-        let frame = app.scrollViews.firstMatch.frame
+        let frame = editorScrollView.frame
         let x = frame.minX + 10
         let start = app.coordinate(withNormalizedOffset: .zero)
             .withOffset(CGVector(dx: x, dy: frame.minY + frame.height * fromY))
@@ -287,6 +295,16 @@ final class GoldJewelRuntimeTests: XCTestCase {
             .withOffset(CGVector(dx: x, dy: frame.minY + frame.height * toY))
         start.press(forDuration: 0.2, thenDragTo: end)
         Thread.sleep(forTimeInterval: 0.5)
+    }
+
+    /// The iPad split view contains the sidebar list and the editor. Selecting
+    /// the first scroll view would scroll the sidebar, so use the editor's
+    /// identifier and fall back to the widest scroll view if it is flattened.
+    private var editorScrollView: XCUIElement {
+        let named = app.scrollViews["editor-scroll"]
+        if named.exists { return named }
+        let all = app.scrollViews.allElementsBoundByIndex
+        return all.max { $0.frame.width < $1.frame.width } ?? app.scrollViews.firstMatch
     }
 
     private func returnToProjectList() {
@@ -311,7 +329,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
 
     private func capture(_ name: String, preview: XCUIElement) throws -> PreviewFrame {
         scrollToTop()
-        XCTAssertTrue(preview.waitForExistence(timeout: 10),
+        XCTAssertTrue(preview.waitForExistence(timeout: 30),
                       "\(deviceName): preview disappeared before \(name)")
         let screenshot = preview.screenshot()
         attach(screenshot, name: "\(deviceName)-\(name)")
