@@ -25,16 +25,26 @@ final class GoldJewelRuntimeTests: XCTestCase {
         relaunch(reset: true)
 
         let newProject = app.buttons["new-project"]
-        XCTAssertTrue(newProject.waitForExistence(timeout: 30),
+        // On iPhone the compact split view can restore the selected project's
+        // detail at launch, so walk back to the list before looking for its
+        // toolbar button.
+        if !newProject.waitForExistence(timeout: 6) {
+            returnToProjectList()
+        }
+        XCTAssertTrue(newProject.waitForExistence(timeout: 20),
                       "\(deviceName): project list never appeared")
         newProject.tap()
 
         let rows = app.descendants(matching: .any).matching(identifier: "project-row")
-        XCTAssertTrue(waitForCount(rows, atLeast: 2, timeout: 10),
-                      "\(deviceName): creating a project did not add a row")
-        rows.element(boundBy: rows.count - 1).tap()
-
         let preview = app.descendants(matching: .any)["head-preview"]
+        // Selecting the new project pushes the editor on iPhone but leaves the
+        // list visible on iPad, so accept either, then require the row to exist
+        // when the list is still on screen.
+        if !preview.waitForExistence(timeout: 12) {
+            XCTAssertTrue(waitForCount(rows, atLeast: 2, timeout: 10),
+                          "\(deviceName): creating a project did not add a row")
+            rows.element(boundBy: rows.count - 1).tap()
+        }
         XCTAssertTrue(preview.waitForExistence(timeout: 30),
                       "\(deviceName): editor did not show the head preview")
         waitForPreviewGeometry(preview)
@@ -57,7 +67,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         setToggle("rail-toggle", on: false, preview: preview)
         let withoutRail = try capture("03-rail-off", preview: preview)
         XCTAssertGreaterThan(withoutRail.difference(from: beforeRail), 0.005,
-                             "\(deviceName): switching the gallery off did not change a pixel")
+                             "\(deviceName): switching the gallery off changed only \(withoutRail.difference(from: beforeRail)) of the preview")
         setToggle("rail-toggle", on: true, preview: preview)
 
         // Prong domes (on by default).
@@ -65,7 +75,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         setToggle("dome-toggle", on: false, preview: preview)
         let withoutDome = try capture("05-dome-off", preview: preview)
         XCTAssertGreaterThan(withoutDome.difference(from: beforeDome), 0.005,
-                             "\(deviceName): switching the dome off did not change a pixel")
+                             "\(deviceName): switching the dome off changed only \(withoutDome.difference(from: beforeDome)) of the preview")
         setToggle("dome-toggle", on: true, preview: preview)
 
         // Bezel (off by default).
@@ -73,14 +83,14 @@ final class GoldJewelRuntimeTests: XCTestCase {
         setToggle("bezel-toggle", on: true, preview: preview)
         let withBezel = try capture("07-bezel-on", preview: preview)
         XCTAssertGreaterThan(withBezel.difference(from: beforeBezel), 0.005,
-                             "\(deviceName): enabling the bezel did not change a pixel")
+                             "\(deviceName): enabling the bezel changed only \(withBezel.difference(from: beforeBezel)) of the preview")
 
         // Halo (off by default).
         let beforeHalo = try capture("08-before-halo", preview: preview)
         setToggle("halo-toggle", on: true, preview: preview)
         let withHalo = try capture("09-halo-on", preview: preview)
         XCTAssertGreaterThan(withHalo.difference(from: beforeHalo), 0.005,
-                             "\(deviceName): enabling the halo did not change a pixel")
+                             "\(deviceName): enabling the halo changed only \(withHalo.difference(from: beforeHalo)) of the preview")
 
         // A parameter change that keeps the topology but moves the geometry.
         let gemSlider = app.sliders["gem-diameter"]
@@ -90,7 +100,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         Thread.sleep(forTimeInterval: 0.8)
         let afterGem = try capture("11-gem-larger", preview: preview)
         XCTAssertGreaterThan(afterGem.difference(from: beforeGem), 0.01,
-                             "\(deviceName): moving the gem slider did not change the head")
+                             "\(deviceName): moving the gem slider changed only \(afterGem.difference(from: beforeGem)) of the head")
 
         attachFullScreen("12-final")
         app.terminate()
@@ -102,6 +112,9 @@ final class GoldJewelRuntimeTests: XCTestCase {
             .matching(identifier: "project-row")
             .matching(NSPredicate(format: "label CONTAINS 'Runtime Gate'"))
             .firstMatch
+        if !savedRow.waitForExistence(timeout: 6) {
+            returnToProjectList()
+        }
         XCTAssertTrue(savedRow.waitForExistence(timeout: 20),
                       "\(deviceName): the edited project did not survive relaunch")
         savedRow.tap()
@@ -178,21 +191,33 @@ final class GoldJewelRuntimeTests: XCTestCase {
                        "\(deviceName): preview never reported its triangle count")
     }
 
+    /// The editor is a single long scroll view and the controls are exercised
+    /// out of document order, so every lookup starts by returning to the top
+    /// and then scrolls down. Scrolling only downward could never reach a
+    /// control that sits above the current position.
     private func scrollTo(_ element: XCUIElement) {
-        for _ in 0..<14 {
+        scrollToTop()
+        for _ in 0..<16 {
             if element.exists && element.isHittable { return }
             app.swipeUp()
         }
         XCTFail("\(deviceName): could not scroll to \(element)")
     }
 
-    private func scrollToTop(preview: XCUIElement) {
-        if app.statusBars.firstMatch.exists {
-            app.statusBars.firstMatch.tap()
-        }
-        for _ in 0..<4 {
+    private func scrollToTop() {
+        let preview = app.descendants(matching: .any)["head-preview"]
+        for _ in 0..<12 {
             if preview.isHittable { return }
             app.swipeDown()
+        }
+    }
+
+    private func returnToProjectList() {
+        let back = app.navigationBars.buttons.matching(
+            NSPredicate(format: "label == 'Projects' OR label BEGINSWITH 'Back'")
+        ).firstMatch
+        if back.waitForExistence(timeout: 4) {
+            back.tap()
         }
     }
 
@@ -208,7 +233,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     // MARK: - Screenshots and pixels
 
     private func capture(_ name: String, preview: XCUIElement) throws -> PreviewFrame {
-        scrollToTop(preview: preview)
+        scrollToTop()
         XCTAssertTrue(preview.waitForExistence(timeout: 10),
                       "\(deviceName): preview disappeared before \(name)")
         let screenshot = preview.screenshot()
@@ -233,6 +258,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
 
 /// A 48×48 luminance sample of the preview plus the fraction of cells bright
 /// enough to be metal or a gem rather than the dark canvas background.
+@MainActor
 struct PreviewFrame {
     let luminance: [UInt8]
     let inkRatio: Double
