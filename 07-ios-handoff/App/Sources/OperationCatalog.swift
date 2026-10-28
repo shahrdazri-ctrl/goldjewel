@@ -10,23 +10,23 @@ struct AppOperation: Identifiable, Hashable {
     var isWired: Bool { OperationCatalog.wired.contains(id) }
 }
 
+enum WiredOperation: String, CaseIterable, Sendable {
+    case deleteBuilder = "DeleteBuilder"
+    case executeBuilderCommand = "ExecuteBuilderCommand"
+    case getActiveBuilderId = "GetActiveBuilderId"
+    case getActiveDocPath = "GetActiveDocPath"
+    case getAllBuilderGuids = "GetAllBuilderGuids"
+    case getCurrentFileIsModified = "GetCurrentFileIsModified"
+    case getDefaultRingSizeRegionAbrv = "GetDefaultRingSizeRegionAbrv"
+    case getRingSizeRegionAbrvs = "GetRingSizeRegionAbrvs"
+    case getRingSizesFromRegionAbrv = "GetRingSizesFromRegionAbrv"
+    case readJsonFromDocument = "ReadJsonFromDocument"
+    case setCurrentFileAsNoModified = "SetCurrentFileAsNoModified"
+    case writeJsonToDocument = "WriteJsonToDocument"
+}
+
 enum OperationCatalog {
-    static let wired: Set<String> = [
-        "DeleteBuilder",
-        "ExecuteBuilderCommand",
-        "GetActiveBuilderId",
-        "GetActiveDocPath",
-        "GetAllBuilderGuids",
-        "GetCurrentFileIsModified",
-        "GetDefaultRingSizeRegionAbrv",
-        "GetRingSizeRegionAbrvs",
-        "GetRingSizesFromRegionAbrv",
-        "ReadJsonFromDocument",
-        "ResizeRing",
-        "SetCurrentFileAsNoModified",
-        "SetDefaultRingSizeRegionAbrv",
-        "WriteJsonToDocument",
-    ]
+    static let wired: Set<String> = Set(WiredOperation.allCases.map(\.rawValue))
 
     static let all: [AppOperation] = [
         AppOperation(id: "ActivateBuilderFrom3dm", cluster: "Builders", reason: "core design loop"),

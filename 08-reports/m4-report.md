@@ -87,12 +87,15 @@ hosted runner and was removed rather than reported as a runtime pass.
   (position, width, thickness, offset).
 * **Operation catalog** — `OperationCatalog.swift` is generated from
   `08-reports/capability-matrix.csv`; the sheet lists all **88** v1 operations
-  grouped by cluster, with search and a detail view. **12** are wired to real
-  actions in this shell (save, reload, document path, delete, rebuild, ring
-  lookups, resize placeholder); the other 76 are explicit entry points that
-  report they are pending rather than pretending to run.
+  grouped by cluster, with search and a detail view. **10** are wired to real
+  actions in this shell (save, reload, document path, delete, rebuild and ring
+  lookups); the other 78 are explicit entry points that report they are
+  pending rather than pretending to run. `SetDefaultRingSizeRegionAbrv` and
+  `ResizeRing` are entry points only: this shell has no app-level default
+  region or shank geometry.
 * **Regeneration** — `python Tools/operation_catalog.py` writes the catalog;
-  `--check` fails CI if it drifts from the matrix.
+  `--check` fails CI if it drifts from the matrix or a wired operation has no
+  `ProjectStore` case.
 
 ## What rests on inference
 

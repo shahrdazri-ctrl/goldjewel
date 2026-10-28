@@ -27,7 +27,7 @@ struct OperationsView: View {
         NavigationStack {
             List {
                 Section {
-                    Text("\(OperationCatalog.wired.count) operations are wired to this shell. The rest are registered entry points waiting for their builder family.")
+                    Text("\(OperationCatalog.wired.count) operations are wired to this shell. The rest are registered entry points waiting for an implementation.")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }

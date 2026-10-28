@@ -71,7 +71,7 @@ bezel reconstructed · haloSeats recovered · haloBand reconstructed · haloGems
 |---|---|
 | `python Tools/build_corpus_v2.py --check` | 5 files, 268 types, hashes match |
 | `python Tools/head_geometry_vectors.py --check` | golden vectors match; **19 constants traced to IL** |
-| `python Tools/operation_catalog.py --check` | 88 v1 operations, **14 wired** |
+| `python Tools/operation_catalog.py --check` | 88 v1 operations, **12 wired** |
 | `python 04-index/validate_handoff.py` | 0 failures |
 | `python Tools/m2.py --check` | 50,134-method ledger and 254-operation matrix unchanged |
 | Linux CI | **success** — corpus v2, geometry, catalog and package tests |
@@ -108,10 +108,12 @@ renderer.
 
 **Operations.** `GetActiveBuilderId` and `GetAllBuilderGuids` moved from listed
 entry points to wired behaviour (the selected project is the active builder;
-all project IDs are the builder GUIDs). That raises the wired count from 12 to
-**14 of 88**. No v1 operation is named for a bezel or halo; those families are
-reached through `ExecuteBuilderCommand`, which now rebuilds and reports every
-graded family.
+all project IDs are the builder GUIDs). The true wired count is **12 of 88**:
+the earlier catalogue counted `SetDefaultRingSizeRegionAbrv` and `ResizeRing`,
+which only returned explanatory strings. Both remain entry points because this
+shell has no app-level default-region setting or shank geometry. No v1
+operation is named for a bezel or halo; those families are reached through
+`ExecuteBuilderCommand`, which now rebuilds and reports every graded family.
 
 ## What still rests on inference
 

@@ -135,52 +135,54 @@ final class ProjectStore: ObservableObject {
         }
     }
 
-    /// Runs the operations this shell actually implements. Every other v1
-    /// operation is listed with an entry point but reports that it is pending.
+    /// Runs the operations this shell actually implements. The wired set is
+    /// generated from `Tools/operation_catalog.py`; switching on the generated
+    /// enum makes a newly wired operation a compile error until it has a case.
     @discardableResult
     func perform(operation id: String) -> String {
-        switch id {
-        case "WriteJsonToDocument":
+        guard let operation = WiredOperation(rawValue: id) else {
+            return "\(id) is in the v1 contract but has no implementation yet."
+        }
+        return perform(operation)
+    }
+
+    private func perform(_ operation: WiredOperation) -> String {
+        switch operation {
+        case .writeJsonToDocument:
             save()
             return "Saved to \(fileURL.lastPathComponent)"
-        case "ReadJsonFromDocument":
+        case .readJsonFromDocument:
             reload()
             return statusMessage ?? "Reloaded"
-        case "GetActiveDocPath":
+        case .getActiveDocPath:
             return fileURL.path
-        case "GetCurrentFileIsModified":
+        case .getCurrentFileIsModified:
             return "Autosave is on; the in-memory projects are always the saved state."
-        case "SetCurrentFileAsNoModified":
+        case .setCurrentFileAsNoModified:
             save()
             return "Marked saved"
-        case "DeleteBuilder":
+        case .deleteBuilder:
             if let selectedID {
                 delete(selectedID)
                 return "Deleted the selected project"
             }
             return "No project selected"
-        case "ExecuteBuilderCommand":
+        case .executeBuilderCommand:
             guard let project = selectedProject, let assembly = project.assembly else {
                 return "The selected project does not build"
             }
             return "Rebuilt \(assembly.triangleCount.formatted()) triangles across \(assembly.partTiers.count) graded families"
-        case "GetActiveBuilderId":
+        case .getActiveBuilderId:
             return selectedID?.uuidString ?? "No active builder"
-        case "GetAllBuilderGuids":
+        case .getAllBuilderGuids:
             return projects.map(\.id.uuidString).joined(separator: ", ")
-        case "GetRingSizeRegionAbrvs":
+        case .getRingSizeRegionAbrvs:
             return RingSizeCatalog.bundled.regions.map(\.abbreviation).joined(separator: ", ")
-        case "GetRingSizesFromRegionAbrv":
+        case .getRingSizesFromRegionAbrv:
             guard let project = selectedProject else { return "No project selected" }
             return "\(RingSizeCatalog.bundled.sizes(for: project.ringRegion).count) sizes in \(project.ringRegion.abbreviation)"
-        case "GetDefaultRingSizeRegionAbrv":
+        case .getDefaultRingSizeRegionAbrv:
             return JewelryProject().ringRegion.abbreviation
-        case "SetDefaultRingSizeRegionAbrv":
-            return "The project stores its own region; the app default is US."
-        case "ResizeRing":
-            return "Ring resizing geometry is not part of the head milestone; the size is stored for the shank builder."
-        default:
-            return "\(id) is in the v1 contract but has no implementation yet."
         }
     }
 

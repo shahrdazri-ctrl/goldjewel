@@ -6,21 +6,24 @@ script writes the Swift table the app shows, so the shell cannot drift from the
 CSV by hand-editing.
 
   python Tools/operation_catalog.py           write App/Sources/OperationCatalog.swift
-  python Tools/operation_catalog.py --check   fail if the Swift file is stale
+  python Tools/operation_catalog.py --check   fail if the Swift file is stale or
+                                              ProjectStore is missing a wired case
 """
 from __future__ import annotations
 
 import argparse
 import csv
 import os
+import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MATRIX = os.path.join(ROOT, "08-reports", "capability-matrix.csv")
 OUTPUT = os.path.join(ROOT, "07-ios-handoff", "App", "Sources", "OperationCatalog.swift")
+STORE = os.path.join(ROOT, "07-ios-handoff", "App", "Sources", "ProjectStore.swift")
 
 # Operations whose behaviour the current app actually performs. Everything else
-# in v1 has a visible entry point but is marked pending its builder family.
+# in v1 has a visible entry point but is marked pending an implementation.
 WIRED = {
     "ExecuteBuilderCommand",
     "DeleteBuilder",
@@ -34,13 +37,64 @@ WIRED = {
     "GetRingSizeRegionAbrvs",
     "GetRingSizesFromRegionAbrv",
     "GetDefaultRingSizeRegionAbrv",
-    "SetDefaultRingSizeRegionAbrv",
-    "ResizeRing",
 }
 
 
 def escape(value: str) -> str:
     return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
+def swift_case(value: str) -> str:
+    return value[:1].lower() + value[1:]
+
+
+def perform_body(text: str) -> str | None:
+    """Return the brace-balanced body of ProjectStore's typed perform switch."""
+    marker = "private func perform(_ operation: WiredOperation) -> String"
+    start = text.find(marker)
+    if start < 0:
+        return None
+    brace = text.find("{", start)
+    if brace < 0:
+        return None
+    depth = 0
+    for index in range(brace, len(text)):
+        char = text[index]
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return text[brace + 1:index]
+    return None
+
+
+def check_store() -> list[str]:
+    """Fail when the generated wired set and the store dispatch disagree."""
+    try:
+        with open(STORE, encoding="utf-8") as handle:
+            text = handle.read()
+    except OSError as error:
+        return [f"cannot read {os.path.relpath(STORE, ROOT)}: {error}"]
+    body = perform_body(text)
+    if body is None:
+        return ["ProjectStore.swift has no perform(_ operation: WiredOperation) switch"]
+    implemented = set(re.findall(r"\bcase \.([A-Za-z0-9_]+):", body))
+    expected = {swift_case(name) for name in WIRED}
+    problems = []
+    missing = sorted(expected - implemented)
+    extra = sorted(implemented - expected)
+    if missing:
+        problems.append(
+            "wired operations have no ProjectStore case: " + ", ".join(missing)
+        )
+    if extra:
+        problems.append(
+            "ProjectStore handles operations that are not wired: " + ", ".join(extra)
+        )
+    if "WiredOperation(rawValue: id)" not in text:
+        problems.append("ProjectStore.perform(operation:) must resolve id through WiredOperation")
+    return problems
 
 
 def generate() -> str:
@@ -67,12 +121,18 @@ def generate() -> str:
         "    var isWired: Bool { OperationCatalog.wired.contains(id) }",
         "}",
         "",
-        "enum OperationCatalog {",
-        "    static let wired: Set<String> = [",
+        "enum WiredOperation: String, CaseIterable, Sendable {",
     ]
     for name in sorted(WIRED):
-        lines.append(f'        "{escape(name)}",')
-    lines += ["    ]", "", "    static let all: [AppOperation] = ["]
+        lines.append(f'    case {swift_case(name)} = "{escape(name)}"')
+    lines += [
+        "}",
+        "",
+        "enum OperationCatalog {",
+        "    static let wired: Set<String> = Set(WiredOperation.allCases.map(\\.rawValue))",
+        "",
+        "    static let all: [AppOperation] = [",
+    ]
     for row in rows:
         lines.append(
             "        AppOperation("
@@ -100,7 +160,15 @@ def main() -> int:
         if open(OUTPUT, encoding="utf-8").read() != text:
             print("OperationCatalog.swift is stale; run Tools/operation_catalog.py", file=sys.stderr)
             return 1
-        print("operation catalog matches the capability matrix")
+        problems = check_store()
+        if problems:
+            for problem in problems:
+                print(problem, file=sys.stderr)
+            return 1
+        print(
+            "operation catalog matches the capability matrix and ProjectStore "
+            f"({len(WIRED)} wired)"
+        )
         return 0
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8", newline="\n") as fh:
