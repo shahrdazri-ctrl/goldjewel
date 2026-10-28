@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import signal
 import subprocess
@@ -29,6 +30,117 @@ PROJECT = os.path.join(APP_DIR, "GoldJewel.xcodeproj")
 SCHEME = "GoldJewel"
 RUN_TIMEOUT = 1000
 BUILD_TIMEOUT = 900
+SHUTDOWN_TIMEOUT = 60
+EXPORT_TIMEOUT = 180
+DISCOVERY_TIMEOUT = 120
+DISCOVERY_ATTEMPTS = 3
+RETRY_DELAY = 5
+ATTEMPTS_PER_DEVICE = 2
+DEVICE_COUNT = 2
+TEST_ALLOWANCE = 780
+# Time outside the runner: xcodegen, the generic build, and artifact uploads.
+WORKFLOW_OVERHEAD = 1200
+# Required headroom below the workflow timeout.
+MIN_BUDGET_MARGIN = 600
+PINNED_DEVICES = {
+    "iphone": ("iPhone SE (3rd generation)", "18.6"),
+    "ipad": ("iPad mini (A17 Pro)", "18.6"),
+}
+WORKFLOW_PATH = os.path.join(REPO_ROOT, ".github", "workflows", "ios-simulator.yml")
+
+
+def worst_case_seconds() -> dict[str, int]:
+    """Sum every bounded wait the gate can perform, in seconds."""
+    discovery = (
+        DISCOVERY_TIMEOUT * DISCOVERY_ATTEMPTS
+        + RETRY_DELAY * (DISCOVERY_ATTEMPTS - 1)
+    )
+    per_device = (
+        ATTEMPTS_PER_DEVICE * RUN_TIMEOUT
+        + ATTEMPTS_PER_DEVICE * SHUTDOWN_TIMEOUT
+        + (ATTEMPTS_PER_DEVICE - 1) * RETRY_DELAY
+        + EXPORT_TIMEOUT
+    )
+    devices = DEVICE_COUNT * per_device
+    gate = discovery + BUILD_TIMEOUT + devices
+    return {
+        "discovery": discovery,
+        "build": BUILD_TIMEOUT,
+        "per_device": per_device,
+        "devices": devices,
+        "gate": gate,
+        "job": gate + WORKFLOW_OVERHEAD,
+    }
+
+
+def _minutes(seconds: int) -> str:
+    return f"{seconds / 60:.1f} min"
+
+
+def read_workflow_timeouts(path: str = WORKFLOW_PATH) -> tuple[int, int]:
+    """Read the job and runtime-step timeout from the iOS workflow."""
+    with open(path, encoding="utf-8") as handle:
+        text = handle.read()
+    job = re.search(r"^\s{4}timeout-minutes:\s*(\d+)\s*$", text, re.MULTILINE)
+    step = re.search(
+        r"- name: Run iPhone and iPad runtime tests\n([\s\S]*?)(?=\n\s{6}- name:|\Z)",
+        text,
+    )
+    step_timeout = (
+        re.search(r"^\s{8}timeout-minutes:\s*(\d+)\s*$", step.group(1), re.MULTILINE)
+        if step
+        else None
+    )
+    if job is None or step_timeout is None:
+        raise RuntimeError(
+            "ios-simulator.yml must declare both the job timeout and the "
+            "runtime-step timeout"
+        )
+    return int(job.group(1)), int(step_timeout.group(1))
+
+
+def check_workflow_budget(path: str = WORKFLOW_PATH) -> list[str]:
+    """Fail unless every bounded wait fits below the workflow's timeout."""
+    budget = worst_case_seconds()
+    job_minutes, step_minutes = read_workflow_timeouts(path)
+    job_seconds = job_minutes * 60
+    step_seconds = step_minutes * 60
+    required_job = budget["job"] + MIN_BUDGET_MARGIN
+    required_step = budget["gate"] + MIN_BUDGET_MARGIN
+    print(
+        "runtime gate budget: "
+        f"gate worst case {budget['gate']} s ({_minutes(budget['gate'])}): "
+        f"discovery {budget['discovery']} s + build {budget['build']} s + "
+        f"{DEVICE_COUNT} devices x {budget['per_device']} s"
+    )
+    print(
+        f"runtime gate budget: with {WORKFLOW_OVERHEAD} s of workflow overhead, "
+        f"the job needs {required_job} s ({_minutes(required_job)}) and is "
+        f"configured for {job_seconds} s ({job_minutes} min)"
+    )
+    print(
+        f"runtime gate budget: the runtime step needs {required_step} s "
+        f"({_minutes(required_step)}) and is configured for {step_seconds} s "
+        f"({step_minutes} min)"
+    )
+    problems = []
+    if RUN_TIMEOUT <= TEST_ALLOWANCE:
+        problems.append(
+            f"RUN_TIMEOUT ({RUN_TIMEOUT} s) must exceed the test allowance "
+            f"({TEST_ALLOWANCE} s)"
+        )
+    if job_seconds < required_job:
+        problems.append(
+            f"job timeout {job_seconds} s is below the required {required_job} s"
+        )
+    if step_seconds < required_step:
+        problems.append(
+            f"runtime step timeout {step_seconds} s is below the required "
+            f"{required_step} s"
+        )
+    if step_seconds >= job_seconds:
+        problems.append("the runtime step must be shorter than the whole job")
+    return problems
 
 
 def _progress_line(line: str) -> bool:
@@ -122,24 +234,33 @@ def simulator_devices() -> list[dict]:
     # waiting forever.
     code = 1
     output = ""
-    for attempt in range(3):
+    for attempt in range(DISCOVERY_ATTEMPTS):
         try:
             code, output = capture(
                 ["xcrun", "simctl", "list", "devices", "available", "-j"],
-                timeout=120,
+                timeout=DISCOVERY_TIMEOUT,
             )
         except subprocess.TimeoutExpired:
-            print(f"runtime gate: simctl list timed out (attempt {attempt + 1}/3)",
-                  file=sys.stderr)
-            time.sleep(5)
+            print(
+                f"runtime gate: simctl list timed out "
+                f"(attempt {attempt + 1}/{DISCOVERY_ATTEMPTS})",
+                file=sys.stderr,
+            )
+            time.sleep(RETRY_DELAY)
             continue
         if code == 0:
             break
-        print(f"runtime gate: simctl list failed (attempt {attempt + 1}/3, exit {code})",
-              file=sys.stderr)
-        time.sleep(5)
+        print(
+            f"runtime gate: simctl list failed "
+            f"(attempt {attempt + 1}/{DISCOVERY_ATTEMPTS}, exit {code})",
+            file=sys.stderr,
+        )
+        time.sleep(RETRY_DELAY)
     else:
-        raise RuntimeError(f"simctl list did not answer after 3 attempts: {output[-2000:]}")
+        raise RuntimeError(
+            f"simctl list did not answer after {DISCOVERY_ATTEMPTS} attempts: "
+            f"{output[-2000:]}"
+        )
     if code != 0:
         raise RuntimeError(f"simctl list failed: {output[-2000:]}")
     try:
@@ -165,12 +286,25 @@ def simulator_devices() -> list[dict]:
 
 
 def pick_device(devices: list[dict], kind: str) -> dict:
-    token = "iPad" if kind == "ipad" else "iPhone"
-    candidates = [device for device in devices if token in device["name"]]
+    """Return the pinned simulator, or fail with the available alternatives."""
+    name, version = PINNED_DEVICES[kind]
+    candidates = [
+        device
+        for device in devices
+        if device["name"] == name and device["version"] == version
+    ]
     if not candidates:
-        raise RuntimeError(f"no {token} simulator is available")
-    candidates.sort(key=lambda device: (device["version"], device["name"]), reverse=True)
-    return candidates[0]
+        token = "iPad" if kind == "ipad" else "iPhone"
+        available = sorted({
+            f"{device['name']} iOS {device['version']}"
+            for device in devices
+            if token in device["name"]
+        })
+        raise RuntimeError(
+            f"pinned {kind} simulator {name!r} on iOS {version} is not "
+            f"available: {', '.join(available) or 'none'}"
+        )
+    return sorted(candidates, key=lambda device: device["udid"])[0]
 
 
 def build_for_testing(device: dict) -> None:
@@ -206,7 +340,14 @@ def build_for_testing(device: dict) -> None:
 
 
 def shutdown(udid: str) -> None:
-    run(["xcrun", "simctl", "shutdown", udid], timeout=60)
+    run(["xcrun", "simctl", "shutdown", udid], timeout=SHUTDOWN_TIMEOUT)
+
+
+def _readable_attachment_name(name: str) -> str:
+    stem = os.path.splitext(os.path.basename(name))[0]
+    stem = re.sub(r"_0_[0-9A-Fa-f-]{36}$", "", stem)
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "-", stem).strip("-")
+    return (stem or "attachment") + ".png"
 
 
 def export_screenshots(result_bundle: str, kind: str) -> list[str]:
@@ -214,26 +355,81 @@ def export_screenshots(result_bundle: str, kind: str) -> list[str]:
     if os.path.isdir(evidence):
         shutil.rmtree(evidence)
     os.makedirs(evidence, exist_ok=True)
-    exported = os.path.join(evidence, "attachments")
+    exported = os.path.join(evidence, ".attachments")
     code, output = run(
         [
             "xcrun", "xcresulttool", "export", "attachments",
             "--path", result_bundle,
             "--output-path", exported,
         ],
-        timeout=180,
+        timeout=EXPORT_TIMEOUT,
     )
     if code != 0:
         print(output[-2000:] if output else "")
         return []
+    manifest_path = os.path.join(exported, "manifest.json")
+    entries = []
+    if os.path.exists(manifest_path):
+        try:
+            payload = json.loads(open(manifest_path, encoding="utf-8").read())
+            if isinstance(payload, list) and payload:
+                entries = payload[0].get("attachments", [])
+        except (OSError, json.JSONDecodeError, AttributeError):
+            entries = []
+    if not entries:
+        print(
+            "runtime gate: xcresulttool produced no attachment manifest; "
+            "refusing to publish GUID-named screenshots",
+            file=sys.stderr,
+        )
+        shutil.rmtree(exported, ignore_errors=True)
+        return []
     screenshots = []
-    for root, _, files in os.walk(exported):
-        for name in files:
-            if name.lower().endswith(".png"):
-                source = os.path.join(root, name)
-                destination = os.path.join(evidence, name)
-                shutil.copy2(source, destination)
-                screenshots.append(destination)
+    records = []
+    used = set()
+    for entry in entries:
+        filename = entry.get("exportedFileName")
+        if not filename or not filename.lower().endswith(".png"):
+            continue
+        source = os.path.join(exported, filename)
+        if not os.path.exists(source):
+            continue
+        readable = _readable_attachment_name(
+            entry.get("suggestedHumanReadableName") or filename
+        )
+        stem, suffix = os.path.splitext(readable)
+        candidate = readable
+        index = 2
+        while candidate in used:
+            candidate = f"{stem}-{index}{suffix}"
+            index += 1
+        used.add(candidate)
+        destination = os.path.join(evidence, candidate)
+        shutil.copy2(source, destination)
+        screenshots.append(destination)
+        records.append({
+            "file": candidate,
+            "device": entry.get("deviceName", ""),
+            "attachment": entry.get("suggestedHumanReadableName", ""),
+        })
+    shutil.rmtree(exported, ignore_errors=True)
+    if records:
+        with open(
+            os.path.join(evidence, "manifest.json"),
+            "w",
+            encoding="utf-8",
+            newline=chr(10),
+        ) as handle:
+            json.dump(
+                {
+                    "schema": "goldjewel.runtime-evidence/1",
+                    "kind": kind,
+                    "attachments": records,
+                },
+                handle,
+                indent=2,
+            )
+            handle.write(chr(10))
     return screenshots
 
 
@@ -255,13 +451,14 @@ def run_device(device: dict, kind: str) -> dict:
         # Bound a wedged simulator at the xcodebuild level as well as the
         # runner's own process timeout, so one device cannot eat the job.
         "-test-timeouts-enabled", "YES",
-        "-default-test-execution-time-allowance", "780",
-        "-maximum-test-execution-time-allowance", "900",
+        "-default-test-execution-time-allowance", str(TEST_ALLOWANCE),
+        "-maximum-test-execution-time-allowance", str(TEST_ALLOWANCE + 120),
         "CODE_SIGNING_ALLOWED=NO",
     ]
+    started = time.monotonic()
     attempt = 1
     code = 1
-    while attempt <= 2:
+    while attempt <= ATTEMPTS_PER_DEVICE:
         # A retry must not fail because the previous attempt left a bundle at
         # the result path; xcodebuild refuses to overwrite one.
         if os.path.exists(result_bundle):
@@ -279,8 +476,8 @@ def run_device(device: dict, kind: str) -> dict:
             print("".join(tail))
         shutdown(device["udid"])
         attempt += 1
-        if attempt <= 2:
-            time.sleep(5)
+        if attempt <= ATTEMPTS_PER_DEVICE:
+            time.sleep(RETRY_DELAY)
 
     if code != 0:
         # Export what the failing run managed to attach. A red gate should still
@@ -293,6 +490,7 @@ def run_device(device: dict, kind: str) -> dict:
             "device": device["name"],
             "udid": device["udid"],
             "status": "failed",
+            "duration_seconds": round(time.monotonic() - started, 1),
             "screenshots": [os.path.relpath(path, REPO_ROOT) for path in failed_shots],
         }
 
@@ -313,6 +511,7 @@ def run_device(device: dict, kind: str) -> dict:
         "device": device["name"],
         "udid": device["udid"],
         "status": "passed",
+        "duration_seconds": round(time.monotonic() - started, 1),
         "screenshots": [os.path.relpath(path, REPO_ROOT) for path in screenshots],
     }
 
@@ -356,4 +555,16 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if "--check-budget" in sys.argv[1:]:
+        try:
+            problems = check_workflow_budget()
+        except (OSError, RuntimeError) as error:
+            print(f"runtime gate budget: FAIL: {error}", file=sys.stderr)
+            raise SystemExit(1)
+        if problems:
+            for problem in problems:
+                print(f"runtime gate budget: FAIL: {problem}", file=sys.stderr)
+            raise SystemExit(1)
+        print("runtime gate budget: OK")
+        raise SystemExit(0)
     raise SystemExit(main())

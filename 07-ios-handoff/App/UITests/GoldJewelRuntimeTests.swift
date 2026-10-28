@@ -38,6 +38,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         }
         XCTAssertTrue(newProject.waitForExistence(timeout: 20),
                       "\(deviceName): project list never appeared")
+        attachFullScreen("00-project-list")
         newProject.tap()
 
         let rows = app.descendants(matching: .any).matching(identifier: "project-row")
@@ -54,12 +55,13 @@ final class GoldJewelRuntimeTests: XCTestCase {
                       "\(deviceName): editor did not show the head preview")
         revealEditor(preview)
         waitForPreviewGeometry(preview)
+        attachFullScreen("01-project-created")
         step("preview ready")
 
         let base = try capture("01-base", preview: preview)
         XCTAssertGreaterThan(base.goldRatio, 0.02,
                              "\(deviceName): preview contains almost no metal pixels (\(base.goldRatio)); it is blank or background-only")
-        attachFullScreen("01-start")
+        attachFullScreen("02-start")
         step("base captured")
 
         // Edit the document name. Appending is enough to prove the text field

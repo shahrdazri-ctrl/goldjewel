@@ -15,9 +15,12 @@ concurrency:
 jobs:
   build:
     runs-on: macos-15
-    timeout-minutes: 40
+    timeout-minutes: 130
     steps:
       - uses: actions/checkout@v4
+      - name: Check runtime budget against the job timeout
+        working-directory: 07-ios-handoff/App
+        run: python3 run_runtime_gate.py --check-budget
       - name: Install XcodeGen
         run: brew install xcodegen
       - name: Generate project
@@ -40,6 +43,7 @@ jobs:
           if-no-files-found: error
       - name: Run iPhone and iPad runtime tests
         working-directory: 07-ios-handoff/App
+        timeout-minutes: 120
         run: python3 run_runtime_gate.py
       - name: Upload runtime screenshots
         if: always()
