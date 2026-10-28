@@ -15,7 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: macos-15
-    timeout-minutes: 130
+    timeout-minutes: 140
     steps:
       - uses: actions/checkout@v4
       - name: Check runtime budget against the job timeout
@@ -43,7 +43,7 @@ jobs:
           if-no-files-found: error
       - name: Run iPhone and iPad runtime tests
         working-directory: 07-ios-handoff/App
-        timeout-minutes: 120
+        timeout-minutes: 130
         run: python3 run_runtime_gate.py
       - name: Upload runtime screenshots
         if: always()

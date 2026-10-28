@@ -15,6 +15,24 @@ import XCTest
 @MainActor
 final class GoldJewelRuntimeTests: XCTestCase {
     private var app: XCUIApplication!
+    private static let wiredOperations = [
+        "DeleteBuilder",
+        "ExecuteBuilderCommand",
+        "GetActiveBuilderId",
+        "GetActiveDocPath",
+        "GetAllBuilderGuids",
+        "GetCurrentFileIsModified",
+        "GetDefaultRingSizeRegionAbrv",
+        "GetRingSizeRegionAbrvs",
+        "GetRingSizesFromRegionAbrv",
+        "ReadJsonFromDocument",
+        "SetCurrentFileAsNoModified",
+        "WriteJsonToDocument",
+    ]
+    private static let pendingOperations = [
+        "ResizeRing",
+        "SetDefaultRingSizeRegionAbrv",
+    ]
 
     private var deviceName: String {
         UIDevice.current.userInterfaceIdiom == .pad ? "iPad" : "iPhone"
@@ -23,7 +41,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     func testProjectEditingRenderingAndPersistence() throws {
         // Bound a wedged run instead of letting xcodebuild sit for its full
         // job timeout; a timeout is a test failure, not a skipped check.
-        executionTimeAllowance = 780
+        executionTimeAllowance = 900
         continueAfterFailure = false
         app = XCUIApplication()
         relaunch(reset: true)
@@ -57,6 +75,73 @@ final class GoldJewelRuntimeTests: XCTestCase {
         waitForPreviewGeometry(preview)
         attachFullScreen("01-project-created")
         step("preview ready")
+
+        // The operations sheet is the screen whose wired/pending status this
+        // correction changes. Open it and assert the catalogue against real
+        // controls, not only against the generated Swift table.
+        step("operations opening")
+        let operationsButton = app.buttons["operations-open"]
+        XCTAssertTrue(operationsButton.waitForExistence(timeout: 15),
+                      "\(deviceName): the Operations button did not appear")
+        operationsButton.tap()
+
+        let summary = app.staticTexts["operations-summary"]
+        XCTAssertTrue(summary.waitForExistence(timeout: 20),
+                      "\(deviceName): the operations summary did not appear")
+        XCTAssertEqual(summary.label,
+                       "88 v1 operations · 12 wired · 76 entry points",
+                       "\(deviceName): the operations summary does not match the catalogue")
+        attachFullScreen("07-operations-sheet")
+
+        for id in Self.wiredOperations {
+            let row = filterOperation(id)
+            XCTAssertEqual(row.value as? String, "wired",
+                           "\(deviceName): \(id) is not presented as wired")
+        }
+        for id in Self.pendingOperations {
+            let row = filterOperation(id)
+            XCTAssertEqual(row.value as? String, "entry-point",
+                           "\(deviceName): \(id) is presented as wired")
+        }
+
+        for id in Self.pendingOperations {
+            let row = filterOperation(id)
+            row.tap()
+            let status = app.staticTexts["operation-status"]
+            XCTAssertTrue(status.waitForExistence(timeout: 15),
+                          "\(deviceName): \(id) detail did not appear")
+            XCTAssertEqual(status.label, "Entry point only",
+                           "\(deviceName): \(id) is presented as runnable")
+            XCTAssertFalse(app.buttons["operation-run"].exists,
+                           "\(deviceName): \(id) offers a Run operation button")
+            if id == Self.pendingOperations[0] {
+                attachFullScreen("08-operations-entry-point")
+            }
+            leaveOperationDetail()
+        }
+
+        let wiredRow = filterOperation("GetActiveBuilderId")
+        wiredRow.tap()
+        let wiredStatus = app.staticTexts["operation-status"]
+        XCTAssertTrue(wiredStatus.waitForExistence(timeout: 15),
+                      "\(deviceName): wired operation detail did not appear")
+        XCTAssertEqual(wiredStatus.label, "Wired",
+                       "\(deviceName): a wired operation is not presented as wired")
+        let run = app.buttons["operation-run"]
+        XCTAssertTrue(run.waitForExistence(timeout: 15),
+                      "\(deviceName): a wired operation has no Run button")
+        run.tap()
+        XCTAssertTrue(app.staticTexts["operation-result"].waitForExistence(timeout: 15),
+                      "\(deviceName): running a wired operation produced no result")
+        leaveOperationDetail()
+
+        let operationsDone = app.buttons["operations-done"]
+        XCTAssertTrue(operationsDone.waitForExistence(timeout: 10),
+                      "\(deviceName): the operations sheet has no Done button")
+        operationsDone.tap()
+        XCTAssertTrue(summary.waitForNonExistence(timeout: 15),
+                      "\(deviceName): the operations sheet did not close")
+        step("operations verified")
 
         let base = try capture("01-base", preview: preview)
         XCTAssertGreaterThan(base.goldRatio, 0.02,
@@ -203,6 +288,54 @@ final class GoldJewelRuntimeTests: XCTestCase {
         app.launch()
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 45),
                       "\(deviceName): app did not reach the foreground")
+    }
+
+    /// Filter the operation list to one ID so every assertion reads the real
+    /// row rather than relying on list virtualization or scroll position.
+    private func filterOperation(_ id: String) -> XCUIElement {
+        let search = app.searchFields.firstMatch
+        XCTAssertTrue(search.waitForExistence(timeout: 15),
+                      "\(deviceName): the operations search field did not appear")
+        search.tap()
+        let clear = search.buttons["Clear text"].exists
+            ? search.buttons["Clear text"]
+            : app.buttons["Clear text"]
+        if clear.exists {
+            clear.tap()
+        } else if
+            let current = search.value as? String,
+            !current.isEmpty,
+            current != "Operation or cluster"
+        {
+            search.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue,
+                                   count: current.count))
+        }
+        search.typeText(id)
+        let row = operationRow(id)
+        XCTAssertTrue(row.waitForExistence(timeout: 15),
+                      "\(deviceName): operation row \(id) did not appear")
+        return row
+    }
+
+    /// Leave the pushed detail. The back button carries the list's title; the
+    /// fallback keeps the tap away from the sheet's Done button.
+    private func leaveOperationDetail() {
+        let back = app.navigationBars.buttons["v1 operations"]
+        if back.exists && back.isHittable {
+            back.tap()
+        } else {
+            app.navigationBars.buttons.element(boundBy: 0).tap()
+        }
+        Thread.sleep(forTimeInterval: 0.5)
+    }
+
+    /// The identifier sits on the NavigationLink, which SwiftUI wraps in a
+    /// cell; take the first match so the lookup works for either shape and
+    /// never has to pay a probe timeout per row.
+    private func operationRow(_ id: String) -> XCUIElement {
+        app.descendants(matching: .any)
+            .matching(identifier: "operation-row-\(id)")
+            .firstMatch
     }
 
     private func dismissKeyboard() {

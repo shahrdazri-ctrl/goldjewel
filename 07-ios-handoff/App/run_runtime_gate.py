@@ -28,7 +28,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(APP_DIR))
 BUILD_DIR = os.path.join(APP_DIR, "build")
 PROJECT = os.path.join(APP_DIR, "GoldJewel.xcodeproj")
 SCHEME = "GoldJewel"
-RUN_TIMEOUT = 1000
+RUN_TIMEOUT = 1100
 BUILD_TIMEOUT = 900
 SHUTDOWN_TIMEOUT = 60
 EXPORT_TIMEOUT = 180
@@ -37,7 +37,7 @@ DISCOVERY_ATTEMPTS = 3
 RETRY_DELAY = 5
 ATTEMPTS_PER_DEVICE = 2
 DEVICE_COUNT = 2
-TEST_ALLOWANCE = 780
+TEST_ALLOWANCE = 900
 # Time outside the runner: xcodegen, the generic build, and artifact uploads.
 WORKFLOW_OVERHEAD = 1200
 # Required headroom below the workflow timeout.

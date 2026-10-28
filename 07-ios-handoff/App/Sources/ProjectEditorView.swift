@@ -45,6 +45,7 @@ struct ProjectEditorView: View {
                 } label: {
                     Label("Operations", systemImage: "square.stack.3d.up")
                 }
+                .accessibilityIdentifier("operations-open")
             }
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()

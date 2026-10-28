@@ -27,9 +27,10 @@ struct OperationsView: View {
         NavigationStack {
             List {
                 Section {
-                    Text("\(OperationCatalog.wired.count) operations are wired to this shell. The rest are registered entry points waiting for an implementation.")
+                    Text("\(OperationCatalog.all.count) v1 operations · \(OperationCatalog.wired.count) wired · \(OperationCatalog.all.count - OperationCatalog.wired.count) entry points")
                         .font(.caption)
                         .foregroundStyle(.secondary)
+                        .accessibilityIdentifier("operations-summary")
                 }
                 ForEach(groups, id: \.0) { cluster, operations in
                     Section(cluster) {
@@ -48,19 +49,27 @@ struct OperationsView: View {
                                         .foregroundStyle(operation.isWired ? .green : .secondary)
                                 }
                             }
+                            .accessibilityIdentifier("operation-row-\(operation.id)")
+                            .accessibilityLabel("\(operation.id), \(operation.isWired ? "wired" : "entry point only")")
+                            .accessibilityValue(operation.isWired ? "wired" : "entry-point")
                         }
                     }
                 }
             }
             .navigationTitle("v1 operations")
             .navigationBarTitleDisplayMode(.inline)
-            .searchable(text: $query, prompt: "Operation or cluster")
+            .searchable(
+                text: $query,
+                placement: .navigationBarDrawer(displayMode: .always),
+                prompt: "Operation or cluster"
+            )
             .navigationDestination(for: AppOperation.self) { operation in
                 OperationDetailView(operation: operation, store: store)
             }
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .accessibilityIdentifier("operations-done")
                 }
             }
         }
@@ -80,6 +89,7 @@ struct OperationDetailView: View {
                         .foregroundStyle(operation.isWired ? .green : .secondary)
                     Text(operation.isWired ? "Wired" : "Entry point only")
                         .font(.headline)
+                        .accessibilityIdentifier("operation-status")
                 }
 
                 GroupBox("Contract") {
@@ -97,6 +107,7 @@ struct OperationDetailView: View {
                         result = store.perform(operation: operation.id)
                     }
                     .buttonStyle(.borderedProminent)
+                    .accessibilityIdentifier("operation-run")
                 } else {
                     Text("The entry point is present and appears in the shell. Its geometry or data path is not part of this milestone, so running it reports that it is pending rather than pretending to succeed.")
                         .font(.footnote)
@@ -110,6 +121,7 @@ struct OperationDetailView: View {
                             .textSelection(.enabled)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.top, 4)
+                            .accessibilityIdentifier("operation-result")
                     }
                 }
             }
