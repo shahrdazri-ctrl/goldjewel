@@ -88,7 +88,7 @@ public enum GalleryRailBuilder {
         // PointAtEnd is the base of the side rail (z = drop). A RailPos of 0
         // sits on the base, 1 on the girdle.
         let baseZ = cage.sideX.last?.z ?? cage.dropMM
-        var z = baseZ * (1 - min(max(rail.position, 0), 1))
+        var z = baseZ * (1 - rail.position)
         if rail.upperToggle {
             z = -rail.height / 2 - rail.position
         }
