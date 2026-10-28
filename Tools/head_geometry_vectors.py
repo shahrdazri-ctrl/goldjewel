@@ -303,7 +303,15 @@ def main() -> int:
             if not os.path.exists(path):
                 failures.append(f"missing {os.path.relpath(path, ROOT)}")
                 continue
-            if open(path, encoding="utf-8").read() != text:
+            # Compare data, not bytes: float formatting differs between the
+            # Python that generated the file and the Python in CI, while the
+            # values are identical. Swift decodes the same numbers either way.
+            try:
+                committed = json.load(open(path, encoding="utf-8"))
+            except json.JSONDecodeError as error:
+                failures.append(f"{os.path.relpath(path, ROOT)} is not JSON: {error}")
+                continue
+            if committed != payload:
                 failures.append(f"{os.path.relpath(path, ROOT)} is stale; regenerate")
         if failures:
             for failure in failures:
