@@ -121,7 +121,7 @@ Recorded in `limitations.md` #17–#18:
 | `04-index/validate_handoff.py` | **Executed**: 0 failures (materials, ring vectors, regions). |
 | `Tools/m2.py --check` | **Executed**: corpus hashes, 50,134-method triage and 254-operation matrix all match. |
 | Offline mesh render (`09-logs/render_check.py`) | **Executed**: the gallery band was inspected in three views. |
-| Linux / macOS / simulator CI | **Executed**: green at `4d11b6b`; Linux re-ran on the final tree `c275ec4`. |
+| Linux / macOS / simulator CI | **Executed**: all three green at `4d11b6b`; Linux also ran green on the later report-only commits. |
 | App launch and interaction | **Not executed**: no macOS host here; the hosted `simctl` attempt stalled and was removed. |
 | Rhino geometry | **Not executed**: licensed Rhino is still unavailable (limitation #4). |
 
