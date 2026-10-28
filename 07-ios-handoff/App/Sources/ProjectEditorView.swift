@@ -61,18 +61,25 @@ struct ProjectEditorView: View {
     }
 
     private var previewKey: String {
-        [
-            project.gemDiameterMM, Double(project.prongCount),
-            project.rail.enabled ? 1 : 0, project.rail.position, project.rail.height,
-            project.dome.enabled ? 1 : 0, project.dome.height,
-            project.bezel?.seatHeight ?? 0, project.bezel?.seatLength ?? 0,
-            project.bezel?.seatAngle ?? 0,
-            project.halo?.gemDiameter ?? 0, project.halo?.spacing ?? 0,
-            project.halo?.offsetRailX ?? 0, project.halo?.offsetRailZ ?? 0,
-            project.halo?.fixPosition ?? 0
+        let railOn: Double = project.rail.enabled ? 1 : 0
+        let domeOn: Double = project.dome.enabled ? 1 : 0
+        let bezelHeight: Double = project.bezel?.seatHeight ?? 0
+        let bezelLength: Double = project.bezel?.seatLength ?? 0
+        let bezelAngle: Double = project.bezel?.seatAngle ?? 0
+        let haloDiameter: Double = project.halo?.gemDiameter ?? 0
+        let haloSpacing: Double = project.halo?.spacing ?? 0
+        let haloOffset: Double = project.halo?.offsetRailX ?? 0
+        let haloZ: Double = project.halo?.offsetRailZ ?? 0
+        let haloPhase: Double = project.halo?.fixPosition ?? 0
+        let values: [Double] = [
+            project.gemDiameterMM, Double(project.prongCount), railOn,
+            project.rail.position, project.rail.height, domeOn, project.dome.height,
+            bezelHeight, bezelLength, bezelAngle,
+            haloDiameter, haloSpacing, haloOffset, haloZ, haloPhase
         ]
-        .map { $0.formatted(.number.precision(.fractionLength(4))) }
-        .joined(separator: "-")
+        return values.map { value in
+            value.formatted(.number.precision(.fractionLength(4)))
+        }.joined(separator: "-")
     }
 
     private var summary: some View {

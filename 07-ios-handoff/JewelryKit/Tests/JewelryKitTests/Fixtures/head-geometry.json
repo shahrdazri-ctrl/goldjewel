@@ -8,6 +8,7 @@
         "vertices": 512
       },
       "parameters": {
+        "enabled": true,
         "samples": 128,
         "seatAngle": 10.0,
         "seatHeight": 0.55,
@@ -1000,6 +1001,7 @@
       },
       "parameters": {
         "bandSamples": 128,
+        "enabled": true,
         "even": false,
         "fixPosition": 0.0,
         "gemDiameter": 1.25,

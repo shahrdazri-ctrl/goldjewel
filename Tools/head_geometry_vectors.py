@@ -73,6 +73,7 @@ DOME = {
 }
 
 BEZEL = {
+    "enabled": True,
     "seatHeight": 0.55,
     "seatLength": 0.45,
     "seatAngle": 10.0,
@@ -80,6 +81,7 @@ BEZEL = {
 }
 
 HALO = {
+    "enabled": True,
     "gemDiameter": 1.25,
     "spacing": 0.18,
     "offsetRailX": 0.75,
