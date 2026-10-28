@@ -197,14 +197,22 @@ final class GoldJewelRuntimeTests: XCTestCase {
     private func setToggle(_ identifier: String, on: Bool, preview: XCUIElement) {
         let toggle = app.switches[identifier]
         scrollTo(toggle)
+        // A tap during deceleration only stops the scroll; let the view settle
+        // so the switch receives the tap.
+        Thread.sleep(forTimeInterval: 0.8)
         guard isOn(toggle) != on else { return }
         let before = preview.value as? String
-        toggle.tap()
+        // Aim at the control at the trailing edge rather than the row's centre,
+        // in case the merged accessibility element spans the whole row.
+        toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.9, dy: 0.5)).tap()
         // The switch animates and SwiftUI commits the new state on the next
         // run loop; poll the real value instead of sampling it once.
         let deadline = Date().addingTimeInterval(5)
         while Date() < deadline && isOn(toggle) != on {
             Thread.sleep(forTimeInterval: 0.1)
+        }
+        if isOn(toggle) != on {
+            attachFullScreen("stuck-\(identifier)")
         }
         XCTAssertEqual(isOn(toggle), on,
                        "\(deviceName): \(identifier) did not switch after a tap")
@@ -239,7 +247,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// preview, and never at the centre of the screen.
     private func scrollTo(_ element: XCUIElement) {
         scrollToTop()
-        for _ in 0..<8 {
+        for _ in 0..<5 {
             if element.exists && element.isHittable { return }
             scrollDownOnePage()
         }
@@ -247,25 +255,38 @@ final class GoldJewelRuntimeTests: XCTestCase {
     }
 
     private func scrollToTop() {
-        for _ in 0..<6 {
+        // Tapping the status bar asks the system to scroll the active scroll
+        // view to the top without touching the preview's drag gesture. Two
+        // margin drags are the fallback if the system ignores it.
+        if app.statusBars.firstMatch.exists {
+            app.statusBars.firstMatch.tap()
+            Thread.sleep(forTimeInterval: 0.6)
+        }
+        for _ in 0..<2 {
             scrollUpOnePage()
         }
     }
 
     private func scrollDownOnePage() {
-        drag(from: 0.85, to: 0.15)
+        dragWithinMargin(fromY: 0.88, toY: 0.12)
     }
 
     private func scrollUpOnePage() {
-        drag(from: 0.72, to: 0.97)
+        dragWithinMargin(fromY: 0.25, toY: 0.88)
     }
 
-    private func drag(from: CGFloat, to: CGFloat) {
-        // Stay in the right-hand padding: a drag that starts on a slider would
-        // move that slider instead of scrolling the editor.
-        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.96, dy: from))
-        let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.96, dy: to))
-        start.press(forDuration: 0.05, thenDragTo: end)
+    /// Drag inside the editor's left margin. The preview's drag gesture covers
+    /// the content and its centre, so a gesture there rotates the head; the
+    /// margin is a few points left of the preview and of every slider.
+    private func dragWithinMargin(fromY: CGFloat, toY: CGFloat) {
+        let frame = app.scrollViews.firstMatch.frame
+        let x = frame.minX + 10
+        let start = app.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: x, dy: frame.minY + frame.height * fromY))
+        let end = app.coordinate(withNormalizedOffset: .zero)
+            .withOffset(CGVector(dx: x, dy: frame.minY + frame.height * toY))
+        start.press(forDuration: 0.2, thenDragTo: end)
+        Thread.sleep(forTimeInterval: 0.5)
     }
 
     private func returnToProjectList() {
