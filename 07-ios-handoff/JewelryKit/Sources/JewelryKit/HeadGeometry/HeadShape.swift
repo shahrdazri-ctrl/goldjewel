@@ -95,10 +95,10 @@ public struct HeadShapeParameters: Codable, Sendable, Hashable {
         baseAngleDegrees: 4,
         baseAnglePosition: 0.5,
         prongs: [
-            ProngPlacement(angleDegrees: 45),
-            ProngPlacement(angleDegrees: 135),
-            ProngPlacement(angleDegrees: 225),
-            ProngPlacement(angleDegrees: 315)
+            ProngPlacement(angleDegrees: 45, topX: 0.9, topY: 0.6, baseX: 1.0, baseY: 0.7),
+            ProngPlacement(angleDegrees: 135, topX: 0.9, topY: 0.6, baseX: 1.0, baseY: 0.7),
+            ProngPlacement(angleDegrees: 225, topX: 0.9, topY: 0.6, baseX: 1.0, baseY: 0.7),
+            ProngPlacement(angleDegrees: 315, topX: 0.9, topY: 0.6, baseX: 1.0, baseY: 0.7)
         ]
     )
 }

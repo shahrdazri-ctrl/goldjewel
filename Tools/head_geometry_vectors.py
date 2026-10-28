@@ -235,8 +235,8 @@ def build(parameters):
         "mesh": {
             "ringSamples": RING_SAMPLES,
             "railSamples": RAIL_SAMPLES,
-            "basketVertices": RING_SAMPLES * 4 + 2,
-            "basketTriangles": (4 - 1) * RING_SAMPLES * 2 + 2 * RING_SAMPLES,
+            "basketVertices": RING_SAMPLES * 4,
+            "basketTriangles": (4 - 1) * RING_SAMPLES * 2,
             "prongVertices": RAIL_SAMPLES * 36 + 2,
             "prongTriangles": (RAIL_SAMPLES - 1) * 36 * 2 + 2 * 36,
         },

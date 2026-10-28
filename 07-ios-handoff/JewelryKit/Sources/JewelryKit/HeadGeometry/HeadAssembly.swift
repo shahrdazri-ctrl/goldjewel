@@ -55,7 +55,9 @@ public struct HeadAssembly: Sendable {
         }
         let rings = [cage.base, cage.middle, cage.girdle, cage.top]
             .sorted { meanZ($0) < meanZ($1) }
-        self.basket = Mesh3D.loft(rings: rings, closedRing: true, capStart: true, capEnd: true)
+        // The basket is open at the girdle and at the base: the gem sits in it
+        // and the shank joins below. Capping would hide the seat.
+        self.basket = Mesh3D.loft(rings: rings, closedRing: true, capStart: false, capEnd: false)
 
         self.prongs = zip(cage.prongRails, parameters.prongs).map { rail, prong in
             ProngSweeper.solid(rail: rail, prong: prong)

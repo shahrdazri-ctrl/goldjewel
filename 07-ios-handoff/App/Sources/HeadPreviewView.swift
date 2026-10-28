@@ -5,7 +5,7 @@ import SwiftUI
 /// this view projects them. Keeping the renderer dumb makes it easy to replace
 /// with Metal/RealityKit later without touching the recovered geometry.
 struct HeadPreviewView: View {
-    private let assembly = HeadAssembly.solitaire
+    let assembly: HeadAssembly
     @State private var yaw: Double = -0.6
     @State private var pitch: Double = 0.35
     @State private var dragStart: (yaw: Double, pitch: Double)?

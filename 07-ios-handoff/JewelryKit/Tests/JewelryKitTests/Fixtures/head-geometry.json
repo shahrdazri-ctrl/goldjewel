@@ -807,8 +807,8 @@
       ]
     ],
     "mesh": {
-      "basketTriangles": 1024,
-      "basketVertices": 514,
+      "basketTriangles": 768,
+      "basketVertices": 512,
       "prongTriangles": 2304,
       "prongVertices": 1154,
       "railSamples": 32,

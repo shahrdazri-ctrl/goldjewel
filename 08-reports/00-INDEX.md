@@ -42,6 +42,8 @@
 * `08-reports/triage-ledger.csv` — all 50,134 first-party methods classified, each with the rule that decided it.
 * `08-reports/capability-matrix.csv` — all 254 service operations with a v1 / defer / drop disposition.
 * `08-reports/m2-report.md` — the measured M2 counts and the reproduce commands.
+* `05-evidence/vectors/head-geometry.json` — golden head cage, prong rails and mesh counts, recomputed independently from the decompiled formulas.
+* `08-reports/m3-report.md` — the head slice: what renders, what was checked against IL, and the explicit inference list.
 * `03-decompiled/il/` — per-assembly CIL for all 35 first-party assemblies (41,460 `.method` directives, 111.6 MB).
 
 ---

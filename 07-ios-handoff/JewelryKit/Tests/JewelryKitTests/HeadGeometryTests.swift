@@ -74,6 +74,7 @@ final class HeadGeometryTests: XCTestCase {
         let mesh = golden.expected.mesh
 
         XCTAssertEqual(assembly.basket.vertices.count, mesh.basketVertices)
+        XCTAssertEqual(assembly.basket.vertices.count, HeadShapeBuilder.ringSamples * 4)
         XCTAssertEqual(assembly.basket.triangles.count, mesh.basketTriangles)
         XCTAssertEqual(assembly.prongs.count, golden.parameters.prongs.count)
         for prong in assembly.prongs {
@@ -99,6 +100,33 @@ final class HeadGeometryTests: XCTestCase {
             let ringGrid = HeadShapeBuilder.railSamples * ProngProfile.roundedRectangle().count
             XCTAssertEqual(prong.vertices.count, ringGrid + 2)
             XCTAssertGreaterThan(prong.triangles.count, 0)
+        }
+    }
+
+    func testParametricProngCountsAndGemSizes() throws {
+        for (index, count) in [4, 6, 8].enumerated() {
+            let gem = [6.0, 6.5, 7.5][index]
+            let step = 360.0 / Double(count)
+            let prongs = (0..<count).map { position in
+                ProngPlacement(angleDegrees: 45 + step * Double(position),
+                               topX: 0.9, topY: 0.6, baseX: 1.0, baseY: 0.7)
+            }
+            let parameters = HeadShapeParameters(
+                gemXSizeMM: gem, gemYSizeMM: gem,
+                headHeightMM: -2.4, prongHeightMM: 1.6,
+                angleXDegrees: 12, angleYDegrees: 10,
+                topAngleDegrees: 2, baseAngleDegrees: 4,
+                baseAnglePosition: 0.5, prongs: prongs
+            )
+            let assembly = try HeadAssembly(parameters: parameters)
+            XCTAssertEqual(assembly.cage.prongRails.count, count)
+            XCTAssertTrue(assembly.cage.prongRails.allSatisfy { $0.count == HeadShapeBuilder.railSamples })
+            XCTAssertEqual(assembly.basket.triangles.count, 3 * HeadShapeBuilder.ringSamples * 2)
+            XCTAssertEqual(assembly.combined.vertices.count,
+                           HeadShapeBuilder.ringSamples * 4
+                           + count * (HeadShapeBuilder.railSamples * ProngProfile.roundedRectangle().count + 2))
+            let bounds = try XCTUnwrap(assembly.combined.bounds)
+            XCTAssertGreaterThan(bounds.max.x - bounds.min.x, gem * 0.8)
         }
     }
 

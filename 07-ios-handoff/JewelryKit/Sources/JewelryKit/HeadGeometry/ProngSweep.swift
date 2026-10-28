@@ -8,7 +8,9 @@ import Foundation
 /// a rounded rectangle with a 0.25 corner fraction. Replacing it with a
 /// recovered profile changes no placement maths.
 public enum ProngProfile {
-    public static let cornerFraction = 0.25
+    /// 0.5 makes the rounded rectangle a circle, so the scaled profile is an
+    /// ellipse: the default prong section. The authored curve can replace it.
+    public static let cornerFraction = 0.5
 
     public static func roundedRectangle(samples: Int = 32) -> [Vec2] {
         let half = 0.5
@@ -66,10 +68,13 @@ public enum ProngSweeper {
             let previous = rail[max(index - 1, 0)]
             let next = rail[min(index + 1, rail.count - 1)]
             let railTangent = (next - previous).normalized(fallback: tangent)
-            let frameX = railTangent
-            let up = Vec3(0, 0, 1)
-            var frameY = (up - frameX * up.dot(frameX)).normalized(fallback: Vec3(0, 1, 0))
-            if frameY.length < 1e-9 { frameY = Vec3(0, 1, 0) }
+
+            // The sweep plane is perpendicular to the rail. Width runs along
+            // the tangential direction; thickness runs radially outwards.
+            let radial = Vec3(origin.x, origin.y, 0).normalized(fallback: Vec3(0, 1, 0))
+            var side = railTangent.cross(radial).normalized(fallback: Vec3(1, 0, 0))
+            if side.length < 1e-9 { side = Vec3(1, 0, 0) }
+            let normal = side.cross(railTangent).normalized(fallback: radial)
 
             let t = Double(index) / Double(rail.count - 1)
             let scale = Vec2(
@@ -80,7 +85,7 @@ public enum ProngSweeper {
             var ring: [Vec3] = []
             ring.reserveCapacity(profile.count)
             for point in profile {
-                ring.append(origin + frameX * (point.x * scale.x) + frameY * (point.y * scale.y + offset))
+                ring.append(origin + side * (point.x * scale.x) + normal * (point.y * scale.y + offset))
             }
             rings.append(ring)
         }
