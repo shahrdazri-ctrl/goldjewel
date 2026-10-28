@@ -1,3 +1,4 @@
+import Darwin
 import UIKit
 import XCTest
 
@@ -20,9 +21,13 @@ final class GoldJewelRuntimeTests: XCTestCase {
     }
 
     func testProjectEditingRenderingAndPersistence() throws {
+        // Bound a wedged run instead of letting xcodebuild sit for its full
+        // job timeout; a timeout is a test failure, not a skipped check.
+        executionTimeAllowance = 420
         continueAfterFailure = false
         app = XCUIApplication()
         relaunch(reset: true)
+        step("launched")
 
         let newProject = app.buttons["new-project"]
         // On iPhone the compact split view can restore the selected project's
@@ -48,11 +53,13 @@ final class GoldJewelRuntimeTests: XCTestCase {
         XCTAssertTrue(preview.waitForExistence(timeout: 30),
                       "\(deviceName): editor did not show the head preview")
         waitForPreviewGeometry(preview)
+        step("preview ready")
 
         let base = try capture("01-base", preview: preview)
         XCTAssertGreaterThan(base.goldRatio, 0.02,
                              "\(deviceName): preview contains almost no metal pixels (\(base.goldRatio)); it is blank or background-only")
         attachFullScreen("01-start")
+        step("base captured")
 
         // Edit the document name. Appending is enough to prove the text field
         // writes through; the persisted value is checked after relaunch.
@@ -64,26 +71,33 @@ final class GoldJewelRuntimeTests: XCTestCase {
         dismissKeyboard()
         XCTAssertFalse(app.keyboards.firstMatch.exists,
                        "\(deviceName): keyboard stayed up and would cover the controls")
+        step("name edited")
 
         // Gallery rail.
         let beforeRail = try capture("02-before-rail", preview: preview)
+        step("rail before")
         setToggle("rail-toggle", on: false, preview: preview)
+        step("rail off")
         let withoutRail = try capture("03-rail-off", preview: preview)
         XCTAssertGreaterThan(withoutRail.difference(from: beforeRail), 0.005,
                              "\(deviceName): switching the gallery off changed only \(withoutRail.difference(from: beforeRail)) of the preview")
         setToggle("rail-toggle", on: true, preview: preview)
+        step("rail restored")
 
         // Prong domes (on by default).
         let beforeDome = try capture("04-before-dome", preview: preview)
         setToggle("dome-toggle", on: false, preview: preview)
+        step("dome off")
         let withoutDome = try capture("05-dome-off", preview: preview)
         XCTAssertGreaterThan(withoutDome.difference(from: beforeDome), 0.005,
                              "\(deviceName): switching the dome off changed only \(withoutDome.difference(from: beforeDome)) of the preview")
         setToggle("dome-toggle", on: true, preview: preview)
+        step("dome restored")
 
         // Bezel (off by default).
         let beforeBezel = try capture("06-before-bezel", preview: preview)
         setToggle("bezel-toggle", on: true, preview: preview)
+        step("bezel on")
         let withBezel = try capture("07-bezel-on", preview: preview)
         XCTAssertGreaterThan(withBezel.difference(from: beforeBezel), 0.005,
                              "\(deviceName): enabling the bezel changed only \(withBezel.difference(from: beforeBezel)) of the preview")
@@ -91,6 +105,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         // Halo (off by default).
         let beforeHalo = try capture("08-before-halo", preview: preview)
         setToggle("halo-toggle", on: true, preview: preview)
+        step("halo on")
         let withHalo = try capture("09-halo-on", preview: preview)
         XCTAssertGreaterThan(withHalo.difference(from: beforeHalo), 0.005,
                              "\(deviceName): enabling the halo changed only \(withHalo.difference(from: beforeHalo)) of the preview")
@@ -101,16 +116,19 @@ final class GoldJewelRuntimeTests: XCTestCase {
         let beforeGem = try capture("10-before-gem", preview: preview)
         gemSlider.adjust(toNormalizedSliderPosition: 0.72)
         Thread.sleep(forTimeInterval: 0.8)
+        step("gem moved")
         let afterGem = try capture("11-gem-larger", preview: preview)
         XCTAssertGreaterThan(afterGem.difference(from: beforeGem), 0.01,
                              "\(deviceName): moving the gem slider changed only \(afterGem.difference(from: beforeGem)) of the head")
 
         attachFullScreen("12-final")
+        step("editing complete")
         app.terminate()
 
         // Relaunch without the reset switch: the project, its name and the four
         // family switches must come back from projects.json.
         relaunch(reset: false)
+        step("relaunched")
         let savedRow = app.descendants(matching: .any)
             .matching(identifier: "project-row")
             .matching(NSPredicate(format: "label CONTAINS 'Runtime Gate'"))
@@ -129,6 +147,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
         XCTAssertGreaterThan(restored.goldRatio, 0.02,
                              "\(deviceName): restored preview is blank (\(restored.goldRatio) metal pixels)")
 
+        step("restored preview captured")
         let restoredName = app.textFields["project-name"]
         scrollTo(restoredName)
         XCTAssertTrue((restoredName.value as? String)?.contains("Runtime Gate") == true,
@@ -141,6 +160,14 @@ final class GoldJewelRuntimeTests: XCTestCase {
                           "\(deviceName): \(identifier) was not persisted as on")
         }
         attachFullScreen("14-relaunch")
+        step("persistence verified")
+    }
+
+    /// Surfaced in the CI log while the test is still running, and as an
+    /// activity in the result bundle if it fails or hangs.
+    private func step(_ name: String) {
+        print("RUNTIME_STEP \(deviceName): \(name)")
+        fflush(stdout)
     }
 
     // MARK: - Actions
@@ -212,7 +239,7 @@ final class GoldJewelRuntimeTests: XCTestCase {
     /// preview, and never at the centre of the screen.
     private func scrollTo(_ element: XCUIElement) {
         scrollToTop()
-        for _ in 0..<12 {
+        for _ in 0..<8 {
             if element.exists && element.isHittable { return }
             scrollDownOnePage()
         }
@@ -220,17 +247,17 @@ final class GoldJewelRuntimeTests: XCTestCase {
     }
 
     private func scrollToTop() {
-        for _ in 0..<8 {
+        for _ in 0..<6 {
             scrollUpOnePage()
         }
     }
 
     private func scrollDownOnePage() {
-        drag(from: 0.85, to: 0.42)
+        drag(from: 0.85, to: 0.15)
     }
 
     private func scrollUpOnePage() {
-        drag(from: 0.74, to: 0.96)
+        drag(from: 0.72, to: 0.97)
     }
 
     private func drag(from: CGFloat, to: CGFloat) {

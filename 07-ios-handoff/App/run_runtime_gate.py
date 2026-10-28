@@ -18,6 +18,7 @@ import shutil
 import signal
 import subprocess
 import sys
+import threading
 import time
 from datetime import datetime, timezone
 
@@ -30,31 +31,48 @@ RUN_TIMEOUT = 900
 BUILD_TIMEOUT = 900
 
 
-def run(cmd: list[str], timeout: int, log_path: str | None = None):
-    """Run a command with a hard timeout and optional combined log."""
-    if log_path:
-        handle = open(log_path, "w", encoding="utf-8", newline="\n")
-        output = handle
-    else:
-        handle = None
-        output = subprocess.PIPE
+def _progress_line(line: str) -> bool:
+    """Keep the CI console readable while still showing live test progress."""
+    markers = ("RUNTIME_STEP", "Test Case", "Test Suite", "error:", "Assertion")
+    return any(marker in line for marker in markers)
+
+
+def run(cmd: list[str], timeout: int, log_path: str | None = None, echo: bool = False):
+    """Run a command with a hard timeout, a full log and optional live echoes.
+
+    Reading the pipe in a thread lets the timeout kill a wedged xcodebuild while
+    every line still reaches the log. A hung test then shows which RUNTIME_STEP
+    it stopped after, instead of only a timeout.
+    """
+    handle = open(log_path, "w", encoding="utf-8", newline="\n") if log_path else None
     process = subprocess.Popen(
         cmd,
         cwd=APP_DIR,
-        stdout=output,
+        stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        bufsize=1,
         start_new_session=True,
     )
+    chunks: list[str] = []
+
+    def pump() -> None:
+        if process.stdout is None:
+            return
+        for line in process.stdout:
+            chunks.append(line)
+            if len(chunks) > 2000:
+                del chunks[:1000]
+            if handle is not None:
+                handle.write(line)
+                handle.flush()
+            if echo and _progress_line(line):
+                print(line.rstrip(), flush=True)
+
+    reader = threading.Thread(target=pump, daemon=True)
+    reader.start()
     try:
-        stdout, _ = process.communicate(timeout=timeout)
-        if log_path:
-            try:
-                with open(log_path, encoding="utf-8", errors="replace") as handle:
-                    stdout = handle.read()[-8000:]
-            except OSError:
-                stdout = ""
-        return process.returncode, stdout or ""
+        code = process.wait(timeout=timeout)
     except subprocess.TimeoutExpired:
         os.killpg(os.getpgid(process.pid), signal.SIGTERM)
         try:
@@ -62,10 +80,11 @@ def run(cmd: list[str], timeout: int, log_path: str | None = None):
         except subprocess.TimeoutExpired:
             os.killpg(os.getpgid(process.pid), signal.SIGKILL)
             process.wait(timeout=15)
-        return 124, "timed out"
-    finally:
-        if handle is not None:
-            handle.close()
+        code = 124
+    reader.join(timeout=10)
+    if handle is not None:
+        handle.close()
+    return code, "".join(chunks)[-12000:]
 
 
 def compiler_errors(log_path: str) -> list[str]:
@@ -203,7 +222,7 @@ def run_device(device: dict, kind: str) -> dict:
         if os.path.exists(result_bundle):
             shutil.rmtree(result_bundle)
         print(f"runtime gate: {kind} attempt {attempt} on {device['name']} ({device['udid']})")
-        code, output = run(command, timeout=RUN_TIMEOUT, log_path=log_path)
+        code, output = run(command, timeout=RUN_TIMEOUT, log_path=log_path, echo=True)
         if code == 0:
             break
         print(f"runtime gate: {kind} attempt {attempt} failed (exit {code})")
