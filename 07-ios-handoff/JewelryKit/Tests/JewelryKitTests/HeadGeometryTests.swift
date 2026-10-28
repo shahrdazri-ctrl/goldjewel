@@ -22,6 +22,9 @@ final class HeadGeometryTests: XCTestCase {
         var sideX: [[Double]]
         var sideY: [[Double]]
         var gallery: GalleryExpectation
+        var dome: DomeExpectation
+        var bezel: BezelExpectation
+        var halo: HaloExpectation
         var mesh: MeshExpectation
     }
 
@@ -45,6 +48,50 @@ final class HeadGeometryTests: XCTestCase {
     private struct GalleryMesh: Decodable {
         var vertices: Int
         var triangles: Int
+    }
+
+    private struct DomeExpectation: Decodable {
+        var parameters: DomeParameters
+        var apex: [Double]
+        var baseCenter: [Double]
+        var baseFirst: [Double]
+        var midFirst: [Double]
+        var mesh: GalleryMesh
+    }
+
+    private struct BezelExpectation: Decodable {
+        var parameters: BezelParameters
+        var topZ: Double
+        var lipZ: Double
+        var seatTopFirst: [Double]
+        var seatLipFirst: [Double]
+        var wallBottomFirst: [Double]
+        var mesh: GalleryMesh
+    }
+
+    private struct HaloExpectation: Decodable {
+        var parameters: HaloParameters
+        var count: Int
+        var centers: [[Double]]
+        var firstCenter: [Double]
+        var mesh: HaloMesh
+    }
+
+    private struct HaloMesh: Decodable {
+        var bandVertices: Int
+        var bandTriangles: Int
+        var gemVertices: Int
+        var gemTriangles: Int
+        var vertices: Int
+        var triangles: Int
+    }
+
+    private struct DomeParameters: Decodable {
+        var height: Double
+        var settingDistance: Double
+        var settingAngle: Double
+        var planar: Bool
+        var samples: Int
     }
 
     private struct MeshExpectation: Decodable {
@@ -104,6 +151,46 @@ final class HeadGeometryTests: XCTestCase {
         }
     }
 
+    func testProngDomeMatchesGoldenVectors() throws {
+        let golden = try golden()
+        let expected = golden.expected.dome
+        let parameters = golden.parameters
+        let domeParameters = ProngDomeParameters(
+            height: expected.parameters.height,
+            settingDistance: expected.parameters.settingDistance,
+            settingAngle: expected.parameters.settingAngle,
+            planar: expected.parameters.planar
+        )
+        let cage = try HeadShapeBuilder.build(parameters)
+        let dome = try XCTUnwrap(
+            ProngDomeBuilder.cap(
+                rail: cage.prongRails[0],
+                prong: parameters.prongs[0],
+                parameters: domeParameters
+            )
+        )
+        assertClose(dome.apex, expected.apex, label: "dome.apex")
+        assertClose(dome.baseCenter, expected.baseCenter, label: "dome.baseCenter")
+        assertClose(dome.meridianMid, expected.midFirst, label: "dome.midFirst")
+        XCTAssertEqual(dome.heightMM, expected.parameters.height, accuracy: 1e-12)
+        XCTAssertEqual(dome.tier, .reconstructed)
+        XCTAssertEqual(dome.mesh.vertices.count, expected.mesh.vertices)
+        XCTAssertEqual(dome.mesh.triangles.count, expected.mesh.triangles)
+
+        let assembly = try HeadAssembly(
+            parameters: parameters,
+            domeParameters: domeParameters
+        )
+        XCTAssertEqual(assembly.domes.count, parameters.prongs.count)
+        XCTAssertEqual(assembly.partTiers["domes"], .reconstructed)
+        XCTAssertEqual(
+            assembly.combined.vertices.count,
+            golden.expected.mesh.basketVertices
+                + golden.expected.mesh.prongVertices * parameters.prongs.count
+                + expected.mesh.vertices * parameters.prongs.count
+        )
+    }
+
     func testGalleryRailMatchesGoldenVectors() throws {
         let golden = try golden()
         let expected = golden.expected.gallery
@@ -136,6 +223,67 @@ final class HeadGeometryTests: XCTestCase {
                        golden.expected.mesh.basketTriangles
                        + golden.expected.mesh.prongTriangles * parameters.prongs.count
                        + expected.mesh.triangles)
+    }
+
+    func testBezelMatchesGoldenVectors() throws {
+        let golden = try golden()
+        let expected = golden.expected.bezel
+        let parameters = golden.parameters
+        let cage = try HeadShapeBuilder.build(parameters)
+        let bezel = try XCTUnwrap(BezelBuilder.build(cage: cage, bezel: expected.parameters))
+
+        XCTAssertEqual(bezel.tier, .reconstructed)
+        XCTAssertEqual(bezel.topZ, expected.topZ, accuracy: 1e-12)
+        XCTAssertEqual(bezel.lipZ, expected.lipZ, accuracy: 1e-12)
+        assertClose(bezel.seatTopFirst, expected.seatTopFirst, label: "bezel.seatTopFirst")
+        assertClose(bezel.seatLipFirst, expected.seatLipFirst, label: "bezel.seatLipFirst")
+        assertClose(bezel.wallBottomFirst, expected.wallBottomFirst, label: "bezel.wallBottomFirst")
+        XCTAssertEqual(bezel.mesh.vertices.count, expected.mesh.vertices)
+        XCTAssertEqual(bezel.mesh.triangles.count, expected.mesh.triangles)
+
+        let assembly = try HeadAssembly(parameters: parameters, bezelParameters: expected.parameters)
+        XCTAssertEqual(assembly.partTiers["bezel"], .reconstructed)
+        XCTAssertEqual(
+            assembly.combined.vertices.count,
+            golden.expected.mesh.basketVertices
+                + golden.expected.mesh.prongVertices * parameters.prongs.count
+                + expected.mesh.vertices
+        )
+    }
+
+    func testHaloMatchesGoldenVectors() throws {
+        let golden = try golden()
+        let expected = golden.expected.halo
+        let parameters = golden.parameters
+        let halo = try XCTUnwrap(HaloBuilder.build(parameters: parameters, halo: expected.parameters))
+
+        XCTAssertEqual(halo.count, expected.count)
+        XCTAssertEqual(halo.seats.count, expected.count)
+        XCTAssertEqual(halo.centers.count, expected.centers.count)
+        for index in 0..<min(halo.centers.count, expected.centers.count) {
+            assertClose(halo.centers[index], expected.centers[index], label: "halo.center[\(index)]")
+        }
+        assertClose(halo.centers[0], expected.firstCenter, label: "halo.firstCenter")
+        XCTAssertEqual(halo.tier, .reconstructed)
+        XCTAssertEqual(halo.bandTier, .reconstructed)
+        XCTAssertEqual(halo.gemTier, .inferred)
+        XCTAssertEqual(halo.band.vertices.count, expected.mesh.bandVertices)
+        XCTAssertEqual(halo.band.triangles.count, expected.mesh.bandTriangles)
+        XCTAssertEqual(halo.gems.vertices.count, expected.mesh.gemVertices)
+        XCTAssertEqual(halo.gems.triangles.count, expected.mesh.gemTriangles)
+        XCTAssertEqual(halo.mesh.vertices.count, expected.mesh.vertices)
+        XCTAssertEqual(halo.mesh.triangles.count, expected.mesh.triangles)
+
+        let assembly = try HeadAssembly(parameters: parameters, haloParameters: expected.parameters)
+        XCTAssertEqual(assembly.partTiers["haloSeats"], .recovered)
+        XCTAssertEqual(assembly.partTiers["haloBand"], .reconstructed)
+        XCTAssertEqual(assembly.partTiers["haloGems"], .inferred)
+        XCTAssertEqual(
+            assembly.combined.vertices.count,
+            golden.expected.mesh.basketVertices
+                + golden.expected.mesh.prongVertices * parameters.prongs.count
+                + expected.mesh.vertices
+        )
     }
 
     func testAssemblyStructureAndMeshCounts() throws {
@@ -201,10 +349,82 @@ final class HeadGeometryTests: XCTestCase {
     }
 
     func testProvenanceIsPresent() throws {
-        XCTAssertEqual(HeadProvenance.all.count, 12)
+        XCTAssertEqual(HeadProvenance.all.count, 19)
         for entry in HeadProvenance.all {
+            XCTAssertEqual(entry.tier, .recovered)
             XCTAssertFalse(entry.method.isEmpty)
             XCTAssertGreaterThanOrEqual(entry.ilOffset, 0)
+        }
+    }
+
+    /// The three grades are enforced here, not merely described in comments:
+    /// recovered facts must name an IL method and offset, reconstructed ones a
+    /// documented algorithm, and inferred ones a rationale. Every rendered
+    /// family must declare a grade.
+    func testProvenanceTiersAreEnforced() throws {
+        XCTAssertEqual(Set(HeadProvenance.claims.map(\.tier)), Set(ProvenanceTier.allCases))
+        for claim in HeadProvenance.claims {
+            XCTAssertFalse(claim.statement.isEmpty, claim.id)
+            XCTAssertFalse(claim.evidence.isEmpty, claim.id)
+            switch claim.tier {
+            case .recovered:
+                XCTAssertFalse(claim.method?.isEmpty ?? true, "\(claim.id) lacks a method")
+                XCTAssertNotNil(claim.ilOffset, "\(claim.id) lacks an IL offset")
+            case .reconstructed:
+                XCTAssertFalse(
+                    claim.documentedAlgorithm?.isEmpty ?? true,
+                    "\(claim.id) lacks a documented algorithm"
+                )
+            case .inferred:
+                XCTAssertFalse(claim.rationale?.isEmpty ?? true, "\(claim.id) lacks a rationale")
+            }
+        }
+
+        let assembly = HeadAssembly.solitaire
+        XCTAssertEqual(Set(assembly.partTiers.keys), ["basket", "prongs"])
+        for (part, tier) in assembly.partTiers {
+            XCTAssertTrue(ProvenanceTier.allCases.contains(tier), part)
+        }
+    }
+
+    /// Every visible family has a declared grade and the full build records
+    /// exactly the three tiers. If a builder is added without a tier this fails.
+    func testFullAssemblyDeclaresEveryFamilyTier() throws {
+        let golden = try golden()
+        let assembly = try HeadAssembly(
+            parameters: golden.parameters,
+            railParameters: [RailParameters(
+                enabled: true,
+                position: golden.expected.gallery.parameters.position,
+                width: golden.expected.gallery.parameters.width,
+                height: golden.expected.gallery.parameters.height,
+                offset: golden.expected.gallery.parameters.offset
+            )],
+            domeParameters: ProngDomeParameters(
+                height: golden.expected.dome.parameters.height,
+                settingDistance: golden.expected.dome.parameters.settingDistance,
+                settingAngle: golden.expected.dome.parameters.settingAngle,
+                planar: golden.expected.dome.parameters.planar
+            ),
+            bezelParameters: golden.expected.bezel.parameters,
+            haloParameters: golden.expected.halo.parameters
+        )
+        XCTAssertEqual(assembly.partTiers, [
+            "basket": .recovered,
+            "prongs": .inferred,
+            "domes": .reconstructed,
+            "gallery": .inferred,
+            "bezel": .reconstructed,
+            "haloSeats": .recovered,
+            "haloBand": .reconstructed,
+            "haloGems": .inferred
+        ])
+        // Every declared tier is backed by at least one claim of that tier.
+        for (part, tier) in assembly.partTiers {
+            XCTAssertTrue(
+                HeadProvenance.claims.contains { $0.tier == tier },
+                "\(part) is graded \(tier.rawValue) with no supporting claim"
+            )
         }
     }
 

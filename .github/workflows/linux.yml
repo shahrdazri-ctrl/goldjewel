@@ -22,7 +22,9 @@ jobs:
         run: python 04-index/validate_handoff.py
       - name: M2 ledgers and corpus are hash-verified
         run: python Tools/m2.py --check
-      - name: Head and gallery geometry vectors and IL provenance
+      - name: Corpus v2 hashes
+        run: python Tools/build_corpus_v2.py --check
+      - name: Head, dome, bezel and halo geometry vectors and IL provenance
         run: python Tools/head_geometry_vectors.py --check
       - name: Operation catalog matches the capability matrix
         run: python Tools/operation_catalog.py --check

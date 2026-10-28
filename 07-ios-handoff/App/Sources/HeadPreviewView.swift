@@ -40,7 +40,7 @@ struct HeadPreviewView: View {
                 .onEnded { _ in dragStart = nil }
         )
         .accessibilityLabel("Parametric ring head preview")
-        .accessibilityValue("\(assembly.prongs.count) prongs, \(assembly.triangleCount) triangles")
+        .accessibilityValue("\(assembly.prongs.count) prongs, \(assembly.partTiers.count) graded parts, \(assembly.triangleCount) triangles")
     }
 
     private func draw(in context: inout GraphicsContext, size: CGSize) {
@@ -88,9 +88,19 @@ struct HeadPreviewView: View {
         faces.reserveCapacity(assembly.combined.triangles.count)
 
         var vertexOffset = 0
+        // This list must stay in HeadAssembly.combined's order, because the
+        // projected array was built from the combined vertex buffer.
         var meshes: [(Mesh3D, (Double, Double, Double))] = [(assembly.basket, (0.78, 0.62, 0.30))]
         meshes.append(contentsOf: assembly.prongs.map { ($0, (0.95, 0.78, 0.38)) })
+        meshes.append(contentsOf: assembly.domes.map { ($0.mesh, (0.98, 0.82, 0.42)) })
         meshes.append(contentsOf: assembly.rails.map { ($0.mesh, (0.70, 0.54, 0.26)) })
+        if let bezel = assembly.bezel {
+            meshes.append((bezel.mesh, (0.86, 0.70, 0.34)))
+        }
+        if let halo = assembly.halo {
+            meshes.append((halo.band, (0.72, 0.56, 0.27)))
+            meshes.append((halo.gems, (0.86, 0.90, 0.96)))
+        }
         for (mesh, gold) in meshes {
             for triangle in mesh.triangles {
                 let a = mesh.vertices[triangle.a]

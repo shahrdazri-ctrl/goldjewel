@@ -19,6 +19,8 @@ struct ProjectEditorView: View {
                 headSection
                 gemAndRingSection
                 gallerySection
+                bezelSection
+                haloSection
                 provenanceSection
             }
             .frame(maxWidth: 760, alignment: .leading)
@@ -59,7 +61,18 @@ struct ProjectEditorView: View {
     }
 
     private var previewKey: String {
-        "\(project.gemDiameterMM)-\(project.prongCount)-\(project.rail.enabled)-\(project.rail.position)-\(project.rail.height)"
+        [
+            project.gemDiameterMM, Double(project.prongCount),
+            project.rail.enabled ? 1 : 0, project.rail.position, project.rail.height,
+            project.dome.enabled ? 1 : 0, project.dome.height,
+            project.bezel?.seatHeight ?? 0, project.bezel?.seatLength ?? 0,
+            project.bezel?.seatAngle ?? 0,
+            project.halo?.gemDiameter ?? 0, project.halo?.spacing ?? 0,
+            project.halo?.offsetRailX ?? 0, project.halo?.offsetRailZ ?? 0,
+            project.halo?.fixPosition ?? 0
+        ]
+        .map { $0.formatted(.number.precision(.fractionLength(4))) }
+        .joined(separator: "-")
     }
 
     private var summary: some View {
@@ -68,6 +81,15 @@ struct ProjectEditorView: View {
             Label("\(project.prongCount) prongs", systemImage: "circle.grid.2x2")
             if project.rail.enabled {
                 Label("gallery rail", systemImage: "circle.dashed")
+            }
+            if project.dome.enabled {
+                Label("dome caps", systemImage: "circle.top")
+            }
+            if project.bezel != nil {
+                Label("bezel", systemImage: "circle.circle")
+            }
+            if project.halo != nil {
+                Label("halo", systemImage: "circle.grid.3x3")
             }
             Spacer()
         }
@@ -112,6 +134,14 @@ struct ProjectEditorView: View {
                 slider("Top angle", $project.topAngleDegrees, -10...20, step: 0.5, suffix: "°")
                 slider("Base angle", $project.baseAngleDegrees, -10...30, step: 0.5, suffix: "°")
                 slider("Base position", $project.baseAnglePosition, 0...1, step: 0.05, suffix: "")
+
+                Divider()
+                Toggle("Prong dome caps", isOn: $project.dome.enabled)
+                if project.dome.enabled {
+                    slider("Dome height", $project.dome.height, 0.1...2, step: 0.05, suffix: "mm")
+                    slider("Dome setting distance", $project.dome.settingDistance, -1...1, step: 0.05, suffix: "mm")
+                    slider("Dome setting angle", $project.dome.settingAngle, -30...30, step: 1, suffix: "°")
+                }
             }
             .padding(.top, 4)
         }
@@ -167,17 +197,103 @@ struct ProjectEditorView: View {
         }
     }
 
+    private var bezelSection: some View {
+        GroupBox("Bezel") {
+            VStack(alignment: .leading, spacing: 12) {
+                Toggle("Show bezel", isOn: Binding(
+                    get: { project.bezel != nil },
+                    set: { project.bezel = $0 ? .standard : nil }
+                ))
+                if project.bezel != nil {
+                    slider("Seat height", bezelBinding(\.seatHeight), 0.1...1.5, step: 0.05, suffix: "mm")
+                    slider("Seat length", bezelBinding(\.seatLength), 0.1...1.2, step: 0.05, suffix: "mm")
+                    slider("Seat angle", bezelBinding(\.seatAngle), 0...45, step: 1, suffix: "°")
+                    Text("Seat construction is recovered from BezelProfile; the collar wall and radial normal are reconstructed/inferred.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.top, 4)
+        }
+    }
+
+    private var haloSection: some View {
+        GroupBox("Halo / cluster") {
+            VStack(alignment: .leading, spacing: 12) {
+                Toggle("Show halo", isOn: Binding(
+                    get: { project.halo != nil },
+                    set: { project.halo = $0 ? .standard : nil }
+                ))
+                if project.halo != nil {
+                    slider("Melee diameter", haloBinding(\.gemDiameter), 0.8...3, step: 0.05, suffix: "mm")
+                    slider("Stone spacing", haloBinding(\.spacing), 0.05...0.6, step: 0.01, suffix: "mm")
+                    slider("Rail offset", haloBinding(\.offsetRailX), 0.2...2.5, step: 0.05, suffix: "mm")
+                    slider("Rail height", haloBinding(\.offsetRailZ), -0.5...0.8, step: 0.05, suffix: "mm")
+                    slider("Rotate seats", haloBinding(\.fixPosition), 0...1, step: 0.01, suffix: "")
+                    Toggle("Even stone count", isOn: Binding(
+                        get: { project.halo?.even ?? false },
+                        set: { value in
+                            guard var settings = project.halo else { return }
+                            settings.even = value
+                            project.halo = settings
+                        }
+                    ))
+                    Text("Seat count, spacing and phase come from PlaceGems; the metal band and proxy crowns are reconstructed/inferred.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.top, 4)
+        }
+    }
+
+    private func bezelBinding(_ path: WritableKeyPath<BezelParameters, Double>) -> Binding<Double> {
+        Binding(
+            get: { project.bezel?[keyPath: path] ?? 0 },
+            set: { value in
+                guard var settings = project.bezel else { return }
+                settings[keyPath: path] = value
+                project.bezel = settings
+            }
+        )
+    }
+
+    private func haloBinding(_ path: WritableKeyPath<HaloParameters, Double>) -> Binding<Double> {
+        Binding(
+            get: { project.halo?[keyPath: path] ?? 0 },
+            set: { value in
+                guard var settings = project.halo else { return }
+                settings[keyPath: path] = value
+                project.halo = settings
+            }
+        )
+    }
+
     private var provenanceSection: some View {
         GroupBox("Evidence") {
             VStack(alignment: .leading, spacing: 6) {
-                Text("\(HeadProvenance.all.count) IL literals traced to corpus v1")
-                Text("Head and gallery placement are recovered; the prong section and rail band are stand-ins for authored profile curves.")
+                Text("\(HeadProvenance.all.count) IL literals traced to corpus v1/v2")
+                Text("Every family declares a grade: recovered (IL-traced), reconstructed (documented algorithm) or inferred (explicit substitute).")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+                ForEach(partTiers) { entry in
+                    LabeledContent(entry.id.capitalized, value: entry.tier.rawValue)
+                        .font(.caption2)
+                }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.top, 4)
         }
+    }
+
+    private struct PartTier: Identifiable {
+        let id: String
+        let tier: ProvenanceTier
+    }
+
+    private var partTiers: [PartTier] {
+        (assembly?.partTiers ?? [:]).map { PartTier(id: $0.key, tier: $0.value) }
+            .sorted { $0.id < $1.id }
     }
 
     private func slider(

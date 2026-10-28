@@ -7,84 +7,249 @@
       "value": 0.01,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 56,
-      "use": "HeadShape clamps prongHeight to 0.01 before any transform"
+      "use": "HeadShape clamps prongHeight to 0.01 before any transform",
+      "tier": "recovered"
     },
     {
       "name": "diameterOffsetMultiplier",
       "value": 2.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 241,
-      "use": "offset is applied to both sides of the gem: gemXSize + num * 2"
+      "use": "offset is applied to both sides of the gem: gemXSize + num * 2",
+      "tier": "recovered"
     },
     {
       "name": "unitZScale",
       "value": 1.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 286,
-      "use": "Transform.Scale z factor for the base outline"
+      "use": "Transform.Scale z factor for the base outline",
+      "tier": "recovered"
     },
     {
       "name": "baseAnglePositionMinimum",
       "value": 0.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 1471,
-      "use": "clamp of baseAnglePosition"
+      "use": "clamp of baseAnglePosition",
+      "tier": "recovered"
     },
     {
       "name": "baseAnglePositionMaximum",
       "value": 1.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 1530,
-      "use": "clamp of baseAnglePosition"
+      "use": "clamp of baseAnglePosition",
+      "tier": "recovered"
     },
     {
       "name": "radialRayLengthMM",
       "value": 50.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 1168,
-      "use": "length of the ray that finds the prong point on the girdle outline"
+      "use": "length of the ray that finds the prong point on the girdle outline",
+      "tier": "recovered"
     },
     {
       "name": "prongPointIntersectionToleranceMM",
       "value": 0.001,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
       "il_offset": 1225,
-      "use": "curve/ray intersection tolerance"
+      "use": "curve/ray intersection tolerance",
+      "tier": "recovered"
     },
     {
       "name": "railDedupeDistanceMM",
       "value": 0.01,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.ProngInterpCurve",
       "il_offset": 28,
-      "use": "consecutive rail points closer than this are removed"
+      "use": "consecutive rail points closer than this are removed",
+      "tier": "recovered"
     },
     {
       "name": "railMidParameter",
       "value": 0.1,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.ProngInterpCurve",
       "il_offset": 124,
-      "use": "midpoint parameter when only two rail points survive"
+      "use": "midpoint parameter when only two rail points survive",
+      "tier": "recovered"
     },
     {
       "name": "galleryHeightFraction",
       "value": 1.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
       "il_offset": 74,
-      "use": "rail height is sideX.end.z * (1.0 - RailPos)"
+      "use": "rail height is sideX.end.z * (1.0 - RailPos)",
+      "tier": "recovered"
     },
     {
       "name": "galleryRayLengthMM",
       "value": 100.0,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
       "il_offset": 178,
-      "use": "length of the horizontal ray that intersects the side rail"
+      "use": "length of the horizontal ray that intersects the side rail",
+      "tier": "recovered"
     },
     {
       "name": "galleryIntersectionToleranceMM",
       "value": 0.01,
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
       "il_offset": 212,
-      "use": "curve/ray intersection tolerance for the gallery rail"
+      "use": "curve/ray intersection tolerance for the gallery rail",
+      "tier": "recovered"
+    },
+    {
+      "name": "blendNearControl",
+      "value": 0.2,
+      "method": "CSBlockUtil.CSUtilCurves.BlendCurve",
+      "il_offset": 72,
+      "use": "first interior Bezier control at 20 % of the chord",
+      "tier": "recovered"
+    },
+    {
+      "name": "blendFarControl",
+      "value": 0.4,
+      "method": "CSBlockUtil.CSUtilCurves.BlendCurve",
+      "il_offset": 119,
+      "use": "second interior Bezier control at 40 % of the chord",
+      "tier": "recovered"
+    },
+    {
+      "name": "bezelSeatAngleOffsetDegrees",
+      "value": 180.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel.BezelProfile",
+      "il_offset": 2436,
+      "use": "seat lip is placed at seatAngle + 180 degrees",
+      "tier": "recovered"
+    },
+    {
+      "name": "bezelBlendThreshold",
+      "value": 0.99,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel.BezelProfile",
+      "il_offset": 2549,
+      "use": "percentage above which the seat uses a single BlendCurve join",
+      "tier": "recovered"
+    },
+    {
+      "name": "haloArcStepNumerator",
+      "value": 1.0,
+      "method": "CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemRound.PlaceGems",
+      "il_offset": 130,
+      "use": "arc step is 1.0 / count",
+      "tier": "recovered"
+    },
+    {
+      "name": "haloArcWrapThreshold",
+      "value": 1.0,
+      "method": "CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemRound.PlaceGems",
+      "il_offset": 168,
+      "use": "normalised position wraps above 1.0",
+      "tier": "recovered"
+    },
+    {
+      "name": "haloArcWrapAmount",
+      "value": 1.0,
+      "method": "CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemRound.PlaceGems",
+      "il_offset": 181,
+      "use": "wrap subtracts 1.0",
+      "tier": "recovered"
+    }
+  ],
+  "claims": [
+    {
+      "id": "head-cage",
+      "tier": "recovered",
+      "statement": "The girdle, middle, base and top outlines come from the three HeadShape scale transforms and the null-base GetDrop branch.",
+      "evidence": "CSHeadShape.HeadShape IL_241/IL_1471/IL_1530; GetDrop null branch.",
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 241
+    },
+    {
+      "id": "prong-spline",
+      "tier": "reconstructed",
+      "statement": "ProngInterpCurve is a degree-3 chord-knot interpolation; this port uses a natural cubic spline.",
+      "evidence": "ProngInterpCurve IL_28/IL_124 and the captured call to CreateInterpolatedCurve(..., 3, Chord).",
+      "documented_algorithm": "RhinoCommon Curve.CreateInterpolatedCurve with degree 3 and chord-length knots; the natural-spline solver follows the standard C2 interpolation construction."
+    },
+    {
+      "id": "prong-section",
+      "tier": "inferred",
+      "statement": "The prong section is an ellipse because the authored profile curve is not in the IL corpus.",
+      "evidence": "ProngProfileSweep scales an authored document curve; no numeric profile is captured.",
+      "rationale": "A 0.5 rounded-rectangle corner fraction is substituted; replacing it changes the section, not the recovered rail placement."
+    },
+    {
+      "id": "gallery-placement",
+      "tier": "recovered",
+      "statement": "Gallery height, side-rail intersection scaling and the two offsets come from GalleryRail_V1.",
+      "evidence": "GalleryRail_V1 IL_74, IL_178, IL_212 and the two GemOffset calls.",
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
+      "il_offset": 74
+    },
+    {
+      "id": "gallery-band",
+      "tier": "inferred",
+      "statement": "The gallery band is rectangular and its elliptical offset adds to both radii.",
+      "evidence": "The vendor sweeps an authored RailProfile between two GemOffset curves; the exact parallel offset and profile are not numeric constants.",
+      "rationale": "Use the recovered offset distance and a constant-thickness band while the authored profile and exact offset solver remain uncaptured."
+    },
+    {
+      "id": "dome-blend",
+      "tier": "reconstructed",
+      "statement": "Each dome meridian is the captured six-point BlendCurve Bezier from the top section to the apex.",
+      "evidence": "CSUtilCurves.BlendCurve IL_72 and IL_119; ProngDomeCurve blend calls.",
+      "documented_algorithm": "CSUtilCurves.BlendCurve builds [start, start+d0*L*0.2, start+d0*L*0.4, end+d1*L*0.4, end+d1*L*0.2, end] and evaluates it as a Bezier."
+    },
+    {
+      "id": "dome-meridian",
+      "tier": "inferred",
+      "statement": "The radial section direction is used as the start tangent of every meridian.",
+      "evidence": "ProngDomeCurve derives its tangents from the split profile after a Rhino intersection that is not reproduced.",
+      "rationale": "A radial meridian keeps the cap attached to the recovered top section; it changes the cap's curvature, not the section or the apex rule."
+    },
+    {
+      "id": "bezel-seat",
+      "tier": "recovered",
+      "statement": "The seat folds from the girdle by seatHeight and then by seatLength at 180 degrees plus seatAngle.",
+      "evidence": "BezelProfile IL_2436 and the three-point seat polyline; the 180 degree offset is a literal.",
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel.BezelProfile",
+      "il_offset": 2436
+    },
+    {
+      "id": "bezel-wall",
+      "tier": "reconstructed",
+      "statement": "The bezel is the captured seat profile swept around the recovered girdle, closed by an outer wall of width seatLength.",
+      "evidence": "RevolveBezel rules a surface between the bezel outline and the gem offset curve.",
+      "documented_algorithm": "A ruled surface between two closed curves, as RhinoCommon NurbsSurface.Create does in RevolveBezel."
+    },
+    {
+      "id": "bezel-ring-normal",
+      "tier": "inferred",
+      "statement": "The outward normal of the girdle ellipse is approximated by the radial direction.",
+      "evidence": "The exact GemOffsetCurve result is captured but not evaluated here.",
+      "rationale": "For the default round gem the two coincide; for fancy shapes the seat width varies slightly with the true normal."
+    },
+    {
+      "id": "halo-placement",
+      "tier": "recovered",
+      "statement": "Halo seat count, even-count adjustment, phase, wrap and sort come from PlaceGems.",
+      "evidence": "CSClusterGemRound.PlaceGems IL_130, IL_168 and IL_181.",
+      "method": "CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemRound.PlaceGems",
+      "il_offset": 130
+    },
+    {
+      "id": "halo-band",
+      "tier": "reconstructed",
+      "statement": "The metal halo is a rectangular band swept along the recovered seat path.",
+      "evidence": "MakeHaloProfile builds an authored profile that is not reproduced; the seat path is recovered.",
+      "documented_algorithm": "A constant cross-section swept along a closed curve, the standard RhinoCommon Sweep1 construction."
+    },
+    {
+      "id": "halo-gems",
+      "tier": "inferred",
+      "statement": "Melee stones are rendered as octagonal proxy crowns at the recovered seats.",
+      "evidence": "CSGemInstance and the gem table are captured, but gem faceting is not ported.",
+      "rationale": "The proxies make seat spacing visible without claiming the gem geometry."
     }
   ]
 }

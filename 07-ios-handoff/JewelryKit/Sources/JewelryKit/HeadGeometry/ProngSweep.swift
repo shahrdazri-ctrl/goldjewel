@@ -48,11 +48,15 @@ public enum ProngSweeper {
         return cosine > 1e-6 ? 1 / cosine : 1
     }
 
-    /// Places the profile at the start (top) and end (base) of the rail and
-    /// lofts between those two sections along the rail.
-    public static func solid(rail: [Vec3], prong: ProngPlacement) -> Mesh3D {
-        guard rail.count >= 2 else { return Mesh3D() }
-        let profile = ProngProfile.roundedRectangle()
+    /// The section at one rail sample. Exposed so a dome cap sits on exactly
+    /// the same top ring as the prong solid.
+    public static func section(
+        rail: [Vec3],
+        index: Int,
+        prong: ProngPlacement,
+        profile: [Vec2] = ProngProfile.roundedRectangle()
+    ) -> [Vec3] {
+        guard rail.count >= 2, rail.indices.contains(index) else { return [] }
         let tangent = (rail[1] - rail[0]).normalized()
         let secant = secantFactor(tangent: tangent)
 
@@ -62,32 +66,36 @@ public enum ProngSweeper {
         let topScale = Vec2(prong.topX, prong.topY * secant)
         let baseScale = Vec2(prong.baseX, prong.baseY)
 
-        var rings: [[Vec3]] = []
-        for index in 0..<rail.count {
-            let origin = rail[index]
-            let previous = rail[max(index - 1, 0)]
-            let next = rail[min(index + 1, rail.count - 1)]
-            let railTangent = (next - previous).normalized(fallback: tangent)
+        let origin = rail[index]
+        let previous = rail[max(index - 1, 0)]
+        let next = rail[min(index + 1, rail.count - 1)]
+        let railTangent = (next - previous).normalized(fallback: tangent)
 
-            // The sweep plane is perpendicular to the rail. Width runs along
-            // the tangential direction; thickness runs radially outwards.
-            let radial = Vec3(origin.x, origin.y, 0).normalized(fallback: Vec3(0, 1, 0))
-            var side = railTangent.cross(radial).normalized(fallback: Vec3(1, 0, 0))
-            if side.length < 1e-9 { side = Vec3(1, 0, 0) }
-            let normal = side.cross(railTangent).normalized(fallback: radial)
+        // The sweep plane is perpendicular to the rail. Width runs along the
+        // tangential direction; thickness runs radially outwards.
+        let radial = Vec3(origin.x, origin.y, 0).normalized(fallback: Vec3(0, 1, 0))
+        var side = railTangent.cross(radial).normalized(fallback: Vec3(1, 0, 0))
+        if side.length < 1e-9 { side = Vec3(1, 0, 0) }
+        let normal = side.cross(railTangent).normalized(fallback: radial)
 
-            let t = Double(index) / Double(rail.count - 1)
-            let scale = Vec2(
-                topScale.x + (baseScale.x - topScale.x) * t,
-                topScale.y + (baseScale.y - topScale.y) * t
-            )
-            let offset = topOffset + (baseOffset - topOffset) * t
-            var ring: [Vec3] = []
-            ring.reserveCapacity(profile.count)
-            for point in profile {
-                ring.append(origin + side * (point.x * scale.x) + normal * (point.y * scale.y + offset))
-            }
-            rings.append(ring)
+        let t = Double(index) / Double(rail.count - 1)
+        let scale = Vec2(
+            topScale.x + (baseScale.x - topScale.x) * t,
+            topScale.y + (baseScale.y - topScale.y) * t
+        )
+        let offset = topOffset + (baseOffset - topOffset) * t
+        return profile.map {
+            origin + side * ($0.x * scale.x) + normal * ($0.y * scale.y + offset)
+        }
+    }
+
+    /// Places the profile at the start (top) and end (base) of the rail and
+    /// lofts between those two sections along the rail.
+    public static func solid(rail: [Vec3], prong: ProngPlacement) -> Mesh3D {
+        guard rail.count >= 2 else { return Mesh3D() }
+        let profile = ProngProfile.roundedRectangle()
+        let rings = (0..<rail.count).map {
+            section(rail: rail, index: $0, prong: prong, profile: profile)
         }
         return Mesh3D.loft(rings: rings, closedRing: true, capStart: true, capEnd: true)
     }
