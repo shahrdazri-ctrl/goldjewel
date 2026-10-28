@@ -4,9 +4,9 @@ import SwiftUI
 struct ProjectEditorView: View {
     @Binding var project: JewelryProject
     var onSave: () -> Void
+    var onOpenOperations: () -> Void
 
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
-    @Environment(\.openOperations) private var openOperations
 
     private var assembly: HeadAssembly? { project.assembly }
 
@@ -30,7 +30,7 @@ struct ProjectEditorView: View {
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
                 Button {
-                    openOperations()
+                    onOpenOperations()
                 } label: {
                     Label("Operations", systemImage: "square.stack.3d.up")
                 }

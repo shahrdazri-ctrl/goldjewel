@@ -32,7 +32,11 @@ struct RootView: View {
                 }
         } detail: {
             if let id = store.selectedID, let index = store.index(of: id) {
-                ProjectEditorView(project: $store.projects[index], onSave: { store.save() })
+                ProjectEditorView(
+                    project: $store.projects[index],
+                    onSave: { store.save() },
+                    onOpenOperations: { showOperations = true }
+                )
             } else {
                 ContentUnavailableView(
                     "No project selected",
@@ -55,18 +59,6 @@ struct RootView: View {
         } message: {
             Text(store.statusMessage ?? "")
         }
-        .environment(\.openOperations, { showOperations = true })
-    }
-}
-
-struct OpenOperationsKey: EnvironmentKey {
-    static let defaultValue: () -> Void = {}
-}
-
-extension EnvironmentValues {
-    var openOperations: () -> Void {
-        get { self[OpenOperationsKey.self] }
-        set { self[OpenOperationsKey.self] = newValue }
     }
 }
 
