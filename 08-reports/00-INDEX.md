@@ -14,7 +14,7 @@
 | The iOS architect | `06-dossiers/01` -> `02` -> `03` -> `05` -> `04` -> `06` -> `07` -> `08` |
 | Starting implementation tomorrow | `07-ios-handoff/JewelryKit` (working package) + `06-dossiers/05` (engine contract) |
 | Reviewing fidelity claims | `08-reports/coverage-report.md` + `08-reports/limitations.md` |
-| Reproducing the analysis | `00-control/*.ps1`, `04-index/*.py` (each dossier ends with its queries) |
+| Reproducing the analysis | [Stage map](#stage-map) below |
 
 ---
 
@@ -23,7 +23,7 @@
 ### Dossiers (`06-dossiers/`)
 1. `01-application-shell.md` — two-process architecture, startup, 254-operation service contract, licensing boundary.
 2. `02-document-model-persistence.md` — **designs are JSON/gzip**, exact file format and schema, import/GUID remap, undo.
-3. `03-presentation-layer.md` — 4,205 binding facts, 117 XAML files, screen weights, the single `CommandUpdateGraphFromUI` contract, SwiftUI architecture.
+3. `03-presentation-layer.md` — 4,353 binding facts, 123 XAML files, screen weights, the single `CommandUpdateGraphFromUI` contract, SwiftUI architecture.
 4. `04-geometry-kernel.md` — Rhino call profile, Clipper 2D layer, NURBS contract, transform nodes, tolerance model, iOS kernel options.
 5. `05-parametric-construction.md` — the block graph contract, 408-node taxonomy (731 with legacy), head/prong/bezel/halo algorithms, cutters, JSON persistence, porting order.
 6. `06-gems-and-materials.md` — versioned gem size tables, 55-field `.mgm` material model, metal identity, specific gravity, PBR mapping.
@@ -35,33 +35,34 @@
 
 ### Evidence (`04-index`, `05-evidence`)
 * `symbols.sqlite` — 225 managed assemblies, 35,645 types, 303,780 methods, 75,497 properties, 155,009 fields, 91,902 strings, 1,379,497 call edges.
-* `xaml-bindings.csv` — 4,205 binding/command facts from 117 decompiled BAML files.
+* `xaml-bindings.csv` — 4,353 binding/command facts from 123 decompiled BAML files.
 * `05-evidence/vectors/ring-sizes.json` — 7,005 sizes executed from the real assembly.
 * `05-evidence/rea/` — PE/CLI evidence bundles for the 14 core assemblies, all `coverage=complete` (31,875 methods).
 * `03-decompiled/il/` — per-assembly CIL for all 35 first-party assemblies (41,460 `.method` directives, 111.6 MB).
 
 ---
 
-## Reproduce
+## Stage map
 
-```powershell
-# 1. environment (D: only)
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\env.ps1
+Run from `D:\REA-LAB`. Each row is one stage and one entry point. Run the ledger after the C# decompile so `decompiled_cs` is populated; `xaml_bindings.py` is called by `baml.ps1`, and `00-control/retry.ps1` is the helper library (retry, atomic write, byte formatting) dot-sourced by the install, mirror, manifest and baseline scripts — it is not a stage.
 
-# 2. symbol index + ledger
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\analyze-index.ps1
-python D:\REA-LAB\04-index\build_ledger.py
+| Stage | Entry point | Command | Output |
+|---|---|---|---|
+| Environment | `00-control/env.ps1` | `. D:\REA-LAB\00-control\env.ps1` | current shell environment (D: temp/caches); stage scripts dot-source it where needed |
+| C: containment | `00-control/cleanup-c.ps1` (`baseline.ps1` records the before-picture) | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\cleanup-c.ps1` | `00-control/c-baseline.json`, `00-control/cleanup-result.json`, `09-logs/cleanup-c.log` |
+| Mirror | `00-control/mirror.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\mirror.ps1` | `01-target/mirror/` |
+| Baseline manifest | `00-control/manifest.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\manifest.ps1` | `01-target/target-manifest.csv`, `extensions.csv` |
+| Index scan | `00-control/analyze-index.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\analyze-index.ps1` | `04-index/summary.csv`, `04-index/raw/` |
+| C# decompile | `00-control/decompile.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\decompile.ps1` | `03-decompiled/raw/`, `03-decompiled/decompile-summary.csv` |
+| CIL | `00-control/emit-il.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\emit-il.ps1` | `03-decompiled/il/`, `03-decompiled/il-index.csv` |
+| Ledger | `04-index/build_ledger.py` | `python D:\REA-LAB\04-index\build_ledger.py` | `04-index/symbols.sqlite`, `04-index/coverage.csv` |
+| BAML -> XAML + bindings | `00-control/baml.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\baml.ps1` | `03-decompiled/xaml/`, `04-index/xaml-bindings.csv` |
+| REA evidence | `00-control/rea-evidence.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\rea-evidence.ps1` | `05-evidence/rea/*.artifact.json`, `*.members.json`, indexes |
+| Golden vectors | `02-toolchain/RingVectors/build.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\02-toolchain\RingVectors\build.ps1` | `05-evidence/vectors/ring-sizes.json` |
+| Validation | `04-index/validate_handoff.py` | `python D:\REA-LAB\04-index\validate_handoff.py` | console report; exit 0 on success |
+| Dossiers | `06-dossiers/*.md` | none — authored from the index and evidence | eight dossier files |
 
-# 3. decompile + XAML
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\decompile.ps1
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\emit-il.ps1
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\baml.ps1
-python D:\REA-LAB\04-index\xaml_bindings.py
-
-# 4. golden vectors + validation
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\02-toolchain\RingVectors\build.ps1
-python D:\REA-LAB\04-index\validate_handoff.py
-```
+`04-index/raw/` is the SymbolScan JSONL cache. It is disposable after the ledger stage finishes; delete it and re-run the index stage to regenerate it. `symbols.sqlite` is kept because the coverage report and dossiers cite it.
 
 ---
 
@@ -71,3 +72,4 @@ python D:\REA-LAB\04-index\validate_handoff.py
 * No PDBs ship with the product: dossiers cite **types, methods, IL evidence and file paths**, never invented source line numbers.
 * Obfuscation: Red Gate SmartAssembly. Method names are mangled; **namespaces, type names (44.8 %), property names, field names, strings, XAML and all data formats survive**. Dossiers are built on the surviving surface plus call-graph and behavioural evidence.
 * Licensing/auth code is a stated boundary and is not analysed (Dossier 01, section 6).
+* The one-off probe helpers and superseded evidence were removed; reproduction depends only on the stage map above.

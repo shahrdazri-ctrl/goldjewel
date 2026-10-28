@@ -47,6 +47,26 @@ FORMULA = {
     "Us": lambda i: ((i / 4.0) * 0.102 + 1.43) / math.pi * 25.4,
 }
 
+def size_name(region, i):
+    fraction = {1: " 1/4", 2: " 1/2", 3: " 3/4"}.get(i % 4, "")
+    if region == "Us":
+        return f"{i // 4}" + fraction
+    if region == "Uk":
+        value = f"Z+{(i - 50) // 2}" if i >= 52 else chr(65 + i // 2)
+        return value + (" 1/2" if i % 2 else "")
+    if region == "Eu":
+        return str(i + 41)
+    if region == "Jp":
+        return str(i)
+    if region == "Fr":
+        return f"{i // 4 + 41}" + fraction
+    if region == "De":
+        n = i + 53
+        return f"{n // 4}" + {1: " 1/4", 2: " 1/2", 3: " 3/4"}.get(n % 4, "")
+    if region == "Ch":
+        return f"{i // 4 + 1}" + fraction
+    raise KeyError(region)
+
 fails = 0
 checked = 0
 # 1. formula regions must match every vector exactly
@@ -60,6 +80,10 @@ for region, fn in FORMULA.items():
         if abs(r2(fn(row["index"]) / 2.0) - row["radiusMM"]) > 1e-9:
             fails += 1
             print("RADIUS MISMATCH", region, row["index"], row["radiusMM"])
+        expect_name = size_name(region, row["index"])
+        if row["name"] != expect_name:
+            fails += 1
+            print("NAME MISMATCH", region, row["index"], expect_name, row["name"])
 
 # 2. structural invariants for all regions
 total = 0
@@ -230,7 +254,17 @@ for enum_name in [
 region_enum = parse_enum(ring_text, "RingSizeRegion")
 kind_enum = parse_enum(ring_text, "Kind")
 region_raw = {name: value for name, value in region_enum["cases"]}
-region_by_raw = {value: name for name, value in region_enum["cases"]}
+
+swift_fails = 0
+issue_seen = set()
+issues = []
+
+def issue(message, count=1):
+    global swift_fails
+    swift_fails += count
+    if message not in issue_seen:
+        issue_seen.add(message)
+        issues.append(message)
 
 # C# enums have no explicit initializers here, so declaration order is the raw
 # value. This also covers values absent from the 257-file corpus (MaterialOwner
@@ -251,18 +285,6 @@ for enum_name, filename in CS_ENUMS.items():
             f"{enum_name}: Swift raw values {swift_values} do not match assembly "
             f"ordinals {list(range(len(cs_names)))} ({cs_names})"
         )
-
-swift_fails = 0
-issue_seen = set()
-issues = []
-
-def issue(message, count=1):
-    global swift_fails
-    swift_fails += count
-    if message not in issue_seen:
-        issue_seen.add(message)
-        issues.append(message)
-
 
 def is_int(value):
     return isinstance(value, int) and not isinstance(value, bool)

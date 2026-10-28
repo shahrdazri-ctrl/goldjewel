@@ -48,10 +48,10 @@ Largest first-party assemblies: `MatrixGold.exe` 951 types / 8,711 methods, `CS.
 | C# files | **2,943** | **60.2 MB** |
 | Per-assembly CIL (`.il`) | **35 / 35**, all exit 0 | **111.6 MB** |
 | CIL `.method` directives | **41,460** | — |
-| BAML -> XAML files | 117 / 117 (0 failures) | 30.7 MB |
-| Extracted binding/command facts | 4,205 | — |
-| Distinct binding paths | 1,168 non-empty | — |
-| Distinct commands | 366 | — |
+| BAML -> XAML files | 123 / 123 (0 failures) | 30.7 MB |
+| Extracted binding/command facts | 4,353 | — |
+| Distinct binding paths | 1,263 non-empty | — |
+| Distinct commands | 372 | — |
 
 The three assemblies previously missing are now present: `MatrixGoldPlugin.rhp` (145 C# files), `MatrixGoldRenderPlugin.rhp` (4), `CommonServiceLocator.dll` (7). `03-decompiled/decompile-summary.csv` and `03-decompiled/il-index.csv` are the machine-readable records. The product ships **no XML documentation and no PDBs**, so neither could be emitted; the generated `.csproj` files are the project layout ILSpy could recover.
 
@@ -85,13 +85,12 @@ The three assemblies previously missing are now present: `MatrixGoldPlugin.rhp` 
 
 Every managed type, method, property, field, string literal and call edge is indexed and queryable. Every first-party assembly is decompiled to C# and to per-assembly CIL. Nothing was sampled for the mechanical layer.
 
-The **semantic** layer is deliberately prioritised: dossiers cover the eight subsystems that determine product quality, at implementation depth, rather than giving 4,347 one-line type summaries. Anything not in a dossier remains queryable — `04-index/condense.py <subsystem>` regenerates a fact sheet on demand.
+The **semantic** layer is deliberately prioritised: dossiers cover the eight subsystems that determine product quality, at implementation depth, rather than giving 4,347 one-line type summaries. Anything not in a dossier remains queryable directly in `04-index/symbols.sqlite`.
 
 ## 8. Reproduce
 
 ```powershell
 python D:\REA-LAB\04-index\validate_handoff.py     # 0 failures expected
-python D:\REA-LAB\04-index\condense.py parametric 40
 powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\emit-il.ps1
 sqlite3 D:\REA-LAB\04-index\symbols.sqlite "select count(*) from methods;"
 ```

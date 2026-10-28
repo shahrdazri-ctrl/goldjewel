@@ -1,5 +1,5 @@
 {
-  "xaml_files": 117,
+  "xaml_files": 123,
   "parse_failures": [],
   "classes": {
     "Common.UI\\resources\\converters.xaml": "",
@@ -110,6 +110,12 @@
     "MatrixGold\\views\\windowsplash.xaml": "MatrixGold.Views.WindowSplash",
     "MatrixGold\\views\\windowtoastposition.xaml": "MatrixGold.Views.WindowToastPosition",
     "MatrixGold\\views\\windowvideoplayer.xaml": "MatrixGold.Views.WindowVideoPlayer",
+    "MatrixGoldPlugin\\commands\\customgemcommands\\customgembuilderwpf.xaml": "MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuilderWpf",
+    "MatrixGoldPlugin\\commands\\gemsplacer\\gemplacerui.xaml": "MatrixGoldPlugin.Commands.GemsPlacer.GemPlacerUI",
+    "MatrixGoldPlugin\\commands\\gemsprings\\gemspringswpf.xaml": "MatrixGoldPlugin.Commands.GemSprings.GemSpringsWpf",
+    "MatrixGoldPlugin\\commands\\jali\\jaliwpf.xaml": "MatrixGoldPlugin.Commands.Jali.JaliWpf",
+    "MatrixGoldPlugin\\commands\\pave\\pavewpf.xaml": "MatrixGoldPlugin.Commands.Pave.PaveWpf",
+    "MatrixGoldPlugin\\commands\\pave\\typenumberdialog.xaml": "MatrixGoldPlugin.Commands.Pave.TypeNumberDialog",
     "SharedTypes\\resourcedictionaries\\designstackslidericons.xaml": "",
     "SuperView\\newmodifyname.xaml": "GV.Designer.SuperView.NewModifyName",
     "SuperView\\selectbycomponent.xaml": "SuperView.SelectByComponent",
@@ -130,16 +136,16 @@
       22515
     ],
     [
+      "Path",
+      21581
+    ],
+    [
       "GeometryDrawing.Pen",
       21492
     ],
     [
       "Pen",
       21492
-    ],
-    [
-      "Path",
-      21355
     ],
     [
       "GradientBrush.GradientStops",
@@ -171,15 +177,15 @@
     ],
     [
       "Canvas",
-      8223
+      8288
     ],
     [
       "Rectangle",
-      3299
+      3300
     ],
     [
       "Viewbox",
-      2790
+      2832
     ],
     [
       "Setter",
@@ -187,11 +193,11 @@
     ],
     [
       "ContentControl",
-      1992
+      2037
     ],
     [
       "TextBlock",
-      1001
+      1048
     ],
     [
       "Shape.Fill",
@@ -199,15 +205,15 @@
     ],
     [
       "Border",
-      641
+      722
     ],
     [
       "DockPanel",
-      617
+      670
     ],
     [
       "Grid",
-      615
+      620
     ],
     [
       "ColumnDefinition",
@@ -231,7 +237,7 @@
     ],
     [
       "Button",
-      344
+      350
     ],
     [
       "DrawingGroup",
@@ -255,7 +261,7 @@
     ],
     [
       "ResourceDictionary",
-      223
+      227
     ],
     [
       "Setter.Value",
@@ -267,11 +273,15 @@
     ],
     [
       "StackPanel",
-      197
+      204
     ],
     [
       "EventTrigger",
       183
+    ],
+    [
+      "TextBox",
+      166
     ],
     [
       "InvokeCommandAction",
@@ -298,20 +308,16 @@
       138
     ],
     [
-      "TextBox",
-      133
-    ],
-    [
       "Grid.RowDefinitions",
       133
     ],
     [
-      "ControlTemplate.Triggers",
-      125
+      "CheckBox",
+      132
     ],
     [
-      "CheckBox",
-      121
+      "ControlTemplate.Triggers",
+      125
     ],
     [
       "ContentPresenter",
@@ -319,7 +325,7 @@
     ],
     [
       "FrameworkElement.Resources",
-      106
+      110
     ],
     [
       "Interaction.Behaviors",
@@ -350,16 +356,16 @@
       89
     ],
     [
+      "Slider",
+      88
+    ],
+    [
       "Condition",
       84
     ],
     [
-      "Ellipse",
-      74
-    ],
-    [
       "Image",
-      72
+      74
     ]
   ],
   "top_binding_paths": [
@@ -636,6 +642,10 @@
       6
     ],
     [
+      "Rotation",
+      6
+    ],
+    [
       "Message",
       5
     ],
@@ -712,7 +722,15 @@
       5
     ],
     [
+      "Enabled",
+      5
+    ],
+    [
       "Length",
+      4
+    ],
+    [
+      "GirdleThickness",
       4
     ],
     [
@@ -829,18 +847,6 @@
     ],
     [
       "CommandCancel",
-      4
-    ],
-    [
-      "Projects",
-      4
-    ],
-    [
-      "SelectedProject",
-      4
-    ],
-    [
-      "NewestMatrixFileInfo",
       4
     ]
   ],
@@ -1166,5 +1172,5 @@
       2
     ]
   ],
-  "binding_rows": 4205
+  "binding_rows": 4353
 }

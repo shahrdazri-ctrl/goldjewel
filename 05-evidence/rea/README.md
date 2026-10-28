@@ -4,7 +4,7 @@
 
 ## Status (re-captured 2026-10-27)
 
-All **14 / 14** core bundles report `coverage.state = complete` and contain real member rows. Previous CS, CSBlocks and MatrixGold bundles contained a type inventory and **zero methods** because REA's metadata projection budget was exceeded; those stubs are retained under `_superseded/` as an audit trail. The old CSRingSizes summary (a PowerShell error log) and its 3-method selection bundle are also in `_superseded/`; the current bundle is the full 33-type / 153-method assembly.
+All **14 / 14** core bundles report `coverage.state = complete` and contain real member rows. Earlier CS, CSBlocks and MatrixGold captures contained a type inventory and **zero methods** because REA's metadata projection budget was exceeded; those superseded stubs are no longer kept. The current CSRingSizes bundle is the full 33-type / 153-method assembly.
 
 | Assembly | Types | Methods | Fields | Call edges | Bundle |
 |---|---:|---:|---:|---:|---:|
@@ -40,14 +40,8 @@ The local copy raises the constant to **1 GiB**:
 ## Reproduce
 
 ```powershell
-# one assembly, complete bundle
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\rea-capture.ps1 `
-  -Name CS `
-  -Target D:\REA-LAB\01-target\mirror\Main\MatrixGold\MatrixGoldPlugin\CS.dll `
-  -Bundle D:\REA-LAB\05-evidence\rea\CS.members.json
-
-# all 14 artifact records
-powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\rea-artifacts.ps1
+# all 14 artifact records, then all 14 complete member bundles
+powershell -ExecutionPolicy Bypass -File D:\REA-LAB\00-control\rea-evidence.ps1
 ```
 
-`*.members-summary.json` is the CLI's summary stdout; `*.members.json` is the complete Evidence bundle. REA refuses to overwrite an existing bundle; `rea-capture.ps1` deletes it first, while a bare REA invocation needs a fresh path.
+`*.members-summary.json` is the CLI's summary stdout; `*.members.json` is the complete Evidence bundle. The capture loop deletes an existing bundle before re-capturing it.

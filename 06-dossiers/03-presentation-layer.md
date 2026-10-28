@@ -1,6 +1,6 @@
 # Dossier 03 — Presentation Layer (WPF MVVM -> SwiftUI)
 
-**Status:** implementation-grade · **Evidence:** 117 BAML resources decompiled to XAML, 4,205 extracted binding/command facts, `MatrixGold` UI assemblies (55 views, 39 view-models, 107 converters)
+**Status:** implementation-grade · **Evidence:** 123 BAML resources decompiled to XAML, 4,353 extracted binding/command facts, `MatrixGold` UI assemblies (55 views, 39 view-models, 107 converters)
 **Purpose:** define the interaction model, screen inventory and binding contract so the iPad app is a *professional tool*, not a form over a 3D view.
 
 ---
@@ -9,10 +9,10 @@
 
 | Artifact | Count |
 |---|---:|
-| BAML -> XAML files decompiled | **117 / 117** (zero failures) |
-| Extracted binding/command facts | **4,205** |
-| Distinct binding paths | **1,168** non-empty |
-| Distinct commands | **366** (`Command*` identifiers: 286) |
+| BAML -> XAML files decompiled | **123 / 123** (zero failures) |
+| Extracted binding/command facts | **4,353** |
+| Distinct binding paths | **1,263** non-empty |
+| Distinct commands | **372** (`Command*` identifiers: 286) |
 | Views (`MatrixGold.Views`) | 55 |
 | View-models (`MatrixGold.ViewModels`) | 39 |
 | Converters | 107 |
@@ -116,7 +116,7 @@ App
  ├ ViewportView (RealityKit / Metal)    // tessellated B-rep cache
  ├ InspectorPanel                       // builder parameters
  ├ BlockOutliner                        // layers/categories
- ├ CommandPalette                       // 1,168 binding paths -> actions
+ ├ CommandPalette                       // 1,263 binding paths -> actions
  └ Reports (weights, gems, cost)
 ```
 
@@ -136,13 +136,13 @@ Layout for iPadOS:
 The original ships **18 locales** and every enum is localised through `EnumToLocalizedStringConverter` / `ContextActionNameLocalizationConverter`. Two consequences:
 
 1. Design strings as `LocalizedStringKey` from day one; do not hardcode English labels in views.
-2. Dynamic Type: 1,168 binding paths include fixed widths (`BuilderWidthConverter`, `ElementWidthConverter`). Replace fixed widths with layout priorities so accessibility sizes do not clip.
+2. Dynamic Type: 1,263 binding paths include fixed widths (`BuilderWidthConverter`, `ElementWidthConverter`). Replace fixed widths with layout priorities so accessibility sizes do not clip.
 
 ---
 
 ## 8. Evidence
 
-* XAML: `03-decompiled/xaml/` (117 files), inventory `04-index/xaml-bindings.csv`.
+* XAML: `03-decompiled/xaml/` (123 files), inventory `04-index/xaml-bindings.csv`.
 * Bindings summary: `04-index/summary.csv`, `04-index/coverage.csv`.
 * Decompiled UI: `03-decompiled/raw/MatrixGold/MatrixGold.Views/**`, `MatrixGold.ViewModels/**`, `MatrixGold.Converters/**`.
 

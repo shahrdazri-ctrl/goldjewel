@@ -140,10 +140,10 @@ These tables exist because the standards are irregular (HK, TW, PT, FI, ES, and 
 ## 5. Verification (already executed)
 
 * The `RingVectors` harness executed the **real `CSRingSizes.dll`** in an isolated harness (no UI, no licensing path) and emitted `05-evidence/vectors/ring-sizes.json`: 22 regions, 7,005 sizes with name/diameter/radius/index.
-* `04-index/validate_formulas.py` re-implemented the 7 closed-form translators and compared against the harness output: **565/565 exact matches** (every US, UK, JP, FR, DE, CH, EU entry).
+* `04-index/validate_handoff.py` re-implements the 7 closed-form translators and compares name, diameter and radius against the harness output: **565/565 exact matches** (every US, UK, JP, FR, DE, CH, EU entry).
 * `JewelryKit` tests assert catalog total (7,005), per-region spot values, inverse round-trips, and banker's-rounding edge cases.
 
-Reproduce: `python 04-index/validate_formulas.py`
+Reproduce: `python 04-index/validate_handoff.py`
 
 ---
 

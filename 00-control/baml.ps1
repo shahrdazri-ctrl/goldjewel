@@ -25,3 +25,6 @@ foreach ($dir in Get-ChildItem $raw -Directory) {
 
 $xaml = @(Get-ChildItem $outRoot -Recurse -File -Filter *.xaml)
 Write-Host ("TOTAL xaml={0}" -f $xaml.Count)
+
+& python 'D:\REA-LAB\04-index\xaml_bindings.py'
+if ($LASTEXITCODE -ne 0) { throw "xaml_bindings.py failed with exit $LASTEXITCODE" }

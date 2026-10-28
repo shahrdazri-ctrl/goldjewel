@@ -1,6 +1,7 @@
 $ErrorActionPreference = 'Continue'
 $temp = Join-Path $env:LOCALAPPDATA 'Temp'
 $log  = 'D:\REA-LAB\09-logs\cleanup-c.log'
+New-Item -ItemType Directory -Force -Path (Split-Path -Parent $log) | Out-Null
 function Get-Size($p) {
     if (-not (Test-Path -LiteralPath $p)) { return 0 }
     $s = 0

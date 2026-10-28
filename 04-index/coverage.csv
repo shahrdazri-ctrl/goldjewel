@@ -20,7 +20,7 @@ Microsoft.WindowsAPICodePack.Shell,MatrixGold\Microsoft.WindowsAPICodePack.Shell
 ActiproSoftware.Docking.Wpf,MatrixGold\ActiproSoftware.Docking.Wpf.dll,312,4059,41,13,8,19771,0,0
 System.Reflection.Metadata,MatrixGold\MatrixGoldPlugin\System.Reflection.Metadata.dll,535,3432,10,3,651,8346,0,0
 System.Reflection.Metadata,MatrixGold\System.Reflection.Metadata.dll,535,3432,10,3,651,8346,0,0
-MatrixGoldPlugin,MatrixGold\MatrixGoldPlugin\MatrixGoldPlugin.rhp,382,3028,206,1229,10,20291,0,0
+MatrixGoldPlugin,MatrixGold\MatrixGoldPlugin\MatrixGoldPlugin.rhp,382,3028,206,1229,10,20291,145,0
 Stuller.Web.API.v2.Models,MatrixGold\Stuller.Web.API.v2.Models.dll,254,2656,2,0,51,642,248,0
 Xceed.Wpf.AvalonDock,MatrixGold\Xceed.Wpf.AvalonDock.dll,389,2605,77,11,577,11953,0,0
 System.Data.SQLite,MatrixGold\System.Data.SQLite.dll,222,2352,2,0,1386,8551,0,0
@@ -115,15 +115,15 @@ System.Composition.AttributedModel,MatrixGold\System.Composition.AttributedModel
 GraphQL.Client.Abstractions.Websocket,MatrixGold\GraphQL.Client.Abstractions.Websocket.dll,11,42,0,0,6,70,0,0
 System.Runtime.CompilerServices.Unsafe,MatrixGold\MatrixGoldPlugin\System.Runtime.CompilerServices.Unsafe.dll,4,40,0,0,0,2,0,0
 System.Runtime.CompilerServices.Unsafe,MatrixGold\System.Runtime.CompilerServices.Unsafe.dll,4,40,0,0,0,2,0,0
-CommonServiceLocator,MatrixGold\CommonServiceLocator.dll,8,38,0,1,3,42,0,0
-CommonServiceLocator,MatrixGold\MatrixGoldPlugin\CommonServiceLocator.dll,7,37,0,1,5,39,0,0
+CommonServiceLocator,MatrixGold\CommonServiceLocator.dll,8,38,0,1,3,42,7,0
+CommonServiceLocator,MatrixGold\MatrixGoldPlugin\CommonServiceLocator.dll,7,37,0,1,5,39,7,0
 GraphQL.Client.Serializer.Newtonsoft,MatrixGold\GraphQL.Client.Serializer.Newtonsoft.dll,8,34,0,1,11,101,0,0
 System.Buffers,MatrixGold\MatrixGoldPlugin\System.Buffers.dll,9,34,0,0,10,104,0,0
 System.Buffers,MatrixGold\System.Buffers.dll,9,34,0,0,10,104,0,0
 CSLegacyObjects,MatrixGold\MatrixGoldPlugin\CSLegacyObjects.dll,10,29,0,0,117,374,9,0
 MatrixGoldSkin,MatrixGold\MatrixGoldPlugin\MatrixGoldSkin.dll,5,28,2,0,155,296,3,0
 GemvisionWebhook,MatrixGold\MatrixGoldPlugin\GemvisionWebhook.dll,9,25,2,0,4,73,4,0
-MatrixGoldRenderPlugin,MatrixGold\MatrixGoldRenderPlugin\MatrixGoldRenderPlugin.rhp,6,17,2,0,10,145,0,0
+MatrixGoldRenderPlugin,MatrixGold\MatrixGoldRenderPlugin\MatrixGoldRenderPlugin.rhp,6,17,2,0,10,145,4,0
 Xceed.Wpf.AvalonDock.Themes.Aero,MatrixGold\Xceed.Wpf.AvalonDock.Themes.Aero.dll,6,14,0,0,34,160,0,0
 SmartAssembly.Attributes,MatrixGold\MatrixGoldPlugin\SmartAssembly.Attributes.dll,14,13,0,0,0,13,0,0
 SmartAssembly.Attributes,MatrixGold\MatrixGoldRenderPlugin\SmartAssembly.Attributes.dll,14,13,0,0,0,13,0,0
