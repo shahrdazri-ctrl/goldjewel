@@ -1,0 +1,1170 @@
+{
+  "xaml_files": 117,
+  "parse_failures": [],
+  "classes": {
+    "Common.UI\\resources\\converters.xaml": "",
+    "Common.UI\\resources\\icons.xaml": "",
+    "Common.UI\\resources\\logos.xaml": "",
+    "Common.UI\\usercontrols\\spinner.xaml": "Common.UI.UserControls.Spinner",
+    "CS\\csvalues\\csvaluehandle\\typeongumballdialog.xaml": "CS.CSValues.CSValueHandle.TypeOnGumballDialog",
+    "MatrixGold\\app.xaml": "MatrixGold.App",
+    "MatrixGold\\loginwindow.xaml": "CommonAuthentication.LoginWindow",
+    "MatrixGold\\mainwindow.xaml": "MatrixGold.MainWindow",
+    "MatrixGold\\properties\\designtimeresources.xaml": "",
+    "MatrixGold\\resources\\actiprocontrols.xaml": "",
+    "MatrixGold\\resources\\autoscrolllistboxdictionary.xaml": "",
+    "MatrixGold\\resources\\brushesandcolors.xaml": "",
+    "MatrixGold\\resources\\builderdatatemplates.xaml": "MatrixGold.Resources.BuilderDataTemplates",
+    "MatrixGold\\resources\\button.xaml": "",
+    "MatrixGold\\resources\\checkbox.xaml": "",
+    "MatrixGold\\resources\\combobox.xaml": "",
+    "MatrixGold\\resources\\comboboxicons.xaml": "",
+    "MatrixGold\\resources\\commandicons.xaml": "",
+    "MatrixGold\\resources\\connectionlosticons.xaml": "",
+    "MatrixGold\\resources\\contentcontrol.xaml": "",
+    "MatrixGold\\resources\\contentmanagerresources.xaml": "MatrixGold.Resources.ContentManagerResources",
+    "MatrixGold\\resources\\contextmenu.xaml": "",
+    "MatrixGold\\resources\\converters.xaml": "",
+    "MatrixGold\\resources\\datepicker.xaml": "",
+    "MatrixGold\\resources\\endprongstyles.xaml": "",
+    "MatrixGold\\resources\\fonts.xaml": "",
+    "MatrixGold\\resources\\gemcuticons.xaml": "",
+    "MatrixGold\\resources\\gemshapeicons.xaml": "",
+    "MatrixGold\\resources\\headstylesimageresources.xaml": "",
+    "MatrixGold\\resources\\icons.xaml": "",
+    "MatrixGold\\resources\\layerbuttons.xaml": "",
+    "MatrixGold\\resources\\listbox.xaml": "",
+    "MatrixGold\\resources\\miscellaneous.xaml": "",
+    "MatrixGold\\resources\\objectcontextmenuresources.xaml": "",
+    "MatrixGold\\resources\\patchwireicons.xaml": "",
+    "MatrixGold\\resources\\pointonsurfaceicons.xaml": "",
+    "MatrixGold\\resources\\popup.xaml": "",
+    "MatrixGold\\resources\\progressbar.xaml": "",
+    "MatrixGold\\resources\\radiobutton.xaml": "",
+    "MatrixGold\\resources\\ringrailicons.xaml": "",
+    "MatrixGold\\resources\\scrollviewer.xaml": "",
+    "MatrixGold\\resources\\searchtextbox.xaml": "",
+    "MatrixGold\\resources\\slider.xaml": "",
+    "MatrixGold\\resources\\switch.xaml": "",
+    "MatrixGold\\resources\\tabcontrol.xaml": "",
+    "MatrixGold\\resources\\textblock.xaml": "",
+    "MatrixGold\\resources\\textbox.xaml": "",
+    "MatrixGold\\resources\\toastnotifications.xaml": "",
+    "MatrixGold\\resources\\togglebutton.xaml": "",
+    "MatrixGold\\resources\\tooltip.xaml": "",
+    "MatrixGold\\themes\\custommenu.xaml": "",
+    "MatrixGold\\themes\\gridlistbox.xaml": "",
+    "MatrixGold\\themes\\messagedialog.xaml": "",
+    "MatrixGold\\themes\\numericupdown.xaml": "",
+    "MatrixGold\\themes\\progressring.xaml": "",
+    "MatrixGold\\views\\connectionlostview.xaml": "MatrixGold.Views.ConnectionLostView",
+    "MatrixGold\\views\\displaymodesview.xaml": "MatrixGold.Views.DisplayModesView",
+    "MatrixGold\\views\\layermaterialpicker.xaml": "MatrixGold.Views.LayerMaterialPicker",
+    "MatrixGold\\views\\notificationhistoryview.xaml": "MatrixGold.Views.NotificationHistoryView",
+    "MatrixGold\\views\\objectcontextmenueditorview.xaml": "MatrixGold.Views.ObjectContextMenuEditorView",
+    "MatrixGold\\views\\objectcontextmenueditorwindow.xaml": "MatrixGold.Views.ObjectContextMenuEditorWindow",
+    "MatrixGold\\views\\objectcontextmenuview.xaml": "MatrixGold.Views.ObjectContextMenuView",
+    "MatrixGold\\views\\objectcontextmenuwindow.xaml": "MatrixGold.Views.ObjectContextMenuWindow",
+    "MatrixGold\\views\\quickcommandsview.xaml": "MatrixGold.Views.QuickCommandsView",
+    "MatrixGold\\views\\recentcommandsview.xaml": "MatrixGold.Views.RecentCommandsView",
+    "MatrixGold\\views\\techreportview.xaml": "MatrixGold.Views.TechReportView",
+    "MatrixGold\\views\\testview.xaml": "MatrixGold.Views.TestView",
+    "MatrixGold\\views\\validatecancelcontrol.xaml": "MatrixGold.Views.ValidateCancelControl",
+    "MatrixGold\\views\\viewanimationstudio.xaml": "MatrixGold.Views.ViewAnimationStudio",
+    "MatrixGold\\views\\viewapplicationtoggles.xaml": "MatrixGold.Views.ViewApplicationToggles",
+    "MatrixGold\\views\\viewbatch.xaml": "MatrixGold.Views.ViewBatch",
+    "MatrixGold\\views\\viewbuilders.xaml": "MatrixGold.Views.ViewBuilders",
+    "MatrixGold\\views\\viewcollectionsmanager.xaml": "MatrixGold.Views.ViewCollectionsManager",
+    "MatrixGold\\views\\viewcustommenusample.xaml": "MatrixGold.Views.ViewCustomMenuSample",
+    "MatrixGold\\views\\viewdynamicgroups.xaml": "MatrixGold.Views.ViewDynamicGroups",
+    "MatrixGold\\views\\viewgembuilder.xaml": "MatrixGold.Views.ViewGemBuilder",
+    "MatrixGold\\views\\viewgemreport.xaml": "MatrixGold.Views.ViewGemReport",
+    "MatrixGold\\views\\viewlayers.xaml": "MatrixGold.Views.ViewLayers",
+    "MatrixGold\\views\\viewlibrarymanager.xaml": "MatrixGold.Views.ViewLibraryManager",
+    "MatrixGold\\views\\viewmatrixlegacy.xaml": "MatrixGold.Views.ViewMatrixLegacy",
+    "MatrixGold\\views\\viewmetalweights.xaml": "MatrixGold.Views.ViewMetalWeights",
+    "MatrixGold\\views\\viewmoviemaker.xaml": "MatrixGold.Views.ViewMovieMaker",
+    "MatrixGold\\views\\viewprojectmanager.xaml": "MatrixGold.Views.ViewProjectManager",
+    "MatrixGold\\views\\viewprojects.xaml": "MatrixGold.Views.ViewProjects",
+    "MatrixGold\\views\\viewprojecttimer.xaml": "MatrixGold.Views.ViewProjectTimer",
+    "MatrixGold\\views\\viewrender.xaml": "MatrixGold.Views.ViewRender",
+    "MatrixGold\\views\\viewringresizer.xaml": "MatrixGold.Views.ViewRingResizer",
+    "MatrixGold\\views\\viewselectionproperties.xaml": "MatrixGold.Views.ViewSelectionProperties",
+    "MatrixGold\\views\\viewstylesheetmanager.xaml": "MatrixGold.Views.ViewStyleSheetManager",
+    "MatrixGold\\views\\viewtoolribbon.xaml": "MatrixGold.Views.ViewToolRibbon",
+    "MatrixGold\\views\\windowabout.xaml": "MatrixGold.Views.WindowAbout",
+    "MatrixGold\\views\\windowaddrhinolanguagepackview.xaml": "MatrixGold.Views.WindowAddRhinoLanguagePackView",
+    "MatrixGold\\views\\windowcommandeditor.xaml": "MatrixGold.Views.WindowCommandEditor",
+    "MatrixGold\\views\\windowcontentmanager.xaml": "MatrixGold.Views.WindowContentManager",
+    "MatrixGold\\views\\windoweula.xaml": "MatrixGold.Views.WindowEula",
+    "MatrixGold\\views\\windowgembuilder.xaml": "MatrixGold.Views.WindowGemBuilder",
+    "MatrixGold\\views\\windowgemmap.xaml": "MatrixGold.Views.WindowGemMap",
+    "MatrixGold\\views\\windowlegacyimport.xaml": "MatrixGold.Views.WindowLegacyImport",
+    "MatrixGold\\views\\windowlegacyimportprojects.xaml": "MatrixGold.Views.WindowLegacyImportProjects",
+    "MatrixGold\\views\\windowmatchattributes.xaml": "MatrixGold.Views.WindowMatchAttributes",
+    "MatrixGold\\views\\windowmovecollectionfiles.xaml": "MatrixGold.Views.WindowMoveCollectionFiles",
+    "MatrixGold\\views\\windowmoviepreview.xaml": "MatrixGold.Views.WindowMoviePreview",
+    "MatrixGold\\views\\windowpersoneditor.xaml": "MatrixGold.Views.WindowPersonEditor",
+    "MatrixGold\\views\\windowpreferences.xaml": "MatrixGold.Views.WindowPreferences",
+    "MatrixGold\\views\\windowsavecontent.xaml": "MatrixGold.Views.WindowSaveContent",
+    "MatrixGold\\views\\windowsplash.xaml": "MatrixGold.Views.WindowSplash",
+    "MatrixGold\\views\\windowtoastposition.xaml": "MatrixGold.Views.WindowToastPosition",
+    "MatrixGold\\views\\windowvideoplayer.xaml": "MatrixGold.Views.WindowVideoPlayer",
+    "SharedTypes\\resourcedictionaries\\designstackslidericons.xaml": "",
+    "SuperView\\newmodifyname.xaml": "GV.Designer.SuperView.NewModifyName",
+    "SuperView\\selectbycomponent.xaml": "SuperView.SelectByComponent",
+    "ToastNotifications\\display\\notificationswindow.xaml": "ToastNotifications.Display.NotificationsWindow",
+    "ToastNotifications.Messages\\error\\errordisplaypart.xaml": "ToastNotifications.Messages.Error.ErrorDisplayPart",
+    "ToastNotifications.Messages\\information\\informationdisplaypart.xaml": "ToastNotifications.Messages.Information.InformationDisplayPart",
+    "ToastNotifications.Messages\\success\\successdisplaypart.xaml": "ToastNotifications.Messages.Success.SuccessDisplayPart",
+    "ToastNotifications.Messages\\themes\\default.xaml": "",
+    "ToastNotifications.Messages\\warning\\warningdisplaypart.xaml": "ToastNotifications.Messages.Warning.WarningDisplayPart"
+  },
+  "top_elements": [
+    [
+      "GradientStop",
+      39069
+    ],
+    [
+      "GeometryDrawing",
+      22515
+    ],
+    [
+      "GeometryDrawing.Pen",
+      21492
+    ],
+    [
+      "Pen",
+      21492
+    ],
+    [
+      "Path",
+      21355
+    ],
+    [
+      "GradientBrush.GradientStops",
+      17589
+    ],
+    [
+      "LinearGradientBrush",
+      17288
+    ],
+    [
+      "GeometryDrawing.Brush",
+      16852
+    ],
+    [
+      "TransformGroup",
+      15719
+    ],
+    [
+      "Brush.RelativeTransform",
+      15699
+    ],
+    [
+      "RotateTransform",
+      15639
+    ],
+    [
+      "SkewTransform",
+      15576
+    ],
+    [
+      "Canvas",
+      8223
+    ],
+    [
+      "Rectangle",
+      3299
+    ],
+    [
+      "Viewbox",
+      2790
+    ],
+    [
+      "Setter",
+      2400
+    ],
+    [
+      "ContentControl",
+      1992
+    ],
+    [
+      "TextBlock",
+      1001
+    ],
+    [
+      "Shape.Fill",
+      747
+    ],
+    [
+      "Border",
+      641
+    ],
+    [
+      "DockPanel",
+      617
+    ],
+    [
+      "Grid",
+      615
+    ],
+    [
+      "ColumnDefinition",
+      405
+    ],
+    [
+      "Trigger",
+      390
+    ],
+    [
+      "Style",
+      379
+    ],
+    [
+      "Binding",
+      376
+    ],
+    [
+      "RowDefinition",
+      362
+    ],
+    [
+      "Button",
+      344
+    ],
+    [
+      "DrawingGroup",
+      332
+    ],
+    [
+      "DrawingBrush",
+      331
+    ],
+    [
+      "DrawingBrush.Drawing",
+      331
+    ],
+    [
+      "DrawingGroup.Children",
+      324
+    ],
+    [
+      "RadialGradientBrush",
+      308
+    ],
+    [
+      "ResourceDictionary",
+      223
+    ],
+    [
+      "Setter.Value",
+      220
+    ],
+    [
+      "ControlTemplate",
+      204
+    ],
+    [
+      "StackPanel",
+      197
+    ],
+    [
+      "EventTrigger",
+      183
+    ],
+    [
+      "InvokeCommandAction",
+      166
+    ],
+    [
+      "DataTemplate",
+      157
+    ],
+    [
+      "Interaction.Triggers",
+      157
+    ],
+    [
+      "MultiBinding",
+      155
+    ],
+    [
+      "SolidColorBrush",
+      139
+    ],
+    [
+      "Grid.ColumnDefinitions",
+      138
+    ],
+    [
+      "TextBox",
+      133
+    ],
+    [
+      "Grid.RowDefinitions",
+      133
+    ],
+    [
+      "ControlTemplate.Triggers",
+      125
+    ],
+    [
+      "CheckBox",
+      121
+    ],
+    [
+      "ContentPresenter",
+      115
+    ],
+    [
+      "FrameworkElement.Resources",
+      106
+    ],
+    [
+      "Interaction.Behaviors",
+      102
+    ],
+    [
+      "DataTrigger",
+      101
+    ],
+    [
+      "MatrixTransform",
+      97
+    ],
+    [
+      "Run",
+      96
+    ],
+    [
+      "ContentControl.Content",
+      94
+    ],
+    [
+      "Style.Triggers",
+      90
+    ],
+    [
+      "Brush.Transform",
+      89
+    ],
+    [
+      "Condition",
+      84
+    ],
+    [
+      "Ellipse",
+      74
+    ],
+    [
+      "Image",
+      72
+    ]
+  ],
+  "top_binding_paths": [
+    [
+      "",
+      515
+    ],
+    [
+      "Foreground",
+      271
+    ],
+    [
+      "IsChecked",
+      87
+    ],
+    [
+      "DataContext.CommandUpdateGraphFromUI",
+      68
+    ],
+    [
+      "IsActive",
+      55
+    ],
+    [
+      "ActionType",
+      41
+    ],
+    [
+      "ActualWidth",
+      39
+    ],
+    [
+      "Name",
+      32
+    ],
+    [
+      "IsFilteredOut",
+      29
+    ],
+    [
+      "IsUIDisabled",
+      28
+    ],
+    [
+      "IsMouseOver",
+      26
+    ],
+    [
+      "BlockInstanceGuid",
+      25
+    ],
+    [
+      "IsSelected",
+      21
+    ],
+    [
+      "Title",
+      19
+    ],
+    [
+      "ControlName",
+      19
+    ],
+    [
+      "SelectedPreferenceGroupName",
+      18
+    ],
+    [
+      "Step1",
+      17
+    ],
+    [
+      "Source={x:Static viewModel:Locator.WindowPreferencesVM",
+      16
+    ],
+    [
+      "IsOpen",
+      14
+    ],
+    [
+      "EnglishName",
+      13
+    ],
+    [
+      "IsPinned",
+      13
+    ],
+    [
+      "CommandAdjustEnvironmentSettings",
+      13
+    ],
+    [
+      "IsBusy",
+      12
+    ],
+    [
+      "PreviewBase64",
+      12
+    ],
+    [
+      "Value1",
+      12
+    ],
+    [
+      "CommandItemIconResource",
+      11
+    ],
+    [
+      "GemTableIndex",
+      10
+    ],
+    [
+      "SelectedFile",
+      10
+    ],
+    [
+      "Width",
+      9
+    ],
+    [
+      "Maximum1",
+      9
+    ],
+    [
+      "Minimum1",
+      9
+    ],
+    [
+      "CommandInvokeCommand",
+      9
+    ],
+    [
+      "SelectedFile.Is3dmFile",
+      9
+    ],
+    [
+      "SecondSetVisible",
+      9
+    ],
+    [
+      "UIBuilderIconSize",
+      8
+    ],
+    [
+      "ScaledJobBagImageSize",
+      8
+    ],
+    [
+      "Preview",
+      8
+    ],
+    [
+      "DisplayModeSize",
+      8
+    ],
+    [
+      "PopulatingFiles",
+      8
+    ],
+    [
+      "IsAlphaMaterial",
+      8
+    ],
+    [
+      "CommandAdjustRepeat",
+      8
+    ],
+    [
+      "IsVisible",
+      7
+    ],
+    [
+      "GemCarat",
+      7
+    ],
+    [
+      "UIBuilderShowSliders",
+      7
+    ],
+    [
+      "GemLength",
+      7
+    ],
+    [
+      "GemDepth",
+      7
+    ],
+    [
+      "GemDepthPercentage",
+      7
+    ],
+    [
+      "ItemSize",
+      7
+    ],
+    [
+      "IsEmpty",
+      7
+    ],
+    [
+      "LastWriteTime",
+      7
+    ],
+    [
+      "IsImage",
+      7
+    ],
+    [
+      "IconSize",
+      7
+    ],
+    [
+      "CommandScrubControl",
+      7
+    ],
+    [
+      "CanScrub",
+      7
+    ],
+    [
+      "ImageSourceBytes",
+      7
+    ],
+    [
+      "SelectedMGMaterialInDocument",
+      7
+    ],
+    [
+      "SelectedStyleSheet",
+      7
+    ],
+    [
+      "UIScale",
+      6
+    ],
+    [
+      "DirectoryPath",
+      6
+    ],
+    [
+      "CommandDeleteJobBag",
+      6
+    ],
+    [
+      "Value",
+      6
+    ],
+    [
+      "Converter={StaticResource EnumToLocalizedStringConverter",
+      6
+    ],
+    [
+      "HasSecondaryCommand",
+      6
+    ],
+    [
+      "SecondaryTitle",
+      6
+    ],
+    [
+      "ShowIcon",
+      6
+    ],
+    [
+      "ShowText",
+      6
+    ],
+    [
+      "CommandAdjustMaterialHueSatLum",
+      6
+    ],
+    [
+      "ToastNotificationsEnabled",
+      6
+    ],
+    [
+      "Message",
+      5
+    ],
+    [
+      "CommandShowEditPreferenceGroupFromString",
+      5
+    ],
+    [
+      "DataItems",
+      5
+    ],
+    [
+      "GemWidth",
+      5
+    ],
+    [
+      "ShowDwt",
+      5
+    ],
+    [
+      "Quantity",
+      5
+    ],
+    [
+      "IsHidden",
+      5
+    ],
+    [
+      "ActualHeight",
+      5
+    ],
+    [
+      "LocalName",
+      5
+    ],
+    [
+      "ActionName",
+      5
+    ],
+    [
+      "CommandGetUserInput",
+      5
+    ],
+    [
+      "CommandKebabCommand",
+      5
+    ],
+    [
+      "IsExpanded",
+      5
+    ],
+    [
+      "SelectedIndex",
+      5
+    ],
+    [
+      "CommandLockLayer",
+      5
+    ],
+    [
+      "CommandEnableSwitch",
+      5
+    ],
+    [
+      "CommandItemCategory.UIClassification",
+      5
+    ],
+    [
+      "IsShowingHiddenProjects",
+      5
+    ],
+    [
+      "MasterFile",
+      5
+    ],
+    [
+      "Length",
+      4
+    ],
+    [
+      "IsCustomGemSize",
+      4
+    ],
+    [
+      "GemTableSizeInfoList",
+      4
+    ],
+    [
+      "GemGirdleThickness",
+      4
+    ],
+    [
+      "IsUserStyle",
+      4
+    ],
+    [
+      "FolderName",
+      4
+    ],
+    [
+      "IsAddFolderButton",
+      4
+    ],
+    [
+      "IsUserFile",
+      4
+    ],
+    [
+      "SizeInMegabytes",
+      4
+    ],
+    [
+      "CommandRenameJobBag",
+      4
+    ],
+    [
+      "PreviewImagePath",
+      4
+    ],
+    [
+      "DisplayModes",
+      4
+    ],
+    [
+      "ToastType",
+      4
+    ],
+    [
+      "CommandInvokeSecondaryCommand",
+      4
+    ],
+    [
+      "Height",
+      4
+    ],
+    [
+      "IsViewportRender",
+      4
+    ],
+    [
+      "Key",
+      4
+    ],
+    [
+      "CommandSetGridSnapSpacing",
+      4
+    ],
+    [
+      "CommandUpdateHistorySettings",
+      4
+    ],
+    [
+      "CommandForceImportJobBag",
+      4
+    ],
+    [
+      "CommandForceOpenJobBag",
+      4
+    ],
+    [
+      "Color",
+      4
+    ],
+    [
+      "RenderPasses",
+      4
+    ],
+    [
+      "GoButton",
+      4
+    ],
+    [
+      "Step2",
+      4
+    ],
+    [
+      "ListIndex",
+      4
+    ],
+    [
+      "DataContext.CommandSelectFromLibraryFile",
+      4
+    ],
+    [
+      "BreadCrumbNav.ActiveDirectory.FolderName",
+      4
+    ],
+    [
+      "CommandSelectLayer",
+      4
+    ],
+    [
+      "CommandCancel",
+      4
+    ],
+    [
+      "Projects",
+      4
+    ],
+    [
+      "SelectedProject",
+      4
+    ],
+    [
+      "NewestMatrixFileInfo",
+      4
+    ]
+  ],
+  "top_commands": [
+    [
+      "{Binding}",
+      174
+    ],
+    [
+      "{Binding Path=DataContext.CommandUpdateGraphFromUI, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}}",
+      67
+    ],
+    [
+      "{Binding CommandAdjustEnvironmentSettings}",
+      13
+    ],
+    [
+      "{StaticResource SlotBump}",
+      12
+    ],
+    [
+      "{StaticResource SlotColor}",
+      12
+    ],
+    [
+      "{Binding CommandInvokeCommand}",
+      9
+    ],
+    [
+      "{Binding CommandAdjustRepeat}",
+      8
+    ],
+    [
+      "{Binding CommandScrubControl}",
+      7
+    ],
+    [
+      "{Binding CommandAdjustMaterialHueSatLum}",
+      6
+    ],
+    [
+      "{Binding CommandGetUserInput}",
+      5
+    ],
+    [
+      "{Binding CommandKebabCommand}",
+      5
+    ],
+    [
+      "{Binding CommandLockLayer}",
+      5
+    ],
+    [
+      "{Binding CommandEnableSwitch}",
+      5
+    ],
+    [
+      "{Binding Path=CommandShowEditPreferenceGroupFromString, Source={x:Static viewModel:Locator.MainVM}}",
+      4
+    ],
+    [
+      "{Binding EnglishName}",
+      4
+    ],
+    [
+      "{Binding CommandInvokeSecondaryCommand}",
+      4
+    ],
+    [
+      "{Binding CommandSetGridSnapSpacing}",
+      4
+    ],
+    [
+      "{Binding Path=CommandUpdateHistorySettings, Source={x:Static viewModel:Locator.MainVM}}",
+      4
+    ],
+    [
+      "{Binding GoButton}",
+      4
+    ],
+    [
+      "{Binding Path=DataContext.CommandSelectFromLibraryFile, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}}",
+      4
+    ],
+    [
+      "{Binding CommandSelectLayer}",
+      4
+    ],
+    [
+      "{Binding CommandCancel}",
+      4
+    ],
+    [
+      "{Binding CommandDeleteJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      4
+    ],
+    [
+      "{Binding CommandSetJobbagFilter}",
+      4
+    ],
+    [
+      "{Binding CommandAdjustRotation}",
+      4
+    ],
+    [
+      "{Binding CommandAdjustStrength}",
+      4
+    ],
+    [
+      "{Binding CommandAdjustBlend}",
+      4
+    ],
+    [
+      "{Binding CommandBrowse}",
+      4
+    ],
+    [
+      "{Binding CommandResetUIScale}",
+      3
+    ],
+    [
+      "{Binding DataContext.CommandImportJobBag, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}}",
+      3
+    ],
+    [
+      "{Binding CommandClearElement}",
+      3
+    ],
+    [
+      "{Binding Path=CommandUpdateGumballAlignment, Source={x:Static viewModel:Locator.MainVM}}",
+      3
+    ],
+    [
+      "{Binding CommandFilterBuilders}",
+      3
+    ],
+    [
+      "{Binding CommandSetFileFilter}",
+      3
+    ],
+    [
+      "{Binding CommandCreateProject}",
+      3
+    ],
+    [
+      "{Binding CommandShowProjectManager}",
+      3
+    ],
+    [
+      "{Binding CommandApplyMGMaterial, Source={x:Static viewModel:Locator.RenderVM}}",
+      3
+    ],
+    [
+      "{Binding CommandApplyHdr}",
+      3
+    ],
+    [
+      "{Binding CommandSelectHdr}",
+      3
+    ],
+    [
+      "{Binding CommandDeleteHdr}",
+      3
+    ],
+    [
+      "{Binding CommandChangeBackdropType}",
+      3
+    ],
+    [
+      "{Binding CommandSelectAll}",
+      3
+    ],
+    [
+      "{Binding PersonToEdit}",
+      3
+    ],
+    [
+      "{Binding CommandButtonPress}",
+      2
+    ],
+    [
+      "{Binding DataContext.CommandOpenDirectory, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}",
+      2
+    ],
+    [
+      "{Binding CommandDeleteProject, Source={x:Static viewModels:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandRenameProject, Source={x:Static viewModels:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandRefreshProjects, Source={x:Static viewModels:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding DataContext.CommandExportJobBag, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}}",
+      2
+    ],
+    [
+      "{Binding CommandAddMaterialToLayer, Source={x:Static viewModel:Locator.RenderVM}}",
+      2
+    ],
+    [
+      "{Binding CommandModifyCameraPath}",
+      2
+    ],
+    [
+      "{Binding Path=CommandUpdateGumballDrag, Source={x:Static viewModel:Locator.MainVM}}",
+      2
+    ],
+    [
+      "{Binding CommandRender}",
+      2
+    ],
+    [
+      "{Binding CommandToggleKebabMenu}",
+      2
+    ],
+    [
+      "{Binding ElementName=ToggleKebab}",
+      2
+    ],
+    [
+      "{Binding CommandSortByDate}",
+      2
+    ],
+    [
+      "{Binding CommandSortByName}",
+      2
+    ],
+    [
+      "{Binding CommandSaveToCollections}",
+      2
+    ],
+    [
+      "{Binding CommandManageMultiSelectedItems}",
+      2
+    ],
+    [
+      "{Binding CommandAddSelectionToLayer}",
+      2
+    ],
+    [
+      "{Binding CommandSetAsActiveLayer}",
+      2
+    ],
+    [
+      "{Binding CommandEnableLayerUnique}",
+      2
+    ],
+    [
+      "{Binding CommandIsolateSelected}",
+      2
+    ],
+    [
+      "{Binding CommandHideSelected}",
+      2
+    ],
+    [
+      "{Binding CommandShowSelected}",
+      2
+    ],
+    [
+      "{Binding CommandShowAll}",
+      2
+    ],
+    [
+      "{Binding CommandExtraLayersToggle}",
+      2
+    ],
+    [
+      "{Binding CommandSelectFile}",
+      2
+    ],
+    [
+      "{Binding CommandForceImportJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandForceOpenJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandRenameJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandImportJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandExportJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{Binding CommandCopyJobBag, Source={x:Static viewModel:Locator.ProjectsVM}}",
+      2
+    ],
+    [
+      "{x:Static models:JobBagType.FullSave}",
+      2
+    ],
+    [
+      "{Binding CommandRemoveFrameGroup, Source={x:Static viewModels:Locator.MovieMakerVM}}",
+      2
+    ],
+    [
+      "{Binding CommandAddFrameSet}",
+      2
+    ],
+    [
+      "{Binding CommandSetProjectListToIconView}",
+      2
+    ],
+    [
+      "{Binding CommandShowPersonEditor}",
+      2
+    ],
+    [
+      "{Binding CommandApplySelectedMaterial, Source={x:Static viewModel:Locator.RenderVM}}",
+      2
+    ]
+  ],
+  "binding_rows": 4205
+}

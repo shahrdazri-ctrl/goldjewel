@@ -1,0 +1,881 @@
+SUBSYSTEM: geometry
+TYPES: 302  METHODS: 1222
+
+== TOP TYPES BY METHOD COUNT ==
+    2  CSBlocks.Maths.CSIsCustomGem                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSRounding                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSValueListEqualTo                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSGemShapeEqualTo                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Maths.CSAddMulti                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Maths.CSAdd                                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSBooleanAnd                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSBooleanOr                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSEqualTo                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSGreaterThan                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSGreaterThanOrEqualTo                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSLessThan                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSLessThanOrEqualTo                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSNonlinear                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSNotEqualTo                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSDivide                                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSMultiply                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSNegate                                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSOneMinus                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.CSSubtract                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Maths.CSSubtractMulti                              CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Maths.Obsolete.CSIsCustomGem1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Maths.Obsolete.CSGemShapeEqualTo1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSProxyGem                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSAppendTransforms                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSBendMultipleDirection                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSCustomObjectTransform                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Transforms.CSBend                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.Transforms.DynamicBendParameters                   CSBlocks               System.Object
+    4  CSBlocks.Transforms.DynamicBend                             CSBlocks               System.Object
+    5  CSBlocks.Transforms.CSMirrorPlane                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSGetObjectsCenterTransform             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSMSRGems                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSMSRObjects                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSOrientRhinoObjectToGem                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSOrientStaticGemCutterToGem            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSOrientStaticMicroCutterToGem          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSPolarArrayAdvanced                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.CSPositionOnCrv                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Transforms.CSPositionsOnCurve                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.CSProfileMirrorTransform                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSProfileTransform                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleTransform                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   12  CSBlocks.Transforms.CSShear                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.CSSmartPattern                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Transforms.CSTaper                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSTransformOnRingRail                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSObjectsOnTransforms                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Transforms.CSTwist                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSCenterObjectOnWorldTransform          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSRotateObjectDegObjectSpace            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSCenterAndScaleObjectX                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Transforms.CSCenterObjectOnObjectTransform         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Transforms.CSCopyFromGem                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.CSMilgrainPoints                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSMoveXform                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.CSObjectOnCrv                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSOrient                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSOrientToGem                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSPolarArray                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSPolarArraySimple                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSRotateObjectDeg                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSRotateObjectDegXform                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleObject                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleObjectObjectSpace                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleObjectToSize                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleObjectToSizeObjectSpace          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleObjectToSizeXform                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSScaleObjectXform                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSTransformationPlane                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Transforms.CSTransformObject                       CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    5  CSBlocks.Transforms.CSTransformObjectCenter                 CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    6  CSBlocks.Transforms.CSTransformObjectXform                  CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Transforms.CSTranslateObject                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSTranslateObjectObjectSpace            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSTranslateObjectXform                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSMirror                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Transforms.Obsolete.CSMirror2                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.Obsolete.CSPositionsOnCurve2            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Transforms.Obsolete.CSMirror1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSObjectsOnTransforms1         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSPolarArrayAdvanced1          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.Obsolete.CSPositionsOnCurve1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Transforms.Obsolete.CSPositionsOnCurve3            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSProfileTransform1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSProfileTransform2            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSProfileTransform3            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSTranslateObjectObjectSpace2  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSCenterObjectOnObjectTransfo  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSCenterObjectOnObjectTransfo  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Transforms.Obsolete.CSObjectOnCrv1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Transforms.Obsolete.CSScaleObjectToSizeObjectSpac  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Transforms.Obsolete.CSTransformObjectCenter1       CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    7  CSBlocks.Transforms.Obsolete.CSScaleObjectObjectSpace1      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Transforms.Obsolete.CSScaleObjectToSizeObjectSpac  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSTranslateObjectObjectSpace1  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Obsolete.CSCopyFromGem1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.CSMSRGemsSetup                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Transforms.Helpers.CSMSRObjectsCalculateTransform  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.CSObjectOnSurfaceSetup          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.CSProfilePlacerSetup            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.CSProngOnSurfaceSetup           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.Obsolete.CSObjectOnSurfaceSetu  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.Obsolete.CSProfilePlacerSetup1  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.Helpers.Obsolete.CSProngOnSurfaceSetup  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Curves.CSCurveRhinoOffset                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveIsClosed                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Curves.CSCurveScale2d                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSDupEdge                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSExtractIsoCurve                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSFilletCurve                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurvePreProcessGemOrObjectOnCurve         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSInterpCurveThroughPoints                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Curves.CSMeanCurve                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSProjectCurve                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSSurfaceEdge                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSMatchingBand                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Curves.CSSurfaceEdges                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveOffsetWithOrigin                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveLength                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveMatchDir                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSBulgeCurve                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveNormalDir                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSFitCurves                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Curves.CSFlattenCurve                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Curves.CSRingTrimCurve                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSJoinCurvesAll                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveToTopOfRingRail                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSArcCurve                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSBlendCurves                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSBlendCurvesAdvanced                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Curves.CSChangeCurveSeam                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurve                                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveCornerBlend                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Curves.CSCurveFrom2View                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveFrom2ViewSimple                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Curves.CSCurveOffset                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveOnRingRail                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveSplit                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSJoinCurves                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSLineFromTwoPoints                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSLineInX                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Curves.CSPullCurveToSurface                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSRebuildCurves                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSUVCurveOnSurface                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSUVCurveOnSurfaceFromTwoPoints             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSUVOnSurfaces                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSTrimCurve                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSCurveBoolean                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.CSGemOffsetCurve                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSBlendCurves2                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSCurveFrom2ViewSimple1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Curves.Obsolete.CSCurveRhinoOffset1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Curves.Obsolete.CSCurveRhinoOffset2                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Curves.Obsolete.CSSurfaceEdges1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Curves.Obsolete.CSCurveSplit1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSTrimCurve1                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSExtractIsoCurve1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSGemOffsetCurve2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSBlendCurvesAdvanced1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSBlendCurves1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Curves.Obsolete.CSChannelBorderFromGems1           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Curves.Obsolete.CSCurveFrom2View1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSJoinCurves2                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Curves.Obsolete.CSRingTrimCurve1                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSJoinCurves1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSMergeCurves1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Curves.Obsolete.CSGemOffsetCurve1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Curves.Obsolete.CSCurveOffset1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSBoundingBox                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Core.CSChainPoint                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSArrayObject                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSBrepEdgeCurves                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSBrepTrimCurves                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSSetCurveDirection                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSCenterTopLine                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSDistanceFromPlanarCurve                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSDistanceFromPoint                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSDistanceFromRingRail                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSDistanceFromSurface                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSObjectsOnPlane                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSLineFromBrep                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   20  CSBlocks.Core.CSOrientBoundingBox                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSPlaneXYCurvesToSolid                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Core.CSPointToSphere                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSProfileGemLine                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Core.CSReorderArray                                CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Core.CSSineWave                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSSortGeometryBy                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Core.CSSortObjects                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.CSTrimBrepUVCurve                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.Obsolete.CSSortObjects3                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Core.Obsolete.CSSortObjects4                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.Obsolete.CSSortObjects2                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.Obsolete.CSBoundingBox3                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.Obsolete.CSBoundingBox2                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.Obsolete.CSOrientBoundingBox1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Core.Obsolete.CSSortObjects1                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Core.Obsolete.CSBrepUVCurve1                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  <Module>                                                    GemvisionCommon        
+    0  GemvisionCommon.Constants                                   GemvisionCommon        System.Object
+    4  GemvisionCommon.Utilities.Serialization.SerializableDictio  GemvisionCommon        System.Collections.Generic.Dictionary`2<TKey,TValue>
+    4  GemvisionCommon.Utilities.Serialization.Serializer`1        GemvisionCommon        System.Object
+    4  GemvisionCommon.Utilities.Serialization.Serializer`1/Seria  GemvisionCommon        System.MulticastDelegate
+   15  GemvisionCommon.Utilities.Networking.NetworkConnection      GemvisionCommon        System.Object
+    5  GemvisionCommon.Utilities.Networking.NetworkConnectionMana  GemvisionCommon        System.Object
+    4  GemvisionCommon.Utilities.Networking.NetworkConnectionMana  GemvisionCommon        System.MulticastDelegate
+   11  GemvisionCommon.Utilities.Networking.Structs.NetworkConnec  GemvisionCommon        System.ValueType
+    0  GemvisionCommon.Utilities.Networking.Structs.NetworkResour  GemvisionCommon        System.ValueType
+    0  GemvisionCommon.Utilities.Networking.Enums.NetworkConnecti  GemvisionCommon        System.Enum
+    0  GemvisionCommon.Utilities.Networking.Enums.NetworkConnecti  GemvisionCommon        System.Enum
+    0  GemvisionCommon.Utilities.Networking.Enums.ResourceDisplay  GemvisionCommon        System.Enum
+    0  GemvisionCommon.Utilities.Networking.Enums.ResourceScope    GemvisionCommon        System.Enum
+    0  GemvisionCommon.Utilities.Networking.Enums.ResourceType     GemvisionCommon        System.Enum
+   24  GemvisionCommon.Utilities.Logging.Logger                    GemvisionCommon        System.Object
+   11  GemvisionCommon.Utilities.Application.Application`1         GemvisionCommon        System.Object
+    3  GemvisionCommon.Utilities.Application.Application`1/OnAfte  GemvisionCommon        System.EventArgs
+    1  GemvisionCommon.Utilities.Application.IApplicationOptions   GemvisionCommon        
+    8  GemvisionCommon.UserInterfaces.FrmProgress                  GemvisionCommon        System.Windows.Forms.Form
+    2  GemvisionCommon.UserInterfaces.FrmProgress/<>c__DisplayCla  GemvisionCommon        System.Object
+    5  GemvisionCommon.UserInterfaceExtensions.CheckedListBoxExte  GemvisionCommon        System.Object
+    0  GemvisionCommon.UserInterfaceExtensions.CheckedListBoxExte  GemvisionCommon        System.Enum
+    5  GemvisionCommon.UserInterfaceExtensions.ComboBoxExtensions  GemvisionCommon        System.Object
+    0  GemvisionCommon.UserInterfaceExtensions.ComboBoxExtensions  GemvisionCommon        System.Enum
+    2  GemvisionCommon.UserInterfaceExtensions.ComboBoxExtensions  GemvisionCommon        System.Object
+    2  GemvisionCommon.UserInterfaceExtensions.ComboBoxExtensions  GemvisionCommon        System.Object
+    3  GemvisionCommon.Helpers.EnumHelper                          GemvisionCommon        System.Object
+   14  GemvisionCommon.Helpers.FileSystemHelper                    GemvisionCommon        System.Object
+    3  GemvisionCommon.Helpers.FileSystemHelper/FileCompare        GemvisionCommon        System.Object
+    2  GemvisionCommon.Helpers.FileSystemHelper/<>c__DisplayClass  GemvisionCommon        System.Object
+    2  GemvisionCommon.Helpers.FileSystemHelper/<>c__DisplayClass  GemvisionCommon        System.Object
+    2  GemvisionCommon.Helpers.FileSystemHelper/<>c__DisplayClass  GemvisionCommon        System.Object
+    8  GemvisionCommon.Helpers.JsonSerializationHelper             GemvisionCommon        System.Object
+    4  GemvisionCommon.Helpers.StringHelper                        GemvisionCommon        System.Object
+    4  GemvisionCommon.Helpers.RetryHelper                         GemvisionCommon        System.Object
+    2  GemvisionCommon.Helpers.RetryHelper/<>c__DisplayClass3_0    GemvisionCommon        System.Object
+    0  <Module>                                                    GemvisionGeometry      
+    4  GemvisionGeometry.FileIO.IoMesh                             GemvisionGeometry      System.Object
+    2  GemvisionGeometry.OctTree.ExtractMesh                       GemvisionGeometry      System.Object
+    1  GemvisionGeometry.OctTree.testDir                           GemvisionGeometry      System.Object
+    3  GemvisionGeometry.OctTree.OctShell                          GemvisionGeometry      System.Object
+    1  GemvisionGeometry.OctTree.OctShell/Sidebuffer               GemvisionGeometry      System.Object
+   11  GemvisionGeometry.OctTree.OctTree                           GemvisionGeometry      System.Object
+    3  GemvisionGeometry.OctTree.OctTree/<>c__DisplayClass7_0      GemvisionGeometry      System.Object
+    1  GemvisionGeometry.OctTree.Triangle                          GemvisionGeometry      System.ValueType
+    5  GemvisionGeometry.Helpers.PolyTree                          GemvisionGeometry      GemvisionGeometry.Helpers.PolyNode
+   10  GemvisionGeometry.Helpers.PolyNode                          GemvisionGeometry      System.Object
+   16  GemvisionGeometry.Helpers.Int128                            GemvisionGeometry      System.ValueType
+    2  GemvisionGeometry.Helpers.IntPoint                          GemvisionGeometry      System.ValueType
+    1  GemvisionGeometry.Helpers.IntRect                           GemvisionGeometry      System.ValueType
+    0  GemvisionGeometry.Helpers.ClipType                          GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.PolyType                          GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.PolyFillType                      GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.JoinType                          GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.EndType                           GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.EdgeSide                          GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.Protects                          GemvisionGeometry      System.Enum
+    0  GemvisionGeometry.Helpers.Direction                         GemvisionGeometry      System.Enum
+    1  GemvisionGeometry.Helpers.TEdge                             GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.IntersectNode                     GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.LocalMinima                       GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.Scanbeam                          GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.OutRec                            GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.OutPt                             GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.JoinRec                           GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.HorzJoinRec                       GemvisionGeometry      System.Object
+   22  GemvisionGeometry.Helpers.ClipperBase                       GemvisionGeometry      System.Object
+  112  GemvisionGeometry.Helpers.Clipper                           GemvisionGeometry      GemvisionGeometry.Helpers.ClipperBase
+    6  GemvisionGeometry.Helpers.Clipper/DoublePoint               GemvisionGeometry      System.Object
+    6  GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder         GemvisionGeometry      System.Object
+    3  GemvisionGeometry.Helpers.Clipper/<>c                       GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Helpers.ClipperException                  GemvisionGeometry      System.Exception
+   11  GemvisionGeometry.Helpers.RhinoCalls                        GemvisionGeometry      System.Object
+    0  GemvisionGeometry.Helpers.RhinoCalls/GCurveOffsetCornerSty  GemvisionGeometry      System.Enum
+    5  GemvisionGeometry.Helpers.RhinoInterface                    GemvisionGeometry      System.Object
+   13  GemvisionGeometry.Helpers.Utils                             GemvisionGeometry      System.Object
+    3  GemvisionGeometry.Helpers.GCurveHelper                      GemvisionGeometry      System.Object
+   21  GemvisionGeometry.Helpers.GMath                             GemvisionGeometry      System.Object
+    5  GemvisionGeometry.Helpers.GNurbsMath                        GemvisionGeometry      System.Object
+   10  GemvisionGeometry.Geometry.GNurbsCurve                      GemvisionGeometry      System.Object
+   31  GemvisionGeometry.Geometry.CurveDefinition                  GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveDefinition/<>c__DisplayCla  GemvisionGeometry      System.Object
+    4  GemvisionGeometry.Geometry.CurveDefinition/<>c              GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveDefinition/<>c__DisplayCla  GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveDefinition/<>c__DisplayCla  GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveDefinition/<>c__DisplayCla  GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveDefinition/<>c__DisplayCla  GemvisionGeometry      System.Object
+   24  GemvisionGeometry.Geometry.CurveSegment                     GemvisionGeometry      System.Object
+    6  GemvisionGeometry.Geometry.CurveSegment/<>c                 GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveSegment/<>c__DisplayClass2  GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveSegment/<>c__DisplayClass2  GemvisionGeometry      System.Object
+    2  GemvisionGeometry.Geometry.CurveSegment/<>c__DisplayClass2  GemvisionGeometry      System.Object
+    7  GemvisionGeometry.GemMap.GemMap                             GemvisionGeometry      System.Object
+    1  GemvisionGeometry.GemMap.GemMapData                         GemvisionGeometry      System.Object
+    1  GemvisionGeometry.GemMap.GemMapLocation                     GemvisionGeometry      System.Object
+    4  GemvisionGeometry.Calc.BlendCurve                           GemvisionGeometry      System.Object
+    1  GemvisionGeometry.Calc.BlendPolyLineCorners                 GemvisionGeometry      System.Object
+    9  GemvisionGeometry.Calc.TriangleBoxIntersector               GemvisionGeometry      System.Object
+    0  GemvisionGeometry.Calc.EdgeType                             GemvisionGeometry      System.Enum
+   24  GemvisionGeometry.Calc.PolylineOffset                       GemvisionGeometry      System.Object
+    0  <PrivateImplementationDetails>                              GemvisionGeometry      System.Object
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=3  GemvisionGeometry      System.ValueType
+
+== READABLE METHOD NAMES (non-obfuscated) ==
+Update                                         | System.Boolean CSBlocks.Curves.CSMatchingBand::Update()
+DrawShell                                      | System.Void GemvisionGeometry.OctTree.ExtractMesh::DrawShell(GemvisionGeometry.OctTree.OctTree,Rhino.Geometry.Mesh,System.Int32&)
+.ctor                                          | System.Void GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder::.ctor(System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGe
+.cctor                                         | System.Void GemvisionGeometry.OctTree.OctShell::.cctor()
+ComputeTransform                               | System.Boolean CSBlocks.Transforms.CSPositionOnCrv::ComputeTransform(GV.CounterSketch.Shared.ValueListItem,Rhino.Geometry.Point3d,Rhino.Geometry.Point
+AddGPoint                                      | Rhino.Geometry.NurbsCurve GemvisionGeometry.Geometry.GNurbsCurve::AddGPoint(Rhino.Geometry.NurbsCurve,Rhino.Geometry.Point3d)
+IntersectEdges                                 | System.Void GemvisionGeometry.Helpers.Clipper::IntersectEdges(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helper
+DeleteControlPoint                             | Rhino.Geometry.NurbsCurve GemvisionGeometry.Geometry.GNurbsCurve::DeleteControlPoint(Rhino.Geometry.NurbsCurve,System.Int32)
+LayOutPIM                                      | System.Void GemvisionGeometry.GemMap.GemMap::LayOutPIM(GemvisionGeometry.GemMap.GemMapData,System.Boolean,System.Boolean)
+AddPolygon                                     | System.Boolean GemvisionGeometry.Helpers.ClipperBase::AddPolygon(System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>,GemvisionGeomet
+FixAngle                                       | System.Void GemvisionGeometry.GemMap.GemMap::FixAngle(GemvisionGeometry.GemMap.GemMapData)
+ProcessEdgesAtTopOfScanbeam                    | System.Void GemvisionGeometry.Helpers.Clipper::ProcessEdgesAtTopOfScanbeam(System.Int64)
+CheckLineBox                                   | System.Boolean GemvisionGeometry.Helpers.GMath::CheckLineBox(Rhino.Geometry.BoundingBox,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d)
+DoRound                                        | System.Void GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder::DoRound(System.Double)
+DoSquare                                       | System.Void GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder::DoSquare()
+ProcessHorizontal                              | System.Void GemvisionGeometry.Helpers.Clipper::ProcessHorizontal(GemvisionGeometry.Helpers.TEdge)
+processQueue                                   | System.Void GemvisionGeometry.OctTree.OctShell::processQueue(GemvisionGeometry.OctTree.OctTree,System.Collections.Generic.List`1<GemvisionGeometry.Oct
+DoTreeInternal                                 | System.Void GemvisionGeometry.OctTree.OctTree::DoTreeInternal(System.Collections.Generic.List`1<Rhino.Geometry.Mesh>,System.Int32,System.Boolean,Syste
+MakeBlendedCurve                               | Rhino.Geometry.NurbsCurve GemvisionGeometry.Calc.BlendPolyLineCorners::MakeBlendedCurve(Rhino.Geometry.Polyline,System.Double,System.Boolean)
+JoinPoints                                     | System.Boolean GemvisionGeometry.Helpers.Clipper::JoinPoints(GemvisionGeometry.Helpers.JoinRec,GemvisionGeometry.Helpers.OutPt&,GemvisionGeometry.Help
+JoinCommonEdges                                | System.Void GemvisionGeometry.Helpers.Clipper::JoinCommonEdges()
+DoMiter                                        | System.Void GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder::DoMiter()
+InsertLocalMinimaIntoAEL                       | System.Void GemvisionGeometry.Helpers.Clipper::InsertLocalMinimaIntoAEL(System.Int64)
+TriBoxOverlap                                  | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::TriBoxOverlap(Rhino.Geometry.Point3d,System.Double,GemvisionGeometry.OctTree.Triangle)
+UpdateLayout                                   | System.Void GemvisionCommon.UserInterfaces.FrmProgress::UpdateLayout()
+op_Division                                    | GemvisionGeometry.Helpers.Int128 GemvisionGeometry.Helpers.Int128::op_Division(GemvisionGeometry.Helpers.Int128,GemvisionGeometry.Helpers.Int128)
+IntersectPoint                                 | System.Boolean GemvisionGeometry.Helpers.Clipper::IntersectPoint(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Hel
+InitializeComponent                            | System.Void GemvisionCommon.UserInterfaces.FrmProgress::InitializeComponent()
+JoinCurves                                     | Rhino.Geometry.NurbsCurve GemvisionGeometry.Helpers.GCurveHelper::JoinCurves(System.Collections.Generic.List`1<Rhino.Geometry.NurbsCurve>)
+AppendPolygon                                  | System.Void GemvisionGeometry.Helpers.Clipper::AppendPolygon(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge)
+AddBoundsToLML                                 | GemvisionGeometry.Helpers.TEdge GemvisionGeometry.Helpers.ClipperBase::AddBoundsToLML(GemvisionGeometry.Helpers.TEdge)
+PointInPolygon                                 | System.Boolean GemvisionGeometry.Helpers.ClipperBase::PointInPolygon(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.OutPt,System.Boolean
+SaveStlBinary                                  | System.Boolean GemvisionGeometry.FileIO.IoMesh::SaveStlBinary(Rhino.Geometry.Mesh,System.String)
+SetTopLevelOctTree                             | GemvisionGeometry.OctTree.OctTree GemvisionGeometry.OctTree.OctTree::SetTopLevelOctTree(System.Collections.Generic.List`1<Rhino.Geometry.Mesh>)
+SetWindingCount                                | System.Void GemvisionGeometry.Helpers.Clipper::SetWindingCount(GemvisionGeometry.Helpers.TEdge)
+ComputeTransformNormalCurve                    | System.Boolean CSBlocks.Transforms.Obsolete.CSPositionsOnCurve3::ComputeTransformNormalCurve(Rhino.Geometry.Curve,System.Double,System.Collections.Gen
+ExplodeCurve                                   | Rhino.Geometry.NurbsCurve GemvisionGeometry.Helpers.GCurveHelper::ExplodeCurve(System.Int32,Rhino.Geometry.NurbsCurve,Rhino.Geometry.NurbsCurve&)
+ClosestPoint                                   | System.Double GemvisionGeometry.Geometry.GNurbsCurve::ClosestPoint(Rhino.Geometry.NurbsCurve,Rhino.Geometry.Point3d,System.Double,Rhino.Geometry.Point
+DoSimplePolygons                               | System.Void GemvisionGeometry.Helpers.Clipper::DoSimplePolygons()
+GetBounds                                      | GemvisionGeometry.Helpers.IntRect GemvisionGeometry.Helpers.ClipperBase::GetBounds()
+trimCurve                                      | Rhino.Geometry.NurbsCurve[] GemvisionGeometry.Helpers.RhinoCalls::trimCurve(Rhino.Geometry.NurbsCurve[],Rhino.Geometry.NurbsCurve,System.Double)
+GetBoundingBox                                 | Rhino.Geometry.BoundingBox GemvisionGeometry.Geometry.CurveDefinition::GetBoundingBox(System.Collections.Generic.List`1<GemvisionGeometry.Geometry.Cur
+PointOnLineSegment                             | System.Boolean GemvisionGeometry.Helpers.ClipperBase::PointOnLineSegment(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint,Gemvisi
+PlaneBoxOverlap                                | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::PlaneBoxOverlap(Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d,System.Double)
+SwapPositionsInSEL                             | System.Void GemvisionGeometry.Helpers.Clipper::SwapPositionsInSEL(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge)
+Explode                                        | System.Collections.Generic.List`1<Rhino.Geometry.NurbsCurve> GemvisionGeometry.Helpers.GCurveHelper::Explode(Rhino.Geometry.NurbsCurve)
+Area                                           | System.Double GemvisionGeometry.Helpers.Clipper::Area(System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>)
+splitCurves                                    | Rhino.Geometry.NurbsCurve[] GemvisionGeometry.Helpers.RhinoCalls::splitCurves(Rhino.Geometry.NurbsCurve[],Rhino.Geometry.NurbsCurve[])
+OutputTriFace                                  | System.Void GemvisionGeometry.FileIO.IoMesh::OutputTriFace(Rhino.Geometry.Point3f,Rhino.Geometry.Point3f,Rhino.Geometry.Point3f,System.IO.BinaryWriter
+shell                                          | System.Void GemvisionGeometry.OctTree.OctShell::shell(GemvisionGeometry.OctTree.OctTree,System.Int64&,System.Int32&,System.Int32&)
+SwapPositionsInAEL                             | System.Void GemvisionGeometry.Helpers.Clipper::SwapPositionsInAEL(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge)
+Nip                                            | System.Double GemvisionGeometry.Helpers.GNurbsMath::Nip(System.Int32,System.Int32,System.Double[],System.Double)
+InBoX                                          | System.Boolean GemvisionGeometry.Helpers.GMath::InBoX(Rhino.Geometry.Point3d,Rhino.Geometry.BoundingBox,System.Int32)
+GetOverlapSegment                              | System.Boolean GemvisionGeometry.Helpers.Clipper::GetOverlapSegment(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint,GemvisionGeo
+BuildResult2                                   | System.Void GemvisionGeometry.Helpers.Clipper::BuildResult2(GemvisionGeometry.Helpers.PolyTree)
+CleanPolygon                                   | System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint> GemvisionGeometry.Helpers.Clipper::CleanPolygon(System.Collections.Generic.List`
+IsContributing                                 | System.Boolean GemvisionGeometry.Helpers.Clipper::IsContributing(GemvisionGeometry.Helpers.TEdge)
+calcVLen                                       | System.Double GemvisionGeometry.Calc.BlendCurve::calcVLen(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3
+MinTransform                                   | Rhino.Geometry.Transform CSBlocks.Transforms.Helpers.CSMSRObjectsCalculateTransforms::MinTransform(Rhino.Geometry.GeometryBase)
+OffsetPolygons                                 | System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>> GemvisionGeometry.Helpers.Clipper::OffsetPoly
+FirstIsBottomPt                                | System.Boolean GemvisionGeometry.Helpers.Clipper::FirstIsBottomPt(GemvisionGeometry.Helpers.OutPt,GemvisionGeometry.Helpers.OutPt)
+ExecuteInternal                                | System.Boolean GemvisionGeometry.Helpers.Clipper::ExecuteInternal()
+ComputeAxisOnBrep                              | System.Boolean CSBlocks.Transforms.CSPositionsOnCurve::ComputeAxisOnBrep(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,System.Collections.Generic.Lis
+BuildIntersectList                             | System.Void GemvisionGeometry.Helpers.Clipper::BuildIntersectList(System.Int64,System.Int64)
+CalcCornerDirs                                 | System.Void GemvisionGeometry.Calc.PolylineOffset::CalcCornerDirs()
+MakeBendGeometry                               | System.Collections.Generic.List`1<Rhino.Geometry.GeometryBase> CSBlocks.Transforms.DynamicBend::MakeBendGeometry(System.Collections.Generic.List`1<Rhi
+ReadObj                                        | Rhino.Geometry.Mesh GemvisionGeometry.FileIO.IoMesh::ReadObj(System.String)
+explodeCurves                                  | Rhino.Geometry.NurbsCurve[] GemvisionGeometry.Helpers.RhinoCalls::explodeCurves(Rhino.Geometry.NurbsCurve[])
+AddOutPt                                       | System.Void GemvisionGeometry.Helpers.Clipper::AddOutPt(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.IntPoint)
+UpdateEdgeIntoAEL                              | System.Void GemvisionGeometry.Helpers.Clipper::UpdateEdgeIntoAEL(GemvisionGeometry.Helpers.TEdge&)
+Subdivide                                      | System.Void GemvisionGeometry.OctTree.OctTree::Subdivide(System.Int32)
+BuildArc                                       | System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint> GemvisionGeometry.Helpers.Clipper::BuildArc(GemvisionGeometry.Helpers.IntPoint,S
+SplitDisjointSegments                          | System.Boolean GemvisionGeometry.Geometry.CurveDefinition::SplitDisjointSegments(GemvisionGeometry.Geometry.CurveDefinition,System.Collections.Generic
+AddLocalMinPoly                                | System.Void GemvisionGeometry.Helpers.Clipper::AddLocalMinPoly(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpe
+GetBottomPt                                    | GemvisionGeometry.Helpers.OutPt GemvisionGeometry.Helpers.Clipper::GetBottomPt(GemvisionGeometry.Helpers.OutPt)
+InitEdge                                       | System.Void GemvisionGeometry.Helpers.ClipperBase::InitEdge(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.
+ToPolyLineMinLen                               | System.Void GemvisionGeometry.Geometry.GNurbsCurve::ToPolyLineMinLen(Rhino.Geometry.NurbsCurve,Rhino.Geometry.Polyline,System.Collections.Generic.List
+Taper                                          | System.Void CSBlocks.Transforms.CSTaper::Taper(Rhino.Geometry.GeometryBase,Rhino.Geometry.Plane,System.Double,System.Double,System.Double,System.Doubl
+GetLowermostRec                                | GemvisionGeometry.Helpers.OutRec GemvisionGeometry.Helpers.Clipper::GetLowermostRec(GemvisionGeometry.Helpers.OutRec,GemvisionGeometry.Helpers.OutRec)
+GetGemOutline                                  | Rhino.Geometry.Polyline GemvisionGeometry.GemMap.GemMap::GetGemOutline(GemvisionGeometry.GemMap.GemMapLocation)
+OffsetPolyLines                                | System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>> GemvisionGeometry.Helpers.Clipper::OffsetPoly
+FixupOutPolygon                                | System.Void GemvisionGeometry.Helpers.Clipper::FixupOutPolygon(GemvisionGeometry.Helpers.OutRec)
+Colission                                      | System.Boolean GemvisionGeometry.GemMap.GemMap::Colission(GemvisionGeometry.GemMap.GemMapData)
+GetLogMessageFromException                     | System.String GemvisionCommon.Utilities.Logging.Logger::GetLogMessageFromException(System.Exception,System.Boolean)
+OffsetPoint                                    | System.Void GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder::OffsetPoint(GemvisionGeometry.Helpers.JoinType,System.Double)
+PerformOffset                                  | System.Boolean GemvisionGeometry.Calc.PolylineOffset::PerformOffset(System.Double&)
+Offset                                         | Rhino.Geometry.NurbsCurve[] GemvisionGeometry.Helpers.RhinoCalls::Offset(Rhino.Geometry.NurbsCurve,Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Syst
+ClosestPointOnLine                             | GemvisionGeometry.Helpers.Clipper/DoublePoint GemvisionGeometry.Helpers.Clipper::ClosestPointOnLine(GemvisionGeometry.Helpers.IntPoint,GemvisionGeomet
+ToPolyLineMinLength                            | Rhino.Geometry.Polyline GemvisionGeometry.Geometry.GNurbsCurve::ToPolyLineMinLength(Rhino.Geometry.NurbsCurve,System.Double)
+CalcEdgeMaxOffsets                             | System.Void GemvisionGeometry.Calc.PolylineOffset::CalcEdgeMaxOffsets()
+ComputeTransformFlat                           | System.Boolean CSBlocks.Transforms.CSPositionsOnCurve::ComputeTransformFlat(Rhino.Geometry.Curve,Rhino.Geometry.Transform,System.Double,System.Collect
+Orient                                         | Rhino.Geometry.Transform GemvisionGeometry.Helpers.Utils::Orient(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d,Rhino.Geometry
+ChangeClosedCurveSeam_ForceNonPeriodic         | System.Boolean CSBlocks.Curves.CSChangeCurveSeam::ChangeClosedCurveSeam_ForceNonPeriodic(Rhino.Geometry.NurbsCurve&,System.Double,System.Boolean)
+InsertScanbeam                                 | System.Void GemvisionGeometry.Helpers.Clipper::InsertScanbeam(System.Int64)
+InsertIntersectNode                            | System.Void GemvisionGeometry.Helpers.Clipper::InsertIntersectNode(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.H
+IsValid                                        | System.Boolean GemvisionGeometry.Calc.PolylineOffset::IsValid()
+<DeleteOldLogs>b__28_0                         | System.Void GemvisionCommon.Utilities.Logging.Logger::<DeleteOldLogs>b__28_0(System.String)
+ObtainTransform                                | System.Void CSBlocks.Transforms.CSShear::ObtainTransform(System.Int32,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,System.Dou
+WriteXml                                       | System.Void GemvisionCommon.Utilities.Serialization.SerializableDictionary`2::WriteXml(System.Xml.XmlWriter)
+Testnext                                       | System.Void GemvisionGeometry.OctTree.OctTree::Testnext(System.Int32,System.Int32,System.Int32)
+joinCurves                                     | Rhino.Geometry.NurbsCurve[] GemvisionGeometry.Helpers.RhinoCalls::joinCurves(Rhino.Geometry.NurbsCurve[])
+AddJoin                                        | System.Void GemvisionGeometry.Helpers.Clipper::AddJoin(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,System.Int32,System.Int32)
+InsertEdgeIntoAEL                              | System.Void GemvisionGeometry.Helpers.Clipper::InsertEdgeIntoAEL(GemvisionGeometry.Helpers.TEdge)
+Connect                                        | System.Boolean GemvisionCommon.Utilities.Networking.NetworkConnection::Connect(System.String,System.Net.NetworkCredential)
+LineInt                                        | Rhino.Geometry.Point3d GemvisionGeometry.Helpers.GMath::LineInt(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Point3d,Rhino.Geometry.V
+GetValueFromDescription                        | T GemvisionCommon.Helpers.EnumHelper::GetValueFromDescription(System.String,T)
+ReadXml                                        | System.Void GemvisionCommon.Utilities.Serialization.SerializableDictionary`2::ReadXml(System.Xml.XmlReader)
+RollLog                                        | System.Void GemvisionCommon.Utilities.Logging.Logger::RollLog(System.IO.FileInfo)
+ComputeTransformAuto                           | System.Boolean CSBlocks.Transforms.CSPositionsOnCurve::ComputeTransformAuto(Rhino.Geometry.Curve,Rhino.Geometry.Transform,System.Double,System.Collect
+GeneratePointsFromCurve                        | Rhino.Collections.Point3dList CSBlocks.Transforms.CSMilgrainPoints::GeneratePointsFromCurve(Rhino.Geometry.Curve,System.Double,System.Double)
+AngleY                                         | System.Double CSBlocks.Transforms.Helpers.CSMSRObjectsCalculateTransforms::AngleY(Rhino.Geometry.GeometryBase,System.Double,System.Double,System.Doubl
+AngleX                                         | System.Double CSBlocks.Transforms.Helpers.CSMSRObjectsCalculateTransforms::AngleX(Rhino.Geometry.GeometryBase,System.Double,System.Double,System.Doubl
+RemoveDuplicatedPoints                         | System.Boolean GemvisionGeometry.Geometry.CurveSegment::RemoveDuplicatedPoints()
+DoMaxima                                       | System.Void GemvisionGeometry.Helpers.Clipper::DoMaxima(GemvisionGeometry.Helpers.TEdge,System.Int64)
+Blend                                          | Rhino.Geometry.NurbsCurve GemvisionGeometry.Helpers.RhinoCalls::Blend(Rhino.Geometry.NurbsCurve,Rhino.Geometry.NurbsCurve,System.Double,System.Double)
+op_Equality                                    | System.Boolean GemvisionGeometry.Geometry.CurveDefinition::op_Equality(GemvisionGeometry.Geometry.CurveDefinition,GemvisionGeometry.Geometry.CurveDefi
+Reset                                          | System.Void GemvisionGeometry.Helpers.ClipperBase::Reset()
+Shear                                          | System.Void CSBlocks.Transforms.CSShear::Shear(Rhino.Geometry.GeometryBase,System.Int32,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.V
+FullRangeNeeded                                | System.Boolean GemvisionGeometry.Helpers.Clipper::FullRangeNeeded(System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>)
+Scale                                          | System.Void GemvisionGeometry.Geometry.CurveSegment::Scale(Rhino.Geometry.Point3f,System.Single,System.Single)
+CreateInterp                                   | Rhino.Geometry.NurbsCurve GemvisionGeometry.Geometry.GNurbsCurve::CreateInterp(Rhino.Geometry.Point3d[],System.Int32,System.Boolean)
+testStartPoint                                 | System.Boolean GemvisionGeometry.Calc.PolylineOffset::testStartPoint(System.Double&)
+ObtainTransformXYForXSide                      | System.Void CSBlocks.Transforms.CSShear::ObtainTransformXYForXSide(Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Transform&)
+ObtainTransformXZForXSide                      | System.Void CSBlocks.Transforms.CSShear::ObtainTransformXZForXSide(Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Transform&)
+ObtainTransformXYForYSide                      | System.Void CSBlocks.Transforms.CSShear::ObtainTransformXYForYSide(Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Transform&)
+ObtainTransformXZForYSide                      | System.Void CSBlocks.Transforms.CSShear::ObtainTransformXZForYSide(Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Transform&)
+ObtainTransformXYForZSide                      | System.Void CSBlocks.Transforms.CSShear::ObtainTransformXYForZSide(Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Transform&)
+ObtainTransformXZForZSide                      | System.Void CSBlocks.Transforms.CSShear::ObtainTransformXZForZSide(Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Transform&)
+BuildResult                                    | System.Void GemvisionGeometry.Helpers.Clipper::BuildResult(System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.Helpe
+CleanUp                                        | System.Boolean GemvisionGeometry.Geometry.CurveDefinition::CleanUp()
+GetNetworkConnectionPath                       | System.String GemvisionCommon.Utilities.Networking.NetworkConnectionManager::GetNetworkConnectionPath(GemvisionCommon.Utilities.Networking.Structs.Net
+AllBernstein2                                  | System.Void GemvisionGeometry.Helpers.GNurbsMath::AllBernstein2(System.Int32,System.Double,System.Double[]&)
+OrientToGem                                    | System.Void CSBlocks.Transforms.CSCopyFromGem::OrientToGem(CSDatas.Interfaces.ICSArray,CSDatas.Interfaces.ICSArray,CSDatas.CSDataArray,Rhino.Geometry.
+Read                                           | System.Boolean GemvisionCommon.Utilities.Serialization.Serializer`1::Read(System.String,T&)
+SlopesEqual                                    | System.Boolean GemvisionGeometry.Helpers.ClipperBase::SlopesEqual(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint,GemvisionGeome
+FindSegment                                    | System.Boolean GemvisionGeometry.Helpers.Clipper::FindSegment(GemvisionGeometry.Helpers.OutPt&,System.Boolean,GemvisionGeometry.Helpers.IntPoint&,Gemv
+IntersectBoundingBoxSplitCurve                 | System.Boolean GemvisionGeometry.Helpers.Utils::IntersectBoundingBoxSplitCurve(Rhino.Geometry.NurbsCurve,Rhino.Geometry.BoundingBox,System.Double)
+ScaleToGem                                     | System.Void CSBlocks.Transforms.CSCopyFromGem::ScaleToGem(CSDatas.Interfaces.ICSArray,CSDatas.CSDataArray,CSDatas.CSDataArray,Rhino.Geometry.Transform
+GetLastPoint                                   | Rhino.Geometry.Point3f GemvisionGeometry.Geometry.CurveDefinition::GetLastPoint()
+Int128Mul                                      | GemvisionGeometry.Helpers.Int128 GemvisionGeometry.Helpers.Int128::Int128Mul(System.Int64,System.Int64)
+CalcIntersectPoints                            | System.Void GemvisionGeometry.Calc.PolylineOffset::CalcIntersectPoints()
+InsertLocalMinima                              | System.Void GemvisionGeometry.Helpers.ClipperBase::InsertLocalMinima(GemvisionGeometry.Helpers.LocalMinima)
+FixupJoinRecs                                  | System.Void GemvisionGeometry.Helpers.Clipper::FixupJoinRecs(GemvisionGeometry.Helpers.JoinRec,GemvisionGeometry.Helpers.OutPt,System.Int32)
+GetUnitNormal                                  | GemvisionGeometry.Helpers.Clipper/DoublePoint GemvisionGeometry.Helpers.Clipper::GetUnitNormal(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.He
+AngleOfPoint                                   | System.Double GemvisionGeometry.Helpers.GMath::AngleOfPoint(System.Double,System.Double)
+MorphPlane                                     | System.Void CSBlocks.Transforms.CSTwist::MorphPlane(Rhino.Geometry.GeometryBase,Rhino.Geometry.Plane,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Sys
+IsSymetrical                                   | System.Boolean GemvisionGeometry.Geometry.GNurbsCurve::IsSymetrical(Rhino.Geometry.NurbsCurve)
+CalcEdgeTypes                                  | System.Int32 GemvisionGeometry.Calc.PolylineOffset::CalcEdgeTypes()
+Write                                          | System.Boolean GemvisionCommon.Utilities.Serialization.Serializer`1::Write(System.String,T)
+LineToPointDistance2D                          | System.Double GemvisionGeometry.Helpers.GMath::LineToPointDistance2D(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,System.Boole
+Bin1_2                                         | System.Void GemvisionGeometry.Helpers.GNurbsMath::Bin1_2(System.Int32,System.Int32,System.Double,System.Double&)
+reAddStartPoint                                | System.Void GemvisionGeometry.Calc.PolylineOffset::reAddStartPoint(System.Double)
+Clear                                          | System.Void GemvisionGeometry.Helpers.ClipperBase::Clear()
+GetClosestPointToLine                          | Rhino.Geometry.Point3f GemvisionGeometry.Helpers.GMath::GetClosestPointToLine(Rhino.Geometry.Point3f,Rhino.Geometry.Point3f,Rhino.Geometry.Point3f,Sys
+ReadOptions                                    | T GemvisionCommon.Utilities.Application.Application`1::ReadOptions()
+ComputeIntersectionPoint                       | System.Boolean CSBlocks.Curves.CSCurveScale2d::ComputeIntersectionPoint(Rhino.Geometry.BoundingBox,Rhino.Geometry.Vector3d,Rhino.Geometry.Curve,System
+GetBlendCurv                                   | Rhino.Geometry.Point3d[] GemvisionGeometry.Calc.BlendCurve::GetBlendCurv(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.G
+Divide                                         | System.Void GemvisionGeometry.Geometry.CurveSegment::Divide(System.Single)
+ProcessIntersectList                           | System.Void GemvisionGeometry.Helpers.Clipper::ProcessIntersectList()
+GetPixel                                       | System.Boolean GemvisionGeometry.OctTree.OctTree::GetPixel(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean[]&)
+quadVal                                        | System.Double GemvisionGeometry.Calc.BlendCurve::quadVal(System.Double,System.Double[],System.Double[])
+GetDescriptionFromValue                        | System.String GemvisionCommon.Helpers.EnumHelper::GetDescriptionFromValue(System.Enum)
+ProcessIntersections                           | System.Boolean GemvisionGeometry.Helpers.Clipper::ProcessIntersections(System.Int64,System.Int64)
+CrossProduct2D                                 | System.Double GemvisionGeometry.Helpers.GMath::CrossProduct2D(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d)
+DotProduct2D                                   | System.Double GemvisionGeometry.Helpers.GMath::DotProduct2D(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d)
+ShiftSeam                                      | System.Boolean GemvisionGeometry.Geometry.CurveDefinition::ShiftSeam()
+RangeTest                                      | System.Void GemvisionGeometry.Helpers.ClipperBase::RangeTest(GemvisionGeometry.Helpers.IntPoint,System.Int64&)
+TrySetCheckedItems                             | System.Boolean GemvisionCommon.UserInterfaceExtensions.CheckedListBoxExtensions::TrySetCheckedItems(System.Windows.Forms.CheckedListBox,System.Collect
+Pt3IsBetweenPt1AndPt2                          | System.Boolean GemvisionGeometry.Helpers.Clipper::Pt3IsBetweenPt1AndPt2(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint,Gemvisio
+AllBernstein                                   | System.Void GemvisionGeometry.Helpers.GNurbsMath::AllBernstein(System.Int32,System.Double,System.Double[]&)
+CopyDirectoryContents                          | System.Boolean GemvisionCommon.Helpers.FileSystemHelper::CopyDirectoryContents(System.String,System.String)
+GetTempFilePath                                | System.String GemvisionCommon.Helpers.FileSystemHelper::GetTempFilePath(System.String,System.String)
+ToDouble                                       | System.Double GemvisionGeometry.Helpers.Int128::ToDouble()
+FixupIntersectionOrder                         | System.Boolean GemvisionGeometry.Helpers.Clipper::FixupIntersectionOrder()
+subDivide                                      | System.Double[] GemvisionGeometry.Geometry.GNurbsCurve::subDivide(System.Double[],System.Int32)
+Load                                           | System.Void GemvisionCommon.UserInterfaceExtensions.ComboBoxExtensions::Load(System.Windows.Forms.ComboBox,System.Collections.Generic.IEnumerable`1<Sy
+Create                                         | Rhino.Geometry.NurbsCurve GemvisionGeometry.Geometry.GNurbsCurve::Create(Rhino.Geometry.Point3d[],System.Int32,System.Boolean)
+GetTransforms                                  | System.Boolean CSBlocks.Transforms.CSPositionsOnCurve::GetTransforms(Rhino.Geometry.Curve,CSDatas.CSData,System.Collections.Generic.List`1<System.Doub
+GetVolume                                      | System.Void GemvisionGeometry.OctTree.OctTree::GetVolume(System.Collections.Generic.List`1<Rhino.Geometry.Mesh>,System.Boolean,System.Double&,Rhino.Ge
+TaperRigid                                     | System.Void CSBlocks.Transforms.CSTaper::TaperRigid(Rhino.Geometry.GeometryBase,Rhino.Geometry.Plane,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Sys
+FixHoleLinkage                                 | System.Void GemvisionGeometry.Helpers.Clipper::FixHoleLinkage(GemvisionGeometry.Helpers.OutRec)
+MirrorX                                        | Rhino.Geometry.GeometryBase[] GemvisionGeometry.Helpers.Utils::MirrorX(Rhino.Geometry.GeometryBase[])
+PolylineCurveIntersectBoundingBox              | System.Boolean GemvisionGeometry.Helpers.Utils::PolylineCurveIntersectBoundingBox(Rhino.Geometry.PolylineCurve,Rhino.Geometry.BoundingBox,System.Doubl
+FixupFirstLefts1                               | System.Void GemvisionGeometry.Helpers.Clipper::FixupFirstLefts1(GemvisionGeometry.Helpers.OutRec,GemvisionGeometry.Helpers.OutRec)
+get_IsClosed                                   | System.Boolean GemvisionGeometry.Geometry.CurveSegment::get_IsClosed()
+E2InsertsBeforeE1                              | System.Boolean GemvisionGeometry.Helpers.Clipper::E2InsertsBeforeE1(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge)
+SetDx                                          | System.Void GemvisionGeometry.Helpers.ClipperBase::SetDx(GemvisionGeometry.Helpers.TEdge)
+TrySetSelectedItem                             | System.Boolean GemvisionCommon.UserInterfaceExtensions.ComboBoxExtensions::TrySetSelectedItem(System.Windows.Forms.ComboBox,System.Object)
+InsertPolyPtBetween                            | GemvisionGeometry.Helpers.OutPt GemvisionGeometry.Helpers.Clipper::InsertPolyPtBetween(GemvisionGeometry.Helpers.OutPt,GemvisionGeometry.Helpers.OutPt
+CreateOutRec                                   | GemvisionGeometry.Helpers.OutRec GemvisionGeometry.Helpers.Clipper::CreateOutRec()
+Append                                         | System.Boolean GemvisionGeometry.Geometry.CurveDefinition::Append(GemvisionGeometry.Geometry.CurveDefinition)
+GetSubCurve                                    | GemvisionGeometry.Geometry.CurveDefinition GemvisionGeometry.Geometry.CurveDefinition::GetSubCurve(System.Int32,System.Int32)
+AXISTEST_Y02                                   | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::AXISTEST_Y02(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino
+AXISTEST_Y1                                    | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::AXISTEST_Y1(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino.
+ValidateDirectoryPath                          | System.Boolean GemvisionCommon.Helpers.FileSystemHelper::ValidateDirectoryPath(System.String)
+SwapIntersectNodes                             | System.Void GemvisionGeometry.Helpers.Clipper::SwapIntersectNodes(GemvisionGeometry.Helpers.IntersectNode,GemvisionGeometry.Helpers.IntersectNode)
+AddPolyNodeToPolygons                          | System.Void GemvisionGeometry.Helpers.Clipper::AddPolyNodeToPolygons(GemvisionGeometry.Helpers.PolyNode,System.Collections.Generic.List`1<System.Colle
+AXISTEST_X01                                   | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::AXISTEST_X01(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino
+AXISTEST_X2                                    | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::AXISTEST_X2(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino.
+AXISTEST_Z12                                   | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::AXISTEST_Z12(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino
+AXISTEST_Z0                                    | System.Boolean GemvisionGeometry.Calc.TriangleBoxIntersector::AXISTEST_Z0(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino.
+WriteToLogAux                                  | System.Void GemvisionCommon.Utilities.Logging.Logger::WriteToLogAux(System.String)
+IntersectBoundBoxSplitCurveTest                | System.Boolean GemvisionGeometry.Helpers.Utils::IntersectBoundBoxSplitCurveTest(Rhino.Geometry.NurbsCurve,Rhino.Geometry.BoundingBox,System.Double)
+SetHoleState                                   | System.Void GemvisionGeometry.Helpers.Clipper::SetHoleState(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.OutRec)
+PointFArrayToPolygon                           | System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint> GemvisionGeometry.GemMap.GemMap::PointFArrayToPolygon(Rhino.Geometry.Polyline,Sy
+Disconnect                                     | System.Boolean GemvisionCommon.Utilities.Networking.NetworkConnection::Disconnect(System.String)
+Execute                                        | System.Boolean GemvisionGeometry.Helpers.Clipper::Execute(GemvisionGeometry.Helpers.ClipType,System.Collections.Generic.List`1<System.Collections.Gene
+Poly2ContainsPoly1                             | System.Boolean GemvisionGeometry.Helpers.Clipper::Poly2ContainsPoly1(GemvisionGeometry.Helpers.OutPt,GemvisionGeometry.Helpers.OutPt,System.Boolean)
+DeleteFromAEL                                  | System.Void GemvisionGeometry.Helpers.Clipper::DeleteFromAEL(GemvisionGeometry.Helpers.TEdge)
+DeleteFromSEL                                  | System.Void GemvisionGeometry.Helpers.Clipper::DeleteFromSEL(GemvisionGeometry.Helpers.TEdge)
+GetNextSiblingUp                               | GemvisionGeometry.Helpers.PolyNode GemvisionGeometry.Helpers.PolyNode::GetNextSiblingUp()
+ComputeTransformRingRail                       | System.Boolean CSBlocks.Transforms.Obsolete.CSPositionsOnCurve3::ComputeTransformRingRail(Rhino.Geometry.Curve,Rhino.Geometry.Transform,System.Double,
+IntMesh                                        | System.Collections.Generic.List`1<GemvisionGeometry.OctTree.Triangle> GemvisionGeometry.OctTree.OctTree::IntMesh(Rhino.Geometry.Point3d,System.Double)
+AddKinkPoint                                   | Rhino.Geometry.NurbsCurve GemvisionGeometry.Helpers.RhinoCalls::AddKinkPoint(Rhino.Geometry.NurbsCurve,Rhino.Geometry.Point3d)
+Join                                           | GemvisionGeometry.Geometry.CurveDefinition GemvisionGeometry.Geometry.CurveDefinition::Join(System.Collections.Generic.List`1<GemvisionGeometry.Geomet
+IntersectBoundingBox                           | System.Boolean GemvisionGeometry.Helpers.Utils::IntersectBoundingBox(Rhino.Geometry.GeometryBase,Rhino.Geometry.BoundingBox,System.Double)
+AddEdgeToSEL                                   | System.Void GemvisionGeometry.Helpers.Clipper::AddEdgeToSEL(GemvisionGeometry.Helpers.TEdge)
+AddLocalMaxPoly                                | System.Void GemvisionGeometry.Helpers.Clipper::AddLocalMaxPoly(GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpers.TEdge,GemvisionGeometry.Helpe
+AngleBetweenVectors                            | System.Double GemvisionGeometry.Helpers.GMath::AngleBetweenVectors(Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d)
+Rebuild                                        | Rhino.Geometry.NurbsCurve GemvisionGeometry.Helpers.RhinoCalls::Rebuild(Rhino.Geometry.NurbsCurve,System.Int32,System.Int32,System.Boolean,System.Doub
+GetIntersection                                | System.Boolean GemvisionGeometry.Helpers.GMath::GetIntersection(System.Double,System.Double,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geomet
+GetFirstPoint                                  | Rhino.Geometry.Point3f GemvisionGeometry.Geometry.CurveDefinition::GetFirstPoint()
+ReadOffsetCornerStyle                          | System.Boolean CSBlocks.Curves.CSCurveRhinoOffset::ReadOffsetCornerStyle(GV.CounterSketch.Shared.ValueListItem,Rhino.Geometry.CurveOffsetCornerStyle&)
+GetObjectFromJson                              | System.Boolean GemvisionCommon.Helpers.JsonSerializationHelper::GetObjectFromJson(System.String,T&)
+SlopesNearColinear                             | System.Boolean GemvisionGeometry.Helpers.Clipper::SlopesNearColinear(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint,GemvisionGe
+IsTopHorz                                      | System.Boolean GemvisionGeometry.Helpers.Clipper::IsTopHorz(GemvisionGeometry.Helpers.TEdge,System.Double)
+Reverse                                        | System.Void GemvisionGeometry.Geometry.CurveDefinition::Reverse()
+FixupFirstLefts2                               | System.Void GemvisionGeometry.Helpers.Clipper::FixupFirstLefts2(GemvisionGeometry.Helpers.OutRec,GemvisionGeometry.Helpers.OutRec)
+op_Addition                                    | GemvisionGeometry.Helpers.Int128 GemvisionGeometry.Helpers.Int128::op_Addition(GemvisionGeometry.Helpers.Int128,GemvisionGeometry.Helpers.Int128)
+CreateSurface                                  | Rhino.Geometry.NurbsSurface CSBlocks.Transforms.CSSmartPattern::CreateSurface(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d)
+DeleteDirectoryContents                        | System.Void GemvisionCommon.Helpers.FileSystemHelper::DeleteDirectoryContents(System.String)
+ComputeRotatedVectorXZ                         | Rhino.Geometry.Vector3d CSBlocks.Transforms.CSShear::ComputeRotatedVectorXZ(Rhino.Geometry.Plane,System.Double)
+GetPolyline                                    | Rhino.Geometry.Polyline GemvisionGeometry.Calc.PolylineOffset::GetPolyline()
+DeleteOldLogs                                  | System.Void GemvisionCommon.Utilities.Logging.Logger::DeleteOldLogs()
+AddPoint                                       | System.Void GemvisionGeometry.Helpers.Clipper/PolyOffsetBuilder::AddPoint(GemvisionGeometry.Helpers.IntPoint)
+GetChainPoint                                  | Rhino.Geometry.Point3d CSBlocks.Core.CSChainPoint::GetChainPoint()
+op_Multiply                                    | GemvisionGeometry.Geometry.CurveSegment GemvisionGeometry.Geometry.CurveSegment::op_Multiply(GemvisionGeometry.Geometry.CurveSegment,System.Single)
+<op_Division>b__0                              | System.Void GemvisionGeometry.Geometry.CurveSegment/<>c__DisplayClass20_0::<op_Division>b__0(Rhino.Geometry.Point3f)
+Morph                                          | System.Void CSBlocks.Transforms.CSTwist::Morph(Rhino.Geometry.GeometryBase,System.Double,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,System.Boolean,
+NurbsCurveIntersectBoundingBox                 | System.Boolean GemvisionGeometry.Helpers.Utils::NurbsCurveIntersectBoundingBox(Rhino.Geometry.NurbsCurve,Rhino.Geometry.BoundingBox,System.Double)
+Do                                             | T GemvisionCommon.Helpers.RetryHelper::Do(System.Func`1<T>,System.TimeSpan,System.Int32)
+ComputeRotatedVectorXY                         | Rhino.Geometry.Vector3d CSBlocks.Transforms.CSShear::ComputeRotatedVectorXY(Rhino.Geometry.Plane,System.Double)
+<UpdateProgress>b__0                           | System.Void GemvisionCommon.UserInterfaces.FrmProgress/<>c__DisplayClass10_0::<UpdateProgress>b__0()
+GetOutRec                                      | GemvisionGeometry.Helpers.OutRec GemvisionGeometry.Helpers.Clipper::GetOutRec(System.Int32)
+GetPtDirections                                | System.Void GemvisionGeometry.Calc.PolylineOffset::GetPtDirections(System.Int32,Rhino.Geometry.Vector3d&,Rhino.Geometry.Vector3d&)
+GetDx                                          | System.Double GemvisionGeometry.Helpers.Clipper::GetDx(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint)
+GetMaximaPair                                  | GemvisionGeometry.Helpers.TEdge GemvisionGeometry.Helpers.Clipper::GetMaximaPair(GemvisionGeometry.Helpers.TEdge)
+Bin                                            | System.Double GemvisionGeometry.Helpers.GNurbsMath::Bin(System.Int32,System.Int32,System.Double)
+UpdateBotPt                                    | System.Boolean GemvisionGeometry.Helpers.Clipper::UpdateBotPt(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint&)
+Translate                                      | System.Void GemvisionGeometry.Geometry.CurveDefinition::Translate(Rhino.Geometry.Vector3f)
+Multiply                                       | System.Void GemvisionGeometry.Geometry.CurveSegment::Multiply(System.Single)
+Equals                                         | System.Boolean GemvisionGeometry.Helpers.Int128::Equals(System.Object)
+CopyAELToSEL                                   | System.Void GemvisionGeometry.Helpers.Clipper::CopyAELToSEL()
+CleanPolygons                                  | System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>> GemvisionGeometry.Helpers.Clipper::CleanPolyg
+CompareDirectoryContents                       | System.Boolean GemvisionCommon.Helpers.FileSystemHelper::CompareDirectoryContents(System.String,System.String)
+DisposeOutRec                                  | System.Void GemvisionGeometry.Helpers.Clipper::DisposeOutRec(System.Int32)
+SquareLength                                   | System.Double GemvisionGeometry.Helpers.Utils::SquareLength(Rhino.Geometry.Point3f)
+ShiftPoints                                    | System.Boolean GemvisionGeometry.Geometry.CurveSegment::ShiftPoints()
+AddSpacing                                     | System.String GemvisionCommon.Helpers.StringHelper::AddSpacing(System.String)
+CleanTimeString                                | System.String GemvisionCommon.Utilities.Logging.Logger::CleanTimeString(System.String)
+ReadOptionsAux                                 | System.Boolean GemvisionCommon.Utilities.Application.Application`1::ReadOptionsAux()
+UpdateProgress                                 | System.Void GemvisionCommon.UserInterfaces.FrmProgress::UpdateProgress(System.String,System.Int32)
+IsValidDouble                                  | System.Boolean GemvisionGeometry.Helpers.GMath::IsValidDouble(System.Double)
+IsValidSingle                                  | System.Boolean GemvisionGeometry.Helpers.GMath::IsValidSingle(System.Double)
+get_IsLinear                                   | System.Boolean GemvisionGeometry.Geometry.CurveDefinition::get_IsLinear()
+WriteObjectToFile                              | System.Boolean GemvisionCommon.Helpers.JsonSerializationHelper::WriteObjectToFile(System.String,T)
+op_UnaryNegation                               | GemvisionGeometry.Helpers.Int128 GemvisionGeometry.Helpers.Int128::op_UnaryNegation(GemvisionGeometry.Helpers.Int128)
+Findminmax                                     | System.Void GemvisionGeometry.Calc.TriangleBoxIntersector::Findminmax(System.Double,System.Double,System.Double,System.Double&,System.Double&)
+CheckRollLog                                   | System.Void GemvisionCommon.Utilities.Logging.Logger::CheckRollLog()
+CopyFile                                       | System.Boolean GemvisionCommon.Helpers.FileSystemHelper::CopyFile(System.String,System.String,System.Boolean)
+TopX                                           | System.Int64 GemvisionGeometry.Helpers.Clipper::TopX(GemvisionGeometry.Helpers.TEdge,System.Int64)
+op_GreaterThan                                 | System.Boolean GemvisionGeometry.Helpers.Int128::op_GreaterThan(GemvisionGeometry.Helpers.Int128,GemvisionGeometry.Helpers.Int128)
+op_LessThan                                    | System.Boolean GemvisionGeometry.Helpers.Int128::op_LessThan(GemvisionGeometry.Helpers.Int128,GemvisionGeometry.Helpers.Int128)
+PointOnPolygon                                 | System.Boolean GemvisionGeometry.Helpers.ClipperBase::PointOnPolygon(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.OutPt,System.Boolean
+DisposeLocalMinimaList                         | System.Void GemvisionGeometry.Helpers.ClipperBase::DisposeLocalMinimaList()
+PointsAreClose                                 | System.Boolean GemvisionGeometry.Helpers.Clipper::PointsAreClose(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint,System.Double)
+ComputeTransformAligned                        | System.Boolean CSBlocks.Transforms.CSPositionsOnCurve::ComputeTransformAligned(Rhino.Geometry.Curve,System.Double,Rhino.Geometry.Vector3d,Rhino.Geomet
+DeleteDir                                      | System.Boolean GemvisionCommon.Helpers.FileSystemHelper::DeleteDir(System.String,System.Boolean)
+GetJsonFromObject                              | System.Boolean GemvisionCommon.Helpers.JsonSerializationHelper::GetJsonFromObject(T,System.String&)
+add_OnAfterGetDefaultSettings                  | System.Void GemvisionCommon.Utilities.Application.Application`1::add_OnAfterGetDefaultSettings(System.EventHandler`1<System.EventArgs>)
+remove_OnAfterGetDefaultSettings               | System.Void GemvisionCommon.Utilities.Application.Application`1::remove_OnAfterGetDefaultSettings(System.EventHandler`1<System.EventArgs>)
+DisposeAllPolyPts                              | System.Void GemvisionGeometry.Helpers.Clipper::DisposeAllPolyPts()
+EdgesAdjacent                                  | System.Boolean GemvisionGeometry.Helpers.Clipper::EdgesAdjacent(GemvisionGeometry.Helpers.IntersectNode)
+PointsAt                                       | Rhino.Geometry.Point3d[] GemvisionGeometry.Helpers.Utils::PointsAt(Rhino.Geometry.NurbsCurve,System.Double[])
+GetLogMessageFormatted                         | System.String GemvisionCommon.Utilities.Logging.Logger::GetLogMessageFormatted(System.String,System.Object[])
+CheckAll                                       | System.Void GemvisionCommon.UserInterfaceExtensions.CheckedListBoxExtensions::CheckAll(System.Windows.Forms.CheckedListBox)
+UncheckAll                                     | System.Void GemvisionCommon.UserInterfaceExtensions.CheckedListBoxExtensions::UncheckAll(System.Windows.Forms.CheckedListBox)
+GetObjectFromPath                              | System.Boolean GemvisionCommon.Helpers.JsonSerializationHelper::GetObjectFromPath(System.String,T&)
+Tgo                                            | System.Void GemvisionGeometry.OctTree.OctTree::Tgo(System.Int32,System.Int32,System.Int32,System.Int32)
+ConvertCurveOffsetCornerStyle                  | Rhino.Geometry.CurveOffsetCornerStyle GemvisionGeometry.Helpers.RhinoCalls::ConvertCurveOffsetCornerStyle(GemvisionGeometry.Helpers.RhinoCalls/GCurveO
+set_MinEdgeLength                              | System.Void GemvisionGeometry.Calc.PolylineOffset::set_MinEdgeLength(System.Double)
+GetTempDirPath                                 | System.String GemvisionCommon.Helpers.FileSystemHelper::GetTempDirPath(System.String)
+AddChild                                       | System.Void GemvisionGeometry.Helpers.PolyNode::AddChild(GemvisionGeometry.Helpers.PolyNode)
+AddPolygons                                    | System.Boolean GemvisionGeometry.Helpers.ClipperBase::AddPolygons(System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometr
+ReversePolyPtLinks                             | System.Void GemvisionGeometry.Helpers.Clipper::ReversePolyPtLinks(GemvisionGeometry.Helpers.OutPt)
+SimplifyPolygon                                | System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>> GemvisionGeometry.Helpers.Clipper::SimplifyPo
+SimplifyPolygons                               | System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint>> GemvisionGeometry.Helpers.Clipper::SimplifyPo
+Round                                          | System.Int64 GemvisionGeometry.Helpers.Clipper::Round(System.Double)
+ReversePolygons                                | System.Void GemvisionGeometry.Helpers.Clipper::ReversePolygons(System.Collections.Generic.List`1<System.Collections.Generic.List`1<GemvisionGeometry.H
+DistanceSqrd                                   | System.Double GemvisionGeometry.Helpers.Clipper::DistanceSqrd(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint)
+SwapX                                          | System.Void GemvisionGeometry.Helpers.ClipperBase::SwapX(GemvisionGeometry.Helpers.TEdge)
+DisposeScanbeamList                            | System.Void GemvisionGeometry.Helpers.Clipper::DisposeScanbeamList()
+IsMinima                                       | System.Boolean GemvisionGeometry.Helpers.Clipper::IsMinima(GemvisionGeometry.Helpers.TEdge)
+DisposeIntersectNodes                          | System.Void GemvisionGeometry.Helpers.Clipper::DisposeIntersectNodes()
+PopScanbeam                                    | System.Int64 GemvisionGeometry.Helpers.Clipper::PopScanbeam()
+UpdateOutPtIdxs                                | System.Void GemvisionGeometry.Helpers.Clipper::UpdateOutPtIdxs(GemvisionGeometry.Helpers.OutRec)
+DeleteFile                                     | System.Boolean GemvisionCommon.Helpers.FileSystemHelper::DeleteFile(System.String)
+WriteOptions                                   | System.Boolean GemvisionCommon.Utilities.Application.Application`1::WriteOptions()
+GetNext                                        | GemvisionGeometry.Helpers.PolyNode GemvisionGeometry.Helpers.PolyNode::GetNext()
+ProcessHorizontals                             | System.Void GemvisionGeometry.Helpers.Clipper::ProcessHorizontals()
+GetHashCode                                    | System.Int32 GemvisionCommon.Helpers.FileSystemHelper/FileCompare::GetHashCode(System.IO.FileInfo)
+AddHorzJoin                                    | System.Void GemvisionGeometry.Helpers.Clipper::AddHorzJoin(GemvisionGeometry.Helpers.TEdge,System.Int32)
+TaperNonRigid                                  | System.Void CSBlocks.Transforms.CSTaper::TaperNonRigid(Rhino.Geometry.GeometryBase,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,System.Double,System.
+<Subdivide>b__1                                | System.Void GemvisionGeometry.OctTree.OctTree/<>c__DisplayClass7_0::<Subdivide>b__1(System.Int32)
+PointsEqual                                    | System.Boolean GemvisionGeometry.Helpers.ClipperBase::PointsEqual(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.IntPoint)
+PointIsVertex                                  | System.Boolean GemvisionGeometry.Helpers.ClipperBase::PointIsVertex(GemvisionGeometry.Helpers.IntPoint,GemvisionGeometry.Helpers.OutPt)
+PreCompute                                     | System.Boolean GemvisionGeometry.Calc.PolylineOffset::PreCompute()
+Dispose                                        | System.Void GemvisionCommon.UserInterfaces.FrmProgress::Dispose(System.Boolean)
+DisposeOutPts                                  | System.Void GemvisionGeometry.Helpers.Clipper::DisposeOutPts(GemvisionGeometry.Helpers.OutPt)
+ChangeClosedCurveSeam                          | Rhino.Geometry.NurbsCurve GemvisionGeometry.Helpers.RhinoCalls::ChangeClosedCurveSeam(Rhino.Geometry.NurbsCurve,System.Double)
+WriteOptionsAux                                | System.Boolean GemvisionCommon.Utilities.Application.Application`1::WriteOptionsAux()
+
+== PROPERTIES ==
+distinct=157
+  Bendpoint | CancellationToken | ChildCount | Childs | ConnectionType | Contour
+  Domain | EndPoint | ExpandableInputChannelArrayType | ExpandableInputChannelDataType | ExpandableInputChannelIdentifier | ForceSimple
+  InAdjustX | InAdjustY | InAdjustZ | InAngleEnd | InAngleStart | InBail
+  InBrep | InCenter | InCurve | InCurves | InDisable | InDistance
+  InDuplicate | InEdgeType | InEnableCenterOnObjectX | InEnableCenterOnObjectY | InEnableCenterOnObjectZ | InGrowX
+  InGrowY | InGrowZ | InObj | InObject | InObjectDestination | InObjectSource
+  InOffsetType | InOutputMethod | InPointCurrent | InPointOriginal | InPointSpine | InPointsArray
+  InPreserve | InRigid | InSortDirection | InSortPoint | InSortSide | InStart
+  InStraight | InUnsortedObjects | InWhichAxis | InX | InXform | InXformPlane
+  InY | InZ | IsClosed | IsEmpty | IsHole | IsLinear
+  Logger | MaxLogAge | MaxLogAgeSize | MaxOffset | MinEdgeLength | OffsetDistance
+  OnNetworkConnectionManagerException | OnSerializerException | Options | OutBboxCenterInverseTransform | OutBboxCenterTransform | OutCenter
+  OutChainPoint | OutCurve | OutCurves | OutEdges | OutMax | OutMaxX
+  OutMaxY | OutMaxZ | OutMin | OutMinX | OutMinY | OutMinZ
+  OutNegated | OutObj | OutObjectTransformed | OutOneMinus | OutSizeX | OutSizeY
+  OutSizeZ | OutSortedObjects | OutTransform | OutTransformOrientDown | OutTransformOrientUp | OutTransformation
+  OutValue | Parent | Password | Path | PathFileLog | PointCount
+  Points | Preserve | ReverseSolution | Rigid | StackTrace | StartPoint
+  Straight | Total | Transforms | UserName | X | Y
+  iAmount | iAngle | iBrep | iCurve | iCurve1 | iCurve2
+  iEndAmount | iEndAmount2 | iEndAngle | iEndRadius | iExtType | iGemDestination
+  iGemSource | iMatchCurve | iMaxDistance | iMiddleRadius | iMode | iObj
+  iObject | iObjects | iOffset | iPointParameter | iPointParameter2 | iRadius
+  iScaleToGem | iSortedGemArray | iStartAngle | iStartX | iStartY | iSurface
+  iX | iY | iZ | iZOffset | oBrep | oCurve
+  oCurve1 | oCurve2 | oCurve3 | oCurves | oObj | oObject
+  oObjects
+
+== STRINGS (len>=5, deduped, top 220) ==
+  16  Missing Surface
+  15  Curves
+  14  Object
+  10  Missing Object
+   7  Missing Curves
+   6  Curve
+   6  Trim failed
+   6  {0}_{1}
+   5  GetTightBoundingBox failed
+   5  Missing Curve
+   5  Missing unsorted objects
+   5  OutSortedObjects_
+   4  Initial Points not defined
+   4  Missing object
+   4  Objects
+   4  GetNormalizedArcLengthPoint failed
+   4  GetUnscaledXform failed
+   4  GetTightBoundingBox failed (Destination)
+   4  Missing Objects
+   4  InTransformation
+   4  Mising Object
+   4  Curve 1 is missing
+   4  Curve 2 is missing
+   4  Curve 1 is not planar
+   4  Curve 2 is not planar
+   4  Error with merge
+   4  Missing Point Start
+   4  Missing Point End
+   3  Final Points not defined
+   3  Missing rail data
+   3  Missing rail
+   3  Unknown Profile Method
+   3  Missing Source Object
+   3  Invalid Inverse Xform
+   3  Missing Object Duplicates
+   3  Distance
+   3  Offset type
+   3  Offset error
+   3  Bad Curves
+   3  MergeCurves failed
+   3  Missing Curve Data 1
+   3  Missing Curve 1
+   3  Missing Curve Data 2
+   3  Missing Curve 2
+   3  Surface
+   3  Invalid Sort Direction
+   3  Invalid Output Method
+   2  ValueLhs
+   2  ValueRhs
+   2  InValue
+   2  Value
+   2  Inverse Transform failed
+   2  InObjects
+   2  Can't fit any object
+   2  Error computing the transform
+   2  Lengths not defined
+   2  LengthOtherSide not defined
+   2  Bounding Box
+   2  Missing Destination Object
+   2  Missing Master Curve
+   2  Missing Object Data
+   2  Invalid Xform
+   2  CSScaleObjectToSize: Bad Object 
+   2  CSScaleObjectToSizeObjectSpace: Missing Object 
+   2  CSScaleObjectToSizeObjectSpace: Missing Object Data 
+   2  CSScaleObjectToSizeObjectSpace: Unable to calculate bounding box 
+   2  Missing Points
+   2  GetTightBoundingBox failed (Source)
+   2  Input subObjects is not an array
+   2  Missing Brep Input
+   2  Overflow on the number of faces of the InBrep
+   2  GetClosestIndexToPosition failed
+   2  Missing surface
+   2  Invalid Angle
+   2  Error getting loft surface
+   2  Missing edge type
+   2  Unsupported edge type
+   2  Origin
+   2  Unable to offset
+   2  Missing Match Curve
+   2  Input Curve not planar
+   2  Invalid Curve
+   2  IntersectSurface failed
+   2  RingRail is missing
+   2  Curve is missing
+   2  RingRail Intersect Failed
+   2  BlendCurve failed
+   2  Curve from two views curves 1
+   2  Curve from two views curves 2
+   2  Missing Curve1
+   2  Missing Curve2
+   2  Missing Parameters
+   2  Failed Merge
+   2  GetNormalizedArcLengthPoint failed (Start)
+   2  GetNormalizedArcLengthPoint failed (End)
+   2  Missing curve in array (No Object)
+   2  Curve Missing
+   2  No intersection
+   2  Invalid Side Method
+   2  Bad Brep
+   2  Failed Pushup
+   2  Missing unsorted objects channel
+   2  value
+   2  Unknown Error
+   2  No message
+   2  Progress
+   2  Coordinate exceeds range bounds
+   2  DoMaxima error
+   1  Input value out of range
+   1  InTargetGems
+   1  InBaseGem
+   1  Inverse Fail
+   1  No input transforms
+   1  Transforms array empty
+   1  Array item is not a transform
+   1  Angle not defined
+   1  InGems
+   1  CSSmartPattern:
+   1  No input points
+   1  Offset Curve
+   1  Offset Curve Length
+   1  Normalized Arc Length Point
+   1  Missing Transforms
+   1  Transforms and Objs not same number
+   1  Object to scale
+   1  RotateObjectDegObjectSpace: Missing Object to translate
+   1  GetTightBoundingBox failed (Source
+   1  Invalid gem
+   1  Error Source Xform
+   1  No input object
+   1  TranslateObject: Missing Object to translate
+   1  Failure getting inverse
+   1  CSScaleObjectToSize: Unable to calculate bounding box 
+   1  {5a433c16-53c4-492d-8ce8-edb283e1b893}
+   1  Missing Center
+   1  CSScaleObjectToSizeObjectSpace: Missing Object
+   1  CSScaleObjectToSizeObjectSpace: Missing Object Data
+   1  CSScaleObjectToSizeObjectSpace: Unable to calculate bounding box
+   1  Object Data
+   1  Selected Index out of range
+   1  InCurve input channel is null.
+   1  InCurve input channel is not set.
+   1  InCurve input channel  has a null or invalid Curve.
+   1  Input curve
+   1  Width
+   1  Height
+   1  InWidthTop
+   1  InWidthBottom
+   1  Left point failed
+   1  Right point failed
+   1  Up point failed
+   1  Bottom point failed
+   1  Input breps is not an array
+   1  Input brep is not valid
+   1  Input objects is not a brep is not an array
+   1  Index out of the bounds of the Edges array
+   1  GeometryData not right
+   1  Error computing IsoCurve
+   1  PreProcessCrv failed
+   1  Error getting point array
+   1  Missing point
+   1  Error getting BoundingBox
+   1  Error getting control point curve
+   1  Error getting loft intersect
+   1  Resolution must be even
+   1  Invalid point on crv
+   1  ChangeClosedCurveSeam failed
+   1  RingRail is not planar
+   1  Curve is not planar
+   1  Merge Curve Failed
+   1  Error Merging RingRail Parts
+   1  RhinoIntersectSurfaces failed
+   1  RhinoMergeCurves failed
+   1  Missing StartPoint
+   1  Missing MidPoint
+   1  Missing EndPoint
+   1  Error with Arc
+   1  No arc created
+   1  BlendCurveAdvanced failed
+   1  Point Array is not large enough
+   1  Error with intersect
+   1  Missing Ring Rail
+   1  Missing Curve Angle
+   1  Missing Curve Width
+   1  Missing Shank Position
+   1  Invalid Curve Boudning Box
+   1  Invalid Tight Curve Boudning Box
+   1  Rail doesn't Intersect curve
+   1  Error Extrude
+   1  Error Push Up
+   1  Error Output Bounding Box
+   1  Input Curve is null
+   1  Missing inputs
+   1  Pullback failed
+   1  Pushup failed
+   1  Merge curves failed
+   1  Closest Point 1 Failed
+   1  Closest Point 2 Failed
+   1  Curve Legnth 0
+   1  Unable to Pushup
+   1  Unable to trim
+   1  Unable to push up trimmed curve
+   1  Error Pushup
+   1  Missing position curve data
+   1  Missing position curve
+   1  Invalid negative curve
+   1  Missing Point Parameter
+   1  Missing Point Parameter (Double)
+   1  Missing Point Parameter (Point)
+   1  GetClosestPoint failed (p1)
+   1  GetNormalizedArcLengthPoint (p1)
+   1  Split failed
+   1  GetClosestPoint failed (p2)
+   1  GetNormalizedArcLengthPoint (p2)
+   1  Error with blend
+   1  Missing Gems
+   1  Missing Gems Channel Gems Data
+   1  Missing Curves On Gems
+   1  Unable To Calculate Border
+   1  Error RhinoMergeCurve Failed

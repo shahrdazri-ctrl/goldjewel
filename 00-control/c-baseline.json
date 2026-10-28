@@ -1,0 +1,234 @@
+{
+    "capturedAtUtc":  "2026-10-28T01:26:57.2092865Z",
+    "cFreeBytes":  857671237632,
+    "dFreeBytes":  2417496141824,
+    "localAppDataTempBytes":  16599066045,
+    "fridaDirCount":  203,
+    "fridaBytes":  12968401656,
+    "odisBytes":  2136674283,
+    "adAppMgrBytes":  1184022821,
+    "cProfileDirs":  [
+                         {
+                             "path":  "C:\\Users\\shahr\\.config\\freebuff-desktop",
+                             "bytes":  71701198
+                         },
+                         {
+                             "path":  "C:\\Users\\shahr\\AppData\\Local\\freebuff-desktop",
+                             "bytes":  0
+                         },
+                         {
+                             "path":  "C:\\Users\\shahr\\AppData\\Roaming\\freebuff-desktop",
+                             "bytes":  0
+                         },
+                         {
+                             "path":  "C:\\Users\\shahr\\AppData\\Roaming\\npm-cache",
+                             "bytes":  0
+                         },
+                         {
+                             "path":  "C:\\Users\\shahr\\.npm",
+                             "bytes":  0
+                         }
+                     ],
+    "topTempEntries":  [
+                           {
+                               "name":  "odis_download_dest",
+                               "bytes":  2136674283,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "AdAppMgrRollBackBackup",
+                               "bytes":  1184022821,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "Maya_2027_install.log",
+                               "bytes":  75444372,
+                               "isDir":  false
+                           },
+                           {
+                               "name":  "frida-ffb5f0230cfa27092d2a2ac8525d1db3",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-952719ef667cc9ccdd1da162424715aa",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-f764a7aa459c07f4a7e602f24187fd83",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-ffb2f594349029b063369b1495dbff58",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-fabc683b6616bcbd07839acfd07961c8",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-f6a25092e72bb767a2ce1a7ac3d2bf80",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-fe2a6b1ad85ec86ad72ea6728d2af625",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-90bcc3024917b074df6415a9a618da27",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-9030b717e41ebe1b08240cf8ab2ce174",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-de877573b0eaa4f7a44b3fe19e5fdb99",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-918b381a7d95c882f820d1db1ee38808",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-95114fb41a62778b24f0e1dc17bd3b49",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-933691b5a719588dd4b7c723efe265c1",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-92b6bc9d5d53893f2049c02353908c4e",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-f39f9813f5f42f9d7b679a9cda6ffbeb",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e42e6589ae4fec5dba0362f3468c1fdc",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e5149fc2759717f7c8b42f9a40908db0",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e5e1fd6e25892ce929bd7dc6e089dd36",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e38942560e4c5b5fd03a3e4a4eceb1ed",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-df86b8d25834d9094f7bca371327d137",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e2099c2b94bfd6fa9de6be243e6dd05c",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e27375529f88fb97493e619e263bb637",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-eff5b49abed6dc808497da9911d24a47",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-f03fc259413a5c49ae2643649fc43ded",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-f1c946d4f376e3bc2c479b1520af80ef",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-ec11453cce6538f086c1a1175071acf1",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e7cdf8a4855bd7b96b8b113b5e58a4f3",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e87393d20a7e9b6dc13dedb69ba07d3a",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-e93c59297e88894a920d4dd458c5e988",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-75597af340d9961cad793055391a5f62",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-750206b1c665350d3c5479e3bfb3bb22",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-742c8c7ae9acbb80fce5899875554b7e",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-77bcb456ada55d4248df1baefd4fb425",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-7cd61e0e727e03c8cdfecc41383503ca",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-7c2a6dd09f1acb1a18325b21b8f893f4",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-7b45125524126d430db06d3037936f10",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           },
+                           {
+                               "name":  "frida-72bb093f6fd541bb6eccadfa21c55767",
+                               "bytes":  63883752,
+                               "isDir":  true
+                           }
+                       ]
+}

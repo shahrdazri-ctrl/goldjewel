@@ -1,0 +1,806 @@
+SUBSYSTEM: ui
+TYPES: 249  METHODS: 4497
+
+== TOP TYPES BY METHOD COUNT ==
+    4  MatrixGold.Views.ConnectionLostView                         MatrixGold             System.Windows.Controls.UserControl
+    4  MatrixGold.Views.LayerMaterialPicker                        MatrixGold             System.Windows.Controls.UserControl
+    4  MatrixGold.Views.NotificationHistoryView                    MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewAnimationStudio                        MatrixGold             System.Windows.Controls.UserControl
+    4  MatrixGold.Views.ViewBatch                                  MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewCustomMenuSample                       MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewGemBuilder                             MatrixGold             System.Windows.Controls.UserControl
+    7  MatrixGold.Views.ViewMatrixLegacy                           MatrixGold             MatrixGold.Views.View
+    1  MatrixGold.Views.View                                       MatrixGold             System.Windows.Controls.UserControl
+    4  MatrixGold.Views.ViewProjectTimer                           MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewMovieMaker                             MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewRingResizer                            MatrixGold             System.Windows.Controls.UserControl
+    6  MatrixGold.Views.WindowAddRhinoLanguagePackView             MatrixGold             MatrixGold.Controls.ScalableWindow
+    5  MatrixGold.Views.DisplayModesView                           MatrixGold             MatrixGold.Views.View
+    4  MatrixGold.Views.ViewApplicationToggles                     MatrixGold             System.Windows.Controls.UserControl
+    6  MatrixGold.Views.ViewCollectionsManager                     MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewStyleSheetManager                      MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewLibraryManager                         MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewProjectManager                         MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.RecentCommandsView                         MatrixGold             MatrixGold.Views.View
+    5  MatrixGold.Views.QuickCommandsView                          MatrixGold             MatrixGold.Views.View
+   15  MatrixGold.Views.TechReportView                             MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.TestView                                   MatrixGold             System.Windows.Window
+    4  MatrixGold.Views.ViewDynamicGroups                          MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewGemReport                              MatrixGold             MatrixGold.Views.View
+    7  MatrixGold.Views.MenuItemDataTemplateSelector               MatrixGold             System.Windows.Controls.DataTemplateSelector
+    4  MatrixGold.Views.ObjectContextMenuEditorView                MatrixGold             System.Windows.Controls.UserControl
+    7  MatrixGold.Views.ObjectContextMenuEditorWindow              MatrixGold             MatrixGold.Controls.ScalableWindow
+    8  MatrixGold.Views.ObjectContextMenuView                      MatrixGold             System.Windows.Controls.UserControl
+   11  MatrixGold.Views.ObjectContextMenuWindow                    MatrixGold             System.Windows.Window
+    4  MatrixGold.Views.ValidateCancelControl                      MatrixGold             System.Windows.Controls.UserControl
+   11  MatrixGold.Views.ViewBuilders                               MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewProjects                               MatrixGold             System.Windows.Controls.UserControl
+    6  MatrixGold.Views.ViewLayers                                 MatrixGold             MatrixGold.Views.View
+    5  MatrixGold.Views.ViewMetalWeights                           MatrixGold             MatrixGold.Views.View
+    5  MatrixGold.Views.ViewRender                                 MatrixGold             System.Windows.Controls.UserControl
+    5  MatrixGold.Views.ViewSelectionProperties                    MatrixGold             MatrixGold.Views.View
+    7  MatrixGold.Views.WindowGemBuilder                           MatrixGold             MatrixGold.Controls.ScalableWindow
+    8  MatrixGold.Views.WindowMoviePreview                         MatrixGold             MatrixGold.Controls.ScalableWindow
+   20  MatrixGold.Views.WindowContentManager                       MatrixGold             MatrixGold.Controls.ScalableWindow
+    9  MatrixGold.Views.WindowEula                                 MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.WindowGemMap                               MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.WindowMatchAttributes                      MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.WindowCommandEditor                        MatrixGold             MatrixGold.Controls.ScalableWindow
+    5  MatrixGold.Views.WindowMoveCollectionFiles                  MatrixGold             MatrixGold.Controls.ScalableWindow
+   10  MatrixGold.Views.WindowLegacyImportProjects                 MatrixGold             MatrixGold.Controls.ScalableWindow
+   11  MatrixGold.Views.WindowSaveContent                          MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.WindowLegacyImport                         MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.WindowPersonEditor                         MatrixGold             MatrixGold.Controls.ScalableWindow
+   11  MatrixGold.Views.WindowPreferences                          MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.WindowAbout                                MatrixGold             MatrixGold.Controls.ScalableWindow
+   11  MatrixGold.Views.WindowSplash                               MatrixGold             MatrixGold.Controls.ScalableWindow
+    6  MatrixGold.Views.ViewToolRibbon                             MatrixGold             MatrixGold.Views.View
+    9  MatrixGold.Views.WindowToastPosition                        MatrixGold             System.Windows.Window
+    4  MatrixGold.Views.WindowVideoPlayer                          MatrixGold             System.Windows.Window
+  203  MatrixGold.ViewModels.AnimationStudioViewModel              MatrixGold             Stuller.Mvvm.ViewModelBase
+  100  MatrixGold.ViewModels.BuildersViewModel                     MatrixGold             Stuller.Mvvm.ViewModelBase
+   92  MatrixGold.ViewModels.BuilderViewModel                      MatrixGold             Stuller.Mvvm.ViewModelBase
+  106  MatrixGold.ViewModels.CollectionsManagerViewModel           MatrixGold             Stuller.Mvvm.ViewModelBase
+   25  MatrixGold.ViewModels.DirectoryInfo                         MatrixGold             Stuller.Mvvm.ViewModelBase
+   28  MatrixGold.ViewModels.DisplayModesViewModel                 MatrixGold             Stuller.Mvvm.ViewModelBase
+   61  MatrixGold.ViewModels.DynamicGroupsViewModel                MatrixGold             Stuller.Mvvm.ViewModelBase
+   20  MatrixGold.ViewModels.GemInfoItemGroup                      MatrixGold             System.Object
+   22  MatrixGold.ViewModels.GemReportViewModel                    MatrixGold             Stuller.Mvvm.ViewModelBase
+   57  MatrixGold.ViewModels.LayersViewModel                       MatrixGold             Stuller.Mvvm.ViewModelBase
+   82  MatrixGold.ViewModels.MovieMakerViewModel                   MatrixGold             Stuller.Mvvm.ViewModelBase
+   29  MatrixGold.ViewModels.MovieFrameGroup                       MatrixGold             Stuller.Mvvm.ViewModelBase
+   16  MatrixGold.ViewModels.MovieFrame                            MatrixGold             Stuller.Mvvm.ViewModelBase
+    0  MatrixGold.ViewModels.PreferenceGroup                       MatrixGold             System.Enum
+  285  MatrixGold.ViewModels.ProjectsViewModel                     MatrixGold             Stuller.Mvvm.ViewModelBase
+   16  MatrixGold.ViewModels.MigratedProject                       MatrixGold             Stuller.Mvvm.ViewModelBase
+   22  MatrixGold.ViewModels.LegacyProfileFolder                   MatrixGold             System.Object
+  482  MatrixGold.ViewModels.RenderViewModel                       MatrixGold             Stuller.Mvvm.ViewModelBase
+  103  MatrixGold.ViewModels.RingResizerViewModel                  MatrixGold             Stuller.Mvvm.ViewModelBase
+    7  MatrixGold.ViewModels.RingSizeOption                        MatrixGold             Stuller.Mvvm.ViewModelBase
+   10  MatrixGold.ViewModels.RingSizeOptionRow                     MatrixGold             Stuller.Mvvm.ViewModelBase
+    0  MatrixGold.ViewModels.SearchMode                            MatrixGold             System.Enum
+   36  MatrixGold.ViewModels.LibraryManagerViewModel               MatrixGold             Stuller.Mvvm.ViewModelBase
+   31  MatrixGold.ViewModels.Locator                               MatrixGold             System.Object
+  183  MatrixGold.ViewModels.MainViewModel                         MatrixGold             Stuller.Mvvm.ViewModelBase
+   30  MatrixGold.ViewModels.MetalWeightsViewModel                 MatrixGold             Stuller.Mvvm.ViewModelBase
+   81  MatrixGold.ViewModels.ObjectContextMenuViewModel            MatrixGold             Stuller.Mvvm.ViewModelBase
+   21  MatrixGold.ViewModels.QuickCommandsViewModel                MatrixGold             Stuller.Mvvm.ViewModelBase
+   31  MatrixGold.ViewModels.SelectionPropertiesViewModel          MatrixGold             Stuller.Mvvm.ViewModelBase
+   31  MatrixGold.ViewModels.SuperSelectViewModel                  MatrixGold             Stuller.Mvvm.ViewModelBase
+   48  MatrixGold.ViewModels.TechReportViewModel                   MatrixGold             Stuller.Mvvm.ViewModelBase
+  126  MatrixGold.ViewModels.ToolRibbonViewModel                   MatrixGold             Stuller.Mvvm.ViewModelBase
+   26  MatrixGold.ViewModels.WindowCommandEditorViewModel          MatrixGold             Stuller.Mvvm.ViewModelBase
+    0  MatrixGold.ViewModels.ContentManagerTab                     MatrixGold             System.Enum
+   23  MatrixGold.ViewModels.MatchAttributesViewModel              MatrixGold             Stuller.Mvvm.ViewModelBase
+  388  MatrixGold.ViewModels.WindowPreferencesViewModel            MatrixGold             Stuller.Mvvm.ViewModelBase
+   55  MatrixGold.ViewModels.WindowSaveContentViewModel            MatrixGold             Stuller.Mvvm.ViewModelBase
+    9  MatrixGold.ViewModels.WindowLegacyImportViewModel           MatrixGold             Stuller.Mvvm.ViewModelBase
+    6  MatrixGold.ViewModels.LegacyObjectTypeItem                  MatrixGold             Stuller.Mvvm.ViewModelBase
+   25  MatrixGold.Models.AnimationPreset                           MatrixGold             GV.MatrixCommon.Models.AnimationData
+   28  MatrixGold.Models.BreadCrumbNavigator                       MatrixGold             Stuller.Mvvm.ViewModelBase
+   13  MatrixGold.Models.BreadCrumbItem                            MatrixGold             Stuller.Mvvm.ViewModelBase
+    6  MatrixGold.Models.DragDropAdornerTemplateSelector           MatrixGold             System.Windows.Controls.DataTemplateSelector
+   26  MatrixGold.Models.LayerViewItemBase                         MatrixGold             Stuller.Mvvm.ViewModelBase
+   93  MatrixGold.Models.MatrixFileInfo                            MatrixGold             Stuller.Mvvm.ViewModelBase
+   24  MatrixGold.Models.Person                                    MatrixGold             Stuller.Mvvm.ViewModelBase
+   12  MatrixGold.Models.MenuItemTemplateSelector                  MatrixGold             System.Windows.Controls.DataTemplateSelector
+   17  MatrixGold.Models.ObjectContextMenu                         MatrixGold             System.Object
+   41  MatrixGold.Models.ObjectContextMenuGroup                    MatrixGold             System.Object
+   21  MatrixGold.Models.ObjectContextMenuItem                     MatrixGold             System.Object
+    0  MatrixGold.Models.ObjectContextMenuItemType                 MatrixGold             System.Enum
+    0  MatrixGold.Models.ObjectContextMenuMode                     MatrixGold             System.Enum
+   12  MatrixGold.Models.ProjectManagerMetadataInfo                MatrixGold             Stuller.Mvvm.ViewModelBase
+    7  MatrixGold.Models.RingResizeOutputRegionTemplateSelector    MatrixGold             System.Windows.Controls.DataTemplateSelector
+    8  MatrixGold.Models.StyleSheetFile                            MatrixGold             MatrixGold.Models.MatrixFileInfo
+    0  MatrixGold.Models.ProjectStatus                             MatrixGold             System.Enum
+   56  MatrixGold.Models.UIControlTemplateSelector                 MatrixGold             System.Windows.Controls.DataTemplateSelector
+    8  MatrixGold.Models.BuilderCategoryItem                       MatrixGold             Stuller.Mvvm.ViewModelBase
+    8  MatrixGold.Models.GroupLayerItem                            MatrixGold             MatrixGold.Models.LayerViewItemBase
+    0  MatrixGold.Models.JobBagType                                MatrixGold             System.Enum
+   14  MatrixGold.Models.TabItem                                   MatrixGold             Stuller.Mvvm.ViewModelBase
+  102  MatrixGold.Models.ToolRibbonItem                            MatrixGold             Stuller.Mvvm.ViewModelBase
+   12  MatrixGold.Models.RibbonItemDisk                            MatrixGold             Stuller.Mvvm.ViewModelBase
+   25  MatrixGold.Models.CustomizedCommand                         MatrixGold             System.Object
+   36  MatrixGold.Models.ProjectInfo                               MatrixGold             MatrixGold.ViewModels.DirectoryInfo
+   18  MatrixGold.Models.LayerViewItem                             MatrixGold             MatrixGold.Models.LayerViewItemBase
+    9  MatrixGold.Models.LibraryFileInfo                           MatrixGold             MatrixGold.Models.MatrixFileInfo
+    6  MatrixGold.Helpers.CommandCreationHelper                    MatrixGold             System.Object
+   18  MatrixGold.Helpers.ContentManagerHelper                     MatrixGold             System.Object
+    8  MatrixGold.Helpers.ProjectCache                             MatrixGold             System.Object
+    3  MatrixGold.Helpers.CommandCheckHelper                       MatrixGold             System.Object
+    5  MatrixGold.Helpers.FileAccessHelper                         MatrixGold             System.Object
+    6  MatrixGold.Helpers.MetalWeightsUIHelper                     MatrixGold             System.Object
+    6  MatrixGold.Helpers.MouseHelper                              MatrixGold             System.Object
+   11  MatrixGold.Helpers.MovieMakerHelper                         MatrixGold             System.Object
+   10  MatrixGold.Helpers.RenderUIHelper                           MatrixGold             System.Object
+   64  MatrixGold.Helpers.RhinoServiceCallback                     MatrixGold             System.Object
+    6  MatrixGold.Helpers.StringComparisonHelper                   MatrixGold             System.Object
+    0  MatrixGold.Helpers.ToastType                                MatrixGold             System.Enum
+    6  MatrixGold.Helpers.Toast                                    MatrixGold             System.Object
+    5  MatrixGold.Helpers.WpfPrintHelper                           MatrixGold             System.Object
+   10  MatrixGold.Helpers.WpfScreen                                MatrixGold             System.Object
+    6  MatrixGold.Helpers.DocumentHelper                           MatrixGold             System.Object
+   18  MatrixGold.Helpers.RhinoServiceHelper                       MatrixGold             System.Object
+    4  MatrixGold.Helpers.HighlightDelayHelper                     MatrixGold             System.Object
+    4  MatrixGold.Helpers.GemReportHighlightDelayHelper            MatrixGold             System.Object
+   61  MatrixGold.Helpers.UIHelper                                 MatrixGold             System.Object
+    9  MatrixGold.Converters.MathConverter                         MatrixGold             System.Windows.Markup.MarkupExtension
+    3  MatrixGold.Converters.BackdropColorPickerMultiBooleanToVis  MatrixGold             System.Object
+    4  MatrixGold.Converters.Base64ToImageConverter                MatrixGold             System.Object
+    3  MatrixGold.Converters.BitmapToImageSourceConverter          MatrixGold             System.Object
+    3  MatrixGold.Converters.BooleanToBrush1OrBrush2Converter      MatrixGold             System.Object
+    4  MatrixGold.Converters.BooleanInverseConverter               MatrixGold             System.Windows.Markup.MarkupExtension
+    4  MatrixGold.Converters.BooleanInverseToVisibilityConverter   MatrixGold             System.Object
+    3  MatrixGold.Converters.BooleanToDwtGramsConverter            MatrixGold             System.Object
+    3  MatrixGold.Converters.BooleanToEnabledOpacityConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.BooleanToScrollBarVisibilityConverte  MatrixGold             System.Object
+    3  MatrixGold.Converters.BooleanToAutoHeightConverter          MatrixGold             System.Object
+    4  MatrixGold.Converters.BoolToUnitWeightConverter             MatrixGold             System.Object
+    3  MatrixGold.Converters.BreadCrumbItemAppearanceConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.BuilderAndSliderToIconResourceConver  MatrixGold             System.Object
+    4  MatrixGold.Converters.BuilderOutputVisibleToOpacityConvert  MatrixGold             System.Object
+    3  MatrixGold.Converters.BuilderWidthConverter                 MatrixGold             System.Object
+    4  MatrixGold.Converters.StringCapitalsToWordsConverter        MatrixGold             System.Object
+    3  MatrixGold.Converters.CategoryNameToImageConverter          MatrixGold             System.Object
+    3  MatrixGold.Converters.CategoryNameToImageVisibilityConvert  MatrixGold             System.Object
+    4  MatrixGold.Converters.CollectionFolderNameTranslationConve  MatrixGold             System.Object
+    4  MatrixGold.Converters.CollectionFolderTutorialVisibilityCo  MatrixGold             System.Object
+    3  MatrixGold.Converters.CollectionsItemPreviewConverter       MatrixGold             System.Object
+    3  MatrixGold.Converters.ComboboxHasIconConverter              MatrixGold             System.Object
+    4  MatrixGold.Converters.ComboboxToIconResourceConverter       MatrixGold             System.Object
+    3  MatrixGold.Converters.CSValueOnOffToBooleanConverter        MatrixGold             System.Object
+    3  MatrixGold.Converters.DesignTimeToFalseConverter            MatrixGold             System.Object
+    3  MatrixGold.Converters.DoubleLimitToOrientationConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.DoubleToGridLengthConverter           MatrixGold             System.Object
+    3  MatrixGold.Converters.ElementWidthConverter                 MatrixGold             System.Object
+    3  MatrixGold.Converters.EnumBooleanConverter                  MatrixGold             System.Object
+    4  MatrixGold.Converters.EnumDescriptionConverter              MatrixGold             System.Object
+    3  MatrixGold.Converters.EnumToLocalizedStringConverter        MatrixGold             System.Object
+    4  MatrixGold.Converters.ExtraLayerGroupVisibilityConverter    MatrixGold             System.Object
+    3  MatrixGold.Converters.FingerSizeComboBoxSizeVisibilityConv  MatrixGold             System.Object
+    3  MatrixGold.Converters.FingerSizeTextInputVisibilityConvert  MatrixGold             System.Object
+    4  MatrixGold.Converters.GemCutToIconConverter                 MatrixGold             System.Object
+    3  MatrixGold.Converters.HexColorToBrushConverter              MatrixGold             System.Object
+    3  MatrixGold.Converters.IsNotNullConverter                    MatrixGold             System.Object
+    4  MatrixGold.Converters.ContextActionNameLocalizationConvert  MatrixGold             System.Object
+    3  MatrixGold.Converters.LayerViewWidthToColumnCountConverter  MatrixGold             System.Object
+    4  MatrixGold.Converters.OneOffBooleanVisibilityConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.RenderMaterialEditorVisibilityConver  MatrixGold             System.Object
+    3  MatrixGold.Converters.HSLToSolidColorBrushConverter         MatrixGold             System.Object
+    3  MatrixGold.Converters.HSLToSolidColorConverter              MatrixGold             System.Object
+    3  MatrixGold.Converters.HSLToLinearSolidGradientBrushConvert  MatrixGold             System.Object
+    3  MatrixGold.Converters.ImageWidthRatioScaleConverter         MatrixGold             System.Object
+    4  MatrixGold.Converters.MatchingBindingsToVisibilityConverte  MatrixGold             System.Object
+    3  MatrixGold.Converters.PointOnSurfaceToIconResourceConverte  MatrixGold             System.Object
+    5  MatrixGold.Converters.UIControlToGemShapeCutDimensionIconC  MatrixGold             System.Object
+    5  MatrixGold.Converters.GemShapeAndCutToIconConverter         MatrixGold             System.Object
+    3  MatrixGold.Converters.GemSizeLineMarginConverter            MatrixGold             System.Object
+    3  MatrixGold.Converters.IsFloatingToUIScaleConverter          MatrixGold             System.Object
+    3  MatrixGold.Converters.JobBagListFlyoutHeightConverter       MatrixGold             System.Object
+    3  MatrixGold.Converters.LayoutIconConverter                   MatrixGold             System.Object
+    4  MatrixGold.Converters.LightAndReflectionNameCleanupConvert  MatrixGold             System.Object
+    3  MatrixGold.Converters.ListItemToCoreLocalizationItemConver  MatrixGold             System.Object
+    3  MatrixGold.Converters.MatchingBindingsToBoolConverter       MatrixGold             System.Object
+    3  MatrixGold.Converters.MatchingEnumToVisibilityConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.GDIColorConverter                     MatrixGold             System.Object
+    4  MatrixGold.Converters.GetEnumDescriptThenParseOnCommaTakin  MatrixGold             System.Object
+    4  MatrixGold.Converters.EnumToDescriptionConverter            MatrixGold             System.Windows.Markup.MarkupExtension
+    6  MatrixGold.Converters.GemShapeNameToVectorGraphicConverter  MatrixGold             System.Windows.Markup.MarkupExtension
+    4  MatrixGold.Converters.HeadStyleListToImageResourceConverte  MatrixGold             System.Object
+    3  MatrixGold.Converters.ImageBytesToBitmapSourceConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.ItemListHasItemsToBooleanConverter    MatrixGold             System.Object
+    3  MatrixGold.Converters.ItemListToVisibilityConverter         MatrixGold             System.Object
+    4  MatrixGold.Converters.JobBagFileInfoToDisplayNameConverter  MatrixGold             System.Object
+    3  MatrixGold.Converters.MMToInConverter                       MatrixGold             System.Object
+    4  MatrixGold.Converters.MultiBooleanToBoolConverter           MatrixGold             System.Object
+    4  MatrixGold.Converters.MultiBooleanToVisibilityConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.NullToInverseVisibilityConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.NullToVisibilityConverter             MatrixGold             System.Object
+    4  MatrixGold.Converters.ObjectDescriptionStringFormatterConv  MatrixGold             System.Object
+    3  MatrixGold.Converters.ObjectVisibleWhenNotNullConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.PathToDirectoryNameConverter          MatrixGold             System.Object
+    3  MatrixGold.Converters.PathToNameConverter                   MatrixGold             System.Object
+    3  MatrixGold.Converters.PointsToPointCollectionConverter      MatrixGold             System.Object
+    4  MatrixGold.Converters.IsActiveLayerToBackgroundBrushConver  MatrixGold             System.Object
+    3  MatrixGold.Converters.BooleanToOpacityConverter             MatrixGold             System.Object
+    4  MatrixGold.Converters.BooleanToVisibilityConverter          MatrixGold             System.Object
+    4  MatrixGold.Converters.ColorToBrushConverter                 MatrixGold             System.Object
+    4  MatrixGold.Converters.IntColorToBrushConverter              MatrixGold             System.Object
+    3  MatrixGold.Converters.ProjectStatusToBrushColorConverter    MatrixGold             System.Object
+    3  MatrixGold.Converters.ProportionalConverter                 MatrixGold             System.Object
+    4  MatrixGold.Converters.RingSizeDataItemToTextConverter       MatrixGold             System.Object
+    3  MatrixGold.Converters.SelectedTabToVisibilityConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.StringNotEmptyToBooleanConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.StringToVisibilityConverter           MatrixGold             System.Object
+    4  MatrixGold.Converters.ThumbStyleNumberToStyleConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.ToolRibbonItemMarginConverter         MatrixGold             System.Object
+    4  MatrixGold.Converters.ToolRibbonNameWithOverrideTooltipCon  MatrixGold             System.Object
+    3  MatrixGold.Converters.ToolWindowContainerFloatingToBorderT  MatrixGold             System.Object
+    4  MatrixGold.Converters.ToolWindowGearVisibilityConverter     MatrixGold             System.Object
+    4  MatrixGold.Converters.TruncatedPathToNameConverter          MatrixGold             System.Object
+    3  MatrixGold.Converters.UIClassificationToColorBrushConverte  MatrixGold             System.Object
+    3  MatrixGold.Converters.ValuePercentageMultiConverter         MatrixGold             System.Object
+    4  MatrixGold.Converters.ValueRangeTextBoxFormatConverter      MatrixGold             System.Object
+    3  MatrixGold.Converters.ValueToPercentageFullConverter        MatrixGold             System.Object
+    4  MatrixGold.Converters.IsLockedLayerToResourceConverter      MatrixGold             System.Object
+    4  MatrixGold.Converters.IsVisibleLayerToResourceConverter     MatrixGold             System.Object
+    3  MatrixGold.Converters.NumericSignConverter                  MatrixGold             System.Object
+    3  MatrixGold.Converters.PositiveValueToVisibleConverter       MatrixGold             System.Object
+    4  MatrixGold.Converters.IconToResourceConverter               MatrixGold             System.Object
+    5  MatrixGold.Converters.WrapPanelItemWidthConverter           MatrixGold             System.Object
+    4  MatrixGold.Converters.XamlStringToDependencyObjectConverte  MatrixGold             System.Object
+    4  MatrixGold.Converters.StringToResourceConverter             MatrixGold             System.Object
+    4  MatrixGold.Converters.ContentManagerTabVisibilityMultiConv  MatrixGold             System.Object
+
+== READABLE METHOD NAMES (non-obfuscated) ==
+.ctor                                          | System.Void MatrixGold.ViewModels.ProjectsViewModel::.ctor()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+GetGemShapeImage                               | System.Object MatrixGold.Converters.GemShapeAndCutToIconConverter::GetGemShapeImage(System.String,System.String)
+.cctor                                         | System.Void MatrixGold.Helpers.ContentManagerHelper::.cctor()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+Convert                                        | System.Object MatrixGold.Converters.CollectionFolderTutorialVisibilityConverter::Convert(System.Object,System.Type,System.Object,System.Globalization.
+EditGemParameter                               | System.Void MatrixGold.ViewModels.BuilderViewModel::EditGemParameter()
+System.Windows.Markup.IComponentConnector.Connect | System.Void MatrixGold.Views.ViewRender::System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)
+NotifyPropertiesHaveUpdated                    | System.Void MatrixGold.Models.MatrixFileInfo::NotifyPropertiesHaveUpdated()
+SelectTemplate                                 | System.Windows.DataTemplate MatrixGold.Models.UIControlTemplateSelector::SelectTemplate(System.Object,System.Windows.DependencyObject)
+ResetAnimation                                 | System.Void MatrixGold.ViewModels.AnimationStudioViewModel::ResetAnimation()
+RhinoObjectsSelected                           | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoObjectsSelected(GV.MatrixCommon.Models.MatrixObjectSelectionEventArgs,System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+AddGemParameter                                | System.Void MatrixGold.ViewModels.BuilderViewModel::AddGemParameter()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::()
+SortControlsIntoCollections                    | System.Void MatrixGold.ViewModels.BuilderViewModel::SortControlsIntoCollections()
+RhinoDocumentOpened                            | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoDocumentOpened(System.String,System.Boolean)
+ConvertBack                                    | System.Object[] MatrixGold.Converters.RingSizeDataItemToTextConverter::ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.Cult
+RingResizerRingSelected                        | System.Void MatrixGold.Helpers.RhinoServiceCallback::RingResizerRingSelected(GV.MatrixCommon.Models.RingResizerSelectRingModelArgs)
+ProcessMessage                                 | System.Void MatrixGold.Views.ObjectContextMenuView::ProcessMessage(System.String)
+UpdatePresetData                               | System.Void MatrixGold.Models.AnimationPreset::UpdatePresetData(GV.MatrixCommon.Models.AnimationData)
+SetWindowButtonsToMatchState                   | System.Void MatrixGold.Views.WindowContentManager::SetWindowButtonsToMatchState()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+UpdateProperties                               | System.Void MatrixGold.Models.MatrixFileInfo::UpdateProperties(MatrixGold.Models.MatrixFileInfo)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+UpdateMetalInfo                                | System.Void MatrixGold.Models.MatrixFileInfo::UpdateMetalInfo(System.Boolean)
+GetColorForBuilderFromUIClassification         | System.Windows.Media.Color MatrixGold.Helpers.UIHelper::GetColorForBuilderFromUIClassification(GV.MatrixCommon.UIClassification)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::(System.Boolean)
+InitializeCollectionFile                       | System.Void MatrixGold.Models.MatrixFileInfo::InitializeCollectionFile(System.String)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+Populate                                       | System.Void MatrixGold.ViewModels.BuilderViewModel::Populate(System.Boolean,MatrixGold.MockData.MockGraphProvider/,System.Collections.Generic.List`1<
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.ProjectsViewModel::()
+WriteSerializedJsonFileInfo                    | System.Boolean MatrixGold.Models.MatrixFileInfo::WriteSerializedJsonFileInfo()
+KebabCommand                                   | System.Void MatrixGold.ViewModels.BuilderViewModel::KebabCommand(System.String)
+PopulateFileCount                              | System.Void MatrixGold.ViewModels.DirectoryInfo::PopulateFileCount(System.String)
+System.Windows.Markup.IStyleConnector.Connect  | System.Void MatrixGold.Views.ViewBuilders::System.Windows.Markup.IStyleConnector.Connect(System.Int32,System.Object)
+get_TotalCarats                                | System.Double MatrixGold.ViewModels.GemInfoItemGroup::get_TotalCarats()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::()
+PrintControl                                   | System.Void MatrixGold.Views.TechReportView::PrintControl(System.Boolean,System.Boolean)
+UpdateToastSettings                            | System.Void MatrixGold.Views.WindowToastPosition::UpdateToastSettings()
+CommandStarted                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::CommandStarted(GV.MatrixCommon.Models.StringEventArgs)
+ApplyOptionsToRhino                            | System.Void MatrixGold.Helpers.UIHelper::ApplyOptionsToRhino()
+RefreshBuilderRelationships                    | System.Void MatrixGold.ViewModels.BuilderViewModel::RefreshBuilderRelationships()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+WindowToastPosition_Loaded                     | System.Void MatrixGold.Views.WindowToastPosition::WindowToastPosition_Loaded(System.Object,System.Windows.RoutedEventArgs)
+set_BuilderCategoryItems                       | System.Void MatrixGold.ViewModels.BuilderViewModel::set_BuilderCategoryItems(System.Collections.Generic.List`1<MatrixGold.Models.BuilderCategoryItem>)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+set_JobBagType                                 | System.Void MatrixGold.Models.MatrixFileInfo::set_JobBagType(MatrixGold.Models.JobBagType)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+get_Header                                     | System.String MatrixGold.ViewModels.GemInfoItemGroup::get_Header()
+WindowContentManager_Loaded                    | System.Void MatrixGold.Views.WindowContentManager::WindowContentManager_Loaded(System.Object,System.Windows.RoutedEventArgs)
+ResetBuildersVM                                | System.Void MatrixGold.Helpers.RhinoServiceCallback::ResetBuildersVM()
+set_IsActive                                   | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsActive(System.Boolean)
+InitializeProjectManagerFile                   | System.Void MatrixGold.Models.MatrixFileInfo::InitializeProjectManagerFile(System.String)
+set_GroupFrames                                | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_GroupFrames(System.Collections.ObjectModel.ObservableCollection`1<MatrixGold.ViewModels.MovieFr
+                                              | System.Void MatrixGold.ViewModels.ProjectsViewModel::()
+ShowToastMessageEvent                          | System.Void MatrixGold.Helpers.RhinoServiceCallback::ShowToastMessageEvent(GV.MatrixCommon.Models.ToastEventArgs)
+ResetSavedSettings                             | System.Void MatrixGold.Helpers.UIHelper::ResetSavedSettings()
+ReadSerializedJsonFileInfoFromDisk             | System.Boolean MatrixGold.Models.MatrixFileInfo::ReadSerializedJsonFileInfoFromDisk(MatrixGold.Models.MatrixFileInfo/JsonReadResult&)
+Imagedr_MouseLeftButtonDown                    | System.Void MatrixGold.Views.TechReportView::Imagedr_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)
+Rename                                         | System.Void MatrixGold.ViewModels.BuilderViewModel::Rename()
+get_GemCount                                   | System.Int32 MatrixGold.ViewModels.GemInfoItemGroup::get_GemCount()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+UpdateGemInfo                                  | System.Void MatrixGold.Models.MatrixFileInfo::UpdateGemInfo()
+RelatedCommandsToggleButton_MouseLeftButtonDown | System.Void MatrixGold.Views.ViewMatrixLegacy::RelatedCommandsToggleButton_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs
+Finalize                                       | System.Void MatrixGold.Views.ObjectContextMenuWindow::Finalize()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+ViewportControlHandleUpdated                   | System.Void MatrixGold.Helpers.RhinoServiceCallback::ViewportControlHandleUpdated(System.Guid)
+PopupBorderLeave                               | System.Void MatrixGold.Views.ViewBuilders::PopupBorderLeave(System.Object,System.Windows.Input.MouseEventArgs)
+KebabMenu_OnOpened                             | System.Void MatrixGold.Views.ViewBuilders::KebabMenu_OnOpened(System.Object,System.EventArgs)
+CalculateItemMargin                            | System.Windows.Thickness MatrixGold.Converters.WrapPanelItemWidthConverter::CalculateItemMargin(System.Double,System.Double)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+DeleteGemParameter                             | System.Void MatrixGold.ViewModels.BuilderViewModel::DeleteGemParameter()
+ResetUserLayers                                | System.Void MatrixGold.ViewModels.LayersViewModel::ResetUserLayers()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::(System.Boolean)
+UpdateLayerItem                                | System.Boolean MatrixGold.Models.LayerViewItemBase::UpdateLayerItem(Common.LayerItem,System.Guid)
+UpdateDirectoryInfo                            | System.Void MatrixGold.ViewModels.DirectoryInfo::UpdateDirectoryInfo(System.String)
+AnimationCreationCompleted                     | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationCreationCompleted(GV.MatrixCommon.Models.AnimationResultEventArgs)
+WndProc                                        | System.IntPtr MatrixGold.Views.WindowContentManager::WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean&)
+RingResizerAngleAdjusted                       | System.Void MatrixGold.Helpers.RhinoServiceCallback::RingResizerAngleAdjusted(GV.MatrixCommon.Models.Angle,GV.MatrixCommon.Models.RingResizerAdjustAng
+SetUserLogo                                    | System.Void MatrixGold.Views.TechReportView::SetUserLogo()
+HasIcon                                        | System.Boolean MatrixGold.Converters.ComboboxToIconResourceConverter::HasIcon(System.Object[],System.String&,System.Windows.Controls.Viewbox&)
+set_Name                                       | System.Void MatrixGold.ViewModels.BuilderViewModel::set_Name(System.String)
+set_GemControls                                | System.Void MatrixGold.ViewModels.BuilderViewModel::set_GemControls(System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl>)
+set_InboxControls                              | System.Void MatrixGold.ViewModels.BuilderViewModel::set_InboxControls(System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl>)
+set_ToggleControls                             | System.Void MatrixGold.ViewModels.BuilderViewModel::set_ToggleControls(System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl>)
+set_GoButton                                   | System.Void MatrixGold.ViewModels.BuilderViewModel::set_GoButton(GV.CounterSketch.Shared.Model.UIControl)
+SaveNewFilenameToDisk                          | System.Void MatrixGold.Models.MatrixFileInfo::SaveNewFilenameToDisk()
+SetSelectedCategoryFromName                    | System.Void MatrixGold.ViewModels.BuilderViewModel::SetSelectedCategoryFromName(System.String)
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+BuilderRemoved                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::BuilderRemoved(System.Guid)
+DoEvents                                       | System.Void MatrixGold.Helpers.UIHelper::DoEvents()
+get_CommandItemIcon                            | GV.MatrixCommon.CommandItemIcon MatrixGold.Models.ToolRibbonItem::get_CommandItemIcon()
+get_CommandItemIconResource                    | System.Windows.UIElement MatrixGold.Models.ToolRibbonItem::get_CommandItemIconResource()
+GetIsCustomCommandStatus                       | System.Boolean MatrixGold.Models.CustomizedCommand::GetIsCustomCommandStatus()
+SelectPattern                                  | System.Void MatrixGold.Helpers.RhinoServiceCallback::SelectPattern()
+                                              | System.Void MatrixGold.ViewModels.RenderViewModel::()
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+                                              | System.Void MatrixGold.ViewModels.WindowPreferencesViewModel::(System.Boolean)
+RhinoEscapeKeyPressed                          | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoEscapeKeyPressed()
+SelectedCSUICategoryChanged                    | System.Void MatrixGold.Helpers.RhinoServiceCallback::SelectedCSUICategoryChanged(System.String)
+MoveSplashToShowDialog                         | System.Void MatrixGold.Views.WindowSplash::MoveSplashToShowDialog()
+get_SizeInMegabytes                            | System.String MatrixGold.Models.MatrixFileInfo::get_SizeInMegabytes()
+RhinoMouseDown                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoMouseDown(System.Boolean,System.Boolean,System.Boolean)
+LaunchCommandEditor                            | System.Void MatrixGold.Models.ToolRibbonItem::LaunchCommandEditor(System.Boolean)
+MatchAttributes                                | System.Void MatrixGold.Helpers.RhinoServiceCallback::MatchAttributes(GV.MatrixCommon.Models.MatchAttributesArgs)
+get_Shape                                      | System.String MatrixGold.ViewModels.GemInfoItemGroup::get_Shape()
+get_Cut                                        | System.String MatrixGold.ViewModels.GemInfoItemGroup::get_Cut()
+get_Material                                   | System.String MatrixGold.ViewModels.GemInfoItemGroup::get_Material()
+RhinoWindowKeyPressed                          | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoWindowKeyPressed(System.Windows.Input.Key)
+SelectFile                                     | System.Void MatrixGold.Helpers.RhinoServiceCallback::SelectFile(GV.CounterSketch.Shared.Model.UIControl)
+AnimationStudioFocalPointSelected              | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationStudioFocalPointSelected(System.String)
+PopulateToolRibbonItemCache                    | System.Void MatrixGold.Helpers.UIHelper::PopulateToolRibbonItemCache()
+ObjectContextMenuWindow_Loaded                 | System.Void MatrixGold.Views.ObjectContextMenuWindow::ObjectContextMenuWindow_Loaded(System.Object,System.Windows.RoutedEventArgs)
+ObjectContextMenuWindow_LocationChanged        | System.Void MatrixGold.Views.ObjectContextMenuWindow::ObjectContextMenuWindow_LocationChanged(System.Object,System.EventArgs)
+RefreshFileOnDiskInfo                          | System.Void MatrixGold.Models.MatrixFileInfo::RefreshFileOnDiskInfo()
+WindowPreferences_IsVisibleChanged             | System.Void MatrixGold.Views.WindowPreferences::WindowPreferences_IsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)
+InvokeTheCommand                               | System.Void MatrixGold.Models.ToolRibbonItem::InvokeTheCommand(System.Boolean)
+get_UICommand                                  | System.Action MatrixGold.Models.ToolRibbonItem::get_UICommand()
+FilesAndFoldersStack_MouseUp                   | System.Void MatrixGold.Views.ViewCollectionsManager::FilesAndFoldersStack_MouseUp(System.Object,System.Windows.Input.MouseButtonEventArgs)
+get_MaterialSpg                                | System.Double MatrixGold.ViewModels.GemInfoItemGroup::get_MaterialSpg()
+get_Width                                      | System.Double MatrixGold.ViewModels.GemInfoItemGroup::get_Width()
+get_Length                                     | System.Double MatrixGold.ViewModels.GemInfoItemGroup::get_Length()
+System.Windows.Data.IValueConverter.Convert    | System.Object MatrixGold.Converters.LayerViewWidthToColumnCountConverter::System.Windows.Data.IValueConverter.Convert(System.Object,System.Type,System
+WindowContentManager_LocationChanged           | System.Void MatrixGold.Views.WindowContentManager::WindowContentManager_LocationChanged(System.Object,System.EventArgs)
+get_FilenameFormatWhenSaving                   | System.String MatrixGold.Models.MatrixFileInfo::get_FilenameFormatWhenSaving()
+GetEnumDescription                             | System.String MatrixGold.Converters.EnumDescriptionConverter::GetEnumDescription(System.Enum)
+ButtonAccept_Click                             | System.Void MatrixGold.Views.WindowEula::ButtonAccept_Click(System.Object,System.Windows.RoutedEventArgs)
+InitializeComponent                            | System.Void MatrixGold.Views.ConnectionLostView::InitializeComponent()
+LoadPlacement                                  | System.Void MatrixGold.Views.WindowContentManager::LoadPlacement()
+SavePlacement                                  | System.Void MatrixGold.Views.WindowContentManager::SavePlacement()
+ShutDown                                       | System.Void MatrixGold.Views.WindowSplash::ShutDown()
+InvokeCommand                                  | System.Void MatrixGold.Models.ToolRibbonItem::InvokeCommand()
+InvokeSecondaryCommand                         | System.Void MatrixGold.Models.ToolRibbonItem::InvokeSecondaryCommand()
+AddSelectionToLayer                            | System.Void MatrixGold.Models.LayerViewItem::AddSelectionToLayer()
+SelectLayer                                    | System.Void MatrixGold.Models.LayerViewItem::SelectLayer()
+SetAsActiveLayer                               | System.Void MatrixGold.Models.LayerViewItem::SetAsActiveLayer()
+Parse                                          | MatrixGold.Converters.MathConverter/IExpression MatrixGold.Converters.MathConverter::Parse(System.String)
+SendCommandToUI                                | System.Void MatrixGold.Helpers.RhinoServiceCallback::SendCommandToUI(GV.MatrixCommon.UICommandFunction)
+RhinoObjectAdded                               | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoObjectAdded(System.Guid,System.String)
+add_PropertyChanged                            | System.Void MatrixGold.ViewModels.GemInfoItemGroup::add_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler)
+remove_PropertyChanged                         | System.Void MatrixGold.ViewModels.GemInfoItemGroup::remove_PropertyChanged(System.ComponentModel.PropertyChangedEventHandler)
+BuilderEdited                                  | System.Void MatrixGold.Helpers.RhinoServiceCallback::BuilderEdited(System.Guid,System.Guid)
+ShowSplash                                     | System.Void MatrixGold.Views.WindowSplash::ShowSplash()
+BuilderStarted                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::BuilderStarted(System.Guid,System.Guid)
+set_SelectedCategory                           | System.Void MatrixGold.ViewModels.BuilderViewModel::set_SelectedCategory(MatrixGold.Models.BuilderCategoryItem)
+set_IsBetaFeature                              | System.Void MatrixGold.Models.ToolRibbonItem::set_IsBetaFeature(System.Boolean)
+get_CommandAddSelectionToLayer                 | Stuller.Mvvm.RelayCommand MatrixGold.Models.LayerViewItem::get_CommandAddSelectionToLayer()
+get_CommandSelectLayer                         | Stuller.Mvvm.RelayCommand MatrixGold.Models.LayerViewItem::get_CommandSelectLayer()
+get_CommandSetAsActiveLayer                    | Stuller.Mvvm.RelayCommand MatrixGold.Models.LayerViewItem::get_CommandSetAsActiveLayer()
+SaveFileAs                                     | System.Void MatrixGold.Helpers.RhinoServiceCallback::SaveFileAs(GV.MatrixCommon.Models.SaveAsUserFileEventArgs)
+VisibleBuildersChanged                         | System.Void MatrixGold.Helpers.RhinoServiceCallback::VisibleBuildersChanged(System.Collections.Generic.List`1<System.Guid>)
+AnimationStudioScrubPositionUpdated            | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationStudioScrubPositionUpdated(GV.MatrixCommon.Models.AnimationData)
+ObjectContextMenuWindow_KeyUp                  | System.Void MatrixGold.Views.ObjectContextMenuWindow::ObjectContextMenuWindow_KeyUp(System.Object,System.Windows.Input.KeyEventArgs)
+CommandIconsListBox_PreviewMouseLeftButtonDown | System.Void MatrixGold.Views.ViewToolRibbon::CommandIconsListBox_PreviewMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)
+set_IsExpanded                                 | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsExpanded(System.Boolean)
+get_CommandInvokeCommand                       | Stuller.Mvvm.RelayCommand MatrixGold.Models.ToolRibbonItem::get_CommandInvokeCommand()
+get_CommandInvokeSecondaryCommand              | Stuller.Mvvm.RelayCommand MatrixGold.Models.ToolRibbonItem::get_CommandInvokeSecondaryCommand()
+ObjectActionsCommand                           | System.Void MatrixGold.Helpers.RhinoServiceCallback::ObjectActionsCommand(GV.MatrixCommon.Models.MatrixObjectSelectionEventArgs)
+ScrollViewer_PreviewMouseLeftButtonDown        | System.Void MatrixGold.Views.ViewStyleSheetManager::ScrollViewer_PreviewMouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)
+Abort                                          | System.Void MatrixGold.Views.WindowEula::Abort()
+NetFabbProgressChanged                         | System.Void MatrixGold.Helpers.RhinoServiceCallback::NetFabbProgressChanged(GV.MatrixCommon.Helpers.ProgressEventArgs)
+Button_Click                                   | System.Void MatrixGold.Views.ViewGemBuilder::Button_Click(System.Object,System.Windows.RoutedEventArgs)
+WindowContentManager_SourceInitialized         | System.Void MatrixGold.Views.WindowContentManager::WindowContentManager_SourceInitialized(System.Object,System.EventArgs)
+set_IsActiveLayer                              | System.Void MatrixGold.Models.LayerViewItem::set_IsActiveLayer(System.Boolean)
+get_IsBuilder                                  | System.Boolean MatrixGold.Models.ToolRibbonItem::get_IsBuilder()
+CyclesRenderFinished                           | System.Void MatrixGold.Helpers.RhinoServiceCallback::CyclesRenderFinished(System.Boolean)
+get_VersionString                              | System.String MatrixGold.Helpers.UIHelper::get_VersionString()
+get_RhinoVersionString                         | System.String MatrixGold.Helpers.UIHelper::get_RhinoVersionString()
+HideSplash                                     | System.Void MatrixGold.Views.WindowSplash::HideSplash()
+EnablePreviewBackfacesChanged                  | System.Void MatrixGold.Helpers.RhinoServiceCallback::EnablePreviewBackfacesChanged(System.Boolean)
+EnablePreviewRenderShadingChanged              | System.Void MatrixGold.Helpers.RhinoServiceCallback::EnablePreviewRenderShadingChanged(System.Boolean)
+ShowViewportRingChanged                        | System.Void MatrixGold.Helpers.RhinoServiceCallback::ShowViewportRingChanged(System.Boolean)
+Imagedr_MouseRightButtonDown                   | System.Void MatrixGold.Views.TechReportView::Imagedr_MouseRightButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)
+CategoryClicked                                | System.Void MatrixGold.ViewModels.BuilderViewModel::CategoryClicked(System.String)
+PinButton_OnClick                              | System.Void MatrixGold.Views.WindowContentManager::PinButton_OnClick(System.Object,System.Windows.RoutedEventArgs)
+SetFocus                                       | System.Void MatrixGold.Views.WindowCommandEditor::SetFocus(System.Boolean)
+set_InstanceGuid                               | System.Void MatrixGold.ViewModels.BuilderViewModel::set_InstanceGuid(System.Guid)
+set_IsChecked                                  | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsChecked(System.Boolean)
+set_HasHiddenOutput                            | System.Void MatrixGold.ViewModels.BuilderViewModel::set_HasHiddenOutput(System.Boolean)
+set_HasError                                   | System.Void MatrixGold.ViewModels.BuilderViewModel::set_HasError(System.Boolean)
+set_ErrorMessage                               | System.Void MatrixGold.ViewModels.BuilderViewModel::set_ErrorMessage(System.String)
+set_RelatedPatchwires                          | System.Void MatrixGold.ViewModels.BuilderViewModel::set_RelatedPatchwires(System.Collections.Generic.List`1<System.Guid>)
+set_IsGraphBusy                                | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsGraphBusy(System.Boolean)
+set_IsSelected                                 | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsSelected(System.Boolean)
+set_IsFilteredOut                              | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsFilteredOut(System.Boolean)
+set_IsDeleted                                  | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsDeleted(System.Boolean)
+set_UIControls                                 | System.Void MatrixGold.ViewModels.BuilderViewModel::set_UIControls(System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl>)
+set_IsVisible                                  | System.Void MatrixGold.ViewModels.BuilderViewModel::set_IsVisible(System.Boolean)
+set_HasGumball                                 | System.Void MatrixGold.ViewModels.BuilderViewModel::set_HasGumball(System.Boolean)
+set_LastWriteTime                              | System.Void MatrixGold.ViewModels.DirectoryInfo::set_LastWriteTime(System.DateTime)
+set_IsSystemFolder                             | System.Void MatrixGold.ViewModels.DirectoryInfo::set_IsSystemFolder(System.Boolean)
+set_FileCount                                  | System.Void MatrixGold.ViewModels.DirectoryInfo::set_FileCount(System.Int32)
+set_IsSystemUserFolder                         | System.Void MatrixGold.ViewModels.DirectoryInfo::set_IsSystemUserFolder(System.Boolean)
+set_IsAddFolderButton                          | System.Void MatrixGold.ViewModels.DirectoryInfo::set_IsAddFolderButton(System.Boolean)
+set_DirectoryPath                              | System.Void MatrixGold.ViewModels.DirectoryInfo::set_DirectoryPath(System.String)
+set_SubDirectories                             | System.Void MatrixGold.ViewModels.DirectoryInfo::set_SubDirectories(System.Collections.Generic.List`1<System.String>)
+ResetDisplayModes                              | System.Void MatrixGold.ViewModels.DisplayModesViewModel::ResetDisplayModes()
+set_GroupName                                  | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_GroupName(System.String)
+set_GroupPreview                               | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_GroupPreview(System.Byte[])
+set_FrameCount                                 | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_FrameCount(System.Int32)
+set_Width                                      | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_Width(System.Int32)
+set_Height                                     | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_Height(System.Int32)
+set_IsEffect                                   | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_IsEffect(System.Boolean)
+set_StartDissolveFrameCount                    | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_StartDissolveFrameCount(System.Int32)
+set_EndDissolveFrameCount                      | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_EndDissolveFrameCount(System.Int32)
+set_EmptyFrameSecondsCount                     | System.Void MatrixGold.ViewModels.MovieFrameGroup::set_EmptyFrameSecondsCount(System.Double)
+set_Preview                                    | System.Void MatrixGold.ViewModels.MovieFrame::set_Preview(System.Byte[])
+set_IsUserPreset                               | System.Void MatrixGold.Models.AnimationPreset::set_IsUserPreset(System.Boolean)
+set_PreviewVideoPath                           | System.Void MatrixGold.Models.AnimationPreset::set_PreviewVideoPath(System.Uri)
+set_IsImage                                    | System.Void MatrixGold.Models.MatrixFileInfo::set_IsImage(System.Boolean)
+set_IsMultiSelected                            | System.Void MatrixGold.Models.MatrixFileInfo::set_IsMultiSelected(System.Boolean)
+set_FilePath                                   | System.Void MatrixGold.Models.MatrixFileInfo::set_FilePath(System.String)
+set_Size                                       | System.Void MatrixGold.Models.MatrixFileInfo::set_Size(System.Int64)
+set_IsToolTipOpen                              | System.Void MatrixGold.Models.MatrixFileInfo::set_IsToolTipOpen(System.Boolean)
+set_IsProjectMaster                            | System.Void MatrixGold.Models.MatrixFileInfo::set_IsProjectMaster(System.Boolean)
+set_FileProject                                | System.Void MatrixGold.Models.MatrixFileInfo::set_FileProject(System.String)
+set_FileIndex                                  | System.Void MatrixGold.Models.MatrixFileInfo::set_FileIndex(System.Int32)
+set_CADLabor                                   | System.Void MatrixGold.Models.MatrixFileInfo::set_CADLabor(System.Double)
+set_Status                                     | System.Void MatrixGold.Models.MatrixFileInfo::set_Status(MatrixGold.Models.ProjectStatus)
+set_DueDate                                    | System.Void MatrixGold.Models.MatrixFileInfo::set_DueDate(System.DateTime)
+set_GemInfo                                    | System.Void MatrixGold.Models.MatrixFileInfo::set_GemInfo(System.String)
+set_CaratTotalWeight                           | System.Void MatrixGold.Models.MatrixFileInfo::set_CaratTotalWeight(System.Double)
+set_GemMaterialInfo                            | System.Void MatrixGold.Models.MatrixFileInfo::set_GemMaterialInfo(System.String)
+set_MetalTotalWeight                           | System.Void MatrixGold.Models.MatrixFileInfo::set_MetalTotalWeight(System.Double)
+set_MetalMaterialInfo                          | System.Void MatrixGold.Models.MatrixFileInfo::set_MetalMaterialInfo(System.String)
+set_Description                                | System.Void MatrixGold.Models.MatrixFileInfo::set_Description(System.String)
+set_GemInfoList                                | System.Void MatrixGold.Models.MatrixFileInfo::set_GemInfoList(System.Collections.Generic.List`1<GV.MatrixCommon.Models.GemInfoItem>)
+set_RingSize                                   | System.Void MatrixGold.Models.MatrixFileInfo::set_RingSize(System.String)
+set_AllMetalWeightInfo                         | System.Void MatrixGold.Models.MatrixFileInfo::set_AllMetalWeightInfo(System.Collections.Generic.List`1<GV.MatrixCommon.Models.MetalWeightInfo>)
+set_TotalMetalWeight                           | System.Void MatrixGold.Models.MatrixFileInfo::set_TotalMetalWeight(System.Double)
+set_IsUserFile                                 | System.Void MatrixGold.Models.MatrixFileInfo::set_IsUserFile(System.Boolean)
+set_FileTypeName                               | System.Void MatrixGold.Models.MatrixFileInfo::set_FileTypeName(System.String)
+set_FileExtension                              | System.Void MatrixGold.Models.MatrixFileInfo::set_FileExtension(System.String)
+set_IsAddFileButton                            | System.Void MatrixGold.Models.MatrixFileInfo::set_IsAddFileButton(System.Boolean)
+set_CreationDate                               | System.Void MatrixGold.Models.MatrixFileInfo::set_CreationDate(System.DateTime)
+set_FileInfo                                   | System.Void MatrixGold.Models.StyleSheetFile::set_FileInfo(System.IO.FileInfo)
+set_PreviewBytes                               | System.Void MatrixGold.Models.StyleSheetFile::set_PreviewBytes(System.Byte[])
+set_IsUserStyle                                | System.Void MatrixGold.Models.StyleSheetFile::set_IsUserStyle(System.Boolean)
+set_Layers                                     | System.Void MatrixGold.Models.GroupLayerItem::set_Layers(System.Collections.ObjectModel.ObservableCollection`1<MatrixGold.Models.LayerViewItemBase>)
+set_IsVisibleInUI                              | System.Void MatrixGold.Models.GroupLayerItem::set_IsVisibleInUI(System.Boolean)
+set_UICommand                                  | System.Void MatrixGold.Models.ToolRibbonItem::set_UICommand(System.Action)
+set_RhinoScriptCommand                         | System.Void MatrixGold.Models.ToolRibbonItem::set_RhinoScriptCommand(System.String)
+set_SecondaryRhinoScriptCommand                | System.Void MatrixGold.Models.ToolRibbonItem::set_SecondaryRhinoScriptCommand(System.String)
+set_OverrideTooltipTitle                       | System.Void MatrixGold.Models.ToolRibbonItem::set_OverrideTooltipTitle(System.String)
+set_IsUICommand                                | System.Void MatrixGold.Models.ToolRibbonItem::set_IsUICommand(System.Boolean)
+set_IsRhinoScriptCommand                       | System.Void MatrixGold.Models.ToolRibbonItem::set_IsRhinoScriptCommand(System.Boolean)
+set_IsCustomizable                             | System.Void MatrixGold.Models.ToolRibbonItem::set_IsCustomizable(System.Boolean)
+set_RelatedCommands                            | System.Void MatrixGold.Models.ToolRibbonItem::set_RelatedCommands(System.Collections.ObjectModel.ObservableCollection`1<MatrixGold.Models.ToolRibbonIt
+set_IsOpen                                     | System.Void MatrixGold.Models.ToolRibbonItem::set_IsOpen(System.Boolean)
+set_IsOpenLegacy                               | System.Void MatrixGold.Models.ToolRibbonItem::set_IsOpenLegacy(System.Boolean)
+set_HasCheck                                   | System.Void MatrixGold.Models.ToolRibbonItem::set_HasCheck(System.Boolean)
+set_HasSecondaryCommand                        | System.Void MatrixGold.Models.ToolRibbonItem::set_HasSecondaryCommand(System.Boolean)
+set_BypassCommandCheck                         | System.Void MatrixGold.Models.ToolRibbonItem::set_BypassCommandCheck(System.Boolean)
+set_EchoScriptCommand                          | System.Void MatrixGold.Models.ToolRibbonItem::set_EchoScriptCommand(System.Boolean)
+set_CommandItemIcon                            | System.Void MatrixGold.Models.ToolRibbonItem::set_CommandItemIcon(GV.MatrixCommon.CommandItemIcon)
+set_Title                                      | System.Void MatrixGold.Models.ToolRibbonItem::set_Title(System.String)
+set_SecondaryTitle                             | System.Void MatrixGold.Models.ToolRibbonItem::set_SecondaryTitle(System.String)
+set_SortOrder                                  | System.Void MatrixGold.Models.ToolRibbonItem::set_SortOrder(System.Int32)
+set_CommandItemCategory                        | System.Void MatrixGold.Models.ToolRibbonItem::set_CommandItemCategory(GV.MatrixCommon.CommandItemCategory)
+set_SubCategory                                | System.Void MatrixGold.Models.ToolRibbonItem::set_SubCategory(System.String)
+set_SubCategoryFeaturedCommand                 | System.Void MatrixGold.Models.ToolRibbonItem::set_SubCategoryFeaturedCommand(System.Boolean)
+set_ShowIcon                                   | System.Void MatrixGold.Models.ToolRibbonItem::set_ShowIcon(System.Boolean)
+set_IconSize                                   | System.Void MatrixGold.Models.ToolRibbonItem::set_IconSize(System.Double)
+set_ShowText                                   | System.Void MatrixGold.Models.ToolRibbonItem::set_ShowText(System.Boolean)
+set_ShowSeparatorAbove                         | System.Void MatrixGold.Models.ToolRibbonItem::set_ShowSeparatorAbove(System.Boolean)
+set_IsPrimaryLayoutCommand                     | System.Void MatrixGold.Models.ToolRibbonItem::set_IsPrimaryLayoutCommand(System.Boolean)
+set_IsSecondaryLayoutCommand                   | System.Void MatrixGold.Models.ToolRibbonItem::set_IsSecondaryLayoutCommand(System.Boolean)
+set_DragLocked                                 | System.Void MatrixGold.Models.RibbonItemDisk::set_DragLocked(System.Boolean)
+Reset                                          | System.Void MatrixGold.Models.CustomizedCommand::Reset()
+Close_OnClick                                  | System.Void MatrixGold.Views.ObjectContextMenuView::Close_OnClick(System.Object,System.Windows.RoutedEventArgs)
+ReProcessCollectionFiles                       | System.Void MatrixGold.Helpers.RhinoServiceCallback::ReProcessCollectionFiles()
+get_JsonFilePath                               | System.String MatrixGold.Models.MatrixFileInfo::get_JsonFilePath()
+get_IsNamed                                    | System.Boolean MatrixGold.Models.MatrixFileInfo::get_IsNamed()
+get_Is3dmFile                                  | System.Boolean MatrixGold.Models.MatrixFileInfo::get_Is3dmFile()
+RingResizerRadiusAdjusted                      | System.Void MatrixGold.Helpers.RhinoServiceCallback::RingResizerRadiusAdjusted(GV.MatrixCommon.Models.RingResizerAdjustRadiusArgs)
+RhinoDocumentSaved                             | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoDocumentSaved(System.String,System.Boolean)
+SizeComboBox_MouseWheel                        | System.Void MatrixGold.Views.ViewBuilders::SizeComboBox_MouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)
+ComboBox_PreviewMouseWheel                     | System.Void MatrixGold.Views.ViewBuilders::ComboBox_PreviewMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)
+get_GemInfoList                                | System.Collections.Generic.List`1<GV.MatrixCommon.Models.GemInfoItem> MatrixGold.Models.MatrixFileInfo::get_GemInfoList()
+get_RelatedCommands                            | System.Collections.ObjectModel.ObservableCollection`1<MatrixGold.Models.ToolRibbonItem> MatrixGold.Models.ToolRibbonItem::get_RelatedCommands()
+get_Title                                      | System.String MatrixGold.Models.ToolRibbonItem::get_Title()
+get_SecondaryTitle                             | System.String MatrixGold.Models.ToolRibbonItem::get_SecondaryTitle()
+GraphChanged                                   | System.Void MatrixGold.Helpers.RhinoServiceCallback::GraphChanged()
+DeleteFile                                     | System.Void MatrixGold.Helpers.UIHelper::DeleteFile(System.String)
+Header_MouseLeftButtonDown                     | System.Void MatrixGold.Views.ObjectContextMenuView::Header_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)
+Window_Closing                                 | System.Void MatrixGold.Views.WindowLegacyImportProjects::Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)
+Hide                                           | System.Void MatrixGold.ViewModels.BuilderViewModel::Hide()
+Show                                           | System.Void MatrixGold.ViewModels.BuilderViewModel::Show()
+Delete                                         | System.Void MatrixGold.ViewModels.BuilderViewModel::Delete()
+OnPropertyChanged                              | System.Void MatrixGold.ViewModels.GemInfoItemGroup::OnPropertyChanged(System.String)
+BuilderRedone                                  | System.Void MatrixGold.Helpers.RhinoServiceCallback::BuilderRedone(System.Guid,System.Guid)
+ActiveBuilderChanged                           | System.Void MatrixGold.Helpers.RhinoServiceCallback::ActiveBuilderChanged(System.Guid,System.Guid)
+GroupsImported                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::GroupsImported(System.String,System.Boolean)
+get_CurrentRhinoPosition                       | MatrixGold.FloatingWindowPosition MatrixGold.Helpers.UIHelper::get_CurrentRhinoPosition()
+get_CurrentContentManagerPosition              | MatrixGold.FloatingWindowPosition MatrixGold.Helpers.UIHelper::get_CurrentContentManagerPosition()
+get_CommandItemCache                           | System.Collections.Generic.List`1<GV.MatrixCommon.CommandItem> MatrixGold.Helpers.UIHelper::get_CommandItemCache()
+ProvideValue                                   | System.Object MatrixGold.Converters.BooleanInverseConverter::ProvideValue(System.IServiceProvider)
+<AddSelectionToLayer>b__18_0                   | System.Void MatrixGold.Models.LayerViewItem::<AddSelectionToLayer>b__18_0()
+<SelectLayer>b__19_0                           | System.Void MatrixGold.Models.LayerViewItem::<SelectLayer>b__19_0()
+<SetAsActiveLayer>b__20_0                      | System.Void MatrixGold.Models.LayerViewItem::<SetAsActiveLayer>b__20_0()
+LayersUpdate                                   | System.Void MatrixGold.Helpers.RhinoServiceCallback::LayersUpdate(Common.LayerItem)
+RhinoIdleStatusBar                             | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoIdleStatusBar(GV.MatrixCommon.Models.IdleStatusBarEventArgs)
+CommandEnded                                   | System.Void MatrixGold.Helpers.RhinoServiceCallback::CommandEnded()
+UpdateGroupsFromUndelete                       | System.Void MatrixGold.Helpers.RhinoServiceCallback::UpdateGroupsFromUndelete(System.Collections.Generic.List`1<System.Guid>)
+UpdateGroupsFromDelete                         | System.Void MatrixGold.Helpers.RhinoServiceCallback::UpdateGroupsFromDelete(System.Collections.Generic.List`1<System.Guid>)
+AddProfileToLibrary                            | System.Void MatrixGold.Helpers.RhinoServiceCallback::AddProfileToLibrary(GV.MatrixCommon.Models.AddProfileToLibraryEventArgs)
+AnimationStudioObjectsSelected                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationStudioObjectsSelected(GV.MatrixCommon.Models.AnimationData)
+AnimationStudioCameraPathSelected              | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationStudioCameraPathSelected(GV.MatrixCommon.Models.AnimationData)
+AnimationStudioCameraTargetSelected            | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationStudioCameraTargetSelected(GV.MatrixCommon.Models.AnimationData)
+set_Version                                    | System.Void MatrixGold.Helpers.UIHelper::set_Version(System.Version)
+
+== PROPERTIES ==
+distinct=1346
+  AcceptButtonText | ActionCommand | ActionGlobal | ActionIconName | ActionName | ActionType
+  ActionTypes | ActiveDirectory | ActualFilenameOnDisk | AddToDocument | AdditionalNotes | Address
+  AlignCameraWithCurve | AlignDirection | AlignStartPosition | Alignment | AlignmentCPlane | AlignmentObject
+  AlignmentWorld | AllGemGroups | AllGemMaterials | AllGroundPlaneMaterials | AllMaterials | AllMetalInfo
+  AllMetalMaterials | AllMetalWeightInfo | AllMiscellaneousMaterials | AllRenderGemMaterials | AllRenderMetalMaterials | AllSystemMaterials
+  AllToolRibbonItems | AllUserMaterials | AngleLeftDeg | AngleLeftRad | AngleRightDeg | AngleRightRad
+  Animation | AnimationStudioVM | AnimationUserPath | AnimationViewportInfo | ApplicationBusyMessage | AspectRatio
+  AutosaveFilePath | AutosaveInterval | AvailableBatchGemMaterials | AvailableBatchGroundPlaneMaterials | AvailableBatchMaterials | AvailableBatchMetalMaterials
+  AvailableBatchMiscMaterials | AvailableCultures | AvailableLayerMaterials | AvailableLayers | AvailableMaterials | AvailableSavedViewportInfos
+  BatchFiles | BatchJobName | BatchLayers | BatchRenderCount | BatchRenderStyle | BatchViews
+  BitRateQuality | BreadCrumb | BreadCrumbNav | BuilderActions | BuilderCategoryItems | BuilderColor
+  BuilderHighlightCancelDelayInSeconds | BuilderItemSelected | Builders | BuildersScrollViewerYPosition | BuildersVM | BuildersView
+  BumpRepeatX | BumpRepeatY | BypassCommandCheck | CADLabor | CSBlockGroupStartTemplate | CSGeometryFromLibrarySelectorTemplate
+  CSImageFromFileSelectorTemplate | CSImageFromLibrarySelectorTemplate | CSObjectFromFileSelectorTemplate | CSProfileFromFileSelectorTemplate | CSValueBooleanArrayButtonTemplate | CSValueBoxSideSelectorTemplate
+  CSValueChooserTemplate | CSValueFontListTemplate | CSValueGemParamListTemplate | CSValueGemShapeTemplate | CSValueGemSizeCustomDiamondBaguetteTaperedTemplate | CSValueGemSizeCustomDiamondEmeraldTemplate
+  CSValueGemSizeTemplate | CSValueGemTemplate | CSValueHeadStyleListTemplate | CSValueImageListTemplate | CSValueInboxTemplate | CSValueInputTemplate
+  CSValueListTemplate | CSValueOnOffTemplate | CSValuePointOnSurfaceTemplate | CSValueRangeAlternateTemplate | CSValueRangeTemplate | CSValueRingSizeTemplate
+  CameraAlignmentDirection | CameraLens | CanGemInfoExpand | CanImport | CanInteract | CanMetalInfoExpand
+  CanOpen | CanPictureFrame | CanScrub | CanSelectedItemImport | CanSelectedItemOpen | CanUpdateBuilders
+  CaratTotalWeight | Category | City | Client | CloseAction | CollectionFiles
+  CollectionRootPaths | CollectionSubFolders | CollectionsManagerVM | Color | ColorRepeatX | ColorRepeatY
+  CommandAddCustomDisplayMode | CommandAddDissolve | CommandAddFileToBatch | CommandAddFiles | CommandAddFrameSet | CommandAddGemParameter
+  CommandAddLayerToBatch | CommandAddMaterialToLayer | CommandAddPerson | CommandAddSelectionToLayer | CommandAddToGroup | CommandAddViewToBatch
+  CommandAdjustAngle | CommandAdjustAngleLeft | CommandAdjustAngleRight | CommandAdjustBlend | CommandAdjustColor | CommandAdjustEnvironmentSettings
+  CommandAdjustGroundPlaneColor | CommandAdjustGroundPlaneHue | CommandAdjustMaterialHueSatLum | CommandAdjustMetalMetalFinish | CommandAdjustRadius | CommandAdjustReflectivity
+  CommandAdjustRepeat | CommandAdjustRotation | CommandAdjustShine | CommandAdjustSpecificGravity | CommandAdjustStrength | CommandApplyHdr
+  CommandApplyMGMaterial | CommandApplyMatchAttributes | CommandApplyMaterialRecipe | CommandApplyPreset | CommandApplyRenderStyle | CommandApplyRenderStyleToBatch
+  CommandApplySavedView | CommandApplySelectedMaterial | CommandAssignProjectMaster | CommandBarEnumLocation | CommandBarLocations | CommandBrowse
+  CommandBrowseSharedRenders | CommandBrowseToProject | CommandCalculate | CommandCalculateWeight | CommandCancel | CommandCancelProfileAdd
+  CommandCategoryClicked | CommandChangeBackdropColor | CommandChangeBackdropEnvironment | CommandChangeBackdropType | CommandChangeGroundPlane | CommandChangeLayerMaterial
+  CommandChangeMapType | CommandChangeProjectsToIconView | CommandChangeUnits | CommandCheckBoxChange | CommandChooseAutosaveLocation | CommandChooseBitmapImage
+  CommandChooseGroundPlaneImage | CommandChooseProjectPath | CommandClearElement | CommandClearInbox | CommandClearNotificationHistory | CommandClearPersonEditor
+  CommandCloseAll | CommandCloseKebabs | CommandClosePersonEditor | CommandCommandChangeProjectsToListView | CommandConvert | CommandCopyJobBag
+  CommandCopySystemInfoToClipboard | CommandCreateAnimation | CommandCreateAnimationPreset | CommandCreateGroup | CommandCreateJobBag | CommandCreateMovie
+  CommandCreateProject | CommandDeleteFile | CommandDeleteFileFromBatch | CommandDeleteFolder | CommandDeleteGemParameter | CommandDeleteGroup
+  CommandDeleteHdr | CommandDeleteJobBag | CommandDeleteLayerFromBatch | CommandDeleteLibraryFile | CommandDeleteMaterial | CommandDeleteMaterialFromLayer
+  CommandDeletePerson | CommandDeleteProject | CommandDeleteRenderStyle | CommandDeleteRenderStyleFromBatch | CommandDeleteUserMaterial | CommandDeleteViewFromBatch
+  CommandDoubleClickFile | CommandDuplicateFrameGroup | CommandDuplicateGroup | CommandDuplicateMaterial | CommandEditGemParameter | CommandEditInRhino
+  CommandEditPerson | CommandEditProfile | CommandEditSpecificGravity | CommandEnableLayerUnique | CommandEnableSwitch | CommandExpandCollapseAll
+  CommandExportJobBag | CommandExportRenderStyle | CommandExportStoneReport | CommandExportToBlankJobBag | CommandExportToCsv | CommandExtraLayersToggle
+  CommandFilterBuilders | CommandFilterJobBags | CommandFilterProjects | CommandForceImportJobBag | CommandForceOpenJobBag | CommandGetFocalPoint
+  CommandGetUserInput | CommandHideGroup | CommandHideInfoPanel | CommandHideSelected | CommandHighlightBuilderOff | CommandHighlightBuilderOn
+  CommandHighlightGemsOff | CommandHighlightGemsOn | CommandIdentifier | CommandImportFile | CommandImportJobBag | CommandImportRenderStyle
+  CommandImportSelected | CommandImportUserMaterial | CommandInvokeCommand | CommandInvokeSecondaryCommand | CommandIsolateSelected | CommandItem
+  CommandItemCache | CommandItemCategory | CommandItemIcon | CommandItemIconResource | CommandKebabCommand | CommandLoadBatch
+  CommandLoadDefaultWindowLayout | CommandLockAll | CommandLockLayer | CommandManageMultiSelectedItems | CommandModifyCameraPath | CommandNewBatch
+  CommandNewFolder | CommandNewImage | CommandOpenAnimationModel | CommandOpenBreadCrumbDirectory | CommandOpenDirectory | CommandOpenFile
+  CommandOpenMaster | CommandOpenPopup | CommandOpenRender | CommandOpenRenderDeviceInfo | CommandOpenStyleSheetManager | CommandPopulateAvailableBatchViews
+  CommandPreviewMovie | CommandRefreshDisplayModes | CommandRefreshDocumentMaterials | CommandRefreshJobBags | CommandRefreshPreview | CommandRefreshProjects
+  CommandRemoveBitmap | CommandRemoveFrameGroup | CommandRemoveFromGroup | CommandRenameFile | CommandRenameFolder | CommandRenameGroup
+  CommandRenameJobBag | CommandRenameLibraryFile | CommandRenameProject | CommandRender | CommandReset | CommandResetAllDefaultStyleSheets
+  CommandResetAllSettingsAndRestart | CommandResetAnimation | CommandResetCommand | CommandResetCustomizedCommands | CommandResetDefaultUI | CommandResetDisplayModes
+  CommandResetDynamicCommands | CommandResetF6Menu | CommandResetGumball | CommandResetHotkeys | CommandResetMaterial | CommandResetMeshSettings
+  CommandResetProjects | CommandResetProperties | CommandResetQuickCommands | CommandResetRecentCommands | CommandResetRender | CommandResetRhinoUIToScheme
+  CommandResetRhinocerosSettings | CommandResetRibbonBar | CommandResetStyle | CommandResetTimer | CommandResetUIScale | CommandResetUserLayers
+  CommandResizeImage | CommandResizeRing | CommandRestoreDefaultTemplate | CommandSaveAs | CommandSaveAsDefaultStyle | CommandSaveBatch
+  CommandSaveContent | CommandSaveCustomCommand | CommandSaveDefaultTemplate | CommandSaveGeneralStyle | CommandSaveMaterial | CommandSaveToCollections
+  CommandScrollViewerChanged | CommandScrubControl | CommandSearchText | CommandSelectAll | CommandSelectFile | CommandSelectFromFile
+  CommandSelectFromLibraryFile | CommandSelectGroup | CommandSelectGroupGems | CommandSelectHdr | CommandSelectLayer | CommandSelectLayerWithMaterials
+  CommandSelectObjects | CommandSelectObjectsByMaterial | CommandSelectRing | CommandSelectionChanged | CommandSetAsActiveLayer | CommandSetCommandBarLocation
+  CommandSetFileFilter | CommandSetGridSnapSpacing | CommandSetJobbagFilter | CommandSetProjectListToIconView | CommandSetRenderDevice | CommandShadeActiveViewport
+  CommandShadeAllViewports | CommandShow | CommandShowAll | CommandShowAllHiddenBuilders | CommandShowDynamicContextMenu | CommandShowEditPreferenceGroupFromString
+  CommandShowGroup | CommandShowInfoPanel | CommandShowLoginPrompt | CommandShowPersonEditor | CommandShowProjectManager | CommandShowSelected
+  CommandShowSuperSelect | CommandShowTestToastNotification | CommandShowToastPositioner | CommandShowToastReset | CommandSortByDate | CommandSortByName
+  CommandSortGroupsByDate | CommandSortGroupsByName | CommandStartTimer | CommandStopAnimation | CommandStopTimer | CommandSuperSelect
+  CommandSwitchToHorizontalLayout | CommandSwitchToVerticalLayout | CommandTestPushBullet | CommandTestRender | CommandToggleAlpha | CommandToggleCamera
+  CommandToggleDynamicOnly | CommandToggleFavorite | CommandToggleGroundPlane | CommandToggleKebabMenu | CommandTogglePreviewRender | CommandUnlockAll
+  CommandUpdateCustomResolutionSafeFrame | CommandUpdateDisplayModes | CommandUpdateGlobalUIScale | CommandUpdateGraphFromUI | CommandUpdateGumballAlignment | CommandUpdateGumballDrag
+  CommandUpdateHistorySettings | CommandUpdateQuickCommandsOnDisk | CommandViewBatch | CommandViewLog | CommandWatchTutorial | Company
+  ConnectionCountdown | ContainedDirectories | ContentBasePath | Count | CpuName | CpuRender
+  CpuSpeed | CreateDate | CreationDate | Crumbs | CurrentActiveBuilderViewModel | CurrentContentManagerPosition
+  CurrentContentType | CurrentDate | CurrentEnvironment | CurrentEventTrigger | CurrentModeMenuGroups | CurrentModeVisualState
+  CurrentPreviewFrame | CurrentRhinoPosition | CurrentTab | CurrentYPosition | CurveCommands | CurveCommandsVisible
+  CustomBitRate | CustomHeight | CustomLeftClick | CustomLeftTooltip | CustomPasses | CustomPassesVisible
+  CustomRightClick | CustomRightToolTip | CustomWidth | Customer | Customers | CustomizeMenuCommand
+  CustomizedCommands | Cut | DPI | DebugButtonClickedCommand | DebugMenuView | DebugModeEnabled
+  DefaultCameraAlignment | DefaultCategory | DefaultDisplayMode | DefaultHasSecondaryCommand | DefaultLeftClick | DefaultLeftTooltip
+  DefaultRightClick | DefaultRightTooltip | DeleteFramesAfterCreation | Description | Designer | Designers
+  DeviceBounds | DeviceName | DirectoryName | DirectoryPath | DisplayModeIconSize | DisplayModeNames
+  DisplayModeSize | DisplayModes | DisplayModesFolder | DisplayModesVM | DocumentName | DocumentPath
+  DonorObjectId | DonorObjectPatchwireId | DoubleClickActions | DoubleClickMatrixFileAction | Drag | DragDropAdornerTemplate
+  DragDropLockedAdornerTemplate | DragLockToolRibbonItems | DragLocked | DragSelectionIsEmpty | DueDate | Duration
+  DynamicGroupsVM | EMail | EchoScriptCommand | EditorCancelCommand | EditorDeleteCommand | EditorDownCommand
+  EditorExportMenuGroupButtonVisiblity | EditorExportMenuGroupCommand | EditorImportMenuGroupCommand | EditorInsertCommand | EditorSaveCommand | EditorSeletectedItem
+  EditorUpCommand | EmptyFrameSecondsCount | EnableDescription | EnableGridSnaps | EndDissolveFrameCount | EnglishName
+  EnvSelectedGroundPlane | EnvironmentBackdrop | ErrorMessage | EstimatedCompletionTime | EstimatedSeconds | ExcludeFromRibbon
+  ExportJobBags | FavoriteMaterials | FavoritesList | FileCount | FileExtension | FileFilter
+  FileImageSize | FileIndex | FileInfo | FileName | FileNameWithoutExtension | FileOutputOptions
+  FilePath | FileProject | FileToEdit | FileTypeName | FilenameFormatWhenSaving | Files
+  FilterDockPanelOrientation | FilterStatusList | FilteredBuilders | FilteredCollectionFiles | FilteredGemMaterials | FilteredGroundPlaneMaterials
+  FilteredJobBags | FilteredMetalMaterials | FilteredMiscMaterials | FilteredPresets | FilteredRenderGemMaterials | FilteredRenderMetalMaterials
+  FilteredUserMaterials | FirstLayerSet | Firstname | FocalBlurAperture | FocalPointJson | FocusSearchTextBox
+  FolderName | FolderPath | ForceResize | FpsOptions | FrameCount | FrameName
+  Frames | FromExistingModel | FullPath | FullSave | FullSaveJobBags | GV.MatrixCommon.ICommandItem.Parameters
+  GemBuilderVM | GemCollections | GemCommands | GemCommandsVisible | GemControls | GemCount
+  GemInfo | GemInfoList | GemMaterialCaratWeight | GemMaterialInfo | GemMaterialsName | GemReportVM
+  Gems | GettingFocalPointFromCommand | GoButton | GpuDriverDate | GpuDriverVersion | GpuName
+  GpuRender | GradientBackdrop | GridSnapIncrement | GridSnapIncrements | GridSnapsEnabled | GroundPlaneEnabled
+  GroupFrames | GroupName | GroupPreview | GroupRecipients | Groups | GroupsView
+  HalfSizeTemplate | HasCheck | HasError | HasGumball | HasHiddenOutput | HasObjectPreview
+  HasPathPreview | HasRowHeader | HasSecondaryCommand | HasTargetPreview | Header | Height
+  HighlightBuilderOnMouseOver | IconSize | Id | Identifier | ImageBytes | ImageFront
+  ImagePerspective | ImageSide | ImageStoneMap | ImageTop | InboxControls | IncludeExtraMargin
+  InstalledRam | InstanceGuid | Is3dmFile | IsActive | IsActiveDirectory | IsActiveLayer
+  IsAddFileButton | IsAddFolderButton | IsAddingPerson | IsApplicationBusy | IsApplicationReady | IsArchive
+  IsAutoGumballEnabled | IsAutoHideEnabled | IsBackdropActive | IsBatchLayerSelected | IsBatchMatrixFileSelected | IsBatchRenderStyleApplied
+  IsBatchViewSelected | IsBeingDragged | IsBetaFeature | IsBrokenHistoryWarning | IsBuilder | IsBumpRepeatLocked
+  IsBusy | IsCameraControlExpanded | IsCameraControlsExpanded | IsCameraCurve | IsCameraPathClosed | IsChecked
+  IsClickable | IsClosed | IsColorAndBumpLocked | IsColorBumpLockVisible | IsColorRepeatLocked | IsCommandListSortedByDate
+  IsCommandRunning | IsConnectedToRhino | IsCustomPasses | IsCustomResolution | IsCustomizable | IsCustomized
+  IsDebuggingUILayout | IsDeleted | IsDeletingPerson | IsEditing | IsEditingLanguage | IsEditingPerson
+  IsEffect | IsEmpty | IsEveryBuilderFilteredOut | IsExpanded | IsExportJobBag | IsFilterTab
+  IsFilteredOut | IsFloatingLayout | IsFocalPointSelected | IsFocalPointVisible | IsFullSave | IsGemTabActive
+  IsGraphBusy | IsGridSnapsEnabled | IsGroundPlaneActive | IsGroundPlaneTabActive | IsGroupsSortedByDate | IsHdrMapActive
+  IsHidden | IsHitTestVisible | IsHorizontalLayout | IsImage | IsInitializing | IsInternalFeature
+  IsJobBagInfoPanelVisible | IsJobTitleValid | IsLastItem | IsLegacyProfilesSelected | IsLegacyProjectManagerDatabaseSelected | IsLegacyProjectsArchiveFolderSelected
+  IsLegacyProjectsFolderSelected | IsLightingMapExpanded | IsLockChildren | IsLocked | IsMaterialsInDocActive | IsMetalTabActive
+  IsMiscTabActive | IsMovieAdvancedExpanded | IsMovieControlsExpanded | IsMultiSelected | IsMultiSelecting | IsNamed
+  IsOpen | IsOpenLegacy | IsOrthoEnabled | IsOsnapsEnabled | IsParentLocked | IsPhysicalLightingActive
+  IsPinned | IsPlanarEnabled | IsPlaying | IsPresetDetailsExpanded | IsPresetRenderTypeRender | IsPresetsExpanded
+  IsPrimary | IsPrimaryLayoutCommand | IsProjectEnabled | IsProjectListSortedByDate | IsProjectListView | IsProjectMaster
+  IsRecordHistoryEnabled | IsRecording | IsReflectionMapExpanded | IsRenderGemMaterialGridView | IsRenderGemsGridView | IsRenderGroundPlanesGridView
+  IsRenderMaterialTabActive | IsRenderMaterialTabEnabled | IsRenderMaterialsExpanded | IsRenderMaterialsGridView | IsRenderMetalMaterialGridView | IsRenderMetalsGridView
+  IsRenderMiscGridView | IsResizeExpanderOpen | IsRhino6 | IsRhino7 | IsRhinoRunning | IsRhinoScriptCommand
+  IsSecondaryLayoutCommand | IsSecurityBusy | IsSelected | IsShowingHelp | IsShowingHiddenProjects | IsSmartTrackEnabled
+  IsSmoothDrag | IsSnappyDrag | IsStillImagePreview | IsStyleSheet | IsSymmetrical | IsSystemDirectory
+  IsSystemFolder | IsSystemUserFolder | IsTimerRunning | IsToolTipOpen | IsTwoPoint | IsTwoPointEnabled
+  IsUICommand | IsUpdateChildren | IsUserFile | IsUserPreset | IsUserStyle | IsViewportRender
+  IsVisible | IsVisibleInUI | IsWireframeBuildersEnabled | ItemSelected | ItemSize | JobBagControlHeight
+  JobBagControlWidth | JobBagListColumnWidth | JobBagType | JobBags | JobNumber | JobbagCache
+  JsonFilePath | KeepAspectRatio | LastWriteTime | Lastname | LatestWindowStatusMessageHistory | LayerColor
+  LayerGroups | LayerName | Layers | LayersVM | LayoutRadioGroupName | LegacyArchives
+  LegacyDatabaseFilePath | LegacyFolders | LegacyObjectTypeItems | LegacyProfileFolders | LegacyProfilesFolder | LegacyProjectsArchiveFolderPath
+  LegacyProjectsFolderPath | Length | LetterBoxLocations | Library | LibraryCategories | LibraryFilesCache
+  LibraryManagerVM | LibraryPaths | LibrarySystemPath | LibraryUserPath | LoadFileOnStartup | LoadLegacyLayout
+  LockFocalDistance | MGMetalMaterialNames | MGRenderStyles | MainMenuItems | MainVM | MainWindow
+  MasterFile | MasterFileName | MasterJobBagPath | MatchAttributesVM | Material | MaterialFinishMapData
+  MaterialMetalInfo | MaterialName | MaterialPreview | MaterialSearchText | MaterialSpg | MaterialsInDocument
+  MatrixGoldFolderName | MatrixGoldLibraryPath | MatrixGoldOptions | MaxScrubPosition | MaxX | MaxY
+  MaxZ | MaximumScaleFactor | MenuBrowserOpen | MenuGroups | MenuItemLayoutToggle | MenuItemRegular
+  MenuItemRegularCheck | MenuItemRegularHeader | MenuItemRegularHighlight | MenuItemSelectedCommand | MenuItemTemplate | MenuItems
+  MenuOpen | MenuTabs | MeshCommands | MeshCommandsVisible | MeshSettingMaxAngle | MeshSettingMaxAngleString
+  MeshSettingMaxAspectRatio | MeshSettingMaxAspectRatioString | MeshSettingMaxDistanceFromEdgeToSurface | MeshSettingMaxDistanceFromEdgeToSurfaceString | MeshSettingMaxEdgeLength | MeshSettingMaxEdgeLengthString
+  MeshSettingMinEdgeLength | MeshSettingMinEdgeLengthString | MeshSettingMinInitialGridQuads | MeshSettingPackTextures | MeshSettingRefineMesh | MetadataInfo
+  MetadataPath | MetalCollections | MetalInfo | MetalMaterialInfo | MetalMaterialTotalWeight | MetalTotalWeight
+  MetalUnitName | MetalWeightUnit | MetalWeightUnitNames | MetalWeightsVM | MigratingFiles | MinX
+  MinY | MinZ | MinimumJobBagImageHeight | MinimumJobBagImageWidth | MinimumScaleFactor | Mode
+  ModeSelectedCommand | ModelHasGems | MovieFrameGroups | MovieMakerCustomBitRate | MovieMakerDuration | MovieMakerFpsOptions
+  MovieMakerFrames | MovieMakerSelectedBitRateQuality | MovieMakerSelectedFpsOption | MovieMakerSelectedFramePreview | MovieMakerUseCustomBitRate | MovieMakerVM
+  MovieNameWithoutExtension | Name | NewDescription | NewLeftClick | NewLeftTooltip | NewLineTemplate
+  NewName | NewProjectFolderPath | NewRightClick | NewRightTooltip | NewestMatrixFileInfo | NonObjectCommands
+  NonObjectCommandsVisible | NonStockMaterials | NotificationHistory | NotificationHistoryEnabled | NumberOfCores | NumberOfLogicalProcessors
+  ObjectCommands | ObjectCommandsVisible | ObjectContextMenu | ObjectContextMenuVM | ObjectId | ObjectInfo
+  ObjectInfoShort | ObjectName | ObjectSelected | ObjectSubId | ObjectType | ObjectType1
+  ObjectType1ClassName | ObjectType2 | ObjectType2ClassName | ObjectType3 | ObjectType3ClassName | ObjectsDeleted
+  OutputNameFileBase | OutputRingRailRegionAbrv | OutputRingSizeRows | OverrideHeight | OverrideRenderSize | OverrideTooltipTitle
+  OverrideWidth | Parameters | PassesPresets | PathHistory | PathHistoryIndex | PathToPlugin
+  PerObjectInfo | PersonEditorTitle | PersonEditorWindow | PersonToEdit | Phone | PolySurfaceCommands
+  PolySurfaceCommandsVisible | PopulatingFiles | Positions | PreferenceGroupsSource | PreferredGemMaterial | PreferredMetalQuality
+  PreferredMetalWeightUnit | PresetDuration | PresetHasCameraPath | PresetHasCameraTarget | PresetResolution | Presets
+  PresetsFilter | Preview | PreviewBackgroundColor | PreviewBitmapSource | PreviewBytes | PreviewCameraPath
+  PreviewCameraTarget | PreviewExport | PreviewHeight | PreviewImage | PreviewImageBytes | PreviewObjectBytes
+  PreviewSave | PreviewTimer | PreviewVideoPath | PreviewViewport | PreviewWidth | PreviewWindow
+  Primary | PrimaryColor | ProfileArgs | ProfileCount | ProfileFilePaths | Project
+  ProjectFiles | ProjectFilter | ProjectFilterOptions | ProjectListColumnWidth | ProjectSearchModes | ProjectStatusList
+  ProjectTime | Projection | Projects | ProjectsFolderPath | ProjectsListHeight | ProjectsListWidth
+  ProjectsVM | PromptOnExportJobbagOverwrite | PromptOnFullSaveOverwrite | PushBulletToken | QuarterSizeTemplate | QuickCommandItems
+  QuickCommandsVM | RadPoint10 | RadPoint100 | RadPoint25 | RadPoint50 | Radius
+  RecentCommands | RecipientObjectIds | Refreshing | Region | RegionOptions | RelatedBuilders
+  RelatedCommands | RelatedPatchwires | RelevantMenuGroup | RelevantMenuGroupItems | RenameOnFullSave | RenderDevice1
+  RenderDevice2 | RenderFileFormats | RenderMaterialsInUseOnly | RenderPasses | RenderType | RenderVM
+  ResetYPosition | ResizeHeight | ResizeWidth | ResizerData | Resolution | ResolutionPresets
+  RhinoScriptCommand | RhinoVersion | RhinoVersionString | RibbonBarVisible | RingObjectsIds | RingObjectsPreview
+  RingRailRadius | RingRailRegionAbrv | RingRailSize | RingResizerOutputPath | RingResizerVM | RingSize
+  RingSizeRegions | RootPath | RowHeader | RowSizes | SaveGemInfo | SaveMetalInfo
+  SaveToFile | SaveToFile3dm | SaveToFile3dmStl | ScaledJobBagImageSize | SchemaVersion | ScrubPosition
+  SearchText | SecondLayerSet | SecondSetVisible | SecondaryColor | SecondaryRhinoScriptCommand | SecondaryTitle
+  Selected | SelectedAvailableBatchMaterial | SelectedAvailableSavedViewportInfo | SelectedBackdropEnvironment | SelectedBatchMGRenderStyle | SelectedBitRateQuality
+  SelectedCategory | SelectedCommand | SelectedDisplayMode | SelectedFile | SelectedFinishMapData | SelectedFps
+  SelectedFrame | SelectedGem | SelectedGroundPlane | SelectedJobBagFilter | SelectedLanguage | SelectedLayerViewItemBase
+  SelectedLayerWithMaterials | SelectedLetterBox | SelectedLetterBoxColor | SelectedLightingEnvironment | SelectedMGMaterialInDocument | SelectedMGMaterialRequiresExternalEditor
+  SelectedMGRenderStyle | SelectedMatrixFileInfo | SelectedMenuItem | SelectedMenuItemIndex | SelectedMetal | SelectedMiscellaneous
+  SelectedMovieFrameGroup | SelectedMovieFrameGroupPreview | SelectedObjects | SelectedOutputOption | SelectedPassesPreset | SelectedPreferenceGroupName
+  SelectedPreset | SelectedProject | SelectedProjectSearchMode | SelectedProjectStatusFilter | SelectedProjection | SelectedProjectsFilter
+  SelectedReflectionEnvironment | SelectedRenderFileFormat | SelectedRenderGem | SelectedRenderMetal | SelectedRenderTab | SelectedResolutionPreset
+  SelectedTab | SelectedTabItem | SelectedUserMaterial | SelectedViewportInfo | SelectionCount | SelectionObjects
+  SelectionPropertiesVM | SelectionTotalWeight | ServerProcessId | Shape | ShowAxis | ShowBrowseSharedRenders
+  ShowBuilderCategoryItems | ShowBuilderCategoryTabs | ShowDwt | ShowDynamicCommandsOnly | ShowError | ShowExtraLayers
+  ShowGemControls | ShowGemFavorites | ShowGoButton | ShowGrid | ShowGroundPlaneFavorites | ShowIcon
+  ShowInboxControls | ShowLanguagePreference | ShowLegacyLayoutOption | ShowMetalFavorites | ShowMiscFavorites | ShowNoMaterialsMessage
+  ShowOnlyVisible | ShowRenderGemFavorites | ShowRenderMetalFavorites | ShowRhinoMenu | ShowSafeFrame | ShowSeparatorAbove
+  ShowText | ShowToggleControls | ShowTripod | ShowUserFavorites | Size | SizeInMegabytes
+  SizeSelected | SliderThumbStyles | SnapSpacing | SolidColorBackdrop | SomeBuildersHaveHiddenOutput | SortOrder
+  SortOrderIndex | SortedItems | SplashMessage | SplashPercentage | SplashWindow | StackFilterShowAll
+  StackFilterShowSelected | StackFilterShowVisible | StartAtFrame | StartDissolveFrameCount | StartFrame | StartingSaveName
+  State | Status | StatusBarShowContextMenu | StatusBarShowDocument | StatusBarShowGridSnaps | StatusBarShowProject
+  StatusBarShowProjectTimer | StatusBarShowSuperSelect | StatusMessage | StatusPercent | StockEnvironments | StoneMapHeight
+  StoneMapWidth | StoneSizeAscending | StyleSheetManagerVM | StyleSheets | StyleSheetsSystemPath | StyleSheetsUserPath
+  StyleToEdit | SubCategory | SubCategoryFeaturedCommand | SubDirectories | SuperSelectVM | SurfaceCommands
+  SurfaceCommandsVisible | SystemAnimationPresetsPath | SystemCollectionsPath | SystemMaterialsPath | SystemRenderStylesPath | SystemRootPath
+  TabItems | TabItemsLegacy | TabTitle | TargetType | TeamMembers | TechReportVM
+  TempFilePath | TempFolderPath | TemporaryPreset | TemporaryPresetData | TimeoutInSecondsForRead3dmInfo | Title
+  TitleBarHeight | ToastCountMaximum | ToastMessage | ToastNotificationLocation | ToastNotificationsEnabled | ToastTimeout
+  ToastType | ToastXOffset | ToastYOffset | ToggleControls | ToolRibbonItems | ToolRibbonVM
+  ToolWindowAnimationStudioVisible | ToolWindowBatchRenderVisible | ToolWindowBuildersVisible | ToolWindowDisplayModesVisible | ToolWindowDynamicGroupsVisible | ToolWindowGemReportVisible
+  ToolWindowLayersVisible | ToolWindowMatrixLegacyVisible | ToolWindowMetalWeightsVisible | ToolWindowProjectsVisible | ToolWindowQuickCommandsVisible | ToolWindowRecentCommandsVisible
+  ToolWindowRenderStudioVisible | ToolWindowRingResizerVisible | ToolWindowSelectionPropertiesVisible | ToolWindowUITestVisible | TotalCarats | TotalCores
+  TotalMetalWeight | UIAutoExpandSelectedBuilders | UIBoolCommand | UIBuilderAction | UIBuilderAskActionToDoWithPreviousCommand | UIBuilderIconSize
+  UIBuilderShowCategoryIcons | UIBuilderShowCategoryText | UIBuilderShowIcons | UIBuilderShowSliders | UIBuilderThumbStyle | UIClassification
+  UICleanRecentCommandsOnNew | UICloseContextOnLeftMouseDownInRhino | UICommand | UIControls | UIEnableAutoSave | UIEnableControlPointsOnCurveSelection
+  UIEnableHotkeyF1 | UIEnableHotkeyF6 | UIEnablePreviewBackfaces | UIEnablePreviewRenderShading | UIEnableSuperSelect | UIExportJobbagZoomExtents
+  UIFontSize | UIFullSaveZoomExtents | UIGroupRecentCommandsByCategory | UIIconSizeInQuickCommands | UIIconSizeInRecentCommands | UIIconSizeInRenderMaterials
+  UIIconSizeInRibbonCommands | UILayoutPrimary | UILayoutSecondary | UIParametricRegenerationFull | UIProcessId | UIRememberLastOpenCollectionsFolder
+  UIRememberLastRenderStyle | UIRingSizeRegionAbbreviation | UISaveRenderToCurrentProject | UISaveRenderToSharedFolder | UIScale | UIScaleGlobablLocal
+  UIScaleGlobal | UIScaleTooltip | UIScaleViewportRing | UIScrollBarSize | UISelectionPropertiesUseDocumnetMaterials | UIShowAdditionalRenderMaterialsTab
+  UIShowBuildersFirst | UIShowIconInQuickCommands | UIShowIconInRecentCommands | UIShowIconInRenderMaterials | UIShowIconInRibbonCommands | UIShowQuickCommandsRemovalPrompt
+  UIShowTextInQuickCommands | UIShowTextInRecentCommands | UIShowTextInRenderMaterials | UIShowTextInRibbonCommands | UIShowViewportRing | UITrackActiveBuilderAdjustment
+  UIUseOldProfileEditor | UIViewportHandleScaleFactor | UiSelectionPropertiesGemMaterial | UiSelectionPropertiesMetalMaterial | UnfilteredTabItems | UngroupedLayers
+  UngroupedVisible | UnknownTemplate | UseAnimationCameraPathAlignment | UseCustomBitRate | UseEasing | UseFocalBlur
+  UsePushBullet | UseSelectionMaterials | UserAnimationPresetsPath | UserCollectionsPath | UserLayerDataPath | UserLayers
+  UserRenderBatchPath | UserRenderEnvironmentsPath | UserRenderMaterialsPath | UserRenderStylesPath | UserRootPath | UserSharedRendersPath
+  Username | Version | VersionString | VideoPreviewBytes | ViewPreviews | Weight
+  WeightUnits | Width | Window | WindowCommandEditorVM | WindowContentManagerVM | WindowGemMapVM
+  WindowLegacyImportVM | WindowMoveCollectionFilesVM | WindowPreferencesVM | WindowSaveContentVM | WindowStatusMessage | WindowStatusMessageHistory
+  WorkingArea | Zip
+
+== STRINGS (len>=5, deduped, top 220) ==

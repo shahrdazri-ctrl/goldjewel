@@ -1,0 +1,19 @@
+# Licensed binaries and bulk generated output are deliberately not versioned.
+01-target/
+02-toolchain/
+03-decompiled/
+05-evidence/rea/
+09-logs/
+_snapshots/
+04-index/raw/
+04-index/symbols.sqlite
+*.dll
+*.exe
+*.mgp
+*.rhp
+*.3dm
+*.mgm
+._*
+
+# Test fixture is a tiny synthetic material, not licensed content
+!07-ios-handoff/JewelryKit/Tests/JewelryKitTests/Fixtures/sample.mgm

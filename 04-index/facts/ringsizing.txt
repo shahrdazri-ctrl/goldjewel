@@ -1,0 +1,174 @@
+SUBSYSTEM: ringsizing
+TYPES: 33  METHODS: 153
+
+== TOP TYPES BY METHOD COUNT ==
+    0  <Module>                                                    CSRingSizes            
+    3  CSRingSizes.UniversalRingSize                               CSRingSizes            System.ValueType
+   28  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            System.Object
+    8  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    7  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+    6  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator
+    3  CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTransl  CSRingSizes            CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded
+   10  CSRingSizes.Helpers.RingSizeHelper                          CSRingSizes            System.Object
+    3  CSRingSizes.Helpers.RingSizeHelper/<>c                      CSRingSizes            System.Object
+    0  CSRingSizes.Enumerations.RingSizeRegionType                 CSRingSizes            System.Enum
+    0  CSRingSizes.Enumerations.RingSizeRegion                     CSRingSizes            System.Enum
+    1  <PrivateImplementationDetails>                              CSRingSizes            System.Object
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=6  CSRingSizes            System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=8  CSRingSizes            System.ValueType
+
+== READABLE METHOD NAMES (non-obfuscated) ==
+get_RingSizePairs                              | System.Collections.Generic.List`1<System.Tuple`2<System.String,System.Double>> CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorUkRg::get
+GetRingSizeRegion                              | CSRingSizes.Enumerations.RingSizeRegion CSRingSizes.Helpers.RingSizeHelper::GetRingSizeRegion(System.String)
+CreateRingSizeTranslator                       | CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator CSRingSizes.Helpers.RingSizeHelper::CreateRingSizeTranslator(CSRingSizes.Enumerations.R
+GetRingSizeRegionAbrv                          | System.String CSRingSizes.Helpers.RingSizeHelper::GetRingSizeRegionAbrv(CSRingSizes.Enumerations.RingSizeRegion)
+.cctor                                         | System.Void CSRingSizes.Helpers.RingSizeHelper::.cctor()
+GetRingSizeRegionType                          | CSRingSizes.Enumerations.RingSizeRegionType CSRingSizes.Helpers.RingSizeHelper::GetRingSizeRegionType(CSRingSizes.Enumerations.RingSizeRegion)
+GetRingSizeNameAux                             | System.String CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorDe::GetRingSizeNameAux(System.Int32)
+GetRingSizeNameCommandLineFromRingSizeName     | System.String CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeNameCommandLineFromRingSizeName(System.String)
+GetRingSizeNameFromRingSizeNameCommandLine     | System.String CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeNameFromRingSizeNameCommandLine(System.String)
+GetIndexAux                                    | System.Int32 CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorHardCoded::GetIndexAux(System.Double)
+.ctor                                          | System.Void CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorCircMM::.ctor()
+GetIndex                                       | System.Boolean CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetIndex(System.String,System.Boolean,System.Int32&)
+GetRadius                                      | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRadius(System.Int32)
+GetRingSizeFromRingSizeName                    | CSRingSizes.UniversalRingSize CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeFromRingSizeName(System.String,System.Boolean
+GetDiameterAux                                 | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorUs::GetDiameterAux(System.Int32)
+GetRingSizeFromDiameter                        | CSRingSizes.UniversalRingSize CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeFromDiameter(System.Double)
+GetDiameter                                    | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetDiameter(System.Int32)
+GetSizes                                       | System.Collections.Generic.List`1<System.String> CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetSizes()
+ComputeStringHash                              | System.UInt32 <PrivateImplementationDetails>::ComputeStringHash(System.String)
+GetRingSizeName                                | System.String CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeName(System.Int32)
+ToString                                       | System.String CSRingSizes.UniversalRingSize::ToString()
+GetRingSizeFromIndex                           | CSRingSizes.UniversalRingSize CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeFromIndex(System.Int32)
+get_Count                                      | System.Int32 CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorCircMM::get_Count()
+get_RingSizeRegionAbrvs                        | System.Collections.Generic.IEnumerable`1<System.String> CSRingSizes.Helpers.RingSizeHelper::get_RingSizeRegionAbrvs()
+Circumference                                  | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorCircMM::Circumference(System.Int32)
+CircumferenceIN                                | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorCircIN::CircumferenceIN(System.Int32)
+get_RingSizeRegions                            | System.Collections.Generic.IEnumerable`1<CSRingSizes.Enumerations.RingSizeRegion> CSRingSizes.Helpers.RingSizeHelper::get_RingSizeRegions()
+get_RingSizeRegionsLegacy                      | System.Collections.Generic.IEnumerable`1<CSRingSizes.Enumerations.RingSizeRegion> CSRingSizes.Helpers.RingSizeHelper::get_RingSizeRegionsLegacy()
+GetRingSizeFromRadius                          | CSRingSizes.UniversalRingSize CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeFromRadius(System.Double)
+RingSizesFromRegionAbrv                        | System.Collections.Generic.List`1<System.String> CSRingSizes.Helpers.RingSizeHelper::RingSizesFromRegionAbrv(System.String)
+get_DiameterMax                                | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_DiameterMax()
+get_DiameterMin                                | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_DiameterMin()
+get_RadiusMax                                  | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_RadiusMax()
+get_RadiusMin                                  | System.Double CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_RadiusMin()
+GetRingSizeNameCommandLine                     | System.String CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::GetRingSizeNameCommandLine(System.Int32)
+get_RingSizeAbrv                               | System.String CSRingSizes.UniversalRingSize::get_RingSizeAbrv()
+get_RingSizeRegionAbrv                         | System.String CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_RingSizeRegionAbrv()
+get_WhichRingSizeRegionType                    | CSRingSizes.Enumerations.RingSizeRegionType CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_WhichRingSizeRegionType()
+<.cctor>b__27_0                                | System.Boolean CSRingSizes.Helpers.RingSizeHelper/<>c::<.cctor>b__27_0(CSRingSizes.Enumerations.RingSizeRegion)
+get_IndexMax                                   | System.Int32 CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_IndexMax()
+get_WhichRingSizeRegion                        | CSRingSizes.Enumerations.RingSizeRegion CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslatorCircIN::get_WhichRingSizeRegion()
+get_IndexMin                                   | System.Int32 CSRingSizes.RingSizeRegionTranslators.RingSizeRegionTranslator::get_IndexMin()
+
+== PROPERTIES ==
+distinct=15
+  Count | DiameterMax | DiameterMin | IndexMax | IndexMin | RadiusMax
+  RadiusMin | RingSizeAbrv | RingSizePairs | RingSizeRegionAbrv | RingSizeRegionAbrvs | RingSizeRegions
+  RingSizeRegionsLegacy | WhichRingSizeRegion | WhichRingSizeRegionType
+
+== STRINGS (len>=5, deduped, top 220) ==
+   2  DIAM. MM
+   2  CIRC. MM
+   2  DIAM. IN
+   2  CIRC. IN
+   2  DE (RG)
+   2  EU (RG)
+   2  JP (RG)
+   2  UK (RG)
+   2  US (RG)
+   2  ES (RG)
+   1  {0}:{1}:{2}
+   1  Unknown
+   1  16 1/2
+   1  17 1/2
+   1  18 1/2
+   1  19 1/2
+   1  20 1/2
+   1  21 1/2
+   1  22 1/2
+   1  B 1/2
+   1  C 1/2
+   1  D 1/2
+   1  E 1/2
+   1  F 1/2
+   1  G 1/2
+   1  H 1/2
+   1  I 1/2
+   1  J 1/2
+   1  K 1/2
+   1  L 1/2
+   1  M 1/2
+   1  N 1/2
+   1  O 1/2
+   1  P 1/2
+   1  Q 1/2
+   1  R 1/2
+   1  S 1/2
+   1  T 1/2
+   1  U 1/2
+   1  V 1/2
+   1  W 1/2
+   1  X 1/2
+   1  Y 1/2
+   1  Z 1/2
+   1  Z+1 1/2
+   1  Z+2 1/2
+   1  1 1/4
+   1  1 1/2
+   1  1 3/4
+   1  2 1/4
+   1  2 1/2
+   1  2 3/4
+   1  3 1/4
+   1  3 1/2
+   1  3 3/4
+   1  4 1/4
+   1  4 1/2
+   1  4 3/4
+   1  5 1/4
+   1  5 1/2
+   1  5 3/4
+   1  6 1/4
+   1  6 1/2
+   1  6 3/4
+   1  7 1/4
+   1  7 1/2
+   1  7 3/4
+   1  8 1/4
+   1  8 1/2
+   1  8 3/4
+   1  9 1/4
+   1  9 1/2
+   1  9 3/4
+   1  10 1/4
+   1  10 1/2
+   1  10 3/4
+   1  11 1/4
+   1  11 1/2
+   1  11 3/4
+   1  12 1/4
+   1  12 1/2
+   1  12 3/4
+   1  13 1/4
+   1  13 1/2
+   1  13 3/4

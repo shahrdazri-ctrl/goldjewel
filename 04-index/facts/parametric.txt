@@ -1,0 +1,1478 @@
+SUBSYSTEM: parametric
+TYPES: 886  METHODS: 6352
+
+== TOP TYPES BY METHOD COUNT ==
+    0  <Module>                                                    CSBlocks               
+    5  CSBlocks.CSNullBlock                                        CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    1  CSBlocks.CSBlocks                                           CSBlocks               System.Object
+    8  CSBlocks.SMI.CSSMICutter2ChannelsFromCenter                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.SMI.CSSMICutterChamfer                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.SMI.CSSMICutterChannelFromCenter                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.SMI.CSSMICutterChannelFromEdge                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.SMI.CSSMICutterComfortFit                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.SMI.CSSMICutterHollow                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.SMI.CSSMICutterInsideRound                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.SMI.CSSMICutterTopCenter                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.SMI.CSSMIInterval                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.SMI.CSSMIIntervalProfiles                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.SMI.CSSMIOutput                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.SMI.CSSMIRectangle                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.SMI.Obsolete.CSSMICutterChamferWithFlat1           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Utilities.CSArrayCount                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Utilities.CSArrayGetItem                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Utilities.CSArrayTrim                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Utilities.CSToMesh                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Utilities.CSGetProfileName                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Utilities.CSTextSpacing                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Utilities.CSTextOnCurve                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Utilities.CSUnarrayGeometry                        CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Utilities.CSIsIterationMode                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Utilities.CSArray                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    6  CSBlocks.Utilities.CSFlatUnarray                            CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    6  CSBlocks.Utilities.CSUnarray                                CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    6  CSBlocks.Utilities.CSFlatArray                              CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    3  CSBlocks.Utilities.CSIfElse                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Utilities.CSMeshObject                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Utilities.CSTextToCurve                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Utilities.CSUnarrayReverse                         CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Utilities.Obsolete.CSMeshObject1                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Utilities.Obsolete.CSToMesh1                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Utilities.Obsolete.CSUnarray1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    3  CSBlocks.UDT.CSFlowBySurface                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.UDT.CSPullToCurve                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.UDT.CSCurvedTaperXY                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.UDT.CSCurvedTaperXY/CSCurvedTaperXYMorph           CSBlocks               CS.CSSpaceMorph
+    7  CSBlocks.UDT.CSPlopOnRingRail                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.UDT.CSPlopOnRingRail/PlopOnRingRail                CSBlocks               CS.CSSpaceMorph
+    2  CSBlocks.UDT.CSPullToRail                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.UDT.CSPullToRailCenterControl                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.UDT.CSPullToRailGroup                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.UDT.CSPullToRailGroupCenterControl                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.UDT.CSRingTaper                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.UDT.CSRingTaper/CSRingTaperMorph                   CSBlocks               CS.CSSpaceMorph
+    4  CSBlocks.UDT.CSRingTaper/CSRingTaperCurveMorph              CSBlocks               CS.CSSpaceMorph
+    8  CSBlocks.UDT.CSTaperObject                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.UDT.CSTaperObject/TaperObject                      CSBlocks               CS.CSSpaceMorph
+    3  CSBlocks.UDT.PullToRailMorph                                CSBlocks               CS.CSSpaceMorph
+    3  CSBlocks.UDT.CSFlowAlongSurface                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.UDT.CSFlowAlongSurface/CSFlowAlongSurfaceMorph     CSBlocks               CS.CSSpaceMorph
+    3  CSBlocks.UDT.Obsolete.CSFlowAlongSurface3                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.UDT.Obsolete.CSFlowAlongSurface3/CSFlowAlongSurfa  CSBlocks               CS.CSSpaceMorph
+   10  CSBlocks.UDT.Obsolete.CSFlowAlongSurface1                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.UDT.Obsolete.CSFlowAlongSurface1/CSFlowAlongSurfa  CSBlocks               CS.CSSpaceMorph
+   12  CSBlocks.UDT.Obsolete.CSFlowAlongSurface2                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.UDT.Obsolete.CSFlowAlongSurface2/CSFlowAlongSurfa  CSBlocks               CS.CSSpaceMorph
+    2  CSBlocks.UDT.Obsolete.CSPullToCurve1                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSEnableGeometry                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Tools.CSPreProcessDisplayMeshes                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSJoinObjects                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSTextObjects                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSIntersectSrfSrf                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   33  CSBlocks.Tools.CSObjectsOnCrv                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Tools.CSObjectsOnCrv/EStatus                       CSBlocks               System.Enum
+    2  CSBlocks.Tools.CSPointOnCurve                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSHeadProngPoints                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Tools.CSHeadProngPoints/<>c__DisplayClass13_0      CSBlocks               System.Object
+    3  CSBlocks.Tools.CSHeadProngPoints/<>c                        CSBlocks               System.Object
+    2  CSBlocks.Tools.CSPointOnSurface                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSIntersectCrvCrv                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tools.CSIntersectCrvSrf                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Tools.Obsolete.CSHeadProngPoints3                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Tools.Obsolete.CSHeadProngPoints3/<>c__DisplayCla  CSBlocks               System.Object
+    3  CSBlocks.Tools.Obsolete.CSHeadProngPoints3/<>c              CSBlocks               System.Object
+    7  CSBlocks.Tools.Obsolete.CSHeadProngPoints4                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Tools.Obsolete.CSHeadProngPoints4/<>c__DisplayCla  CSBlocks               System.Object
+    3  CSBlocks.Tools.Obsolete.CSHeadProngPoints4/<>c              CSBlocks               System.Object
+    2  CSBlocks.Tools.Obsolete.CSTextObjects1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Tools.Obsolete.CSIntersectCrvSrf1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Tools.Obsolete.CSIntersectCrvSrf2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Tools.Obsolete.CSIntersectSrfSrf1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Tools.Obsolete.CSHeadProngPoints2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Tools.Obsolete.CSHeadProngPoints2/<>c__DisplayCla  CSBlocks               System.Object
+    3  CSBlocks.Tools.Obsolete.CSHeadProngPoints2/<>c              CSBlocks               System.Object
+    8  CSBlocks.Tools.Obsolete.CSHeadProngPoints1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   15  CSBlocks.Texture.CS3DTexture                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Texture.CS3DTexture/MEMORYSTATUSEX                 CSBlocks               System.Object
+   14  CSBlocks.Texture.Obsolete.CS3DTexture1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Texture.Obsolete.CS3DTexture1/MEMORYSTATUSEX       CSBlocks               System.Object
+    2  CSBlocks.Tests.CSArrayLogicTester                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tests.CSValueLocationTester                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Tests.CSKeyChannelGems                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Tests.CSSurfacePunch                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   15  CSBlocks.Tests.Obsolete.CSSurfacePunch1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.Sweeps.CSAutoSweep                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Sweeps.CSPipe                                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Sweeps.CSSweepCapSetup                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.CSMeshPipe                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.CSSimpleSweep1                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Sweeps.CSSimpleSweep2                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.CSSimpleSweep2NoProfiles                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Sweeps.CSSimpleSweepPlanarCurves                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Sweeps.CSSurfaceFromCurve                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Sweeps.CSSweep1C4ParamSimple                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.Sweeps.CSSweep2C4Param                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Sweeps.CSSweep2C4ParamSimple                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.Obsolete.CSAutoSweep2                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.Obsolete.CSSimpleSweep11                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.Obsolete.CSAutoSweep1                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.Obsolete.CSSimpleSweep12                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Sweeps.Obsolete.CSSimpleSweep13                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Sweeps.Obsolete.CSSimpleSweep21                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Sweeps.Obsolete.CSSimpleSweepPlanarCurves1         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Sweeps.Obsolete.CSMeshPipe1                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Surfaces.CSAutoBaseSurface                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Surfaces.CSBlendSurfaceEdges                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Surfaces.CSNetworkSurfaceAdvanced                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Surfaces.CSSurfaceOffset                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Surfaces.NetworkSurfaceHelper                      CSBlocks               System.Object
+    9  CSBlocks.Surfaces.CSExtrudePlanarCurve                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Surfaces.CSLoft                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Surfaces.CSSphere                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Surfaces.CSNetworkSurface                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Surfaces.CSSurfaceFromPlanarCurve                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Surfaces.Obsolete.CSAutoBaseSurface1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Surfaces.Obsolete.CSAutoBaseSurface2               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Surfaces.Obsolete.CSExtrudePlanarCurve1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Surfaces.Obsolete.CSExtrudePlanarCurve2            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Surfaces.Obsolete.CSNetworkSurfaceAdvanced1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Surfaces.Obsolete.CSNetworkSurface1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.CSBoolean                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Solids.CSJoinOpenBrep                              CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Solids.CSPullPush                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.CSPullPushDirectional                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Solids.CSJoinAllBrep                               CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Solids.CSBooleanDifference                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Solids.CSBooleanDifferenceMesh                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.CSBooleanIntersection                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Solids.CSBrepSplit                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Solids.CSCapPlanarHoles                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.CSCapPlanarHolesFast                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Solids.CSCapPlanarHolesFast/<>c                    CSBlocks               System.Object
+    5  CSBlocks.Solids.CSJoinBrep                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    2  CSBlocks.Solids.CSBooleanUnion                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.Obsolete.CSPullPush1                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.Obsolete.CSPullPush2                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.Obsolete.CSPullPush3                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Solids.Obsolete.CSJoinBrep2                        CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    6  CSBlocks.Solids.Obsolete.CSJoinBrep1                        CSBlocks               CS.CSObjects.CSBlocks.CSBlockExpandableInput
+    7  CSBlocks.Solids.Obsolete.CSBooleanDifferenceFast1           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Solids.Obsolete.CSJoinSurface1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Signet.CSCutBottom                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Signet.CSSignetCurves                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Signet.CSSignetFloor                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.CSSignetBottom                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.CSSignetExtractCurvesFromTop                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Signet.CSSignetOffsetTopCurve                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.CSSignetRoof                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.CSSignetSetup                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.CSSignetTop                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.CSTrimToRingRail                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.Obsolete.CSSignet1                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Signet.Obsolete.CSSignetFloor1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Signet.Obsolete.CSSignetTopCurve1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.CSLinkedGemOnCrv                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.CSLinkedStartPoint                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedCollarOnRingRail1          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedGemOnRingRail2             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedGemRowOnRingRail2          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedProfileOn2RingRail2        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedProfileOnRingRail2         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedSpaceOnRingRail1           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedGemOnRingRail1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedGemRowOnRingRail1          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Linked.Obsolete.CSLinkedProfileOn2RingRail1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Rope.CSRope                                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rope.CSRope/<>c__DisplayClass17_0                  CSBlocks               System.Object
+    6  CSBlocks.Shank.CSShankNew                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Shank.CSSplitShankGems                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Shank.CSMatrixShankSetup                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Shank.CSSplitShankMetal                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Shank.CSShankGemNew                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   14  CSBlocks.Shank.ShankV1.CSShankGem                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Shank.ShankV1.CSShankGem/UltimateGemInChannels     CSBlocks               System.Object
+    2  CSBlocks.Shank.ShankV1.CSShankMath                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Shank.ShankV1.CSShankPicker                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Shank.ShankV1.CSShank                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Shank.Obsolete.CSMatrixShankSetup3                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Shank.Obsolete.CSShankGemNew1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Shank.Obsolete.CSShankNew2                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Shank.Obsolete.CSShankNew3                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Shank.Obsolete.CSSplitShankMetal1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Shank.Obsolete.CSUltimateGemNew6                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Shank.Obsolete.CSMatrixShankSetup1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Shank.Obsolete.CSMatrixShankSetup2                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Shank.Obsolete.CSShankNew1                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   44  CSBlocks.Shank.Obsolete.CSUltimateGem1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Shank.Obsolete.CSUltimateGem1/GemInfoUltimateGem   CSBlocks               System.Object
+   14  CSBlocks.Shank.Obsolete.CSUltimateGem2                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   22  CSBlocks.Shank.Obsolete.CSUltimateShank1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Shank.Obsolete.CSUltimateShank1/GemInfoUltimateSh  CSBlocks               System.Object
+   11  CSBlocks.Shank.Obsolete.CSUltimateShank2                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Shank.Helpers.CSFourRailSweep                      CSBlocks               System.Object
+    2  CSBlocks.Shank.Helpers.CSFrenchSetProductionGeometrySorter  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   14  CSBlocks.Shank.Helpers.CSGemPosition                        CSBlocks               System.Object
+    1  CSBlocks.Shank.Helpers.CSShankGemParam                      CSBlocks               System.Object
+    5  CSBlocks.Shank.Helpers.CSShankProfileMaker                  CSBlocks               System.Object
+    5  CSBlocks.Shank.Helpers.UltimateGemData                      CSBlocks               System.Object
+   14  CSBlocks.Shank.Helpers.Obsolete.CSGemPosition1              CSBlocks               System.Object
+    1  CSBlocks.Shank.Helpers.Obsolete.CSShankGemParam1            CSBlocks               System.Object
+    5  CSBlocks.Shank.French.CSFrenchSetProduction                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Shank.French.CSFrenchSetProduction/<>c__DisplayCl  CSBlocks               System.Object
+    5  CSBlocks.Shank.French.CSFrenchMorph                         CSBlocks               Rhino.Geometry.SpaceMorph
+    4  CSBlocks.Shank.French.CSFrenchGeometry                      CSBlocks               System.Object
+    4  CSBlocks.Shank.French.CSFrenchGeometry/<>c                  CSBlocks               System.Object
+   10  CSBlocks.Shank.French.CSFrenchShank                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Shank.French.CSFrenchShank/<>c                     CSBlocks               System.Object
+    5  CSBlocks.Shank.French.Obsolete.CSFrenchMorph1               CSBlocks               Rhino.Geometry.SpaceMorph
+   10  CSBlocks.Shank.French.Obsolete.CSFrenchShank1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Shank.French.Obsolete.CSFrenchShank1/<>c           CSBlocks               System.Object
+    3  CSBlocks.Settings.CSPaveProngs                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Settings.CSClusterProngPlacer                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSClusterProngPlacer/<>c__DisplayClass72  CSBlocks               System.Object
+    6  CSBlocks.Settings.CSClusterProngPlacer/<>c                  CSBlocks               System.Object
+   11  CSBlocks.Settings.CSPearlCup                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSPearlCup/<>c__DisplayClass23_0          CSBlocks               System.Object
+    5  CSBlocks.Settings.CSPearlCup/<>c                            CSBlocks               System.Object
+    2  CSBlocks.Settings.CSProng                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSProngPlacerSetup                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   19  CSBlocks.Settings.CSProngPlacerGC                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSProngOnSurface                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSAssignObjectToGem                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSGemRowMetal                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSMapToOtherGems                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.CSMergeArrays                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   43  CSBlocks.Settings.Bezels.BezelCreationHelper                CSBlocks               System.Object
+    4  CSBlocks.Settings.Bezels.BezelCreationHelper/<>c            CSBlocks               System.Object
+    2  CSBlocks.Settings.Bezels.CSBezel                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Settings.Bezels.CSBezel/<>c__DisplayClass32_0      CSBlocks               System.Object
+    2  CSBlocks.Settings.Bezels.CSGalleryRail                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Settings.Bezels.CSGalleryRail/<>c__DisplayClass23  CSBlocks               System.Object
+    2  CSBlocks.Settings.Bezels.CSUnderBezel                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Settings.Bezels.CSUnderBezel/<>c__DisplayClass30_  CSBlocks               System.Object
+    6  CSBlocks.Settings.Obsolete.CSClusterProngPlacer1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSClusterProngPlacer1/<>c__Disp  CSBlocks               System.Object
+   16  CSBlocks.Settings.Obsolete.CSClusterProngPlacer2            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSClusterProngPlacer2/<>c__Disp  CSBlocks               System.Object
+    6  CSBlocks.Settings.Obsolete.CSClusterProngPlacer2/<>c        CSBlocks               System.Object
+    2  CSBlocks.Settings.Obsolete.CSPaveProngs1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Settings.Obsolete.CSPearlCup1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSPearlCup1/<>c__DisplayClass22  CSBlocks               System.Object
+    5  CSBlocks.Settings.Obsolete.CSPearlCup1/<>c                  CSBlocks               System.Object
+    2  CSBlocks.Settings.Obsolete.CSClusterProngs4                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSClusterProngs4/<>c__DisplayCl  CSBlocks               System.Object
+    6  CSBlocks.Settings.Obsolete.CSClusterProngsToCurve2          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSClusterProngsToCurve2/<>c__Di  CSBlocks               System.Object
+   16  CSBlocks.Settings.Obsolete.CSProngPlacerGC15                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Settings.Obsolete.CSProngPlacerGC16                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSProngOnSurface1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   14  CSBlocks.Settings.Obsolete.CSProngPlacerGC14                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   77  CSBlocks.Settings.Obsolete.CSProngPlacerGC12                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   77  CSBlocks.Settings.Obsolete.CSProngPlacerGC13                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   17  CSBlocks.Settings.Obsolete.CSBarSet1                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   22  CSBlocks.Settings.Obsolete.CSClusterProngs3                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSClusterProngs3/<>c__DisplayCl  CSBlocks               System.Object
+   38  CSBlocks.Settings.Obsolete.CSClusterProngsToCurve1          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSClusterProngsToCurve1/<>c__Di  CSBlocks               System.Object
+   28  CSBlocks.Settings.Obsolete.CSProngPlacerFlow4               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   68  CSBlocks.Settings.Obsolete.CSProngPlacerGC11                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   18  CSBlocks.Settings.Obsolete.CSProngPlacerNorth2              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Settings.Obsolete.CSProngPlacerGC5                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.Obsolete.CSProngPlacerGC6                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.Obsolete.CSProngPlacerGC7                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.Obsolete.CSProngPlacerGC8                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.Obsolete.CSProngPlacerGC9                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   15  CSBlocks.Settings.Obsolete.CSProngPlacerGC4                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.CSProngPlacerGC4/<>c__DisplayCl  CSBlocks               System.Object
+   26  CSBlocks.Settings.Obsolete.CSClusterProngs2                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Settings.Obsolete.CSClusterProngs2/ProngCacheItem  CSBlocks               System.Object
+   35  CSBlocks.Settings.Obsolete.CSClusterProngs1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Settings.Obsolete.CSClusterProngs1/CacheProng      CSBlocks               System.Object
+   27  CSBlocks.Settings.Obsolete.CSProngPlacerFlow3               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   19  CSBlocks.Settings.Obsolete.CSProngPlacerGC2                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   20  CSBlocks.Settings.Obsolete.CSProngPlacerFlow1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   25  CSBlocks.Settings.Obsolete.CSProngPlacerFlow2               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Settings.Obsolete.CSProngPlacerNorth1              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   19  CSBlocks.Settings.Obsolete.CSProngPlacerGC1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Settings.Obsolete.CSProng1                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel3             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel3/<>c__Displ  CSBlocks               System.Object
+    9  CSBlocks.Settings.Obsolete.Bezels.CSBezel3                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSBezel3/<>c__DisplayCla  CSBlocks               System.Object
+    4  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail3            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail3/<>c__Disp  CSBlocks               System.Object
+    5  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel2             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel2/<>c__Displ  CSBlocks               System.Object
+    5  CSBlocks.Settings.Obsolete.Bezels.CSBezel1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSBezel1/<>c__DisplayCla  CSBlocks               System.Object
+   22  CSBlocks.Settings.Obsolete.Bezels.CSBezel2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSBezel2/<>c__DisplayCla  CSBlocks               System.Object
+   15  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail1/<>c__Disp  CSBlocks               System.Object
+   15  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail2            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail2/<>c__Disp  CSBlocks               System.Object
+    5  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel1/<>c__Displ  CSBlocks               System.Object
+    9  CSBlocks.Settings.Obsolete.Bezels.CSBezel4                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSBezel4/<>c__DisplayCla  CSBlocks               System.Object
+    4  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail4            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail4/<>c__Disp  CSBlocks               System.Object
+   10  CSBlocks.Settings.Obsolete.Bezels.CSSurfaceGalleryRailOuts  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Obsolete.Bezels.CSBezelRailBottomInner1   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Settings.Obsolete.Bezels.CSBezelRailSeat1          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Obsolete.Bezels.CSBezelRailTopInner1      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Obsolete.Bezels.CSBezelRailTopOuter1      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.Obsolete.Bezels.CSBezelSurfaceOutside1    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Settings.Obsolete.Bezels.CSBezelSurfaceTop1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Settings.Obsolete.Bezels.CSBezelSweepNoProfile1    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.Obsolete.Bezels.CSGalleryRailSurfaceOuts  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezelRailTopInner  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Settings.Obsolete.Bezels.CSUnderBezelRailTopOuter  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Settings.Obsolete.Bezels.CSBezelRailGirdle1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Settings.Obsolete.Bezels.CSSurfaceBezelOutsideOnR  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSMatrixHeadSetup   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSMatrixHeadSetupO  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder/<>c_  CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder/<>c_  CSBlocks               System.Object
+    6  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBetweenProng  CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel         CSBlocks               System.Object
+    7  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadVProngDome    CSBlocks               System.Object
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadVProng        CSBlocks               System.Object
+    6  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadProngProfile  CSBlocks               System.Object
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadProng         CSBlocks               System.Object
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails  CSBlocks               System.Object
+    3  CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape         CSBlocks               System.Object
+   54  CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam          CSBlocks               System.Object
+    3  CSBlocks.Settings.Heads.CSHeadBuilderV2.RailParam           CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBez  CSBlocks               System.Object
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadPro  CSBlocks               System.Object
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadVPr  CSBlocks               System.Object
+    7  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadVPr  CSBlocks               System.Object
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSMatrixH  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    4  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadBui  CSBlocks               System.Object
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadVPr  CSBlocks               System.Object
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadPro  CSBlocks               System.Object
+   12  CSBlocks.Settings.Heads.CSHeadBuilderV2.Obsolete.CSHeadCon  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadSetup         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadFinish        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadStyles        CSBlocks               System.Object
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadStyles/EHead  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadStyles/EHead  CSBlocks               System.Enum
+    6  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadStyles/HeadP  CSBlocks               System.ValueType
+   13  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadProngs        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadRail          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   29  CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadShape         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Object
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    6  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.ValueType
+   41  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   24  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadRai  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSet  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   28  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSet  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   29  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   29  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Object
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    6  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.ValueType
+   25  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUlt  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUlt  CSBlocks               System.Object
+   25  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUlt  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUlt  CSBlocks               System.Object
+   34  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadRai  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   34  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.HelperMak  CSBlocks               System.Object
+   34  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   35  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   30  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   22  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   22  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Object
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.ValueType
+    2  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Object
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.ValueType
+    6  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Object
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Enum
+    0  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.ValueType
+   30  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   23  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   18  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   19  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadPro  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadRai  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   17  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadRai  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   15  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSty  CSBlocks               System.Object
+   15  CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadSha  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Settings.FrenchHalo.CSMakeBeads                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Settings.FrenchHalo.CSFrenchHaloMorph              CSBlocks               System.Object
+    3  CSBlocks.Settings.FrenchHalo.CSFrenchHaloMorph/FrenchHaloM  CSBlocks               Rhino.Geometry.SpaceMorph
+    2  CSBlocks.Settings.FrenchHalo.CSFrenchHaloMorphCorner        CSBlocks               System.Object
+    3  CSBlocks.Settings.FrenchHalo.CSFrenchHaloMorphCorner/Corne  CSBlocks               Rhino.Geometry.SpaceMorph
+    9  CSBlocks.Settings.FrenchHalo.CSFrenchHaloHelper             CSBlocks               System.Object
+    0  CSBlocks.Settings.FrenchHalo.CSFrenchHaloHelper/FrenchObje  CSBlocks               System.Enum
+    3  CSBlocks.Settings.FrenchHalo.CSFrenchHaloHelper/<>c__Displ  CSBlocks               System.Object
+    3  CSBlocks.Settings.FrenchHalo.CSFrenchHaloHelper/<>c         CSBlocks               System.Object
+    9  CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    6  CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction/<>c__D  CSBlocks               System.Object
+    4  CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction/<>c__D  CSBlocks               System.Object
+    2  CSBlocks.Settings.FrenchHalo.CSFrenchHaloSet                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloHelper1   CSBlocks               System.Object
+    0  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloHelper1/  CSBlocks               System.Enum
+    3  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloHelper1/  CSBlocks               System.Object
+    3  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloHelper1/  CSBlocks               System.Object
+    1  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloMorph1    CSBlocks               System.Object
+    3  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloMorph1/F  CSBlocks               Rhino.Geometry.SpaceMorph
+    2  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloMorphCor  CSBlocks               System.Object
+    3  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloMorphCor  CSBlocks               Rhino.Geometry.SpaceMorph
+    2  CSBlocks.Settings.FrenchHalo.Obsolete.CSFrenchHaloSet1      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSCathedralRingRail                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Rails.CSXAxisSurface                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Rails.RingRailXAxis                                CSBlocks               System.Object
+    2  CSBlocks.Rails.CSRingRailTransform                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSSplitShankRails                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   18  CSBlocks.Rails.CSRingRailFlex                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSOutsideRail                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSRingRail                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Rails.CSRingRailBend                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSRingRailBypass                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Rails.CSRingRailCustom                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSRingRailMakeOutside                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSRingRailOpen                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   15  CSBlocks.Rails.CSRingRailTube                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSSecondaryOutsideRingRail                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSSecondaryRingRail                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.CSSelectRingRail                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.Obsolete.CSRingRailBypass1                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.Obsolete.CSOutsideRail3                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.Obsolete.CSRingRail2                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   15  CSBlocks.Rails.Obsolete.CSRingRailTube2                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Rails.Obsolete.CSRingRailTube1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    9  CSBlocks.Rails.Obsolete.CSOutsideRail2                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Rails.Obsolete.CSRingRail1                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Rails.Obsolete.CSRingRailMakeOutside1              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Rails.Obsolete.CSRingRailMakeOutside2              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Rails.Obsolete.CSOutsideRail1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Profiles.CSProfileBlendRC                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Profiles.CSProfileBlendSetup                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfilePlacer2Curves                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfilePlacerGemTo2RailXform            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Profiles.CSNetworkSurfaceSignetProfilePlacer       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfileBlend4Rail                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfileOnPointXform                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.Profiles.CSProfilePlacer1RailXform                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfilePlacer2RailXform                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   19  CSBlocks.Profiles.CSProfilePlacerBetweenRails               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfilePlacerGemTo1RailXform            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfilePlacerNextToGem                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfilePlacerNextToProfile              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.CSProfileSplit                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Profiles.Obsolete.CSProfileBlendRC1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.Profiles.Obsolete.CSProfilePlacer1RailXform2       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.Obsolete.CSProfilePlacerGemTo1RailXform1  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Profiles.Obsolete.CSProfilePlacer1RailXform1       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.Profiles.Obsolete.CSProfilePlacer2RailXform1       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.Obsolete.CSProfilePlacer2RailXform2       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Profiles.Obsolete.CSProfilePlacerPosition1         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.Obsolete.CSProfileBlend1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Profiles.Obsolete.CSProfilePlacerProfileXform1     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Patterns.CSPattern                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Primitives.CSTorus                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Points.CSCathedralRingHelper                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Points.CSPointFromObject                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Points.CSNormalizedPointsOnCurve                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Points.CSGetDistanceBetweenPoints                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Points.CSGetClosestPointOnCurve                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Points.CSGetClosestPointOnSurface                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.MicroProngCutter.CSMicroProngCutterGemCountHelper  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.MicroProngCutter.MpcCreationHelper                 CSBlocks               System.Object
+    5  CSBlocks.MicroProngCutter.MpcCreationHelper/<>c             CSBlocks               System.Object
+    2  CSBlocks.MicroProngCutter.MpcCreationHelper/<>c__DisplayCl  CSBlocks               System.Object
+    2  CSBlocks.MicroProngCutter.CSMPCSliderVisibilityHelper       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.MicroProngCutter.CSPercentVsMillimeterSelectorHel  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper1       CSBlocks               System.Object
+    5  CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper1/<>c   CSBlocks               System.Object
+    2  CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper1/<>c_  CSBlocks               System.Object
+   10  CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper2       CSBlocks               System.Object
+    5  CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper2/<>c   CSBlocks               System.Object
+    2  CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper2/<>c_  CSBlocks               System.Object
+    2  CSBlocks.Hollow.CSHollowRing                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Image.CSImageTempPath                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Image.CSImageRasterToVector                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Image.CSColorInverter                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Image.CSImageFlip                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Image.CSImageRotate                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Image.CSImageTransform                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Hinge.CSHingeBooleans                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Hinge.CSHingeRotator                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Hinge.CSHingeCutters                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Hinge.CSHingePlacer                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Geometry.CSBorders                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Transforms.CSBend/<>c__DisplayClass28_0            CSBlocks               System.Object
+    2  CSBlocks.Transforms.CSSmartPattern/<>c__DisplayClass13_0    CSBlocks               System.Object
+    0  CSBlocks.Transforms.CSObjectOnCrv/StatusType                CSBlocks               System.Enum
+    0  CSBlocks.Transforms.Obsolete.CSObjectOnCrv1/StatusType      CSBlocks               System.Enum
+    3  CSBlocks.Gems.CSClosestGems                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemBetween2CurvesAdvanced                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSGemBetween2CurvesPlacement                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemBetween2CurvesPlacement/<>c__DisplayCla  CSBlocks               System.Object
+    4  CSBlocks.Gems.CSGemListOnCurve                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.CSGemListOnCurve/StatusType                   CSBlocks               System.Enum
+    2  CSBlocks.Gems.CSGemListOnCurve/<>c__DisplayClass41_0        CSBlocks               System.Object
+    2  CSBlocks.Gems.CSGemListOnCurveSetup                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Gems.CSGemBetween2Curves                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Gems.CSGemBetween2Curves/<>c__DisplayClass12_0     CSBlocks               System.Object
+    2  CSBlocks.Gems.CSGemBetween2Curves/<>c__DisplayClass12_1     CSBlocks               System.Object
+   21  CSBlocks.Gems.CSGemBetween2CurvesSetup                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Gems.CSGemBetween2CurvesSetup/OffsetResult         CSBlocks               System.ValueType
+    2  CSBlocks.Gems.CSGemListSetup                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.CSGemOrObjectOnSurface                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   23  CSBlocks.Gems.CSPaveProngsTransforms                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.GemGroup                                      CSBlocks               System.Object
+    3  CSBlocks.Gems.GemGroup/EqualityComparer                     CSBlocks               System.Object
+    1  CSBlocks.Gems.PairGemGroup                                  CSBlocks               System.Object
+    2  CSBlocks.Gems.CSCustomEmerald                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSGemOrObjectOnCrv                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.CSGemOrObjectOnCrv/StatusType                 CSBlocks               System.Enum
+    2  CSBlocks.Gems.CSGemOrObjectOnCrv/<>c__DisplayClass54_0      CSBlocks               System.Object
+    2  CSBlocks.Gems.CSGemPlacer                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.CSGemPlacer/HandleInfo                        CSBlocks               System.ValueType
+    2  CSBlocks.Gems.CSGemPlacerOnSurface                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSMatrixGemOnCrvSetup                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSShankGemToggleHelper                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSSetGemMountingData                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSGemRemoveIntersecting                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSRemoveIntersectionGems                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSSortedGemCurves                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSSortedGemCurves/<>c                         CSBlocks               System.Object
+    2  CSBlocks.Gems.CSGemsFromXFormArray                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSGemInChannelChooser                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemInfo                                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSSetGemMountingDataFromGem                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemPlacerSide                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.CSResizeGem                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSAlternateStones                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSCustomBaguette                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSCustomBaguetteRowOnRingRail                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemAroundRingRailSpan                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.CSGemOnCrv                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.CSGemOnCrvCount                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemPlacerSpan                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemRowOnRingRail                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSSortGems                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSGemListOnCurve1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemListOnCurve1/StatusType         CSBlocks               System.Enum
+    2  CSBlocks.Gems.Obsolete.CSGemListOnCurve1/<>c__DisplayClass  CSBlocks               System.Object
+    7  CSBlocks.Gems.Obsolete.CSGemBetween2Curves1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Gems.Obsolete.CSGemBetween2Curves1/<>c__DisplayCl  CSBlocks               System.Object
+    2  CSBlocks.Gems.Obsolete.CSGemBetween2Curves1/<>c__DisplayCl  CSBlocks               System.Object
+    3  CSBlocks.Gems.Obsolete.CSGemBetween2CurvesPlacement1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemBetween2CurvesPlacement1/<>c__  CSBlocks               System.Object
+   20  CSBlocks.Gems.Obsolete.CSGemBetween2CurvesSetup1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.Gems.Obsolete.CSGemBetween2CurvesSetup1/OffsetRes  CSBlocks               System.ValueType
+    3  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv3                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv3/StatusType       CSBlocks               System.Enum
+    3  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv2/StatusType       CSBlocks               System.Enum
+    3  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv1/StatusType       CSBlocks               System.Enum
+    4  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv4                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv4/StatusType       CSBlocks               System.Enum
+    2  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv4/<>c__DisplayCla  CSBlocks               System.Object
+    2  CSBlocks.Gems.Obsolete.CSGemOrObjectOnSurface1              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSSortGems2                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv10                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv11                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv12                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv13                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv14                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacer3                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv9                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSMatrixGemOnCrvSetup1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSCustomBaguette1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   34  CSBlocks.Gems.Obsolete.CSGemOnCrv8                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   33  CSBlocks.Gems.Obsolete.CSGemOnCrv7                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrvCount4                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrvCount3                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSResizeGem1                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSSortGems1                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Gems.Obsolete.CSGemOnCrv6                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOnCrv6/EStatus                  CSBlocks               System.Enum
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrv6/GemOnCurveInfo           CSBlocks               System.ValueType
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrvCount2                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrvCount2/GemOnCurveInfo      CSBlocks               System.ValueType
+    2  CSBlocks.Gems.Obsolete.CSGemPlacer4                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemInfo1                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacerSide2                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacer2                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSCustomBaguetteRowOnRingRail1       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSGemOnCrv1                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOnCrv1/StatusType               CSBlocks               System.Enum
+    3  CSBlocks.Gems.Obsolete.CSGemOnCrv2                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOnCrv2/EStatus                  CSBlocks               System.Enum
+   28  CSBlocks.Gems.Obsolete.CSGemOnCrv4                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOnCrv4/EStatus                  CSBlocks               System.Enum
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrv4/GemOnCurveInfo           CSBlocks               System.ValueType
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv5                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Gems.Obsolete.CSGemOnCrv5/EStatus                  CSBlocks               System.Enum
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrv5/GemOnCurveInfo           CSBlocks               System.ValueType
+    2  CSBlocks.Gems.Obsolete.CSGemOnCrvCount1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemOnRingRail1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemOnRingRailSide2                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacerSide1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacerSpan1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemRowOnRingRail1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.CSClusterParam                         CSBlocks               System.Object
+    8  CSBlocks.GemClusters.CSHaloBuilder                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.GemClusters.CSHaloBuilder/<>c                      CSBlocks               System.Object
+   10  CSBlocks.GemClusters.CSCluster                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.CSSideGemClusterRowOnRingRail          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.GemClusters.CSClusterMetalChannel                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.GemClusters.Obsolete.CSCluster10                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   51  CSBlocks.GemClusters.Obsolete.CSHaloBuilder3                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.GemClusters.Obsolete.CSHaloBuilder3/<>c            CSBlocks               System.Object
+   51  CSBlocks.GemClusters.Obsolete.CSHaloBuilder4                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.GemClusters.Obsolete.CSHaloBuilder4/<>c            CSBlocks               System.Object
+   52  CSBlocks.GemClusters.Obsolete.CSHaloBuilder5                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.GemClusters.Obsolete.CSHaloBuilder5/<>c            CSBlocks               System.Object
+   20  CSBlocks.GemClusters.Obsolete.CSCluster6                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   20  CSBlocks.GemClusters.Obsolete.CSCluster8                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   24  CSBlocks.GemClusters.Obsolete.CSCluster9                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   29  CSBlocks.GemClusters.Obsolete.CSClusterMetalChannel8        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  CSBlocks.GemClusters.Obsolete.CSClusterParam_V1             CSBlocks               System.Object
+   41  CSBlocks.GemClusters.Obsolete.CSHaloBuilder2                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   29  CSBlocks.GemClusters.Obsolete.CSClusterMetalChannel4        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.GemClusters.Obsolete.CSCluster5                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   17  CSBlocks.GemClusters.Obsolete.CSCluster2                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   17  CSBlocks.GemClusters.Obsolete.CSCluster4                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.GemClusters.Obsolete.CSClusterMetalChannel3        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   24  CSBlocks.GemClusters.Obsolete.CSCluster1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.Obsolete.CSClusterCushion2             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   12  CSBlocks.GemClusters.Obsolete.CSClusterMarquise2            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.Obsolete.CSClusterPear2                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.GemClusters.Obsolete.CSClusterRound3               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   14  CSBlocks.GemClusters.Obsolete.CSClusterSquare2              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   18  CSBlocks.GemClusters.Obsolete.CSClusterMetal1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   22  CSBlocks.GemClusters.Obsolete.CSClusterMetalChannel1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.Obsolete.CSSideGemClusterRowOnRingRai  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   26  CSBlocks.GemClusters.Obsolete.CSClusterEmerald1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.GemClusters.Obsolete.CSClusterHeart1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   10  CSBlocks.GemClusters.Obsolete.CSClusterMarquise1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.Obsolete.CSClusterPear1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   18  CSBlocks.GemClusters.Obsolete.CSClusterRound1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.GemClusters.Obsolete.CSClusterSquare1              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemBaguet  CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemCalf    CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemCoffin  CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemEmeral  CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemHexago  CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemMarqui  CSBlocks               System.Object
+    3  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemPear    CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemRound   CSBlocks               System.Object
+    2  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemSquare  CSBlocks               System.Object
+   10  CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemUtils   CSBlocks               System.Object
+    4  CSBlocks.Cutters.CSChannelFromGemsNew                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.CSGemCutterSetup                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.CSMicroProngCutter                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.CSMicroProngCutter/<>c__DisplayClass36_0   CSBlocks               System.Object
+    7  CSBlocks.Cutters.CSAddProfileCutterOnTopOfCutter            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Cutters.CSAzureCutter                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.CSBoxCutter                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Cutters.CSGemCutter                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   14  CSBlocks.Cutters.CSHaloCutter                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   12  CSBlocks.Cutters.CSMicroPaveCutter                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Cutters.CSPlanarCutter                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Cutters.CSScallopCutter                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   14  CSBlocks.Cutters.CSShankCutterMounting                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Cutters.CSRingProfileSide                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.Obsolete.CSMicroProngCutter1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.Obsolete.CSMicroProngCutter1/<>c__Display  CSBlocks               System.Object
+    3  CSBlocks.Cutters.Obsolete.CSScallopCutter2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.Obsolete.CSMicroProngCutter2               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Cutters.Obsolete.CSMicroProngCutter2/<>c__Display  CSBlocks               System.Object
+   13  CSBlocks.Cutters.Obsolete.CSBezelCutter2                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   42  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew3             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew3/EndStyle    CSBlocks               System.Enum
+   21  CSBlocks.Cutters.Obsolete.CSChannelFromGems2                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Cutters.Obsolete.CSChannelFromGems2/EndStyle       CSBlocks               System.Enum
+   34  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew1/EndStyle    CSBlocks               System.Enum
+   42  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew2             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew2/EndStyle    CSBlocks               System.Enum
+   43  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew4             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   43  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew5             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Cutters.Obsolete.CSGemCutter2                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   17  CSBlocks.Cutters.Obsolete.CSScallopCutter1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Cutters.Obsolete.CSPlanarCutter1                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Cutters.Obsolete.CSChannelFromGems6                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Cutters.Obsolete.CSChannelFromGems6/EndStyle       CSBlocks               System.Enum
+    4  CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew6             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.Cutters.Obsolete.CSChannelFromGems1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  CSBlocks.Cutters.Obsolete.CSChannelFromGems1/EndStyle       CSBlocks               System.Enum
+   12  CSBlocks.Cutters.Obsolete.CSHaloCutter1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   13  CSBlocks.Cutters.Obsolete.CSGemCutter1                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Curves.CSMeanCurve/<>c                             CSBlocks               System.Object
+    2  CSBlocks.Core.CSSortGeometryBy/<>c__DisplayClass3_0         CSBlocks               System.Object
+    5  CSBlocks.Collars.Obsolete.CSSweepCollarRail1                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   16  CSBlocks.Caps.CSProfilesForSweep1                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Caps.CSProfileCapDirectional                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Caps.CSProfileCapNorth                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Caps.CSProfileCapRing                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Caps.CSProfileCap                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Caps.Obsolete.CSProfileCap1                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Caps.Obsolete.CSProfileCap2                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   11  CSBlocks.Caps.Obsolete.CSProfileCapDirectional1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Builders.CSMillgrain                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Builders.CSGemAroundRingRailVChannel               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Builders.CSGemChannelCutIn                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   30  CSBlocks.Builders.CSGemInChannelSetUp                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   24  CSBlocks.Builders.CSGemsInChannelOnRingRail                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Builders.Obsolete.CSGemInChannelSetUp2             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   23  CSBlocks.Builders.Obsolete.CSGemsInChannelOnRingRail1       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Builders.Obsolete.CSGemInChannelSetUp1             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Box.CSBoundingBox                                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Box.CSCurvesOnBoxSides                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Box.CSBoxCurves                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Bails.CS2RailBailSideProfilePositioner             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Bails.CSHalfProfile                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Bails.CSMeasureBailRail                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Bails.CSVolumeCentroid                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Bails.Obsolete.CSBailPlacerXform1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   17  CSBlocks.Bails.Obsolete.CSBailRail2                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Bails.Obsolete.CSBailRail2/EndPinchMorph           CSBlocks               RMA.OpenNURBS.OnSpaceMorph
+    3  CSBlocks.Bails.Obsolete.CSBailRail2/AngleMorph              CSBlocks               RMA.OpenNURBS.OnSpaceMorph
+    3  CSBlocks.AdvancedRingCurve.CSAdvancedRingCurve              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    1  <PrivateImplementationDetails>                              CSBlocks               System.Object
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=1  CSBlocks               System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=1  CSBlocks               System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=2  CSBlocks               System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=2  CSBlocks               System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=2  CSBlocks               System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=3  CSBlocks               System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=4  CSBlocks               System.ValueType
+    0  <Module>                                                    CSBlockDataUtils       
+    8  CSBlockDataUtils.CSUtilProngPlacer                          CSBlockDataUtils       System.Object
+    2  CSBlockDataUtils.CSUtilDataHelper                           CSBlockDataUtils       System.Object
+   18  CSBlockDataUtils.CSUtilGem                                  CSBlockDataUtils       System.Object
+    0  CSBlockDataUtils.CSUtilGem/EGemPlacementMethod              CSBlockDataUtils       System.Enum
+    3  CSBlockDataUtils.CSUtilGem/<>c                              CSBlockDataUtils       System.Object
+   20  CSBlockDataUtils.CSUtilGemOnCrv                             CSBlockDataUtils       System.Object
+   12  CSBlockDataUtils.CSUtilGemOnCrv/CurveInfo                   CSBlockDataUtils       System.ValueType
+   10  CSBlockDataUtils.CSUtilGemOnCrv/GemOnCurveInfo              CSBlockDataUtils       System.ValueType
+   44  CSBlockDataUtils.CSUtilGemRails                             CSBlockDataUtils       System.Object
+    3  CSBlockDataUtils.CSUtilGemRails/SortGem                     CSBlockDataUtils       System.Object
+    2  CSBlockDataUtils.CSUtilGemRails/<>c__DisplayClass38_0       CSBlockDataUtils       System.Object
+   28  CSBlockDataUtils.CSUtilGemRailsNew                          CSBlockDataUtils       System.Object
+    3  CSBlockDataUtils.CSUtilGemRailsNew/SortGem                  CSBlockDataUtils       System.Object
+    2  CSBlockDataUtils.CSUtilGemRailsNew/<>c__DisplayClass16_0    CSBlockDataUtils       System.Object
+    5  CSBlockDataUtils.CSGemOffsetCurves.GemOffsetCurve           CSBlockDataUtils       System.Object
+    5  CSBlockDataUtils.CSGemOffsetCurves.GemOffsetCurveNew        CSBlockDataUtils       System.Object
+    5  CSBlockDataUtils.CSGemOffsetCurves.GemOffsetCurveV2         CSBlockDataUtils       System.Object
+    5  CSBlockDataUtils.CSGemOffsetCurves.GemOffsetCurveV1         CSBlockDataUtils       System.Object
+    2  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetBaguet  CSBlockDataUtils       System.Object
+    3  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCushio  CSBlockDataUtils       System.Object
+    2  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCushio  CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetEmeral  CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetHalfMo  CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetHeart   CSBlockDataUtils       System.Object
+    3  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetMarqui  CSBlockDataUtils       System.Object
+    2  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetPear    CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetRound   CSBlockDataUtils       System.Object
+    3  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetSquare  CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetTriang  CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetTrilli  CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetTrilli  CSBlockDataUtils       System.Object
+    8  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetUtils   CSBlockDataUtils       System.Object
+    1  CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCalf    CSBlockDataUtils       System.Object
+    1  <PrivateImplementationDetails>                              CSBlockDataUtils       System.Object
+    0  <Module>                                                    CSBlockUtil            
+    4  CSBlockUtil.CSProngCache                                    CSBlockUtil            System.Object
+    4  CSBlockUtil.CSProngCache/ProngCacheItem                     CSBlockUtil            System.Object
+    2  CSBlockUtil.CSProngCache/<>c__DisplayClass3_0               CSBlockUtil            System.Object
+    2  CSBlockUtil.CSProngCache/<>c__DisplayClass4_0               CSBlockUtil            System.Object
+    4  CSBlockUtil.CSProngCacheRc                                  CSBlockUtil            System.Object
+    4  CSBlockUtil.CSProngCacheRc/ProngCacheItem                   CSBlockUtil            System.Object
+    2  CSBlockUtil.CSProngCacheRc/<>c__DisplayClass2_0             CSBlockUtil            System.Object
+    2  CSBlockUtil.CSProngCacheRc/<>c__DisplayClass3_0             CSBlockUtil            System.Object
+    3  CSBlockUtil.CSProngDomeCache                                CSBlockUtil            System.Object
+    3  CSBlockUtil.CSProngDomeCache/ProngDomeCacheItem             CSBlockUtil            System.Object
+    2  CSBlockUtil.CSProngDomeCache/<>c__DisplayClass3_0           CSBlockUtil            System.Object
+    3  CSBlockUtil.CSProngDomeCacheRc                              CSBlockUtil            System.Object
+    3  CSBlockUtil.CSProngDomeCacheRc/ProngDomeCacheItem           CSBlockUtil            System.Object
+    2  CSBlockUtil.CSProngDomeCacheRc/<>c__DisplayClass2_0         CSBlockUtil            System.Object
+    2  CSBlockUtil.CSUtilBrepFace                                  CSBlockUtil            System.Object
+   88  CSBlockUtil.CSUtilGeometry                                  CSBlockUtil            System.Object
+    2  CSBlockUtil.CSUtilGeometry/<>c__DisplayClass38_0            CSBlockUtil            System.Object
+   14  CSBlockUtil.CSUtilHollowRing                                CSBlockUtil            System.Object
+    3  CSBlockUtil.CSPullToBaseBrep                                CSBlockUtil            Rhino.Geometry.SpaceMorph
+    3  CSBlockUtil.CSPullToRailCenterMorph                         CSBlockUtil            Rhino.Geometry.SpaceMorph
+    3  CSBlockUtil.CSPullToRailMorph                               CSBlockUtil            Rhino.Geometry.SpaceMorph
+   18  CSBlockUtil.CSUtil                                          CSBlockUtil            System.Object
+    4  CSBlockUtil.CSUtil/DelegateGetBool                          CSBlockUtil            System.MulticastDelegate
+    4  CSBlockUtil.CSUtil/DelegateGetDouble                        CSBlockUtil            System.MulticastDelegate
+    4  CSBlockUtil.CSUtil/DelegateGetString                        CSBlockUtil            System.MulticastDelegate
+    6  CSBlockUtil.CSUtilBrepCrvs                                  CSBlockUtil            System.Object
+   30  CSBlockUtil.CSUtilCurves                                    CSBlockUtil            System.Object
+   14  CSBlockUtil.CSUtilIntersect                                 CSBlockUtil            System.Object
+    0  CSBlockUtil.CSUtilIntersect/Intersects                      CSBlockUtil            System.ValueType
+    6  CSBlockUtil.CSUtilIntersect/SearchData                      CSBlockUtil            System.Object
+   68  CSBlockUtil.CSUtilMath                                      CSBlockUtil            System.Object
+   11  CSBlockUtil.CSUtilRailRevolve                               CSBlockUtil            System.Object
+   10  CSBlockUtil.CSUtilRhino                                     CSBlockUtil            System.Object
+    2  CSBlockUtil.CSUtilRhino/<>c__DisplayClass2_0                CSBlockUtil            System.Object
+    3  CSBlockUtil.CSUtilRhino/<>c                                 CSBlockUtil            System.Object
+   26  CSBlockUtil.CSUtilRingRail                                  CSBlockUtil            System.Object
+    3  CSBlockUtil.CSUtilRingRailRC                                CSBlockUtil            System.Object
+   35  CSBlockUtil.CSUtilSMI                                       CSBlockUtil            System.Object
+   26  CSBlockUtil.CSUtilSweep                                     CSBlockUtil            System.Object
+    7  CSBlockUtil.CSUtilSweep/<>c                                 CSBlockUtil            System.Object
+   16  CSBlockUtil.CSUtilSweepRC                                   CSBlockUtil            System.Object
+   19  CSBlockUtil.CSUtilSweepRC/Sweep4Profile                     CSBlockUtil            System.Object
+   10  CSBlockUtil.CSUtilSweepRC/<>c                               CSBlockUtil            System.Object
+    3  CSBlockUtil.CSUtilSweepRC/<>c__DisplayClass14_0             CSBlockUtil            System.Object
+   11  CSBlockUtil.RhUtilHelper                                    CSBlockUtil            System.Object
+    7  CSBlockUtil.Signet.SignetCommon                             CSBlockUtil            System.Object
+    6  CSBlockUtil.Signet.SignetRingBottom                         CSBlockUtil            System.Object
+   12  CSBlockUtil.Signet.SignetRingTop                            CSBlockUtil            System.Object
+    0  CSBlockUtil.Signet.SignetRingTop/SortOrder                  CSBlockUtil            System.Enum
+    1  CSBlockUtil.Signet.SignetRingTopParameters                  CSBlockUtil            System.Object
+    1  CSBlockUtil.Signet.SignetRingBottomParameters               CSBlockUtil            System.Object
+    1  CSBlockUtil.Signet.ShankTransforms                          CSBlockUtil            System.Object
+    1  CSBlockUtil.Signet.ShankProfileParameters                   CSBlockUtil            System.Object
+    1  CSBlockUtil.Signet.TopProfileParameters                     CSBlockUtil            System.Object
+    3  CSBlockUtil.Signet.Obsolete.CrvExtensions                   CSBlockUtil            System.Object
+    0  CSBlockUtil.Signet.Obsolete.ComputeError                    CSBlockUtil            System.Enum
+   34  CSBlockUtil.Signet.Obsolete.SignetRingAdvanced              CSBlockUtil            System.Object
+    3  CSBlockUtil.Signet.Obsolete.SignetRingAdvanced/<>c          CSBlockUtil            System.Object
+  107  CSBlockUtil.Signet.Obsolete.SignetRingAdvancedParameters    CSBlockUtil            System.Object
+    5  CSBlockUtil.Rope.CSUtilRope                                 CSBlockUtil            System.Object
+    3  CSBlockUtil.Rope.CSUtilRope/<>c                             CSBlockUtil            System.Object
+   21  CSBlockUtil.RasterToVector.CSRasterToVector                 CSBlockUtil            System.Object
+    5  CSBlockUtil.RasterToVector.CSUtilImage                      CSBlockUtil            System.Object
+   46  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry         CSBlockUtil            System.Object
+    0  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/CurveK  CSBlockUtil            System.Enum
+    0  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/Direct  CSBlockUtil            System.Enum
+    1  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/Curve   CSBlockUtil            System.ValueType
+   10  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/SumStr  CSBlockUtil            System.ValueType
+   10  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/Optima  CSBlockUtil            System.ValueType
+    6  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/Interv  CSBlockUtil            System.Object
+    1  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/Raster  CSBlockUtil            System.Object
+    1  CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/CurveM  CSBlockUtil            System.Object
+   11  CSBlockUtil.PullPush.PullPush                               CSBlockUtil            System.Object
+   25  CSBlockUtil.PullPush.PullPushDirectional                    CSBlockUtil            System.Object
+    3  CSBlockUtil.PullPush.PullPushDirectional/<>c                CSBlockUtil            System.Object
+    7  CSBlockUtil.Pipe.CSUtilPipe                                 CSBlockUtil            System.Object
+    1  CSBlockUtil.Millgrain.CSUtilMillgrain                       CSBlockUtil            System.Object
+   12  CSBlockUtil.Hinge.CSUtilHinge                               CSBlockUtil            System.Object
+   12  CSBlockUtil.Hinge.HingeParameters                           CSBlockUtil            System.Object
+   13  CSBlockUtil.AdvancedRingCurve.AdvancedRingCurve             CSBlockUtil            System.Object
+   11  CSBlockUtil.AdvancedRingCurve.AdvancedRingCurveParameters   CSBlockUtil            System.Object
+    0  <PrivateImplementationDetails>                              CSBlockUtil            System.Object
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=2  CSBlockUtil            System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=4  CSBlockUtil            System.ValueType
+
+== READABLE METHOD NAMES (non-obfuscated) ==
+GetHeadProngInfo                               | System.Collections.Generic.IEnumerable`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles6/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadB
+Update                                         | System.Boolean CSBlocks.Settings.Obsolete.CSProngPlacerGC15::Update()
+GetHeadStyle                                   | System.Collections.Generic.List`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles5/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadBuilderV
+GetHeadStyleGameChangerV1                      | System.Collections.Generic.List`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles2/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadBuilderV
+GetHeadStyleGameChangerV2                      | System.Collections.Generic.List`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles2/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadBuilderV
+GetHeadStyleV2                                 | System.Collections.Generic.List`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles2/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadBuilderV
+GetHeadStyleGameChanger                        | System.Collections.Generic.List`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles3/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadBuilderV
+GetHeadStyleV1                                 | System.Collections.Generic.List`1<CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles2/HeadProngInfo> CSBlocks.Settings.Heads.CSHeadBuilderV
+BuildChannel                                   | System.Void CSBlocks.Shank.CSShankNew::BuildChannel(System.Collections.Generic.List`1<CSBlocks.Shank.Helpers.UltimateGemData>,Rhino.Geometry.Curve,Rhi
+UpdateSync                                     | System.Boolean CSBlocks.Settings.Obsolete.CSClusterProngsToCurve1::UpdateSync()
+<UpdateConcurrent>g__UpdateAux|0               | System.Boolean CSBlocks.Settings.Obsolete.CSClusterProngsToCurve1/<>c__DisplayClass98_0::<UpdateConcurrent>g__UpdateAux|0(System.Int32,System.String&)
+<Update>g__UpdateAux|0                         | System.Boolean CSBlocks.Settings.Obsolete.CSClusterProngsToCurve2/<>c__DisplayClass37_0::<Update>g__UpdateAux|0(System.Int32,System.String&)
+MakeCluster                                    | System.Boolean CSBlocks.GemClusters.Obsolete.CSHaloBuilder2::MakeCluster(CSDatas.CSGemData,CSDatas.CSData,System.Boolean,CSDatas.CSGemData,System.Doub
+UltGem                                         | System.Void CSBlocks.Shank.CSShankGemNew::UltGem(CSBlocks.Shank.Helpers.CSShankGemParam,Rhino.Geometry.Curve,CSDatas.CSGemData,CSDatas.CSGemData,CSDat
+ProngProfileSweep                              | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadProngProfileSweep::ProngProfileSweep(System.Int32,CSBlocks.Settings.Heads.CSHeadBuilderV2
+MakeProfileSweepProngs                         | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate5::MakeProfileSweepProngs(System.Int32,System.Collections.Generic.List`1
+GetHeadData1                                   | System.Void CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadStyles1::GetHeadData1(System.String,System.Int32,System.Int32[]&,System.Int32[]&,Sy
+.ctor                                          | System.Void CSBlocks.Shank.CSMatrixShankSetup::.ctor(System.String)
+BezelProfile                                   | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel::BezelProfile(Rhino.Geometry.Curve,CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngPar
+UpdateBuilder                                  | System.Void CSBlocks.Gems.Obsolete.CSGemOnCrv4::UpdateBuilder()
+Offset                                         | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetTrillionCurved::Offset(CSDatas.CSGemData,System.Double,System.Double)
+Create4Rails                                   | System.Void CSBlocks.Shank.CSShankNew::Create4Rails(Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Double,System.Collections.Generic.List`1<System.D
+CalculateHandleTransforms                      | System.Void CSBlocks.MicroProngCutter.MpcCreationHelper::CalculateHandleTransforms(CSDatas.CSGemData,Rhino.Geometry.Brep,Rhino.Geometry.Transform,Rhin
+MakeHalo                                       | System.Boolean CSBlocks.GemClusters.Obsolete.CSHaloBuilder5::MakeHalo(CSDatas.CSGemData,CSDatas.CSData,System.Boolean,CSDatas.CSGemData,System.Double,
+HeadOuterSurface                               | Rhino.Geometry.Brep CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate5::HeadOuterSurface(CSDatas.CSGemData,Rhino.Geometry.Curve,Rhino.Ge
+HeadShape                                      | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape::HeadShape(CSDatas.CSData,CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam[],Syst
+MeshPipe                                       | RMA.OpenNURBS.OnMesh CSBlockUtil.CSUtilSweep::MeshPipe(RMA.OpenNURBS.IOnCurve,System.Double,System.Double,System.Double,System.Double,System.Double)
+ClusterGem                                     | System.Boolean CSBlocks.GemClusters.Obsolete.CSCluster9::ClusterGem(CSDatas.CSGemData,CSDatas.CSData,System.Boolean,CSDatas.CSGemData,System.Double,CS
+CSHeadShape                                    | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate5::CSHeadShape(CSDatas.CSData,System.Double,System.Double,CSDatas.CSData
+MakeHaloProfile                                | System.Boolean CSBlocks.GemClusters.Obsolete.CSHaloBuilder3::MakeHaloProfile(Rhino.Geometry.NurbsCurve,System.Double,System.Double,System.Double,Syste
+GemOffsetCurves                                | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.GemOffsetCurve::GemOffsetCurves(System.String,CSDatas.CSGemData,System.Double,System.Boolean
+GetGemLayout                                   | System.Boolean CSBlocks.GemClusters.CSCluster::GetGemLayout(CSBlocks.GemClusters.CSClusterParam,System.String,CSDatas.CSGemData,CSDatas.CSGemData,Syst
+Sweep4NoParam                                  | System.Boolean CSBlockUtil.CSUtilSweepRC::Sweep4NoParam(Rhino.Geometry.Curve,Rhino.Geometry.Curve,Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Col
+MakeMetal                                      | Rhino.Geometry.Brep CSBlocks.Shank.Obsolete.CSSplitShankMetal1::MakeMetal(System.Boolean,Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Collections.
+BlendCurveCorners                              | System.Boolean CSBlockUtil.CSUtilCurves::BlendCurveCorners(Rhino.Geometry.Curve,System.Double,System.Double,System.Double,System.Double,Rhino.Geometry
+BezelRevolveInnerOuter                         | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBetweenProngSrf::BezelRevolveInnerOuter(Rhino.Geometry.Curve,System.Double,System.Double,
+ProngDome                                      | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadProngProfileSweep::ProngDome(CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam,System.Do
+BuildBlendedProngMesh                          | System.Boolean CSBlocks.Settings.CSClusterProngPlacer::BuildBlendedProngMesh(CSDatas.CSGemData,Rhino.Geometry.Curve,System.Double,System.Double,System
+MakeOffset                                     | System.Boolean CSBlocks.Cutters.CSShankCutterMounting::MakeOffset(Rhino.Geometry.NurbsCurve,Rhino.Geometry.NurbsCurve,System.Double,System.Double,Rhin
+VProng                                         | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadVProng::VProng(System.Int32,CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam,Rhino.Geom
+AdjustProVertex                                | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::AdjustProVertex(CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/RasterPath)
+MakeShankProfile                               | System.Void CSBlocks.Shank.French.CSFrenchSetProduction::MakeShankProfile(System.Boolean,System.Double,System.Double,CSBlocks.Shank.Helpers.UltimateGe
+GalleryRail_V1                                 | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails::GalleryRail_V1(CSDatas.CSGemData,CSBlocks.Settings.Heads.CSHeadBuilderV2.Ra
+GalleryRail_V0                                 | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails::GalleryRail_V0(CSDatas.CSGemData,CSBlocks.Settings.Heads.CSHeadBuilderV2.Ra
+GemOffsetInternal                              | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.GemOffsetCurveNew::GemOffsetInternal(CSDatas.CSGemData,System.Double,System.Boolean,System.B
+MakeHaloAux                                    | System.Boolean CSBlocks.GemClusters.CSHaloBuilder::MakeHaloAux(CSDatas.CSGemData,System.Double,Rhino.Geometry.Curve,System.Double,System.Double,System
+OptimizePenalization                           | System.Boolean CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::OptimizePenalization(CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/RasterPat
+CSHeadRail                                     | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate5::CSHeadRail(CSDatas.CSGemData,CSDatas.CSGemData,Rhino.Geometry.Curve,R
+UpdateConcurrent                               | System.Boolean CSBlocks.Settings.Obsolete.CSClusterProngsToCurve1::UpdateConcurrent()
+CreateProngDome                                | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate2::CreateProngDome(Rhino.Geometry.Curve,System.Double,System.Double,Syst
+OffsetV2                                       | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCushion::OffsetV2(CSDatas.CSGemData,System.Double)
+Offset90Degree                                 | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCushion::Offset90Degree(CSDatas.CSGemData,System.Double)
+ScallopCutter                                  | System.Boolean CSBlocks.Cutters.CSScallopCutter::ScallopCutter(Rhino.Geometry.Transform,Rhino.Geometry.NurbsCurve,System.Double,System.Double,System.D
+CreateProng_Old_V1                             | System.Boolean CSBlockUtil.CSUtilGeometry::CreateProng_Old_V1(RMA.OpenNURBS.IOn3dVector,RMA.OpenNURBS.IOn3dVector,System.Double,System.Double,System.D
+BetweenProngSrf                                | System.Void CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBetweenProngSrf::BetweenProngSrf(Rhino.Geometry.Curve,Rhino.Geometry.Curve,CSDatas.CSGemData
+OptimizeCurve                                  | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::OptimizeCurve(CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/RasterPath,System.D
+ProngDomeCurve                                 | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel::ProngDomeCurve(Rhino.Geometry.Curve,System.Double,System.Double,System.Double,Syst
+CalcGemPos                                     | System.Void CSBlocks.Shank.Helpers.CSGemPosition::CalcGemPos(CSBlocks.Shank.Helpers.CSShankGemParam,System.Double,System.Double,System.Double,System.D
+Compute                                        | System.Void CSBlockUtil.RasterToVector.CSRasterToVector::Compute()
+VProngDome                                     | Rhino.Geometry.Brep CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadVProngDome::VProngDome(System.Int32,Rhino.Geometry.Brep,System.Double,System.Double,
+BezelBuilder                                   | Rhino.Geometry.Brep CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate5::BezelBuilder(CSDatas.CSGemData,CSDatas.CSDataArray,System.Boolea
+MakeGemProfileParts                            | System.Void CSBlocks.Shank.Obsolete.CSShankNew3::MakeGemProfileParts(Rhino.Geometry.Curve,CSBlocks.Shank.Helpers.UltimateGemData,GV.CounterSketch.Shar
+ComputeIsoCurve                                | System.Collections.Generic.List`1<Rhino.Geometry.Curve> CSBlockUtil.CSUtilCurves::ComputeIsoCurve(Rhino.Geometry.Surface,System.Int32,System.Double,Sy
+MakeEndGravers                                 | System.Void CSBlocks.Shank.French.CSFrenchSetProduction::MakeEndGravers(System.Boolean,System.Double,CSBlocks.Shank.Helpers.UltimateGemData,CSBlocks.S
+CutterTopWave2                                 | System.Boolean CSBlockUtil.CSUtilSMI::CutterTopWave2(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,RMA.OpenNURBS
+OffsetV1                                       | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCushion::OffsetV1(CSDatas.CSGemData,System.Double)
+MakeVProngProfile                              | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadProngs::MakeVProngProfile(Rhino.Geometry.Curve,System.Double,System.Double,System.Double,
+CalculateLong                                  | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::CalculateLong(CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/RasterPath)
+MorphPoint                                     | Rhino.Geometry.Point3d CSBlocks.UDT.CSTaperObject/TaperObject::MorphPoint(Rhino.Geometry.Point3d)
+PlaceGemsEmerald                               | System.Boolean CSBlocks.GemClusters.Obsolete.CSCluster6::PlaceGemsEmerald(System.String,CSDatas.CSGemData,CSDatas.CSGemData,System.Double,System.Doubl
+Sweep2NoParam                                  | System.Boolean CSBlockUtil.CSUtilSweep::Sweep2NoParam(RMA.OpenNURBS.IOnCurve,RMA.OpenNURBS.IOnCurve,RMA.OpenNURBS.IOnCurve[],RMA.OpenNURBS.OnBrep[]&,S
+ProngRevolve                                   | System.Void CSBlocks.Settings.CSProngPlacerGC::ProngRevolve(Rhino.Geometry.NurbsCurve,Rhino.Geometry.NurbsCurve,Rhino.Geometry.Point3d,System.Double,R
+ComputeTransforms                              | System.Void CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::ComputeTransforms()
+BuildEnd                                       | RMA.OpenNURBS.OnBrep CSBlocks.Cutters.Obsolete.CSChannelFromGemsNew4::BuildEnd(RMA.OpenNURBS.IOnCurve,RMA.OpenNURBS.OnXform,RMA.OpenNURBS.IOnXform,Sys
+CalculateBezelHandleTransforms                 | System.Void CSBlocks.Settings.Bezels.BezelCreationHelper::CalculateBezelHandleTransforms(Rhino.Geometry.Transform,System.Double,System.Double,System.D
+DoMainMorph                                    | System.Void CSBlocks.Shank.French.CSFrenchShank::DoMainMorph(CSBlocks.Shank.French.CSFrenchGeometry,System.Boolean,System.Double,System.Double,System.
+CalcGemSize                                    | CSBlocks.Shank.Helpers.UltimateGemData CSBlocks.Shank.Obsolete.CSUltimateGemNew6::CalcGemSize(System.Double,System.Boolean,System.Double,System.Double
+CreateDomeBase                                 | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadProngs11::CreateDomeBase(RMA.OpenNURBS.OnNurbsCurve,System.Double,System.Double,
+Sweep2NoParams                                 | System.Boolean CSBlockUtil.CSUtilSweepRC::Sweep2NoParams(Rhino.Geometry.Curve,Rhino.Geometry.Curve,Rhino.Geometry.Curve[],Rhino.Geometry.Brep&,System.
+CreateDomeTop                                  | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadProngs11::CreateDomeTop(RMA.OpenNURBS.OnNurbsCurve,System.Double,System.Double,S
+CreateDome                                     | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadProngs6::CreateDome(RMA.OpenNURBS.OnNurbsCurve,System.Double,System.Double,Syste
+PullToBase                                     | System.Void CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder::PullToBase(System.Double,CSDatas.CSDataArray,CSDatas.CSData,CSDatas.CSDataArray,CSD
+Sweep2C4                                       | RMA.OpenNURBS.OnBrep CSBlockUtil.CSUtilSweep::Sweep2C4(RMA.OpenNURBS.OnCurve,RMA.OpenNURBS.OnCurve,RMA.OpenNURBS.IOnCurve[],System.Double[],System.Dou
+ComputeCircles                                 | System.Collections.Generic.List`1<Rhino.Geometry.Circle> CSBlocks.Gems.CSGemBetween2Curves::ComputeCircles(Rhino.Geometry.Curve,Rhino.Geometry.Curve,S
+GetCircles                                     | System.String CSBlocks.Settings.CSProngPlacerGC::GetCircles(CSDatas.CSChannelGemData,CSDatas.CSChannelGemData,CSDatas.CSChannelGemData,RMA.OpenNURBS.I
+CSHeadFinish                                   | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBuilder::CSHeadFinish(CSDatas.CSData,System.Double,System.Collections.Generic.List`1<Rhin
+CalculateGemXform                              | System.Void CSBlocks.Shank.Obsolete.CSUltimateGemNew6::CalculateGemXform(CSBlocks.Shank.Helpers.UltimateGemData,System.Double)
+MakeVProngs                                    | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate2::MakeVProngs(Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Double,S
+CalculateUnderBezelHandleTransforms            | System.Void CSBlocks.Settings.Bezels.BezelCreationHelper::CalculateUnderBezelHandleTransforms(Rhino.Geometry.Transform,System.Double,System.Double,Sys
+SortGems                                       | System.Void CSBlockDataUtils.CSUtilGemRailsNew::SortGems(CSDatas.CSDataArray,System.Boolean)
+MakeProngProfileStraightObsolete               | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.HelperMakeProngProfileStraightObsolete::MakeProngProfileStraightObsolete(RMA.OpenNURBS
+MakeUnderBezel                                 | System.Boolean CSBlocks.Settings.Obsolete.Bezels.CSUnderBezel1::MakeUnderBezel(CSDatas.CSGemData,System.Double,System.Double,Rhino.Geometry.NurbsCurve
+CalculatePlacementValues                       | System.Boolean CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemCoffin::CalculatePlacementValues(Rhino.Geometry.Curve,Rhino.Geometry.Curve,Rhino.Ge
+MakePearlCup                                   | System.Boolean CSBlocks.Settings.CSPearlCup::MakePearlCup(CSDatas.CSGemData,System.Double,System.Double,System.Double,System.Double,System.Double,Syst
+BuildBlendedProng                              | System.Boolean CSBlocks.Settings.Obsolete.CSClusterProngPlacer1::BuildBlendedProng(CSDatas.CSGemData,RMA.OpenNURBS.IOnNurbsCurve,System.Double,System.
+MakeVProngDomes                                | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.CSHeadProngs::MakeVProngDomes(System.Collections.Generic.IReadOnlyList`1<Rhino.Geometry.Curve>,
+Sweep2                                         | System.Boolean CSBlockUtil.CSUtilSweep::Sweep2(RMA.OpenNURBS.IOnCurve,RMA.OpenNURBS.IOnCurve,RMA.OpenNURBS.IOnCurve[],System.Double[],System.Double[],
+CalculateGemInfos                              | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv13::CalculateGemInfos(System.Int32,System.Int32,CSDatas.CSGemData,System.Double,System.Int32,System.In
+GetMidPointsBetweenGems                        | System.Void CSBlocks.MicroProngCutter.Obsolete.MpcCreationHelper2::GetMidPointsBetweenGems(System.Collections.Generic.List`1<CSDatas.CSGemData>,System
+LayoutStones                                   | System.Double CSBlocks.GemClusters.Obsolete.CSClusterEmerald1::LayoutStones(RMA.OpenNURBS.On3dPoint,RMA.OpenNURBS.On3dPoint,RMA.OpenNURBS.On3dPoint,Sy
+BuildProngProfileNew                           | System.Boolean CSBlockUtil.CSUtilGeometry::BuildProngProfileNew(System.Double,System.Double,System.Double,System.Double,System.Double,Rhino.Geometry.N
+RailRevolveGen                                 | RMA.OpenNURBS.OnNurbsSurface CSBlockUtil.CSUtilRailRevolve::RailRevolveGen(RMA.OpenNURBS.IOnNurbsCurve,RMA.OpenNURBS.IOnNurbsCurve,System.Int32,System
+DetectIndividualProngs                         | System.Void CSBlocks.Gems.CSPaveProngsTransforms::DetectIndividualProngs(System.Collections.Generic.List`1<CSDatas.CSGemData>,System.Collections.Gener
+BuildProngProfile                              | Rhino.Geometry.NurbsCurve CSBlocks.Settings.CSProngPlacerGC::BuildProngProfile(System.Double,System.Double,System.Double,System.Double,System.Double)
+MakeGemCurves                                  | System.Void CSBlocks.Builders.CSGemChannelCutIn::MakeGemCurves(CSDatas.CSGemData,System.Double,System.Double,RMA.OpenNURBS.OnCurve,RMA.OpenNURBS.OnCur
+CutterTopWave                                  | System.Boolean CSBlockUtil.CSUtilSMI::CutterTopWave(System.Double,System.Double,System.Double,System.Double,System.Double,RMA.OpenNURBS.OnCurve&)
+Cap                                            | System.Boolean CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::Cap(Rhino.Geometry.Curve,Rhino.Geometry.Brep&)
+RevolveBezel                                   | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadBezel::RevolveBezel(Rhino.Geometry.Curve,CSDatas.CSGemData,Rhino.Geometry.Curve,System.Do
+BuildProngProfilePolyline                      | Rhino.Geometry.PolylineCurve CSBlockUtil.CSUtilGeometry::BuildProngProfilePolyline(System.Double,System.Double,System.Double,System.Double,System.Doub
+FindMinMax                                     | System.Boolean[] CSBlocks.Shank.CSShankNew::FindMinMax(System.Collections.Generic.IReadOnlyList`1<System.Double>)
+CalculateRail                                  | System.Void CSBlocks.Settings.FrenchHalo.CSFrenchHaloHelper::CalculateRail(CSDatas.CSChannelGemData[],System.Int32,System.Double,System.Double,System.
+CreateProfileOffsetCurve                       | Rhino.Geometry.Curve CSBlockUtil.CSUtilHollowRing::CreateProfileOffsetCurve(System.Double,Rhino.Geometry.Plane,Rhino.Geometry.BoundingBox,Rhino.Geomet
+MakeBezel                                      | System.Boolean CSBlocks.Settings.Obsolete.Bezels.CSBezel1::MakeBezel(CSDatas.CSGemData,Rhino.Geometry.NurbsCurve,Rhino.Geometry.Point3d,System.Boolean
+MakeGemCuttersAndHoles                         | System.Boolean CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction::MakeGemCuttersAndHoles(CSDatas.CSChannelGemData,Rhino.Geometry.Brep,Rhino.Geometry
+CreateMeshProng                                | System.Boolean CSBlockUtil.CSUtilGeometry::CreateMeshProng(RMA.OpenNURBS.IOnNurbsCurve,System.Double,System.Double,System.Double,System.Double,RMA.Ope
+MakeScallopCutters                             | System.Void CSBlocks.Shank.French.CSFrenchSetProduction::MakeScallopCutters(Rhino.Geometry.Curve,System.Collections.Generic.List`1<CSBlocks.Shank.Help
+AddEndCurvePoints                              | System.Void CSBlocks.Shank.French.CSFrenchShank::AddEndCurvePoints(System.Collections.Generic.List`1<CSBlocks.Shank.Helpers.UltimateGemData>,Rhino.Geo
+MakeBar                                        | Rhino.Geometry.GeometryBase CSBlocks.Settings.CSProngPlacerGC::MakeBar(System.Double,System.Double,System.Double,System.Double,System.Double,System.Do
+CutterInsideRoundWithFlat                      | System.Boolean CSBlockUtil.CSUtilSMI::CutterInsideRoundWithFlat(System.Double,System.Double,System.Double,System.Double,RMA.OpenNURBS.OnCurve&)
+CreateMidCurve                                 | System.Boolean CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::CreateMidCurve(Rhino.Geometry.Curve&,Rhino.Geometry.Point3d&,Rhino.Geometry.Point3d&)
+RemoveBottomBrepFaces                          | System.Boolean CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::RemoveBottomBrepFaces(Rhino.Geometry.Brep&,Rhino.Geometry.Curve&,Rhino.Geometry.Curve&)
+RailRevolve                                    | Rhino.Geometry.NurbsSurface CSBlockUtil.CSUtilRailRevolve::RailRevolve(Rhino.Geometry.NurbsCurve,Rhino.Geometry.NurbsCurve,System.Double,System.Int32,
+PlaceProngs                                    | System.Boolean CSBlocks.Settings.Obsolete.CSProngPlacerFlow1::PlaceProngs(CSDatas.CSChannelGemData,CSDatas.CSChannelGemData,RMA.OpenNURBS.OnCurve,Syst
+CalculateApolloniusCircle                      | RMA.OpenNURBS.OnCircle CSBlockUtil.CSUtilGeometry::CalculateApolloniusCircle(RMA.OpenNURBS.IOnCircle,RMA.OpenNURBS.IOnCircle,RMA.OpenNURBS.IOnCircle)
+CreateMeshProngNew                             | System.Boolean CSBlockUtil.CSUtilGeometry::CreateMeshProngNew(Rhino.Geometry.NurbsCurve,System.Double,System.Double,System.Double,System.Double,System
+MakeBaseSurface                                | System.Boolean CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction::MakeBaseSurface(Rhino.Geometry.Curve,CSDatas.CSGemData,Rhino.Geometry.Curve,Rhino.
+Offset45Degrees                                | Rhino.Geometry.Curve[] CSBlockDataUtils.CSGemOffsetCurves.Offsets.GemOffsetCushionSquare::Offset45Degrees(CSDatas.CSGemData,System.Double)
+CreateSignetOutsideRingRail                    | System.Boolean CSBlockUtil.CSUtilRingRail::CreateSignetOutsideRingRail(System.Double,Rhino.Geometry.Curve,Rhino.Geometry.Point3d,Rhino.Geometry.Point3
+GalleryRailOutside                             | System.Boolean CSBlocks.Settings.Obsolete.Bezels.CSSurfaceGalleryRailOutsideOnRingRail1::GalleryRailOutside(RMA.OpenNURBS.OnXform,RMA.OpenNURBS.OnNurb
+GemCurve                                       | System.Void CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemUtils::GemCurve(Rhino.Geometry.Curve,Rhino.Geometry.Curve,CSDatas.CSGemData,System.Dou
+PlaceGems                                      | System.Boolean CSBlocks.GemClusters.CSClusterGemShapes.CSClusterGemEmerald::PlaceGems(CSBlocks.GemClusters.CSClusterParam,System.String,CSDatas.CSGemD
+Shell                                          | System.Boolean CSBlockUtil.CSUtilSMI::Shell(System.Double,System.Double,System.Double,System.Double,System.Double,RMA.OpenNURBS.OnCurve&)
+BezelOutsideOnRingRail                         | System.Boolean CSBlocks.Settings.Obsolete.Bezels.CSSurfaceBezelOutsideOnRingRail1::BezelOutsideOnRingRail(RMA.OpenNURBS.OnXform,RMA.OpenNURBS.OnNurbsC
+ComputeThreads                                 | System.Boolean CSBlockUtil.Rope.CSUtilRope::ComputeThreads(Rhino.Geometry.Curve,Rhino.Geometry.Plane,System.Double,Rhino.Geometry.Curve,System.Double,
+CreateBottomPart                               | System.Boolean CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::CreateBottomPart(Rhino.Geometry.Brep,Rhino.Geometry.Curve,Rhino.Geometry.Curve&,Rhino.G
+SurfaceGalleryRailOutside                      | System.Boolean CSBlocks.Settings.Obsolete.Bezels.CSGalleryRail1::SurfaceGalleryRailOutside(RMA.OpenNURBS.OnCurve,RMA.OpenNURBS.OnNurbsCurve,System.Dou
+Sweep1                                         | System.Boolean CSBlockUtil.CSUtilSweep::Sweep1(RMA.OpenNURBS.IOnCurve,RMA.OpenNURBS.IOnCurve[],System.Double[],RMA.OpenNURBS.OnBrep[]&,System.Boolean)
+CreateBottomTransitions                        | System.Boolean CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::CreateBottomTransitions(Rhino.Geometry.Brep,Rhino.Geometry.Curve,Rhino.Geometry.Curve,R
+CalculateGemInfosMirror                        | System.Void CSBlocks.Gems.Obsolete.CSGemOnCrv13::CalculateGemInfosMirror(System.Int32,System.Int32,System.Int32,System.Boolean,CSDatas.CSGemData,GV.Co
+Detect3GemsProngs                              | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::Detect3GemsProngs(System.Collections.Generic.List`1<CSDatas.CSGemData>,System.Collections.Generic
+CutterTopEdgeWithFlat                          | System.Boolean CSBlockUtil.CSUtilSMI::CutterTopEdgeWithFlat(System.Double,System.Double,System.Double,System.Double,RMA.OpenNURBS.OnCurve&)
+PreProcessCrvWithCorners                       | System.Boolean CSBlockDataUtils.CSUtilGemOnCrv::PreProcessCrvWithCorners(Rhino.Geometry.Curve,System.Collections.Generic.IList`1<CSBlockDataUtils.CSUt
+GetSplitter                                    | Rhino.Geometry.Brep CSBlockUtil.PullPush.PullPushDirectional::GetSplitter(Rhino.Geometry.Curve&,Rhino.Geometry.Curve&,Rhino.Geometry.Curve&)
+CalculateGemCountEstimate                      | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv13::CalculateGemCountEstimate(CSDatas.CSGemData,System.Double,System.Int32,System.Int32,System.Int32,S
+PathListToListOfCurveArrays                    | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::PathListToListOfCurveArrays(System.Collections.ArrayList,System.Collections.ArrayList
+CalculateSides                                 | System.Void CSBlockDataUtils.CSUtilGemRails::CalculateSides(CSDatas.CSChannelGemData,RMA.OpenNURBS.IOnCurve)
+PlaceProngs2                                   | System.Void CSBlocks.Settings.Obsolete.CSProngPlacerFlow4::PlaceProngs2(CSDatas.CSChannelGemData,System.Double,System.Double,System.Int32,System.Doubl
+MakeProflies                                   | System.Void CSBlocks.Shank.CSSplitShankMetal::MakeProflies(System.Boolean,Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Collections.Generic.List`1<
+MakeScallopCutterCorner                        | System.Boolean CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction::MakeScallopCutterCorner(CSDatas.CSChannelGemData,Rhino.Geometry.Brep,Rhino.Geometr
+GetEdgeCurves                                  | System.Void CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadVProngDome::GetEdgeCurves(Rhino.Geometry.Brep,Rhino.Geometry.Curve,Rhino.Geometry.NurbsSurfa
+CalculateLeft                                  | System.Boolean CSBlockDataUtils.CSUtilGemRails::CalculateLeft(System.Collections.Generic.List`1<CSDatas.CSChannelGemData>,RMA.OpenNURBS.OnCurve,System
+CalculateRight                                 | System.Boolean CSBlockDataUtils.CSUtilGemRails::CalculateRight(System.Collections.Generic.List`1<CSDatas.CSChannelGemData>,RMA.OpenNURBS.OnCurve,Syste
+MorphData                                      | CSDatas.CSDataArray CSBlocks.UDT.CSFlowAlongSurface::MorphData(Rhino.Geometry.Surface,Rhino.Geometry.Surface,System.Boolean,CSDatas.CSDataArray)
+QuadFlipCircles                                | System.Collections.Generic.List`1<RMA.OpenNURBS.OnCircle> CSBlocks.GemClusters.Obsolete.CSClusterEmerald1::QuadFlipCircles(System.Collections.Generic.
+CalcGemCurvePointsClosed                       | System.Void CSBlocks.Shank.French.CSFrenchShank::CalcGemCurvePointsClosed(System.Collections.Generic.List`1<CSBlocks.Shank.Helpers.UltimateGemData>,Rh
+CutterChamferWithFlat                          | System.Boolean CSBlockUtil.CSUtilSMI::CutterChamferWithFlat(System.Double,System.Double,System.Double,System.Double,RMA.OpenNURBS.OnCurve&)
+FindFollowingRaster                            | System.Boolean CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::FindFollowingRaster(System.Boolean[0...,0...],System.Int32&,System.Int32&,CSBlockU
+HorizontalAlignment                            | Rhino.Geometry.Transform CSBlocks.Utilities.CSTextOnCurve::HorizontalAlignment(Rhino.Geometry.Curve&,System.Collections.Generic.List`1<Rhino.Geometry.
+SetProngParams                                 | CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam[] CSBlocks.Settings.Heads.CSHeadBuilderV2.ProngParam::SetProngParams(CS.Parametric.Channels.CSInput
+ArrangeGeometry                                | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadProngs7::ArrangeGeometry(CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHead
+Xor_Path                                       | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::Xor_Path(System.Boolean[0...,0...],CSBlockUtil.RasterToVector.CSRasterToVectorGeometr
+IntersectionTreatment                          | System.Void CSBlockUtil.CSUtilHollowRing::IntersectionTreatment(Rhino.Geometry.Curve[]&,System.Int32,System.Int32)
+Smooth                                         | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::Smooth(CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/CurveMixed,System.Int32,Sy
+CreateOutsideRingRail                          | System.Boolean CSBlockUtil.CSUtilRingRail::CreateOutsideRingRail(System.Double,RMA.OpenNURBS.IOnCurve,System.Double,System.Double,System.Double,RMA.Op
+CalcGemCurvePoints                             | System.Void CSBlocks.Shank.French.CSFrenchShank::CalcGemCurvePoints(System.Collections.Generic.List`1<CSBlocks.Shank.Helpers.UltimateGemData>,Rhino.Ge
+DoCornerMorph                                  | System.Void CSBlocks.Settings.FrenchHalo.CSFrenchHaloMorphCorner::DoCornerMorph(System.Int32,CSDatas.CSChannelGemData[],CSDatas.CSChannelGemData[],CSD
+CSHeadProng                                    | System.Boolean CSBlocks.Settings.Heads.CSHeadBuilderV1.Obsolete.CSHeadUltimate5::CSHeadProng(System.Int32,CSDatas.CSData,System.Int32,System.Int32,Sys
+Orient3Point                                   | Rhino.Geometry.Transform CSBlockUtil.CSUtilMath::Orient3Point(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Po
+SlopePointsIn                                  | System.Void CSBlockUtil.RasterToVector.CSRasterToVectorGeometry::SlopePointsIn(CSBlockUtil.RasterToVector.CSRasterToVectorGeometry/RasterPath,System.I
+MakeScallopCutter                              | System.Boolean CSBlocks.Settings.FrenchHalo.CSFrenchHaloProduction::MakeScallopCutter(CSDatas.CSGemData,CSDatas.CSChannelGemData,Rhino.Geometry.Brep,R
+CreateGemsFromCircles                          | CSDatas.CSDataArray CSBlocks.Gems.CSGemBetween2CurvesPlacement::CreateGemsFromCircles(System.Collections.Generic.List`1<Rhino.Geometry.Circle>,CSDatas
+CreateRingTopPart                              | System.Boolean CSBlockUtil.Signet.Obsolete.SignetRingAdvanced::CreateRingTopPart(System.Collections.Generic.IEnumerable`1<Rhino.Geometry.Curve>,System
+
+== PROPERTIES ==
+distinct=1130
+  Alpha | AngleEndLeft | AngleEndRight | AngleStartLeft | AngleStartRight | AngleToleranceRadians
+  Arrangment | Bitmap | BottomProfile | BottomProfileHeight | BottomProfileWidth | Brep
+  C | CSLibraryPath | CleaningPixel | Corner | CornerTolerance | Crv
+  CrvParam1 | CrvParam2 | CrvParam3 | CrvParam4 | Curve | CurveLeft
+  CurveRight | Curves | Direction | Distance | DomeBlendAmountInside | DomeBlendAmountOutside
+  DomeBlendEndInside | DomeBlendEndOutside | DomeBlendStartInside | DomeBlendStartOutside | DomeHeight | ExpandableInputChannelArrayType
+  ExpandableInputChannelDataType | ExpandableInputChannelIdentifier | ExternalRadius | Gem | GemPoint | Geometry
+  GetAngleToleranceRadians | GetCSLibraryPath | GetIsCounterSketch | GetIsPrintingAllowed | GetTolerance | GumballTransform
+  Height | IAbove | IAngle | IBelow | IDestinationAngle | IDestinationAngleSize
+  IEnableBase | IEnableSecondControl | IGem | IGems | IHeadBase | IHeadSideX
+  IHeadSideY | IHeadTop | IObjects | IProngAngle | IProngBaseNudge | IProngBaseProfile
+  IProngBaseX | IProngBaseY | IProngLines | IProngTopNudge | IProngTopProfile | IProngTopX
+  IProngTopY | IRailCount | IRailProfile | IRailProfile2 | IRailX | IRailX2
+  IRailY | IRailY2 | IRailZPos | IRingRail | ISourceAngle | ISourceAngleSize
+  IStyle | ITopAngle | IWhichRail | ImageTransform | InAbove | InActive
+  InAdjustBoundingBoxZ | InAmount1Y | InAmount1x | InAmount2X | InAmount2Y | InAmount3X
+  InAmount3Y | InAmountToMiddle | InAngle | InAngleBottom | InAngleOffset | InAngleX
+  InAngleY | InBase | InBaseAngle | InBaseAngleBottom | InBaseAngleControl | InBaseAngleTop
+  InBaseCurve | InBaseObject | InBaseOffset | InBasePointSize | InBaseStyle | InBaseToPoint
+  InBelow | InBend | InBezel | InBlackHeight | InBlendAdjustment | InBlendAmount
+  InBlendAmountBase | InBlendAmountTop | InBlendCornerInside | InBlendCornerOutside | InBlendLength | InBlendTilt
+  InBottomThickness | InBottomTrim | InBottomX | InBottomZ | InBoundaries | InCapExtrusion
+  InCenterFeatureObjects | InCenterGem | InCenterGemShapeCornerBlendEnabled | InCenterGemShapeCornerBlendOffsetPercentage | InCenterGemShapeCornerBlendRadiusInner | InCenterGemShapeCornerBlendRadiusOuter
+  InCenterGemShapeOverride | InCenterGemShapeOverrideEnabled | InCenterGemShapeOverrideMode | InCenterGemSpacing | InCenterScale | InCenterSpacing
+  InCenterZOffset | InChannelBlend | InChannelBottomOffset | InChannelClosed | InChannelCornerBlendRadius | InChannelDepth
+  InChannelEnabled | InChannelEndExtendType | InChannelEndSpacingBoth | InChannelEndSpacingEnd | InChannelEndSpacingStart | InChannelPullDown
+  InChannelSideSpacing | InChannelSpacing | InChannelSpacing2 | InChannelSpacingEnd | InChannelSpacingStart | InChannelStartDistance
+  InChannelWallDepth | InChannelWallDrop | InChannelWallGemOverlap | InChannelWallThicknessExtraInner | InChannelWallThicknessExtraOuter | InChannelWallThicknessInner
+  InChannelWallThicknessOuter | InChannelWidthInside | InChannelWidthOffset | InClosed | InClusterGems | InComfortFit
+  InComfortOffset | InComfortThickness | InContinuityMode | InCornerBlend | InCornerNudgeEdge | InCornerNudgeGem
+  InCornerProngAngle | InCornerProngSize | InCornerProngSizeOffset | InCount | InCurve | InCurves
+  InDepthFromGems | InDestination | InDiameterEnd | InDiameterMiddle | InDiameterStart | InDoFlip
+  InDoMeshProngs | InDoMeshedProngs | InDoMirror | InDoMountingCutoutBottom | InDoMountingCutoutTop | InDoReverseDirection
+  InDomeAmount | InEdge1 | InEdge2 | InEdgeNudge | InEmeraldCornerPoint1 | InEmeraldCornerPoint2
+  InEnableBase | InEnableBlendInside | InEnableBlendOutside | InEnableDiameterEnd | InEnableDiameterMiddle | InEnableEndProngEndControls
+  InEnableEndProngRotationMirroring | InEnableLock | InEnableModeDoItYourself | InEnablePlacementEnd | InEnablePlacementMiddle | InEnableSecondControl
+  InEnableVProngs | InEndAngleA | InEndAngleB | InEndBlendBot | InEndBlendEdge | InEndBlendTop
+  InEndBottomArcPercentage | InEndControls | InEndControlsMirror | InEndEndType | InEndFillet | InEndHeight
+  InEndNudgeA | InEndNudgeB | InEndNudgeEdge | InEndNudgeGem | InEndProngPercentage | InEndProngStyle
+  InEndSizeOffset | InEndSizeOffsetProng | InEndSizeScalar | InEndSpreadA | InEndSpreadB | InEndTaper
+  InEndTaperProng | InEndTypeEnd | InEndTypeProng | InEndTypeStart | InEndVerticalLocation | InEven
+  InExtrudeBothSides | InExtrudeDistance | InFastMulti | InFillet | InFixPosition | InFlip
+  InFlip1 | InFlip2 | InFlipExtrusion | InFlipU | InFlipV | InFlipZ
+  InFlowSurfaceEnable | InFlowSurfaceParamEnd | InFlowSurfaceParamStart | InFollowCurve | InForceChannel | InForceOpen
+  InFromObject | InGem | InGemCount | InGemDefinition | InGemPlacement | InGemShape
+  InGemSize | InGemSizeToggle | InGemSizeZ | InGemTransform | InGems | InGirdleSpacing
+  InGirldeSpacing | InHalo | InHeadBase | InHeadHeight | InHeadTop | InHeight
+  InHeightInside | InHeightOutside | InInnerWallExtra | InInsideEdgeNudge | InInsideHeight | InInsideSize
+  InInsideSizeBase | InInsideSizeTop | InInsideVerticalLocation | InInsideWidth | InIntersector | InLargeBottomDepth
+  InLargeDiameter | InLargeFillet | InLargeHeight | InLargeTaper | InLargeTopHeight | InLargeWidthAdjustment
+  InLastRightRailNormParam | InLength | InMaxGem | InMeshedProngs | InMetalToggle | InMethod
+  InMiddleBlendBot | InMiddleBlendEdge | InMiddleBlendTop | InMiddleBottomArcPercentage | InMiddleFillet | InMiddleHeight
+  InMiddleProfileCount | InMiddleProngPercentage | InMiddleTaper | InMiddleVerticalLocation | InMinCuletSmallerFlag | InMinCuletUp
+  InMinimumBaseSpacing | InMirror | InMirrorMode | InMountingAngleBottom | InMountingAngleTop | InNormalMode
+  InNudge | InNudgeEdge | InNudgeGem | InObject | InObjects | InOffset
+  InOffsetFix | InOffsetX | InOffsetXEnd | InOffsetXEndProng | InOffsetXStart | InOffsetXStartProng
+  InOffsetY | InOffsetYEnd | InOffsetYEndProng | InOffsetYStart | InOffsetYStartProng | InOrientationMethod
+  InOuterWallExtra | InOutsideEdgeNudge | InOutsideHeight | InOutsideProfile | InOutsideSize | InOutsideSizeBase
+  InOutsideSizeTop | InOutsideVerticalLocation | InOutsideWidth | InParamEnd | InParamStart | InParameter
+  InParams | InParams2 | InPattern | InPercentToggle | InPivot | InPlacement
+  InPlacementEnd | InPlacementMethod | InPlacementMiddle | InPlacementStart | InPlanarCurve | InPlanarOutsideRingRail
+  InPlanarRingRail | InPoint | InPointAt | InPositionEnd | InPositionMiddle | InPositionStart
+  InProfile | InProfile2 | InProfileBottom | InProfileHeight | InProfileProng | InProfileTop
+  InProfileWidth | InProfiles | InProjectionMode | InProngBaseDomeHeight | InProngBaseNudge | InProngBaseProfile
+  InProngBaseX | InProngBaseY | InProngDomeHeight | InProngDomeSettingAngle | InProngDomeSettingDistance | InProngLayout
+  InProngOnOff | InProngRails | InProngRotateAngle | InProngSizeControl | InProngTopNudge | InProngTopProfile
+  InProngTopX | InProngTopY | InProngType | InProngTypeEnd | InProngTypeStart | InProngVBaseAngle
+  InProngVBlendAmount | InProngVTopAngle | InQuality | InRail | InRail0 | InRail1
+  InRail2 | InRailCount | InRailOffset | InRailRadius | InRailX | InRailX2
+  InRailZ | InResizeMode | InReverseColors | InRigidObjects | InRingRail | InRingRailOffset
+  InRingRailRadius | InRoll | InRotate | InRotation | InRotationEnd | InRotationStart
+  InScale | InScaleMaxX | InScaleMaxY | InScaleMaxZ | InScaleXEnd | InScaleXStart
+  InScaleYEnd | InScaleYStart | InSeatAngle | InSeatHeight | InSeatLength | InSeatX
+  InSeatZ | InSettingStyle | InShape | InShoulderBlendAmount | InShoulderBottomAngleOffset | InShoulderBottomMeanCurveAmount
+  InShoulderStyle | InShoulderTopAngleOffset | InShoulderTopMeanCurveAmount | InShoulderTopOffsetX | InShoulderTopOffsetZ | InShoulderTopThickness
+  InShowAll | InShowChannel | InSizeMax | InSizeMin | InSizeOffsetEnd | InSizeOffsetProngEnd
+  InSizeOffsetProngStart | InSizeOffsetStart | InSizePercentageEnd | InSizePercentageStart | InSizeX | InSizeY
+  InSmallBottomDepth | InSmallDiameter | InSmallFillet | InSmallHeight | InSmallTaper | InSmallTopHeight
+  InSmallWidthAdjustment | InSortedGem | InSortedGemArray | InSortedGems | InSpacing | InSpacingFromCenter
+  InSpacingMethod | InSplitDistance | InSplittingSurface | InSpreadEnd | InSpreadStart | InStartBlendBot
+  InStartBlendEdge | InStartBlendTop | InStartBottomArcPercentage | InStartEndType | InStartFillet | InStartHeight
+  InStartNudgeEdge | InStartNudgeGem | InStartProngPercentage | InStartSizeOffset | InStartSizeOffsetProng | InStartSizeScalar
+  InStartTaper | InStartTaperProng | InStartTypeProng | InStartVerticalLocation | InStyle | InSurface
+  InSwapUV | InSweep | InTaper | InTaperDiameter | InTaperEnd | InTaperProngEnd
+  InTaperProngStart | InTaperSpacing | InTaperStart | InTaperZOffset | InTextureImagePath | InThickness
+  InThicknessBottom | InThicknessSide | InThicknessTop | InTilt | InToggleBlendedCorner | InTopAngle
+  InTopThickness | InTopX | InTopZ | InURepeat | InUltimateShankInput | InUseLargestSizePossible
+  InUseMinCulet | InVOffsetEnd | InVOffsetStart | InVPlacement | InVRepeat | InVerticalLocation
+  InWhiteHeight | InWidth | InWidthInside | InWidthOutside | InXMovePatternStart | InXOffset
+  InXOffsetEnd | InXOffsetStart | InXYScaleToGem | InXform | InYMovePatternStart | InYOffset
+  InYOffsetEnd | InYOffsetStart | InZOffset | InZOffsetEnd | InZOffsetStart | Index
+  InternalRadius | Intersected | IsCounterSketch | IsPrintingAllowed | IsSetup | IsValid
+  Items | MaleNumber | MoveDir | OHeadBase | OHeadGirdle | OHeadProngLines
+  OHeadSideX | OHeadSideY | OHeadTop | OLine0 | OLine1 | OObjects
+  OProngs | ORails | ORingRail | OffsetBottom | OffsetTop | OffsetZ
+  On_DEGREES_TO_RADIANS | On_RADIANS_TO_DEGREES | OutAngleX | OutAngleY | OutArray | OutBaseObject
+  OutBezel | OutBoundsCurves | OutBrep | OutCurve | OutCurveEnd | OutCurveLeft
+  OutCurveRight | OutCurveStart | OutCurves | OutCutter | OutCutters | OutDistanceHandle
+  OutEmeraldCorner1Point | OutEmeraldCorner2Point | OutEndProfile | OutEndProfileFlip | OutGem | OutGemHeight
+  OutGemShape | OutGemX | OutGemXFormArray | OutGemY | OutGemZ | OutGemZMin
+  OutHeadBase | OutHeadGirdle | OutHeadProngLines | OutHeadSideX | OutHeadSideY | OutHeadTop
+  OutJoined | OutLargeBoundingBox | OutMetal | OutMiddleGemDisabled | OutMultipleProfile | OutObject
+  OutObjects | OutOutsideRingRail | OutParam | OutParameters | OutPieces | OutPoint
+  OutPoints | OutProfileEnd | OutProfileSelectorHandle | OutProfileStart | OutProfiles | OutProngArrangment
+  OutProngBaseAngleDisabled | OutProngBaseXDisabled | OutProngMoveDir | OutProngOverlap | OutProngParamIndex | OutProngTopAngleDisabled
+  OutProngTopXDisabled | OutProngType | OutProngs | OutRail | OutRail0 | OutRailDistance
+  OutRailPositionDisabled | OutRailProfileDisabled | OutRailSelectorDisabled | OutRailXDisabled | OutRails | OutResizedGem
+  OutRightRailNormParam | OutRigidObjects | OutRingRailFlexInside | OutRingRailFlexOutside | OutShankBuilder | OutShape
+  OutSingleProfile | OutSmallBoundingBox | OutStartFilletHandle | OutStartNudgeGemHandle | OutStartProfile | OutStartProfileFlip
+  OutStartProngHeightHandle | OutStartTaperHandle | OutStartVerticalLocationHandle | OutString | OutSurface | OutSurfaceOutput
+  OutTexturedObject | OutTopLine | OutXform | OutXformEndOffset | OutXformEndSize | OutXformEndX
+  OutXformEndY | OutXformProfileSelector | OutXformStartOffset | OutXformStartSize | OutXformStartX | OutXformStartY
+  OutXformSurface | Overlap | ParamS | ParamT | Parameter | Parameters
+  Pen | Placement | Plane | Pln | Prong | ProngArrangement
+  ProngBaseBlend | ProngBaseDomeHeight | ProngBaseNudge | ProngBaseProfile | ProngBaseRail | ProngBaseX
+  ProngBaseY | ProngDome | ProngDomeHeight | ProngDomeSettingAngle | ProngDomeSettingDistance | ProngOverlap
+  ProngParamIndex | ProngPoint | ProngPointAngle | ProngTopBlend | ProngTopNudge | ProngTopProfile
+  ProngTopX | ProngTopY | ProngType | Pt | PtRc | PullPushCustomDepth
+  PullPushCustomHeight | PullPushCustomOffset | PullPushCustomZPosition | PullPushSideCurve | PullPushSideEnabled | PullPushSideWidth
+  PullPushTopEnabled | PullPushTopOffset | PullPushTophDepth | Radius | RadiusAdjusted | Result
+  SideProfileBottomAngleLeft | SideProfileBottomAngleRight | SideProfileBottomHeightLeft | SideProfileBottomHeightRight | SideProfileBottomLeft | SideProfileBottomRight
+  SideProfileBottomWidthLeft | SideProfileBottomWidthRight | SideProfileMidAngleLeft | SideProfileMidAngleLocalLeft | SideProfileMidAngleLocalRight | SideProfileMidAngleRight
+  SideProfileMidLeft | SideProfileMidLeftHeight | SideProfileMidLeftWidth | SideProfileMidRight | SideProfileMidRightHeight | SideProfileMidRightWidth
+  SmoothFactor | StraightProng | SwapMales | Tan | TanRc | Tolerance
+  TopCurvatureHeight | TopDistanceToFinger | TopHeight | TopOffsetX | TopOffsetY | TopProfile
+  TopRotation | TopWidth | Type | VerticalPointsFront | VerticalPointsLeft | VerticalPointsRear
+  VerticalPointsRight | X | X2 | Xy | Y | Y2
+  iAbove | iAdjustSeam | iAmount | iAmount2 | iAmount3 | iAngle
+  iAngleBottom | iAngleX | iAngleY | iArrayOfCurves | iBase | iBaseAngle
+  iBaseAngleControl | iBaseObject | iBaseOffset | iBaseStyle | iBaseThickness | iBaseToPoint
+  iBasetoPoint | iBelow | iBlend | iBlendAdjustment | iBlendAmount | iBlendAmount1
+  iBlendAmount2 | iBlendAmountBottom | iBlendAmountTop | iBlendInside | iBlendOutside | iBlendTilt
+  iBlendToCurve | iBottomX | iBottomZ | iCenterGem | iCenterGemShapeOverride | iCenterGemShapeOverrideEnabled
+  iCenterGemShapeOverrideMode | iCenterGemSpacing | iCenterShape | iChannelDepth | iChannelEndSpacing | iChannelEndSpacingChannel
+  iChannelEndSpacingProng | iChannelMode | iChannelSpacing | iChannelSpacingChannel | iChannelSpacingProng | iChannelWallChannel
+  iChannelWallDepth | iChannelWallProng | iChannelWallThicknessInner | iChannelWallThicknessOuter | iClosed | iClusterGems
+  iCorner | iCornerBlend | iCount | iCurve | iCurve1 | iCurve2
+  iCurves | iCuttingDepth | iDepth | iDestination | iDiameter | iDiameterEnd
+  iDirection | iDirectionCurves | iDistance | iDomeEnabled | iDomeThickness | iEdgeHeight
+  iEdgeNudge | iEdgeNudgeInside | iEdgeNudgeOutisde | iEnableBase | iEnableModeDoItYourself | iEnableModeGameChanger
+  iEnableRail | iEnableSecondControl | iEnableVProngs | iEndAngleA | iEndAngleB | iEndControls
+  iEndControlsMirror | iEndEndType | iEndNudgeA | iEndNudgeB | iEndPinch | iEndSizeScalar
+  iEndSpread | iEndSpreadA | iEndSpreadB | iEndTaper | iEven | iExtraWidth
+  iFarInsideProngsSize | iFarOutsideProngsSize | iFastMulti | iFillet | iFixPosition | iFlip
+  iFlipU | iFlipV | iFlipX | iFlipZ | iFlowSurface | iFont
+  iFromObject | iGameChanger | iGem | iGemArray | iGemDefinition | iGemEnd
+  iGemHeightOffset | iGemNudge | iGemRotation | iGemSize | iGemSizeZ | iGemSpacing
+  iGemSpacingChannel | iGemSpacingProng | iGemStart | iGems | iGirdleSpacing | iHalo
+  iHeadBase | iHeadSideX | iHeadSideY | iHeadTop | iHeight | iHeightEnd
+  iHeightOffset | iHeightStart | iInnerRail | iInnerWallExtra | iInsideAmount | iLargeDiameter
+  iLargeFillet | iLargeHeight | iLargeTaper | iLength | iMaxProngSize | iMeshProngs
+  iMeshedProngs | iMethod | iMiddleProfileCount | iMinProngSize | iMirror | iMode
+  iNudge | iObject | iObjectCenterPosition | iObjects | iOffset | iOffsetFix
+  iOffsetZ | iOpening | iOrientMethod | iOuterRail | iOuterWallExtra | iOutsideAmount
+  iOutsideProfile | iOutsideRail | iOutsideRailLine | iOutsideRailScale | iOutsideRailTube | iParameter
+  iParameter2 | iParams | iParams2 | iPlacement | iPlacementOffset | iPointAt
+  iPosition | iPositionEnd | iPositionStart | iProfile | iProfileBottom | iProfileCount
+  iProfileHeight | iProfileWidth | iProngAngle | iProngBaseDomeHeight | iProngBaseNudge | iProngBaseOffset
+  iProngBaseProfile | iProngBaseX | iProngBaseY | iProngDomeHeight | iProngDomeSettingAngle | iProngDomeSettingDistance
+  iProngHeight | iProngHeightInside | iProngHeightOutside | iProngLines | iProngProfile | iProngRails
+  iProngRotateAngle | iProngTopNudge | iProngTopOffset | iProngTopProfile | iProngTopX | iProngTopY
+  iProngVBaseAngle | iProngVOffset | iProngVOffsetInside | iProngVOffsetOutside | iProngVTopAngle | iRadiusEnd
+  iRadiusStart | iRail | iRail1 | iRail2 | iRailOffset | iRailOffset2
+  iRailProfile | iRailProfile2 | iRailRadius | iRailX | iRailX2 | iRailY
+  iRailY2 | iRailZ | iRailZPos | iRingRadius | iRingRail | iRingRailOffset
+  iRingRailRadius | iRoll | iRotate | iRotation | iScale | iScaleXEnd
+  iScaleXStart | iScaleYEnd | iScaleYStart | iSeatAngle | iSeatHeight | iSeatLength
+  iSeatX | iSeatZ | iShape | iShearMultiplier | iShowAll | iShowChannel
+  iSizeAngle | iSizeX | iSizeY | iSmallDiameter | iSmallFillet | iSmallHeight
+  iSmallTaper | iSortedGem | iSortedGemArray | iSpacing | iSpacingMethod | iSpan
+  iSplitMiddle | iStartEndType | iStartSizeScalar | iStartTaper | iStyle | iSurface
+  iSurfaceLHS | iSurfaceLhs | iSurfaceRHS | iSurfaceRhs | iSwapUV | iTaper
+  iTaperDiameter | iTaperSpacing | iTaperZOffset | iText | iThickness | iTilt
+  iTopAngle | iTopThickness | iTopX | iTopZ | iTube | iTwist
+  iVOffsetEnd | iVOffsetStart | iWallDropChannel | iWallDropProng | iWhichEndOfCurves | iWidth
+  iWidthEnd | iWidthLock | iWidthOffset | iWidthStart | iXYScaleToGem | iZOffset
+  iZOffsetEnd | iZOffsetPercent | iZOffsetStart | oAngle | oArray | oAvgProngDiameter
+  oBailOpeningInsideDepth | oBailOpeningInsideHeight | oBaseGem | oBaseObject | oBlends | oBrep
+  oChannelEndSpacing | oChannelHeight | oChannelSpacing | oCount | oCurve | oCurves
+  oCutter | oGem | oGemHeight | oGemSizeLoopBack | oGemSizeVector | oGemSpacing
+  oGems | oGeometry | oHeadBase | oHeadGirdle | oHeadProngLines | oHeadSideX
+  oHeadSideY | oHeadTop | oIntersectCurve | oIntersectSurface | oMetal | oObjects
+  oOutsideRingRail | oOutsideScale | oParam | oParam1 | oParam2 | oParam3
+  oParamEnd | oParamFirstGem | oParamLastGem | oParamStart | oParameters | oPipes
+  oPoints | oPosition | oProfile | oProfileParamLeft | oProfileParamRight | oProfileWidthLoopBack
+  oProfiles | oProngs | oRail | oRail11 | oRail12 | oRail21
+  oRail22 | oRingRail | oShape | oSortedGemArray | oStartParam | oStopParam
+  oString | oStuff | oSurface | oWallDrop | oXPos | oXform
+  oYSize | oZPos
+
+== STRINGS (len>=5, deduped, top 220) ==
+ 172  Create prong cache failed
+  54  Curve
+  54  GetGemScaleFromX failed
+  52  Invalid gems
+  50  Missing Gems
+  49  emerald
+  48  princess
+  47  emerald square
+  44  emerald rotated 90
+  41  GetClosestIndexToPosition failed
+  40  Profile
+  39  Invalid head style
+  35  baguette straight
+  35  round
+  35  cushion
+  35  cushion square
+  35  radiant
+  35  heart
+  35  marquise
+  32  CurveTop Inside:
+  32  emerald square rotated 45
+  32  oval rotated 90
+  32  cushion rotated 90
+  32  cushion square rotated 45
+  32  radiant square
+  32  marquise rotated 90
+  30  princess rotated 45
+  29  CalculateCircleEdgeLeft failed
+  29  CalculateCircleEdgeRight failed
+  28  Failed Sweep1
+  28  Failed Sweep1: No results
+  27  GetClosestPoint failed
+  27  GetDiameterFromTable failed
+  26  GetLength failed
+  24  BuildBlendProng:  
+  24  Invalid Gem Cluster Center Shape Override Mode
+  22  {0}_{1}
+  22  Intersection failed
+  21  Failed CapPlanarHoles
+  20  GetWidthHeightFromTable failed
+  20  CenterGem
+  18  Marquise
+  17  Emerald
+  17  Round
+  17  Princess
+  16  half moon
+  16  triangle
+  16  trillion curved
+  16  trillion straight
+  16  Baguette Straight
+  15  PreProcessCrv failed
+  15  Cushion
+  14  octagon
+  13  Missing profile data
+  13  Missing Surfaces
+  13  Missing Rail
+  13  Ultimate GemData GemArray
+  13  Missing Gem
+  13  Unable to create top dome
+  13  Unable to create CAM prong extension.
+  13  Heart
+  12  Missing profile curve
+  12  StartProfile
+  12  RhinoMergeCurves failed
+  12  Invalid gem
+  12  ReduceProngRailLength failed
+  12  CalculateGemInfos failed
+  12  Emerald Square
+  12  Radiant
+  12  OffsetZ Failed
+  11  Bounding Box Failed
+  11  Ultimate GemData Array
+  11  Failed JoinBreps
+  11  Cushion Rotated 90
+  11  Oval Rotated 90
+  11  Cushion Square
+  11  Cushion Square Rotated 45
+  11  Princess Rotated 45
+  11  Emerald Rotated 90
+  11  Emerald Square Rotated 45
+  11  Octagon
+  11  Radiant Square
+  11  Marquise Rotated 90
+  10  Failed Sweep
+  10  RightRailPoint
+  10  RightRailVector
+  10  Cluster Gems
+  10  BuildSweepRail failed:  
+  10  CreateProng failed
+  10  Invalid Gem
+  10  BezelBuilder failed
+  10  Gem Xform
+  10  Offset Curve
+  10  channel Merge failed
+   9  Cutter failed
+   9  Failed Sweep2
+   9  Half Moon
+   9  Prong Top Profile
+   9  Prong Base Profile
+   9  GetNormalizedArcLengthPoint failed
+   9  CalculateGemCountEstimate failed
+   9  PlaceGemsSquare failed
+   9  Boundingbox Error
+   9  Gem Definition
+   8  Missing sorted gems
+   8  Missing curve in array (No NurbsCurve):
+   8  Bounding Box not found
+   8  FindBlendToCurvePoint failed
+   8  BuildBlendedProngMesh:  
+   8  Missing Prong Rail 
+   8  Unable to create base dome
+   8  Error Making Straight Prong Profile Top
+   8  Error Making V Prong Domes
+   8  Error Making Straight Prong Profile Base
+   8  Corner
+   8  PlaceGemsEmerald failed
+   8  Unknown gem space for cluster 
+   8  Sweep2
+   8  NoReturnFromSweep2
+   7  InObject
+   7  Missing surface
+   7  CalculateLeft failed
+   7  CalculateRight failed
+   7  BoundingBox Failed
+   7  Sweep failed
+   7  GetTightBoundingBox failed
+   7  Missing input gems
+   7  Unable to create profile
+   7  HeadRail Failed
+   7  HeadFinish Failed
+   7  BaguetteTapered
+   7  Prong Info Missing
+   7  Offset Curve Length
+   7  PlaceGemsRound failed
+   7  PlaceGemsSquareRotated failed
+   7  PlaceGemsHeart failed
+   7  PlaceGemsMarquise failed
+   7  PlaceGemsPear failed
+   7  PlaceGemsMarquiseRotated failed
+   7  Error with Merge Curves
+   6  Missing Object
+   6  Missing Curve
+   6  Surface
+   6  Missing param in array (No Param):
+   6  Could not find closest point
+   6  Cound not find closest point
+   6  Rail Input Missing
+   6  Profile Placer Simple: Missing Nurbs Curve
+   6  EndProfile
+   6  RhinoMergeCurves failed to produce results
+   6  CreateMeshProng failed
+   6  Missing profile
+   6  Invalid input
+   6  Unable to make outside profile
+   6  Center Gem
+   6  Unable to create Under Bezel
+   6  Unable to create top prong cap.
+   6  Error Making V Prong Top
+   6  Center Gem Bounding Box
+   6  Rhs Gem Bounding Box
+   6  Lhs Gem Bounding Box
+   6  Normalized Arc Length Point
+   6  Missing Objects
+   6  Baguette Tapered
+   6  SeamPt Adjust failed
+   5  Invalid Morph
+   5  MergeCurves failed
+   5  Missing Prong Infos
+   5  InSurface
+   5  CSName
+   5  Failed Sweep Top
+   5  Create prong dome cache failed
+   5  RhinoJoinBreps failed
+   5  RhinoBrepCapPlanarHoles failed
+   5  GeometryData not right
+   5  Surface selected is negative
+   5  Invalid curve
+   5  Prong Placer:  Missing Gem 
+   5  Failed Sweep2 
+   5  HeadShape Failed 
+   5  Sweep 2
+   5  Intersect of custom Rail Failed 
+   5  RhinoExtrudeCurveStraight failed
+   5  Ring Rail
+   5  Bitmap is null
+   5  Gem Bounding Box
+   5  Triangle
+   5  Trillion Curved
+   5  Trillion Straight
+   5  Gem Input
+   5  Intersect for channel Inner Failed
+   5  Intersect for channel Failed
+   5  Gem X form
+   5  Gem Invalid Bounding Box
+   5  Error Intersect Failed
+   5  Failed Duplicate
+   5  Error merging curves
+   5  ProfileEndCap missing
+   5  Gem Offset : 
+   4  Missing Surface
+   4  PrepCrvPrimary failed
+   4  Missing Curve Array
+   4  Missing Curve Array ( No Object)
+   4  Missing Param Array ( No Object)
+   4  Missing Curve In Array (No Object)
+   4  Point
+   4  Failed plane and base Crv Intersection
+   4  Parts not found
+   4  Top mesh part not found
+   4  Base mesh part not found
+   4  Side mesh parts not found
+   4  Unable to get prepared curve
+   4  Under Bezel Top Outer Offset Curve Unable to Create Output 
+   4  Bezel Rail Seat Offset Curve Unable to Create Output
+   4  Under Bezel Top Outer Offset Curve Unable to Create Output
+   4  Can't duplicate the Gem
+   4  Prong split failed
+   4  Failed to get prongRailCrvP
+   4  Failed to get prongRailCrvM
+   4  Failed Sweep1 on rails

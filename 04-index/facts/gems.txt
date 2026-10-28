@@ -1,0 +1,838 @@
+SUBSYSTEM: gems
+TYPES: 262  METHODS: 1317
+
+== TOP TYPES BY METHOD COUNT ==
+    3  CSBlocks.Gems.CSClosestGems                                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemBetween2CurvesAdvanced                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSGemBetween2CurvesPlacement                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSGemListOnCurve                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemListOnCurveSetup                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Gems.CSGemBetween2Curves                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   21  CSBlocks.Gems.CSGemBetween2CurvesSetup                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemListSetup                                CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.CSGemOrObjectOnSurface                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   23  CSBlocks.Gems.CSPaveProngsTransforms                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.GemGroup                                      CSBlocks               System.Object
+    1  CSBlocks.Gems.PairGemGroup                                  CSBlocks               System.Object
+    2  CSBlocks.Gems.CSCustomEmerald                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSGemOrObjectOnCrv                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemPlacer                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemPlacerOnSurface                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSMatrixGemOnCrvSetup                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSShankGemToggleHelper                        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSSetGemMountingData                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSGemRemoveIntersecting                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSRemoveIntersectionGems                      CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSSortedGemCurves                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemsFromXFormArray                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.CSGemInChannelChooser                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemInfo                                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSSetGemMountingDataFromGem                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemPlacerSide                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.CSResizeGem                                   CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSAlternateStones                             CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSCustomBaguette                              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.CSCustomBaguetteRowOnRingRail                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemAroundRingRailSpan                       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.CSGemOnCrv                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.CSGemOnCrvCount                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemPlacerSpan                               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSGemRowOnRingRail                            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.CSSortGems                                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSGemListOnCurve1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Gems.Obsolete.CSGemBetween2Curves1                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.Obsolete.CSGemBetween2CurvesPlacement1        CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   20  CSBlocks.Gems.Obsolete.CSGemBetween2CurvesSetup1            CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv3                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv2                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSGemOrObjectOnCrv4                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemOrObjectOnSurface1              CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSSortGems2                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv10                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv11                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv12                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv13                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv14                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacer3                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv9                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSMatrixGemOnCrvSetup1               CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSCustomBaguette1                    CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   34  CSBlocks.Gems.Obsolete.CSGemOnCrv8                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   33  CSBlocks.Gems.Obsolete.CSGemOnCrv7                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrvCount4                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    5  CSBlocks.Gems.Obsolete.CSGemOnCrvCount3                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSResizeGem1                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSSortGems1                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    7  CSBlocks.Gems.Obsolete.CSGemOnCrv6                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrvCount2                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacer4                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemInfo1                           CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacerSide2                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacer2                         CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSCustomBaguetteRowOnRingRail1       CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    4  CSBlocks.Gems.Obsolete.CSGemOnCrv1                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    3  CSBlocks.Gems.Obsolete.CSGemOnCrv2                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+   28  CSBlocks.Gems.Obsolete.CSGemOnCrv4                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    8  CSBlocks.Gems.Obsolete.CSGemOnCrv5                          CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemOnCrvCount1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemOnRingRail1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemOnRingRailSide2                 CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacerSide1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemPlacerSpan1                     CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    2  CSBlocks.Gems.Obsolete.CSGemRowOnRingRail1                  CSBlocks               CS.CSObjects.CSBlocks.CSBlock
+    0  <Module>                                                    Common.Materials       
+   76  Common.Materials.Helpers.CommonMaterialHelper               Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    0  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.ValueType
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    5  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    8  Common.Materials.Helpers.CommonMaterialHelper/<>c           Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    1  <PrivateImplementationDetails>                              Common.Materials       System.Object
+    0  <Module>                                                    CSGemInstance          
+    4  CSGemInstance.CSGemInstanceDefinitionCustom                 CSGemInstance          CSGemInstance.CSGemInstanceDefinition
+   14  CSGemInstance.CSGemInstanceDefinitionCustomUser             CSGemInstance          CSGemInstance.CSGemInstanceDefinitionCustom
+   55  CSGemInstance.CSUtilGem                                     CSGemInstance          System.Object
+    2  CSGemInstance.CSUtilGem/<>c__DisplayClass47_0               CSGemInstance          System.Object
+    2  CSGemInstance.CSUtilGem/<>c__DisplayClass48_0               CSGemInstance          System.Object
+    2  CSGemInstance.CSUtilGem/<>c__DisplayClass56_0               CSGemInstance          System.Object
+   55  CSGemInstance.CSGemInstanceDefinition                       CSGemInstance          System.Object
+    3  CSGemInstance.CSGemInstanceDefinition/ProngPosition         CSGemInstance          System.Object
+    2  CSGemInstance.CSGemInstanceDefinition/<>c__DisplayClass91_  CSGemInstance          System.Object
+    4  CSGemInstance.CSUtil                                        CSGemInstance          System.Object
+    4  CSGemInstance.CSUtil/DelegateDeleteCallback                 CSGemInstance          System.MulticastDelegate
+    4  CSGemInstance.CSUtil/DelegateGetDouble                      CSGemInstance          System.MulticastDelegate
+   24  CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald   CSGemInstance          CSGemInstance.CSGemInstanceDefinitionCustom
+   24  CSGemInstance.CSGemInstanceDefinitionCustomDiamondBaguette  CSGemInstance          CSGemInstance.CSGemInstanceDefinitionCustom
+    2  CSGemInstance.GemInfoSpec                                   CSGemInstance          CSGemInstance.GemInfo
+   12  CSGemInstance.GemInfo                                       CSGemInstance          System.Object
+    2  CSGemInstance.GemInfoPlus                                   CSGemInstance          CSGemInstance.GemInfo
+    5  CSGemInstance.Helpers.RhinoModelHelper                      CSGemInstance          System.Object
+    7  CSGemInstance.Helpers.RhinoModelHelper/<>c                  CSGemInstance          System.Object
+    2  CSGemInstance.Helpers.UserDataSerializationHelper           CSGemInstance          System.Object
+    1  CSGemInstance.GemTableData.CSGem                            CSGemInstance          System.Attribute
+   14  CSGemInstance.GemTableData.GemTableBase                     CSGemInstance          System.Object
+   25  CSGemInstance.GemTableData.GemTableHelper                   CSGemInstance          System.Object
+    6  CSGemInstance.GemTableData.GemTableHelper/<>c               CSGemInstance          System.Object
+    2  CSGemInstance.GemTableData.GemTableHelper/<>c__DisplayClas  CSGemInstance          System.Object
+    2  CSGemInstance.GemTableData.GemTableHelper/<>c__DisplayClas  CSGemInstance          System.Object
+    0  CSGemInstance.GemTableData.GemTableLayer                    CSGemInstance          System.Enum
+    0  CSGemInstance.GemTableData.GemTableShape                    CSGemInstance          System.Enum
+    0  CSGemInstance.GemTableData.GemTableType                     CSGemInstance          System.Enum
+    9  CSGemInstance.GemTableData.IGemTable                        CSGemInstance          
+    2  CSGemInstance.GemTableData.GemTables.CabochonBullet         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonCushion        CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonEmerald        CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonHeart          CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonMarquise       CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonOval           CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonPear           CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonRound          CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.CabochonSquare         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondBaguetteStraig  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    3  CSGemInstance.GemTableData.GemTables.DiamondBaguetteTapere  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondCalf            CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondCoffin          CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondCushionRotated  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondCushionSquare   CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondCushion         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondCushionSquareR  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondEmeraldRotated  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondEmeraldSquare   CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondEmerald         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    3  CSGemInstance.GemTableData.GemTables.DiamondEmeraldCustom   CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondEmeraldSquareR  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondHalfMoon        CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondHeart           CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondHexagon         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondMarquiseRotate  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondMarquise        CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondOctagon         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondOvalRotated90   CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondOval            CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondPear            CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondPrincessRotate  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondPrincess        CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondRadiantSquare   CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondRadiant         CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondRound           CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondTriangle        CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondTrillionCurved  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondTrillionCurved  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondTrillionStraig  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.DiamondTrillionStraig  CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemCushion             CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemEmerald             CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemHeart               CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemMarquise            CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemOval                CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemPear                CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemRound               CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemSquare              CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemTriangle            CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.GemTrillion            CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.PearlRound             CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.RoseOval               CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.RoseRoundFlat          CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+    2  CSGemInstance.GemTableData.GemTables.RoseRoundPeak          CSGemInstance          CSGemInstance.GemTableData.GemTableBase
+   11  CSGemInstance.GemTableData.GemSize.GemSizeBase              CSGemInstance          System.Object
+    7  CSGemInstance.GemTableData.GemSize.GemSizeCustom            CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeBase
+    3  CSGemInstance.GemTableData.GemSize.GemSizeCustomDiamondBag  CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeRectangleTapered
+    4  CSGemInstance.GemTableData.GemSize.GemSizeCustomDiamondEme  CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeRectangle
+    2  CSGemInstance.GemTableData.GemSize.GemSizeRectangle         CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeSquare
+    1  CSGemInstance.GemTableData.GemSize.GemSizeRectanglePercent  CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeRectangle
+    5  CSGemInstance.GemTableData.GemSize.GemSizeRectangleTapered  CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeSquare
+    5  CSGemInstance.GemTableData.GemSize.GemSizeSquare            CSGemInstance          CSGemInstance.GemTableData.GemSize.GemSizeBase
+    0  CSGemInstance.GemTableData.Enumerations.ViewportControlHan  CSGemInstance          System.Enum
+   10  CSGemInstance.GemInstanceDefinitionParameters.GemInstanceD  CSGemInstance          System.Object
+    0  CSGemInstance.GemInstanceDefinitionParameters.GemInstanceD  CSGemInstance          System.Object
+   11  CSGemInstance.GemInstanceDefinitionParameters.GemInstanceD  CSGemInstance          CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersBase
+   11  CSGemInstance.GemInstanceDefinitionParameters.GemInstanceD  CSGemInstance          CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersBase
+   14  CSGemInstance.GemInstanceDefinitionParameters.GemInstanceD  CSGemInstance          CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersBase
+    0  <PrivateImplementationDetails>                              CSGemInstance          System.Object
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=1  CSGemInstance          System.ValueType
+    0  <PrivateImplementationDetails>/__StaticArrayInitTypeSize=1  CSGemInstance          System.ValueType
+    0  <Module>                                                    CSMaterials            
+   17  CSMaterials.CSDisplayMaterial                               CSMaterials            System.Object
+    0  CSMaterials.MaterialClassification                          CSMaterials            System.Enum
+   25  CSMaterials.MaterialGroup                                   CSMaterials            System.Object
+    3  CSMaterials.MaterialGroup/<>c                               CSMaterials            System.Object
+   10  CSMaterials.MaterialGroupItem                               CSMaterials            System.Object
+    6  CSMaterials.RhinoRenderObject                               CSMaterials            System.Object
+   25  CSMaterials.Helpers.ExportHelper                            CSMaterials            System.Object
+    3  CSMaterials.Helpers.ExportHelper/LayerInfo                  CSMaterials            System.Object
+    3  CSMaterials.Helpers.ExportHelper/<>c                        CSMaterials            System.Object
+    9  CSMaterials.Helpers.MaterialGroupHelper                     CSMaterials            System.Object
+    2  CSMaterials.Helpers.MaterialGroupHelper/<>c__DisplayClass9  CSMaterials            System.Object
+    0  <Module>                                                    Common.Materials       
+   76  Common.Materials.Helpers.CommonMaterialHelper               Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    0  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.ValueType
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    5  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    8  Common.Materials.Helpers.CommonMaterialHelper/<>c           Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    2  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    3  Common.Materials.Helpers.CommonMaterialHelper/<>c__Display  Common.Materials       System.Object
+    1  <PrivateImplementationDetails>                              Common.Materials       System.Object
+
+== READABLE METHOD NAMES (non-obfuscated) ==
+SizeTable                                      | System.Collections.Generic.IEnumerable`1<CSGemInstance.GemTableData.GemSize.GemSizeBase> CSGemInstance.GemTableData.GemTables.DiamondBaguetteTapered::
+Update                                         | System.Boolean CSBlocks.Gems.CSGemOrObjectOnCrv::Update()
+UpdateBuilder                                  | System.Void CSBlocks.Gems.Obsolete.CSGemOnCrv4::UpdateBuilder()
+CalculateVertices                              | System.Collections.Generic.List`1<Rhino.Geometry.Point3d> CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::CalculateVertices(Rhino.Collectio
+.cctor                                         | System.Void CSMaterials.Helpers.ExportHelper::.cctor()
+CalculateFaceCornerSets                        | System.Collections.Generic.IEnumerable`1<System.Int32[]> CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::CalculateFaceCornerSets(System.Dou
+AreTwoMaterialsTheSame                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::AreTwoMaterialsTheSame(Rhino.Render.RenderMaterial,Rhino.Render.RenderMaterial,System.Bo
+GetMGMaterialFromRenderMaterial                | Common.CyclesModels.MGMaterial Common.Materials.Helpers.CommonMaterialHelper::GetMGMaterialFromRenderMaterial(Rhino.Render.RenderMaterial,Common.Cycle
+ComputeCircles                                 | System.Collections.Generic.List`1<Rhino.Geometry.Circle> CSBlocks.Gems.CSGemBetween2Curves::ComputeCircles(Rhino.Geometry.Curve,Rhino.Geometry.Curve,S
+GetMGEnvironmentFromDocument                   | Common.CyclesModels.MGEnvironment Common.Materials.Helpers.CommonMaterialHelper::GetMGEnvironmentFromDocument()
+CalculateGemInfos                              | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv13::CalculateGemInfos(System.Int32,System.Int32,CSDatas.CSGemData,System.Double,System.Int32,System.In
+DetectIndividualProngs                         | System.Void CSBlocks.Gems.CSPaveProngsTransforms::DetectIndividualProngs(System.Collections.Generic.List`1<CSDatas.CSGemData>,System.Collections.Gener
+.ctor                                          | System.Void CSBlocks.Gems.CSGemOrObjectOnCrv::.ctor(System.String)
+GetString                                      | System.String Common.Materials.Helpers.CommonMaterialHelper::GetString(Rhino.Render.Fields.Field)
+SetSingleTextureValue                          | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetSingleTextureValue(Rhino.Render.RenderMaterial,Common.CyclesModels.MaterialMapData,Commo
+SetTextureValues                               | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetTextureValues(Rhino.Render.RenderMaterial,Common.CyclesModels.MaterialMapData)
+CalculateGemInfosMirror                        | System.Void CSBlocks.Gems.Obsolete.CSGemOnCrv13::CalculateGemInfosMirror(System.Int32,System.Int32,System.Int32,System.Boolean,CSDatas.CSGemData,GV.Co
+Detect3GemsProngs                              | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::Detect3GemsProngs(System.Collections.Generic.List`1<CSDatas.CSGemData>,System.Collections.Generic
+CalculateGemXform                              | RMA.OpenNURBS.OnXform CSBlocks.Gems.Obsolete.CSGemOnCrv4::CalculateGemXform(CSBlocks.Gems.Obsolete.CSGemOnCrv4/GemOnCurveInfo)
+CalculateGemCountEstimate                      | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv13::CalculateGemCountEstimate(CSDatas.CSGemData,System.Double,System.Int32,System.Int32,System.Int32,S
+CreateGemsFromCircles                          | CSDatas.CSDataArray CSBlocks.Gems.CSGemBetween2CurvesPlacement::CreateGemsFromCircles(System.Collections.Generic.List`1<Rhino.Geometry.Circle>,CSDatas
+AddGemToDocument_MG                            | System.Boolean CSGemInstance.CSGemInstanceDefinition::AddGemToDocument_MG(System.Double,System.Double,System.Double,Rhino.Geometry.Transform,CSMateria
+HasMapDataFromMaterial                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::HasMapDataFromMaterial(Rhino.Render.RenderMaterial,Rhino.Render.RenderMaterial/StandardC
+<FixMapPathsInXml>g__ReplaceFilePath|7_1       | System.Void Common.Materials.Helpers.CommonMaterialHelper::<FixMapPathsInXml>g__ReplaceFilePath|7_1(System.Xml.XmlNodeList&,System.Int32,Common.Materi
+MakeNonPlanarCurveOffset                       | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::MakeNonPlanarCurveOffset(Rhino.Geometry.Curve,Rhino.Geometry.Curve,Rhino.Geometry.Surface,Rhino
+Create                                         | System.Boolean CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::Create(System.Int32,System.Int32,System.Int32,System.Double,System.Double,Sy
+CheckSpacing                                   | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv13::CheckSpacing(CSBlockDataUtils.CSUtilGemOnCrv/GemOnCurveInfo,CSBlockDataUtils.CSUtilGemOnCrv/GemOnC
+AdjustSpacing                                  | System.Void CSBlocks.Gems.CSGemOnCrv::AdjustSpacing(System.Int32,System.Int32,System.Boolean,GV.CounterSketch.Shared.ValueListItem,System.Double,Syste
+DetectMirrorProngs                             | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::DetectMirrorProngs(System.Collections.Generic.List`1<CSDatas.CSGemData>,System.Collections.Generi
+DoSweep                                        | Rhino.Geometry.Surface CSBlocks.Gems.CSGemBetween2CurvesSetup::DoSweep(Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Double,System.Double)
+CreateMGEnvironmentFromRenderEnvironment       | Common.CyclesModels.MGEnvironment Common.Materials.Helpers.CommonMaterialHelper::CreateMGEnvironmentFromRenderEnvironment(Rhino.Render.RenderEnvironme
+LoadFromRhinoModelProngPositions               | System.Boolean CSGemInstance.Helpers.RhinoModelHelper::LoadFromRhinoModelProngPositions(Rhino.FileIO.File3dm,Rhino.Geometry.Curve,CSGemInstance.CSGemI
+SearchCallback                                 | System.Void CSBlocks.Gems.CSClosestGems::SearchCallback(System.Object,Rhino.Geometry.RTreeEventArgs)
+FixMapPathsInXml                               | System.String Common.Materials.Helpers.CommonMaterialHelper::FixMapPathsInXml(System.String,System.String,System.String,System.String)
+AddGemToDocumentExport                         | System.Boolean CSGemInstance.CSGemInstanceDefinition::AddGemToDocumentExport(System.Double,System.Double,System.Double,Rhino.Geometry.Transform,System
+IsOffsetValid                                  | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::IsOffsetValid(Rhino.Geometry.Curve[],Rhino.Geometry.Curve,Rhino.Geometry.Curve,Rhino.Geometry.S
+GetReport                                      | System.String CSGemInstance.CSGemInstanceDefinition::GetReport()
+MidPoint                                       | Rhino.Geometry.Point3d CSBlocks.Gems.CSPaveProngsTransforms::MidPoint(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,Rhino.Geometry.Point3d)
+SetGroundPlane                                 | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetGroundPlane(Rhino.Render.RenderMaterial,System.Double)
+ConsolidateGemInstanceDefinitions              | System.Boolean CSGemInstance.CSUtilGem::ConsolidateGemInstanceDefinitions()
+GetGemSizeFromTableOld                         | System.Boolean CSGemInstance.GemTableData.GemTableHelper::GetGemSizeFromTableOld(System.Collections.Generic.IEnumerable`1<CSGemInstance.GemTableData.G
+AddGemToDocumentRender                         | System.Boolean CSGemInstance.CSGemInstanceDefinition::AddGemToDocumentRender(System.Double,System.Double,System.Double,Rhino.Geometry.Transform,System
+GetGemTableShapeSortOrderIndex                 | System.Int32 CSGemInstance.CSUtilGem::GetGemTableShapeSortOrderIndex(CSGemInstance.GemTableData.GemTableShape)
+GetSizeTableMinMax                             | System.Boolean CSGemInstance.GemTableData.GemTableHelper::GetSizeTableMinMax(CSGemInstance.GemTableData.GemTableType,CSGemInstance.GemTableData.GemTab
+AddMaterialToDocument                          | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::AddMaterialToDocument(Rhino.Render.RenderMaterial,Rhino.Render.RenderMaterial&)
+IsSweepValid                                   | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::IsSweepValid(Rhino.Geometry.Surface,Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Double,Sys
+GetGemSizeFromTable                            | System.Boolean CSGemInstance.GemTableData.GemTableHelper::GetGemSizeFromTable(System.Collections.Generic.IEnumerable`1<CSGemInstance.GemTableData.GemS
+ComputeProngCenter                             | Rhino.Geometry.Point3d CSBlocks.Gems.CSPaveProngsTransforms::ComputeProngCenter(System.Double,CSDatas.CSGemData,CSDatas.CSGemData,System.Double&,Syste
+PrepCrvMaster                                  | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv4::PrepCrvMaster()
+PrepCrvPrimary                                 | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv6::PrepCrvPrimary()
+LayerPathToMaterial                            | CSMaterials.MaterialClassification CSMaterials.Helpers.MaterialGroupHelper::LayerPathToMaterial(System.String)
+SideGemRhs                                     | System.Void CSBlocks.Gems.CSCustomBaguetteRowOnRingRail::SideGemRhs(CSDatas.CSData&,Rhino.Geometry.Line&,Rhino.Geometry.Line&,System.Double,System.Dou
+SideGemLhs                                     | System.Void CSBlocks.Gems.CSCustomBaguetteRowOnRingRail::SideGemLhs(CSDatas.CSData&,Rhino.Geometry.Line&,Rhino.Geometry.Line&,System.Double,System.Dou
+SetRenderMaterialTags                          | Rhino.Render.RenderMaterial Common.Materials.Helpers.CommonMaterialHelper::SetRenderMaterialTags(Common.CyclesModels.MGMaterial,Rhino.Render.RenderMat
+SideGemRHS                                     | System.Void CSBlocks.Gems.Obsolete.CSCustomBaguetteRowOnRingRail1::SideGemRHS(CSDatas.CSData&,Rhino.Geometry.Line&,Rhino.Geometry.Line&,System.Double,
+AddGemToDocument                               | System.Boolean CSGemInstance.CSGemInstanceDefinition::AddGemToDocument(System.Double,System.Double,System.Double,Rhino.Geometry.Transform)
+SideGemLHS                                     | System.Void CSBlocks.Gems.Obsolete.CSCustomBaguetteRowOnRingRail1::SideGemLHS(CSDatas.CSData&,Rhino.Geometry.Line&,Rhino.Geometry.Line&,System.Double,
+UpdateBuilderAux                               | System.Void CSBlocks.Gems.Obsolete.CSGemOnCrv4::UpdateBuilderAux()
+CalculateProfilePoints                         | Rhino.Collections.Point3dList CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::CalculateProfilePoints(System.Double,System.Double,System.Dou
+MGMaterialFromRenderMaterial                   | Common.CyclesModels.MGMaterial Common.Materials.Helpers.CommonMaterialHelper::MGMaterialFromRenderMaterial(Rhino.Render.RenderMaterial,Common.CyclesMo
+<GetMGMaterialsInDocument>b__0                 | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass10_0::<GetMGMaterialsInDocument>b__0(Rhino.Render.RenderMaterial)
+CreateCustomGem                                | CSGemInstance.CSGemInstanceDefinition CSGemInstance.CSUtilGem::CreateCustomGem(CSGemInstance.GemTableData.GemTableType,CSGemInstance.GemTableData.GemT
+AdjustMaterialHueSatLuminance                  | Rhino.Render.RenderMaterial Common.Materials.Helpers.CommonMaterialHelper::AdjustMaterialHueSatLuminance(Rhino.Render.RenderMaterial,Common.CyclesMode
+LoadFromRhinoModelBezelParam                   | System.Boolean CSGemInstance.Helpers.RhinoModelHelper::LoadFromRhinoModelBezelParam(Rhino.FileIO.File3dm,Rhino.Geometry.Curve,System.Double&,System.St
+ApplyLightingEnvironment                       | System.Void Common.Materials.Helpers.CommonMaterialHelper::ApplyLightingEnvironment(Common.CyclesModels.MGEnvironment)
+UpdateGemInstanceDefinitionParameters          | System.Boolean CSGemInstance.CSUtilGem::UpdateGemInstanceDefinitionParameters(Rhino.DocObjects.InstanceObject)
+<RemoveDuplicateImportedMaterials>b__63_1      | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c::<RemoveDuplicateImportedMaterials>b__63_1(Rhino.Render.RenderMaterial)
+GetGemSizeFromTableZ                           | System.Boolean CSGemInstance.GemTableData.GemTableHelper::GetGemSizeFromTableZ(System.Collections.Generic.List`1<CSGemInstance.GemTableData.GemSize.Ge
+ChangeMaterialParameter                        | System.Void Common.Materials.Helpers.CommonMaterialHelper::ChangeMaterialParameter(Rhino.Render.RenderMaterial,Common.CyclesModels.RenderParameter,Sys
+ApplyGroundPlaneMaterial                       | System.Void Common.Materials.Helpers.CommonMaterialHelper::ApplyGroundPlaneMaterial(Common.CyclesModels.MGMaterial)
+ChangeEnvironmentParameter                     | System.Void Common.Materials.Helpers.CommonMaterialHelper::ChangeEnvironmentParameter(Common.CyclesModels.EnvironmentChannel,Common.CyclesModels.Envir
+CreateFaceFromCorners                          | System.Boolean CSGemInstance.CSUtilGem::CreateFaceFromCorners(Rhino.Geometry.Brep&,System.Collections.Generic.IReadOnlyList`1<Rhino.Geometry.Point3d>,
+SortItemsByPosition                            | System.Void CSBlocks.Gems.CSGemOrObjectOnCrv::SortItemsByPosition(System.Collections.Generic.List`1<System.Int32>&,System.Collections.Generic.List`1<R
+OrientObject                                   | Rhino.Geometry.Transform CSBlocks.Gems.CSGemOrObjectOnSurface::OrientObject(System.Double,System.Double,Rhino.Geometry.Surface,CSDatas.CSGemData)
+CreateGemInstanceDefinitionAux                 | System.Boolean CSGemInstance.CSGemInstanceDefinition::CreateGemInstanceDefinitionAux(Rhino.Geometry.GeometryBase,Rhino.DocObjects.InstanceDefinition&)
+MaterialToLayerPath                            | System.String CSMaterials.Helpers.MaterialGroupHelper::MaterialToLayerPath(CSMaterials.MaterialClassification)
+LoadFromRhinoModelMesh                         | System.Boolean CSGemInstance.Helpers.RhinoModelHelper::LoadFromRhinoModelMesh(Rhino.FileIO.File3dm,Rhino.Geometry.Mesh&,System.Double&,System.String&)
+DecorateMGMaterial                             | Rhino.Render.RenderMaterial Common.Materials.Helpers.CommonMaterialHelper::DecorateMGMaterial(Rhino.Render.RenderMaterial,Common.CyclesModels.MGMateri
+ColorFromStringList                            | System.Drawing.Color Common.Materials.Helpers.CommonMaterialHelper::ColorFromStringList(System.Collections.Generic.List`1<System.String>,System.Boolea
+IntersectionsWithDirection                     | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::IntersectionsWithDirection(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Point3d[
+TrimLessThanSeparation                         | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::TrimLessThanSeparation(System.Double,Rhino.Geometry.Curve&,Rhino.Geometry.Curve&)
+GetGemUserDataOld                              | System.Boolean CSGemInstance.CSUtilGem::GetGemUserDataOld(Rhino.DocObjects.RhinoObject,System.String&,System.String&,System.Int32&,System.Int32&,Syste
+GetObjectIdsByMGMaterials                      | System.Collections.Generic.List`1<System.Guid> Common.Materials.Helpers.CommonMaterialHelper::GetObjectIdsByMGMaterials(System.Collections.Generic.Lis
+GetGemNormal                                   | Rhino.Geometry.Vector3d CSBlocks.Gems.CSGemListOnCurve::GetGemNormal(Rhino.Geometry.Point3d,GV.CounterSketch.Shared.ValueListItem,Rhino.Geometry.Brep,
+ComputeGeodesicOffsetPointsUV                  | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::ComputeGeodesicOffsetPointsUV(Rhino.Geometry.Surface,Rhino.Geometry.Curve,Rhino.Geometry.Curve,
+ApplyMaterial                                  | System.Void Common.Materials.Helpers.CommonMaterialHelper::ApplyMaterial(Common.CyclesModels.MGMaterial,System.Collections.Generic.List`1<Rhino.DocObj
+LoadFromRhinoModel                             | System.Boolean CSGemInstance.CSGemInstanceDefinition::LoadFromRhinoModel(System.String,Rhino.Geometry.Mesh&,System.Double&,Rhino.Geometry.NurbsCurve&,
+SetGemUserDataOld                              | System.Boolean CSGemInstance.CSUtilGem::SetGemUserDataOld(Rhino.DocObjects.RhinoObject,System.String,System.String,System.Int32,System.Int32,System.In
+GetGemTableTypeSortOrderIndex                  | System.Int32 CSGemInstance.CSUtilGem::GetGemTableTypeSortOrderIndex(System.String)
+SaveRenderMaterial                             | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::SaveRenderMaterial(Rhino.Render.RenderMaterial,Common.CyclesModels.MGMaterial,System.Dra
+FloatStringToColor                             | System.Drawing.Color Common.Materials.Helpers.CommonMaterialHelper::FloatStringToColor(System.String)
+MinimumDistanceToBorders                       | System.Double CSBlocks.Gems.CSPaveProngsTransforms::MinimumDistanceToBorders(Rhino.Geometry.Transform,System.Collections.Generic.List`1<Rhino.Geometry
+ValidateLayer                                  | System.Boolean CSMaterials.Helpers.ExportHelper::ValidateLayer(CSMaterials.Helpers.ExportHelper/LayerInfo)
+CreateNewEnvironment                           | Rhino.Render.RenderEnvironment Common.Materials.Helpers.CommonMaterialHelper::CreateNewEnvironment(System.String,System.String)
+IsGemOld                                       | System.Boolean CSGemInstance.CSUtilGem::IsGemOld(Rhino.DocObjects.RhinoObject)
+HasGemUserDataOld                              | System.Boolean CSGemInstance.CSUtilGem::HasGemUserDataOld(Rhino.DocObjects.RhinoObject)
+FixGemMaterialsForRender                       | System.Void Common.Materials.Helpers.CommonMaterialHelper::FixGemMaterialsForRender(Rhino.Render.RenderMaterial)
+FixGemMaterialsForDocument                     | System.Void Common.Materials.Helpers.CommonMaterialHelper::FixGemMaterialsForDocument(Rhino.Render.RenderMaterial)
+Equals                                         | System.Boolean CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersCustomDiamondBaguetteTapered::Equals(System.Object)
+GetGemSettingType                              | CSDatas.GemSettingType CSBlocks.Gems.CSSetGemMountingData::GetGemSettingType(GV.CounterSketch.Shared.ValueListItem)
+ReadJson                                       | System.Boolean CSGemInstance.CSGemInstanceDefinition::ReadJson(Newtonsoft.Json.Linq.JObject,CSGemInstance.GemTableData.GemTableType&,CSGemInstance.Gem
+GetUserMaterials                               | System.Collections.Generic.List`1<Common.CyclesModels.MGMaterial> Common.Materials.Helpers.CommonMaterialHelper::GetUserMaterials(System.Collections.G
+AreOppositeDirections                          | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::AreOppositeDirections(Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Int32)
+ApplyReflectionEnvironment                     | System.Void Common.Materials.Helpers.CommonMaterialHelper::ApplyReflectionEnvironment(Common.CyclesModels.MGEnvironment)
+GetOffsetDistanceTransform                     | Rhino.Geometry.Transform CSBlocks.Gems.CSGemOrObjectOnSurface::GetOffsetDistanceTransform(Rhino.Geometry.BoundingBox,System.Double)
+PointsOnBrep                                   | System.Collections.Generic.List`1<Rhino.Geometry.Point3d> CSBlocks.Gems.CSPaveProngsTransforms::PointsOnBrep(Rhino.Geometry.Point3d,Rhino.Geometry.Vec
+<GetObjectIdsByMGMaterials>b__2                | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass50_2::<GetObjectIdsByMGMaterials>b__2(Rhino.DocObjects.RhinoObject)
+GetClosestGems                                 | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::GetClosestGems(System.Int32,CSDatas.CSDataArray,System.Collections.Generic.Dictionary`2<System.In
+RenderMaterialExistsInDocument                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::RenderMaterialExistsInDocument(Rhino.Render.RenderMaterial,Common.CyclesModels.MGMateria
+GetObjectsWithRenderMaterial                   | System.Collections.Generic.List`1<Rhino.DocObjects.RhinoObject> Common.Materials.Helpers.CommonMaterialHelper::GetObjectsWithRenderMaterial(Rhino.Rend
+GetHandleTransformCorner                       | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::GetHandleTransformCorner()
+ApplyBackdropEnvironment                       | System.Void Common.Materials.Helpers.CommonMaterialHelper::ApplyBackdropEnvironment(Common.CyclesModels.MGEnvironment)
+UpdateMaterial                                 | System.Void CSMaterials.CSDisplayMaterial::UpdateMaterial(System.String)
+LoadFromRhinoModelCurve                        | System.Boolean CSGemInstance.Helpers.RhinoModelHelper::LoadFromRhinoModelCurve(Rhino.FileIO.File3dm,Rhino.Geometry.Curve&,System.String&)
+ClosestPoint                                   | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::ClosestPoint(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d&,Rhino.Geometry.ComponentIndex&,Rhino.
+<GetObjectsWithRenderMaterial>b__0             | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass40_0::<GetObjectsWithRenderMaterial>b__0(Rhino.DocObjects.RhinoObject)
+GetHashCode                                    | System.Int32 CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersCustomDiamondBaguetteTapered::GetHashCode()
+CreateMesh                                     | Rhino.Geometry.Mesh CSGemInstance.CSUtilGem::CreateMesh(System.Collections.Generic.List`1<Rhino.Geometry.Point3d>,System.Collections.Generic.IEnumerab
+<SelectObjectsByMaterial>b__0                  | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass54_0::<SelectObjectsByMaterial>b__0(Rhino.DocObjects.RhinoObject)
+ColorToFloatString                             | System.String Common.Materials.Helpers.CommonMaterialHelper::ColorToFloatString(System.Drawing.Color)
+AreOverlappingCircles                          | System.Boolean CSBlocks.Gems.CSGemBetween2Curves::AreOverlappingCircles(Rhino.Geometry.Circle,Rhino.Geometry.Circle)
+ComputeProngFromRotationCenter                 | System.Void CSBlocks.Gems.CSPaveProngsTransforms::ComputeProngFromRotationCenter(CSDatas.CSDataArray&,CSDatas.CSDataArray&,System.Collections.Generic.
+WriteJson                                      | Newtonsoft.Json.Linq.JObject CSGemInstance.CSGemInstanceDefinition::WriteJson(CSGemInstance.CSGemInstanceDefinition)
+SelectObjectsByMaterial                        | System.Void Common.Materials.Helpers.CommonMaterialHelper::SelectObjectsByMaterial(Rhino.Render.RenderMaterial)
+GetMGMaterialsInDocument                       | System.Collections.Generic.List`1<Common.CyclesModels.MGMaterial> Common.Materials.Helpers.CommonMaterialHelper::GetMGMaterialsInDocument(System.Boole
+FindGemInstanceDefinition                      | System.Boolean CSGemInstance.CSUtilGem::FindGemInstanceDefinition(CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersBase,Rh
+Clone                                          | System.Object CSMaterials.MaterialGroup::Clone()
+GetDisplayMaterialFromRenderMaterial           | Rhino.Display.DisplayMaterial Common.Materials.Helpers.CommonMaterialHelper::GetDisplayMaterialFromRenderMaterial(Rhino.Render.RenderMaterial)
+TryFixLayer                                    | System.Boolean CSMaterials.Helpers.ExportHelper::TryFixLayer(CSMaterials.Helpers.ExportHelper/LayerInfo)
+<GetMGMaterialsInDocument>b__2                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass10_1::<GetMGMaterialsInDocument>b__2(Rhino.DocObjects.RhinoObject)
+GetGemInfo                                     | CSGemInstance.GemInfoPlus CSGemInstance.CSUtilGem::GetGemInfo(System.Collections.Generic.IEnumerable`1<System.String>,CSGemInstance.GemTableData.GemTa
+GetBaseMaterial                                | Common.CyclesModels.MGMaterial Common.Materials.Helpers.CommonMaterialHelper::GetBaseMaterial(Rhino.Render.RenderMaterial)
+SetMassMaterialChanges                         | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetMassMaterialChanges(Rhino.Render.RenderMaterial,Common.CyclesModels.MGMaterial)
+CalculateDiamondSizesFromCt                    | System.Void CSGemInstance.GemTableData.GemTableHelper::CalculateDiamondSizesFromCt(System.Double,CSGemInstance.CSGemInstanceDefinition,System.Double&,
+HasSomeIntersectionAndIsNotTangent             | System.Boolean CSBlocks.Gems.CSGemBetween2Curves::HasSomeIntersectionAndIsNotTangent(Rhino.Geometry.Curve,Rhino.Geometry.NurbsSurface,System.Double,Sy
+GetGemInfoFromFile                             | System.Boolean CSGemInstance.CSUtilGem::GetGemInfoFromFile(System.String,CSGemInstance.GemInfo&)
+GetHandleTransformGirdleThickness              | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::GetHandleTransformGirdleThickness()
+CompareOffsetResults                           | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::CompareOffsetResults(CSBlocks.Gems.CSGemBetween2CurvesSetup/OffsetResult[],Rhino.Geometry.Curve
+TogglePreviewRenderGemValues                   | System.Void Common.Materials.Helpers.CommonMaterialHelper::TogglePreviewRenderGemValues(Rhino.Render.RenderMaterial,System.Boolean)
+GetLayerIndexByNameAndParentLayerId            | System.Boolean CSMaterials.Helpers.ExportHelper::GetLayerIndexByNameAndParentLayerId(System.String,System.Guid,System.Int32&)
+GetOutputObject                                | System.Void CSBlocks.Gems.CSGemOrObjectOnSurface::GetOutputObject(CSDatas.CSData,Rhino.Geometry.Transform,System.Double,Rhino.Geometry.BoundingBox&,Rh
+AddProngToGemFromClosestPoint                  | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::AddProngToGemFromClosestPoint(System.Collections.Generic.Dictionary`2<System.Int32,System.Collect
+ReplaceMaterialsTextures                       | System.Void Common.Materials.Helpers.CommonMaterialHelper::ReplaceMaterialsTextures()
+ReplaceMissingFilePath                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::ReplaceMissingFilePath(System.Collections.Generic.List`1<System.String>,Rhino.Render.Ren
+<ApplyMaterial>g__ApplyMaterialToObjects|0     | Rhino.Render.RenderMaterial Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass6_0::<ApplyMaterial>g__ApplyMaterialToObjects|0(Rhino.Rende
+RemoveDuplicateImportedMaterials               | System.Void Common.Materials.Helpers.CommonMaterialHelper::RemoveDuplicateImportedMaterials()
+GetHandleTransformLength                       | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinition::GetHandleTransformLength(Rhino.Geometry.Transform)
+GetHandleTransformDepth                        | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::GetHandleTransformDepth()
+Load                                           | System.Boolean CSGemInstance.CSGemInstanceDefinition::Load(CSGemInstance.GemInfoPlus,System.Int32,System.Boolean,CSGemInstance.CSGemInstanceDefinition
+ReplaceTexture                                 | System.Void Common.Materials.Helpers.CommonMaterialHelper::ReplaceTexture(System.Collections.Generic.List`1<System.String>,Rhino.Render.RenderMaterial
+GetGemUserData                                 | System.Boolean CSGemInstance.CSUtilGem::GetGemUserData(Rhino.DocObjects.RhinoObject,CSGemInstance.GemTableData.GemTableType&,CSGemInstance.GemTableDat
+CalculateProngPoints                           | System.Collections.Generic.IEnumerable`1<Rhino.Geometry.Point3d> CSGemInstance.CSUtilGem::CalculateProngPoints(Rhino.Geometry.Point3d,Rhino.Geometry.P
+GetShineTransparencyAndReflective              | System.Void Common.Materials.Helpers.CommonMaterialHelper::GetShineTransparencyAndReflective(Rhino.Render.RenderMaterial,System.Double&,System.Double&
+TryRenameLayer                                 | System.Boolean CSMaterials.Helpers.ExportHelper::TryRenameLayer(CSMaterials.Helpers.ExportHelper/LayerInfo)
+<GetMGMaterialsInDocument>b__1                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass10_1::<GetMGMaterialsInDocument>b__1(Rhino.DocObjects.RhinoObject)
+GetHandle                                      | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinitionCustomDiamondEmerald::GetHandle(CSGemInstance.GemTableData.Enumerations.ViewportControlH
+CreateBrep                                     | Rhino.Geometry.Brep CSGemInstance.CSUtilGem::CreateBrep(System.Collections.Generic.IReadOnlyList`1<Rhino.Geometry.Point3d>,System.Collections.Generic.
+ArePlanarCurves                                | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::ArePlanarCurves(Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Double,Rhino.Geometry.Plane&)
+GetClosestIndexToParameter                     | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrv6::GetClosestIndexToParameter(System.Collections.Generic.IList`1<System.Double>,System.Double,System.I
+ToString                                       | System.String CSGemInstance.CSGemInstanceDefinition::ToString()
+Intersections                                  | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::Intersections(Rhino.Geometry.Line,System.Double,Rhino.Geometry.Point3d[]&)
+LoadFromRhinoModelNurbsCurve                   | System.Boolean CSGemInstance.Helpers.RhinoModelHelper::LoadFromRhinoModelNurbsCurve(Rhino.FileIO.File3dm,Rhino.Geometry.NurbsCurve&,System.String&)
+GetDistanceToBorder                            | System.Void CSBlocks.Gems.CSPaveProngsTransforms::GetDistanceToBorder(CSDatas.CSDataArray,CSDatas.CSDataArray&)
+get_GemInstanceDefinitionParameters            | CSGemInstance.GemInstanceDefinitionParameters.GemInstanceDefinitionParametersBase CSGemInstance.CSGemInstanceDefinitionCustomUser::get_GemInstanceDefi
+DrawMesh                                       | System.Void CSGemInstance.CSGemInstanceDefinition::DrawMesh(Rhino.Display.DisplayPipeline,Rhino.Geometry.Transform,Rhino.Display.DisplayMaterial)
+DrawWires                                      | System.Void CSGemInstance.CSGemInstanceDefinition::DrawWires(Rhino.Display.DisplayPipeline,Rhino.Geometry.Transform,System.Drawing.Color)
+SetBackdropColors                              | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetBackdropColors(System.Drawing.Color,System.Drawing.Color,System.Boolean,System.Boolean)
+GetHandleTransformWidth                        | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinition::GetHandleTransformWidth(Rhino.Geometry.Transform)
+GetLimitObject                                 | System.Void CSBlocks.Gems.CSGemOrObjectOnSurface::GetLimitObject(CSDatas.CSData,System.Double,Rhino.Geometry.BoundingBox,System.Double,Rhino.Geometry.
+GetLimitGem                                    | System.Void CSBlocks.Gems.CSGemOrObjectOnSurface::GetLimitGem(CSDatas.CSGemData,System.Double,System.Double,Rhino.Geometry.Transform,CSDatas.CSData&)
+GetHandleTransformWidthBottom                  | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinitionCustomDiamondBaguetteTapered::GetHandleTransformWidthBottom()
+GetHandleTransformWidthTop                     | Rhino.Geometry.Transform CSGemInstance.CSGemInstanceDefinitionCustomDiamondBaguetteTapered::GetHandleTransformWidthTop()
+GetGemInstanceDefinitionParameters             | System.Boolean CSGemInstance.CSUtilGem::GetGemInstanceDefinitionParameters(Rhino.DocObjects.InstanceDefinition,CSGemInstance.GemInstanceDefinitionPara
+IsShapeCustomBaguette                          | System.Boolean CSGemInstance.CSUtilGem::IsShapeCustomBaguette(System.String)
+ToggleAlpha                                    | System.Void Common.Materials.Helpers.CommonMaterialHelper::ToggleAlpha(Rhino.Render.RenderMaterial,System.Boolean)
+<ImportRenderMaterialsFromFile>b__0            | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass37_0::<ImportRenderMaterialsFromFile>b__0(System.String)
+get_GemInstanceDefinitionParametersKeys        | System.Collections.Generic.IEnumerable`1<System.String> CSGemInstance.GemTableData.GemTables.DiamondBaguetteTapered::get_GemInstanceDefinitionParamete
+get_IsEditableMaterialGroup                    | System.Boolean CSMaterials.MaterialGroup::get_IsEditableMaterialGroup()
+ToLayer                                        | Rhino.DocObjects.Layer CSMaterials.Helpers.ExportHelper::ToLayer(CSMaterials.Helpers.ExportHelper/LayerInfo)
+ImportGemInstanceDefinition                    | System.Boolean CSGemInstance.CSUtilGem::ImportGemInstanceDefinition(System.String,System.String,Rhino.DocObjects.InstanceDefinition&)
+MaterialToLayerIndex                           | System.Int32 CSMaterials.Helpers.MaterialGroupHelper::MaterialToLayerIndex(CSMaterials.MaterialClassification)
+ApplyRenderMaterialToObjects                   | System.Void Common.Materials.Helpers.CommonMaterialHelper::ApplyRenderMaterialToObjects(Rhino.Render.RenderMaterial,System.Collections.Generic.List`1<
+<GetObjectIdsByMGMaterials>b__0                | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass50_0::<GetObjectIdsByMGMaterials>b__0(Common.CyclesModels.MGMaterial)
+SetGemInstanceDefinitionParameters             | System.Boolean CSGemInstance.CSUtilGem::SetGemInstanceDefinitionParameters(Rhino.DocObjects.InstanceDefinition,CSGemInstance.GemInstanceDefinitionPara
+GetMutualClosestParam                          | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::GetMutualClosestParam(Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Double&)
+get_DefaultLayerInfosGem                       | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosGem()
+get_DefaultLayerInfosMetal                     | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosMetal()
+get_DefaultLayerInfosObject                    | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosObject()
+get_DefaultLayerInfosUser                      | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosUser()
+get_DefaultLayerInfosRender                    | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosRender()
+get_DefaultLayerInfosExtraA                    | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosExtraA()
+get_DefaultLayerInfosExtraB                    | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosExtraB()
+get_DefaultLayerInfosExtraC                    | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosExtraC()
+get_DefaultLayerInfosExtraD                    | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosExtraD()
+ChangeGroundPlaneImage                         | System.Void Common.Materials.Helpers.CommonMaterialHelper::ChangeGroundPlaneImage(Rhino.Render.RenderMaterial,System.String,Rhino.Render.RenderMateria
+GenerateLayerStructure                         | System.Boolean CSMaterials.Helpers.ExportHelper::GenerateLayerStructure(CSMaterials.Helpers.ExportHelper/LayerInfo)
+AddProngToGem                                  | System.Boolean CSBlocks.Gems.CSPaveProngsTransforms::AddProngToGem(System.Collections.Generic.Dictionary`2<System.Int32,System.Collections.Generic.Sor
+GetLayerIndexById                              | System.Boolean CSMaterials.Helpers.ExportHelper::GetLayerIndexById(System.Guid,System.Int32&)
+GetMutualClosestParamAt                        | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::GetMutualClosestParamAt(Rhino.Geometry.Point3d,Rhino.Geometry.Curve,Rhino.Geometry.Curve,System
+AddCrossSectionRailAt                          | System.Void CSBlocks.Gems.CSGemBetween2CurvesSetup::AddCrossSectionRailAt(System.Double,Rhino.Geometry.Curve,Rhino.Geometry.Curve,System.Collections.G
+GetMaterialsWithoutAlpha                       | System.Collections.Generic.List`1<Common.CyclesModels.MGMaterial> Common.Materials.Helpers.CommonMaterialHelper::GetMaterialsWithoutAlpha()
+get_Tolerance                                  | System.Double CSGemInstance.CSUtil::get_Tolerance()
+GetNextAvailableLayerName                      | System.String CSMaterials.Helpers.ExportHelper::GetNextAvailableLayerName(System.String)
+<Update>b__1_0                                 | CSBlocks.Gems.Obsolete.CSGemOnCrvCount2/GemOnCurveInfo CSBlocks.Gems.Obsolete.CSGemOnCrvCount2::<Update>b__1_0(System.Int32,System.Int32)
+<Update>b__2_0                                 | CSBlocks.Gems.Obsolete.CSGemOnCrv5/GemOnCurveInfo CSBlocks.Gems.Obsolete.CSGemOnCrv5::<Update>b__2_0(System.Int32,System.Int32)
+ResetDomain                                    | System.Void CSBlocks.Gems.CSGemBetween2CurvesSetup::ResetDomain(Rhino.Geometry.Curve,Rhino.Geometry.Curve)
+IsCustomValue                                  | System.Boolean CSGemInstance.CSUtilGem::IsCustomValue(System.String,System.Collections.Generic.IEnumerable`1<System.String>)
+get_SizeX                                      | System.Double CSGemInstance.CSGemInstanceDefinition::get_SizeX()
+get_SizeY                                      | System.Double CSGemInstance.CSGemInstanceDefinition::get_SizeY()
+get_SizeZ                                      | System.Double CSGemInstance.CSGemInstanceDefinition::get_SizeZ()
+get_IsValid                                    | System.Boolean CSGemInstance.CSGemInstanceDefinition::get_IsValid()
+Dispose                                        | System.Void CSGemInstance.CSGemInstanceDefinition::Dispose(System.Boolean)
+AddGemPairRelation                             | System.Void CSBlocks.Gems.CSPaveProngsTransforms::AddGemPairRelation(System.Collections.Generic.Dictionary`2<CSBlocks.Gems.GemGroup,CSBlocks.Gems.Pair
+<GetUserMaterials>b__1                         | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass71_0::<GetUserMaterials>b__1(System.String)
+GetGemInstanceDefinitionCustomLatestVersion    | System.Boolean CSGemInstance.CSUtilGem::GetGemInstanceDefinitionCustomLatestVersion(CSGemInstance.GemTableData.GemTableType,CSGemInstance.GemTableData
+get_IsGemMaterialGroup                         | System.Boolean CSMaterials.MaterialGroup::get_IsGemMaterialGroup()
+get_DefaultLayerInfosPrimary                   | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosPrimary()
+get_DefaultLayerInfosSecondary                 | System.Collections.Generic.IEnumerable`1<CSMaterials.Helpers.ExportHelper/LayerInfo> CSMaterials.Helpers.ExportHelper::get_DefaultLayerInfosSecondary(
+<GetMaterialsWithoutAlpha>b__0                 | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass41_0::<GetMaterialsWithoutAlpha>b__0(Rhino.Render.RenderMaterial)
+get_IsDefaultMaterialGroup                     | System.Boolean CSMaterials.MaterialGroup::get_IsDefaultMaterialGroup()
+TryAddLayer                                    | System.Boolean CSMaterials.Helpers.ExportHelper::TryAddLayer(CSMaterials.Helpers.ExportHelper/LayerInfo)
+<FixMapPathsInXml>b__3                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass7_2::<FixMapPathsInXml>b__3(System.String)
+<FixMapPathsInXml>b__4                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass7_2::<FixMapPathsInXml>b__4(System.String)
+<FixMapPathsInXml>b__5                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass7_2::<FixMapPathsInXml>b__5(System.String)
+<FixMapPathsInXml>b__6                         | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass7_2::<FixMapPathsInXml>b__6(System.String)
+IsCustom                                       | System.Boolean CSGemInstance.CSUtilGem::IsCustom(System.String,System.String)
+GetGemSizes                                    | System.Collections.Generic.IEnumerable`1<CSGemInstance.GemTableData.GemSize.GemSizeBase> CSGemInstance.GemTableData.GemTableHelper::GetGemSizes(CSGemI
+<UpdateBuilderAux>b__101_0                     | CSBlocks.Gems.Obsolete.CSGemOnCrv4/GemOnCurveInfo CSBlocks.Gems.Obsolete.CSGemOnCrv4::<UpdateBuilderAux>b__101_0(System.Int32,System.Int32)
+<GetUserMaterials>b__3                         | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass71_0::<GetUserMaterials>b__3(System.String)
+GetGemInfoPlusFromFile                         | System.Boolean CSGemInstance.CSUtilGem::GetGemInfoPlusFromFile(System.String,CSGemInstance.GemInfoPlus&)
+IsShapeCustomEmerald                           | System.Boolean CSGemInstance.CSUtilGem::IsShapeCustomEmerald(System.String)
+IsTypeCustom                                   | System.Boolean CSGemInstance.CSUtilGem::IsTypeCustom(System.String)
+GetBoundingBox                                 | System.Boolean CSGemInstance.CSGemInstanceDefinition::GetBoundingBox(Rhino.Geometry.BoundingBox&,System.Boolean)
+GetGemInstanceDefinitionParametersKeys         | System.Collections.Generic.IEnumerable`1<System.String> CSGemInstance.GemTableData.GemTableHelper::GetGemInstanceDefinitionParametersKeys(CSGemInstanc
+GetDynamicIcon                                 | System.Drawing.Bitmap Common.Materials.Helpers.CommonMaterialHelper::GetDynamicIcon(Rhino.Render.RenderContent,System.Drawing.Size)
+RenderMaterialFromMgMaterial                   | Rhino.Render.RenderMaterial Common.Materials.Helpers.CommonMaterialHelper::RenderMaterialFromMgMaterial(Common.CyclesModels.MGMaterial)
+GetShineValue                                  | System.Double Common.Materials.Helpers.CommonMaterialHelper::GetShineValue(Rhino.Render.RenderMaterial)
+<FixMapPathsInXml>g__GetFiles|7_0              | System.Collections.Generic.IEnumerable`1<System.String> Common.Materials.Helpers.CommonMaterialHelper::<FixMapPathsInXml>g__GetFiles|7_0(System.String
+<RemoveDuplicateImportedMaterials>b__63_0      | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c::<RemoveDuplicateImportedMaterials>b__63_0(Rhino.Render.RenderMaterial)
+ComputeStringHash                              | System.UInt32 <PrivateImplementationDetails>::ComputeStringHash(System.String)
+GetGemInstanceDefinition                       | System.Boolean CSGemInstance.CSGemInstanceDefinition::GetGemInstanceDefinition(Rhino.DocObjects.InstanceDefinition&)
+CalculateDiamondCt                             | System.Boolean CSGemInstance.GemTableData.GemTableHelper::CalculateDiamondCt(CSGemInstance.GemTableData.GemSize.GemSizeBase,System.Double,System.Doubl
+SetReflectivity                                | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetReflectivity(Rhino.Render.RenderMaterial,Common.CyclesModels.MaterialMapData)
+SetDiffuse                                     | System.Void Common.Materials.Helpers.CommonMaterialHelper::SetDiffuse(Rhino.Render.RenderMaterial,System.Int32)
+GetBlockNameUnique                             | System.Boolean CSGemInstance.CSUtilGem::GetBlockNameUnique(System.String,System.String,System.String&)
+GetGemTable                                    | CSGemInstance.GemTableData.IGemTable CSGemInstance.GemTableData.GemTableHelper::GetGemTable(CSGemInstance.GemTableData.GemTableType,CSGemInstance.GemT
+get_FullPath                                   | System.String CSMaterials.Helpers.ExportHelper/LayerInfo::get_FullPath()
+GetNPointsOfBothCurves                         | System.Collections.Generic.IEnumerable`1<Rhino.Geometry.Point3d> CSBlocks.Gems.CSGemBetween2CurvesSetup::GetNPointsOfBothCurves(Rhino.Geometry.Curve,R
+ImportRenderMaterialsFromFile                  | System.Collections.Generic.List`1<Common.CyclesModels.MGMaterial> Common.Materials.Helpers.CommonMaterialHelper::ImportRenderMaterialsFromFile(System.
+IsRenderMaterialInUse                          | System.Boolean Common.Materials.Helpers.CommonMaterialHelper::IsRenderMaterialInUse(Rhino.Render.RenderMaterial)
+GetCustomGems                                  | System.Collections.Generic.IEnumerable`1<CSGemInstance.GemTableData.IGemTable> CSGemInstance.GemTableData.GemTableHelper::GetCustomGems()
+get_CornerLength                               | System.Double CSGemInstance.GemTableData.GemSize.GemSizeSquare::get_CornerLength()
+get_RhinoObject                                | Rhino.DocObjects.RhinoObject CSMaterials.RhinoRenderObject::get_RhinoObject()
+GetRhinoMaterialColor                          | System.Drawing.Color Common.Materials.Helpers.CommonMaterialHelper::GetRhinoMaterialColor(Rhino.Render.RenderMaterial)
+GetRhinoGemMaterialColor                       | System.Drawing.Color Common.Materials.Helpers.CommonMaterialHelper::GetRhinoGemMaterialColor(Rhino.Render.RenderMaterial)
+WriteMGEnvironmentToDisk                       | System.Void Common.Materials.Helpers.CommonMaterialHelper::WriteMGEnvironmentToDisk(Common.CyclesModels.MGEnvironment,System.String,System.String&)
+get_SupportedViewportControlHandles            | System.Collections.Generic.IEnumerable`1<CSGemInstance.GemTableData.Enumerations.ViewportControlHandle> CSGemInstance.CSGemInstanceDefinitionCustomUse
+GetMaterialGroupByClassification               | System.Collections.ObjectModel.ObservableCollection`1<CSMaterials.MaterialGroup> CSMaterials.Helpers.MaterialGroupHelper::GetMaterialGroupByClassifica
+GetLayer                                       | CSGemInstance.GemTableData.GemTableLayer CSGemInstance.GemTableData.GemTableHelper::GetLayer(CSGemInstance.GemTableData.GemTableType)
+TryAddLayerAux                                 | System.Boolean CSMaterials.Helpers.ExportHelper::TryAddLayerAux(CSMaterials.Helpers.ExportHelper/LayerInfo)
+GetBlockNameRoot                               | System.Boolean CSGemInstance.CSUtilGem::GetBlockNameRoot(System.String,System.String,System.String&)
+GetInstanceDefinitionName                      | System.Boolean CSGemInstance.CSUtilGem::GetInstanceDefinitionName(System.String,System.String,System.String&)
+HueSaturationAndLightnessFromRenderMaterial    | System.Void Common.Materials.Helpers.CommonMaterialHelper::HueSaturationAndLightnessFromRenderMaterial(Rhino.Render.RenderMaterial,System.Double&,Syst
+<ApplyMaterial>b__1                            | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass6_1::<ApplyMaterial>b__1(Rhino.DocObjects.RhinoObject)
+GetClosestIndexToPosition                      | System.Boolean CSBlocks.Gems.Obsolete.CSGemOnCrvCount2::GetClosestIndexToPosition(RMA.OpenNURBS.IOnCurve,System.Collections.Generic.IList`1<System.Dou
+<GetBaseMaterial>b__0                          | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass64_0::<GetBaseMaterial>b__0(Common.CyclesModels.MGMaterial)
+IsCustomBaguette                               | System.Boolean CSGemInstance.CSUtilGem::IsCustomBaguette(System.String,System.String)
+IsCustomEmerald                                | System.Boolean CSGemInstance.CSUtilGem::IsCustomEmerald(System.String,System.String)
+get_MaxX                                       | System.Double CSGemInstance.CSGemInstanceDefinition::get_MaxX()
+get_MaxY                                       | System.Double CSGemInstance.CSGemInstanceDefinition::get_MaxY()
+get_MaxZ                                       | System.Double CSGemInstance.CSGemInstanceDefinition::get_MaxZ()
+get_MinX                                       | System.Double CSGemInstance.CSGemInstanceDefinition::get_MinX()
+get_MinY                                       | System.Double CSGemInstance.CSGemInstanceDefinition::get_MinY()
+get_MinZ                                       | System.Double CSGemInstance.CSGemInstanceDefinition::get_MinZ()
+HasHandle                                      | System.Boolean CSGemInstance.CSGemInstanceDefinition::HasHandle(CSGemInstance.GemTableData.Enumerations.ViewportControlHandle)
+GetFixedCurvePoint                             | System.Int32 CSBlocks.Gems.Obsolete.CSGemOnCrv4::GetFixedCurvePoint(System.Int32)
+MakePlanarCurveOffset                          | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::MakePlanarCurveOffset(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Curve,Syste
+Duplicate                                      | CSMaterials.CSDisplayMaterial CSMaterials.CSDisplayMaterial::Duplicate()
+get_IsConstructionGroup                        | System.Boolean CSMaterials.MaterialGroup::get_IsConstructionGroup()
+HasGemInstanceDefinitionParameters             | System.Boolean CSGemInstance.CSUtilGem::HasGemInstanceDefinitionParameters(Rhino.DocObjects.InstanceDefinition)
+GetGemInstanceDefinition_MG                    | System.Boolean CSGemInstance.CSGemInstanceDefinition::GetGemInstanceDefinition_MG(Rhino.DocObjects.InstanceDefinition&)
+<GetGemTable>b__0                              | System.Boolean CSGemInstance.GemTableData.GemTableHelper/<>c__DisplayClass19_0::<GetGemTable>b__0(CSGemInstance.GemTableData.IGemTable)
+get_IsMetalMaterialGroup                       | System.Boolean CSMaterials.MaterialGroup::get_IsMetalMaterialGroup()
+<CreateMGEnvironmentFromRenderEnvironment>b__0 | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass59_0::<CreateMGEnvironmentFromRenderEnvironment>b__0(System.String)
+CPF                                            | System.Int32 CSBlocks.Gems.Obsolete.CSGemOnCrv1::CPF(System.Int32)
+<ApplyRenderMaterialToObjects>b__0             | System.Void Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass46_0::<ApplyRenderMaterialToObjects>b__0(Rhino.DocObjects.RhinoObject)
+CurveParamToLengthParam                        | System.Double CSBlocks.Gems.CSGemBetween2Curves::CurveParamToLengthParam(Rhino.Geometry.Curve,System.Double)
+<GetMGEnvironmentFromDocument>b__57_0          | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c::<GetMGEnvironmentFromDocument>b__57_0(Rhino.Render.RenderMaterial)
+IsGem                                          | System.Boolean CSGemInstance.CSUtilGem::IsGem(Rhino.DocObjects.RhinoObject)
+GetRotationAngle                               | System.Double CSGemInstance.GemTableData.GemTableHelper::GetRotationAngle(CSGemInstance.GemTableData.GemTableType,CSGemInstance.GemTableData.GemTableS
+AreTooCloseCircles                             | System.Boolean CSBlocks.Gems.CSGemBetween2Curves::AreTooCloseCircles(Rhino.Geometry.Circle,Rhino.Geometry.Circle,System.Double)
+Write                                          | System.String CSGemInstance.Helpers.UserDataSerializationHelper::Write(T)
+CalculateCt                                    | System.Double CSGemInstance.GemTableData.GemTableHelper::CalculateCt(System.Double,System.Double)
+GetIsCustom                                    | System.Boolean CSGemInstance.GemTableData.GemTableHelper::GetIsCustom(CSGemInstance.GemTableData.GemTableType,CSGemInstance.GemTableData.GemTableShape
+CompareTo                                      | System.Int32 CSGemInstance.GemTableData.GemSize.GemSizeBase::CompareTo(CSGemInstance.GemTableData.GemSize.GemSizeBase)
+GetInitializedDoubleArray                      | System.Double[] CSBlocks.Gems.CSGemBetween2CurvesSetup::GetInitializedDoubleArray(System.Int32,System.Double)
+<GetCustomGems>b__0                            | System.Boolean CSGemInstance.GemTableData.GemTableHelper/<>c__DisplayClass12_0::<GetCustomGems>b__0(CSGemInstance.GemTableData.IGemTable)
+MeanNormal                                     | Rhino.Geometry.Vector3d CSBlocks.Gems.CSPaveProngsTransforms::MeanNormal(Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Vector3d)
+<CreateFaceFromCorners>b__0                    | System.Boolean CSGemInstance.CSUtilGem/<>c__DisplayClass47_0::<CreateFaceFromCorners>b__0(System.Int32)
+GetGemTableSizeForShapeTypeIndex               | CSGemInstance.GemTableData.GemSize.GemSizeBase CSGemInstance.GemTableData.GemTableHelper::GetGemTableSizeForShapeTypeIndex(CSGemInstance.GemTableData.
+get_DepthPercentage                            | System.Double CSGemInstance.GemTableData.GemSize.GemSizeSquare::get_DepthPercentage()
+get_IsUserMaterialGroup                        | System.Boolean CSMaterials.MaterialGroup::get_IsUserMaterialGroup()
+set_Name                                       | System.Void CSMaterials.MaterialGroup::set_Name(System.String)
+<ApplyMaterial>b__2                            | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass6_0::<ApplyMaterial>b__2(Common.CyclesModels.MGMaterial)
+<RenderMaterialExistsInDocument>b__0           | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass9_0::<RenderMaterialExistsInDocument>b__0(Rhino.Render.RenderMaterial)
+<GetMGMaterialFromRenderMaterial>b__0          | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass11_0::<GetMGMaterialFromRenderMaterial>b__0(Common.CyclesModels.MGMateri
+<AddMaterialToDocument>b__0                    | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass44_0::<AddMaterialToDocument>b__0(Rhino.Render.RenderMaterial)
+<AddMaterialToDocument>b__1                    | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass44_0::<AddMaterialToDocument>b__1(Rhino.Render.RenderMaterial)
+<ApplyGroundPlaneMaterial>b__0                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass45_0::<ApplyGroundPlaneMaterial>b__0(Rhino.Render.RenderMaterial)
+<ApplyGroundPlaneMaterial>b__1                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass45_0::<ApplyGroundPlaneMaterial>b__1(Rhino.Render.RenderMaterial)
+<GetObjectIdsByMGMaterials>b__1                | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass50_1::<GetObjectIdsByMGMaterials>b__1(Rhino.Render.RenderMaterial)
+<ApplyLightingEnvironment>b__0                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass61_0::<ApplyLightingEnvironment>b__0(Rhino.Render.RenderEnvironment)
+<ApplyLightingEnvironment>b__1                 | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass61_0::<ApplyLightingEnvironment>b__1(Rhino.Render.RenderEnvironment)
+<ApplyReflectionEnvironment>b__0               | System.Boolean Common.Materials.Helpers.CommonMaterialHelper/<>c__DisplayClass62_0::<ApplyReflectionEnvironment>b__0(Rhino.Render.RenderEnvironment)
+<LoadFromRhinoModelMesh>b__0_0                 | System.Boolean CSGemInstance.Helpers.RhinoModelHelper/<>c::<LoadFromRhinoModelMesh>b__0_0(Rhino.FileIO.File3dmObject)
+CalculateFudgeFactor                           | System.Double CSGemInstance.GemTableData.GemTableHelper::CalculateFudgeFactor(System.Double)
+GetCurrentVersionSizeTable                     | System.Int32 CSGemInstance.GemTableData.GemTableHelper::GetCurrentVersionSizeTable(System.String,System.String)
+get_IsDesignerMaterialGroup                    | System.Boolean CSMaterials.MaterialGroup::get_IsDesignerMaterialGroup()
+get_ParentLayerId                              | System.Guid CSMaterials.Helpers.ExportHelper/LayerInfo::get_ParentLayerId()
+ChangeSecondSeamToMatchFirst                   | System.Boolean CSBlocks.Gems.CSGemBetween2CurvesSetup::ChangeSecondSeamToMatchFirst(Rhino.Geometry.Curve,Rhino.Geometry.Curve&)
+GetFixedIndex                                  | System.Int32 CSBlocks.Gems.Obsolete.CSGemOnCrv6::GetFixedIndex(System.Int32,System.Int32)
+
+== PROPERTIES ==
+distinct=144
+  AlphaOrdinal | AssignedMaterialGroup | BezelParameter | Classification | Corner | CornerLength
+  CurrentApplication | CurrentDocumentMaterialGroups | CurrentVersion | CustomCurve | CustomMesh | DefaultLayerInfosExtraA
+  DefaultLayerInfosExtraB | DefaultLayerInfosExtraC | DefaultLayerInfosExtraD | DefaultLayerInfosGem | DefaultLayerInfosMetal | DefaultLayerInfosObject
+  DefaultLayerInfosPrimary | DefaultLayerInfosRender | DefaultLayerInfosSecondary | DefaultLayerInfosUser | Depth | DepthPercentage
+  Description | DisplayMaterial | FullPath | GemDir | GemInstanceDefinitionParameters | GemInstanceDefinitionParametersKeys
+  GemTableLayer | GemTableShape | GemTableType | GetTolerance | GirdleThickness | HasNurbsCurve
+  Id | InAmountToMiddle | InCurve | InDiameterEnd | InDiameterMiddle | InDiameterStart
+  InDoFlip | InDoMirror | InDoReverseDirection | InEnableDiameterEnd | InEnableDiameterMiddle | InEnablePlacementEnd
+  InEnablePlacementMiddle | InFlip | InGem | InGemCount | InGemDefinition | InGemShape
+  InMirror | InOrientationMethod | InParamEnd | InParamStart | InPlacementEnd | InPlacementMethod
+  InPlacementMiddle | InPlacementStart | InPointAt | InPositionEnd | InPositionStart | InResizeMode
+  InRoll | InSizeX | InSizeY | InSpacing | InSpacingMethod | InSurface
+  InTaperDiameter | InTaperSpacing | InTaperZOffset | InTilt | InUseLargestSizePossible | InZOffsetEnd
+  InZOffsetStart | IsConstructionGroup | IsCustom | IsDefaultMaterialGroup | IsDesignerMaterialGroup | IsEditableMaterialGroup
+  IsGemMaterialGroup | IsGemNumberingOnly | IsInherited | IsMetalMaterialGroup | IsObsolete | IsReversed
+  IsUserMaterialGroup | IsValid | IsVerificationMaterialGroupEnabled | Iteration | Layer | Length
+  MaterialGroupItems | MaterialName | MaxX | MaxY | MaxZ | Mesh
+  MinX | MinY | MinZ | Name | NurbsCurve | ObsoleteOffset
+  OutArray | OutMiddleGemDisabled | OutResizedGem | ParentLayerId | PathFile | ProngLayer
+  ProngParam | ProngPositions | RhinoObject | RhinoObjectGuid | RotationAngle | Shape
+  SizeX | SizeY | SizeZ | Sizes | SupportedViewportControlHandles | Tolerance
+  Type | VersionMajor | VersionMinor | VersionSizeTable | Versions | VolumePercentage
+  WhichGemTableLayer | WhichGemTableShape | WhichGemTableType | Width | WidthBottom | WidthTop
+  X | Y | Z | iGemArray | oArray | oSortedGemArray
+
+== STRINGS (len>=5, deduped, top 220) ==
+  38  GetClosestIndexToPosition failed
+  36  GetGemScaleFromX failed
+  27  GetDiameterFromTable failed
+  20  GetWidthHeightFromTable failed
+  18  Curve
+  15  PreProcessCrv failed
+  12  CalculateGemInfos failed
+  10  Offset Curve
+   9  CalculateGemCountEstimate failed
+   9  VersionMajor
+   9  VersionMinor
+   9  VersionSizeTable
+   7  Offset Curve Length
+   7  Bounding Box Failed
+   7  Shape
+   7  #000000
+   6  Center Gem Bounding Box
+   6  Rhs Gem Bounding Box
+   6  Lhs Gem Bounding Box
+   6  Normalized Arc Length Point
+   6  Missing Objects
+   6  {0},{1},{2},{3}
+   6  File not found
+   5  {0} ({1})
+   4  GeometryData not right
+   4  Rhs Closest Point
+   4  Lhs Closest Point
+   4  {0}{1}
+   4  {0},{1}
+   4  {0},{1},{2}
+   3  Surface selected is negative
+   3  Failed to create gem instance definition
+   3  GetGemSizeFromTable failed
+   3  Gem Bounding Box
+   3  Intersection
+   3  Intersection Length
+   3  Missing Master Curve
+   3  PrepCrvPrimary failed
+   3  RHS Gem Bounding Box
+   3  LHS Gem Bounding Box
+   3  Surface
+   3  Parameters
+   3  Length
+   3  GirdleThickness
+   3  Curve not found
+   2  RhinoCorruptedStateException: GemBetween2Curves >> OffsetOnSurface1
+   2  RhinoCorruptedStateException: GemBetween2Curves >> OffsetOnSurface2
+   2  RhinoCorruptedStateException: GemBetween2Curves >> OffsetOnSurface3
+   2  Gems could be overlapping
+   2  Rhs Test Gem Bounding Box
+   2  Rhs Closest Point Length
+   2  Lhs Test Gem Bounding Box
+   2  Lhs Closest Point Length
+   2  Missing Gem
+   2  GetGemSize failed
+   2  GetNormalizedArcLengthPoint failed
+   2  Attempted Divide By Zero
+   2  RHS Closest Point
+   2  LHS Closest Point
+   2  texture-1-mode
+   2  rotate
+   2  repeatx
+   2  repeaty
+   2  multiply
+   2  filename
+   2  blend
+   2  {0}{1} {2} {3} 
+   2  	FileName:
+   2  	Tags:
+   2  {0}	Texture:{1} {2} 
+   2  dd/MM/yyyy HH:mm:ss
+   2  Non implemented type: {0}
+   2  {0} {1} {2} {3} 
+   2  TextureCache
+   2  McNeel\Rhinoceros\7.0\Localization\en-US\Render Content
+   2  [imported]
+   2  GVMat
+   2  .rmtl
+   2  Width
+   2  WidthTop
+   2  WidthBottom
+   2  Corner
+   2  WhichGemTableType
+   2  WhichGemTableShape
+   2  Depth
+   1  GemParam Error
+   1  Error getting left curve
+   1  Error getting right curve
+   1  Error getting middle curve
+   1  GetUnscaledXforms failed
+   1  Rhs GetNormalizedArcLengthPoint
+   1  Lhs GetNormalizedArcLengthPoint
+   1  Invalid resize mode
+   1  Offset Rail
+   1  Offset Rail Length
+   1  Count contains Zero Elements - Cannot create gems.
+   1  Crv Prep
+   1  OrientToCurveNalp failed
+   1  Side Gem On Ring Rail: Missing Gem
+   1  RHS Test Gem Bounding Box
+   1  LHS Test Gem Bounding Box
+   1  RHS Closest Point Length
+   1  LHS Closest Point Length
+   1  Orient to Curve
+   1  {0}_{1}
+   1  Diameter
+   1  BaguetteCustom
+   1  BaguetteTapered
+   1  CustomBaguette
+   1  TaperedBaguette
+   1  EmeraldCustom
+   1  CustomEmerald
+   1  Custom
+   1  Diamond
+   1  MatrixRhinoGemInstance:
+   1  Type:
+   1    Shape:
+   1    Layer:
+   1  Min: (
+   1  Max: (
+   1  Bezel Parameter:
+   1   VolumePercentage:
+   1  {0} {1} {2}.{3}:{4}
+   1  ObsoleteOffset
+   1  Path to file is invalid
+   1  Mesh geometry not found
+   1  Mesh not found
+   1  Mesh is invalid
+   1  Mesh bounding box is invalid
+   1  Curve geometry not found
+   1  Curve is invalid
+   1  NurbsCurve not found
+   1  NurbsCurve is invalid
+   1  BezelParam is invalid
+   1  ^P(\d*$)
+   1  Invalid or missing prong positions
+   1  DD384E7C-D462-4E12-B948-3B16CCBE399F
+   1  Extra A
+   1  #ff8586
+   1  E395019E-85C2-4E9A-A8CF-EABDF76EA9D8
+   1  Extra 01
+   1  #f2ad6c
+   1  B0A481DD-4CE7-4792-9C01-6707E8C05075
+   1  Extra 02
+   1  #f2d178
+   1  AFD47F79-7B46-405D-92A1-87CBA1B79A16
+   1  Extra 03
+   1  #c5d75b
+   1  9EF96E85-6ED4-4E8C-BA1E-42DD4929ED74
+   1  Extra 04
+   1  2B6F5AAE-62D8-43BF-B0F9-2A9861C2E759
+   1  Extra B
+   1  #416652
+   1  B0F5EECE-D834-464A-9209-5721501EF4D9
+   1  Extra 05
+   1  #3c6275
+   1  F5778DF5-E1A3-477A-9D71-92C74C295DE3
+   1  Extra 06
+   1  #403e68
+   1  4A9DDD77-B5F2-40E9-989C-7802F3E4F649
+   1  Extra 07
+   1  #603a54
+   1  B007739E-D156-44F6-9EDC-E85E73BAAAED
+   1  Extra 08
+   1  C4E116F7-D511-46E7-89B6-2BCB3F8A4BF2
+   1  Extra C
+   1  #abfff2
+   1  6E1C2BB6-5328-40B6-BABD-62E69C7181BF
+   1  Extra 09
+   1  #2dfee3
+   1  CCAC2B18-9152-4B6B-A2BB-48760C233C4F
+   1  Extra 10
+   1  #00c0b8
+   1  529CF4EF-FE70-4326-8147-7BF29A191EDF
+   1  Extra 11
+   1  #007f82
+   1  47392AB0-F73B-46BE-965A-8FA9608A3CA4
+   1  Extra 12
+   1  AE31D199-57A6-4126-A306-CDC9253C3539
+   1  Extra D
+   1  #e7d3b5
+   1  9F394356-2C75-42E6-BA46-B55682AB9868
+   1  Extra 13
+   1  #baa37b
+   1  88ED9431-E03B-43E8-98F6-D6E1F754A810
+   1  Extra 14
+   1  #92743e
+   1  D18C242F-530A-4C7F-A8DE-E09C210385AD
+   1  Extra 15
+   1  #6e4c11
+   1  D7F9817C-E732-4838-A075-33CC182F97F2
+   1  Extra 16
+   1  #000080
+   1  7D20D70A-5E9C-4E42-8A09-D308F80C8A92
+   1  #1b3d91
+   1  8669166C-DDC9-4D79-851A-017AC90E3F34
+   1  Gem 01
+   1  #4c74c2
+   1  0D186891-2456-41E1-AED6-C434E7C6B906
+   1  Gem 02
+   1  #85b1f4
+   1  CB75337A-4493-495B-9EED-715D9376E45C
+   1  Gem 03
+   1  #b2ccfa
+   1  1617D12F-5623-4C78-AF20-1896FC4BD8FC
+   1  Gem 04
+   1  #004000
+   1  381A5B84-B08B-4351-A060-5604B4BB664D
+   1  Metal
+   1  #3d805e
+   1  60B4BD30-1861-4845-BB23-38D891FEB5DA
+   1  Metal 01
+   1  #65b672
+   1  2BE59E14-F683-4852-8008-D6238235E5A7
+   1  Metal 02
+   1  #9df88a
+   1  81596CC7-2189-41FF-BE54-B3E5D958BE3A
+   1  Metal 03
+   1  #cff9c6
+   1  224E8792-A339-454A-8A2F-2F2FCDEF3D0B

@@ -1,0 +1,1723 @@
+SUBSYSTEM: shell
+TYPES: 1155  METHODS: 7821
+
+== TOP TYPES BY METHOD COUNT ==
+    0  <Module>                                                    MatrixGold             
+   10  <>f__AnonymousType0`6                                       MatrixGold             System.Object
+    6  <>f__AnonymousType1`2                                       MatrixGold             System.Object
+   10  <>f__AnonymousType2`6                                       MatrixGold             System.Object
+    7  .                                                         MatrixGold             System.Windows.Markup.InternalTypeHelper
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    6  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    8  .                                                         MatrixGold             System.Attribute
+    8  .                                                         MatrixGold             System.Attribute
+    0  .                                                         MatrixGold             System.Enum
+    0  .                                                         MatrixGold             System.Enum
+    4  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    7  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    4  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    0  .                                                         MatrixGold             System.Enum
+    1  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    0  .                                                         MatrixGold             System.Enum
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    5  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    3  .                                                         MatrixGold             System.Attribute
+    5  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Object
+   14  MatrixGold.Program                                          MatrixGold             System.Object
+    9  MatrixGold.Program/<>c                                      MatrixGold             System.Object
+    4  MatrixGold.Program/                                        MatrixGold             System.Object
+    3  MatrixGold.Program/                                        MatrixGold             System.Object
+   30  MatrixGold.FloatingWindowPosition                           MatrixGold             System.Object
+   16  MatrixGold.App                                              MatrixGold             System.Windows.Application
+    2  MatrixGold.App/<>c__DisplayClass7_0                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Windows.Data.Binding
+   33  MatrixGold.MainWindow                                       MatrixGold             System.Windows.Window
+    3  MatrixGold.MainWindow/<>c                                   MatrixGold             System.Object
+    2  MatrixGold.MainWindow/<>c__DisplayClass25_0                 MatrixGold             System.Object
+    7  .                                                         MatrixGold             System.Object
+    9  MatrixGold.Properties.Settings                              MatrixGold             System.Configuration.ApplicationSettingsBase
+   12  MatrixGold.Controls.ScalableWindow                          MatrixGold             System.Windows.Window
+    2  .                                                         MatrixGold             System.Object
+    3  MatrixGold.Views.ViewBuilders/<>c__DisplayClass1_0          MatrixGold             System.Object
+    4  MatrixGold.Views.ViewBuilders/<>c                           MatrixGold             System.Object
+    2  MatrixGold.Views.ViewBuilders/<>c__DisplayClass3_0          MatrixGold             System.Object
+    2  MatrixGold.Views.ViewBuilders/<>c__DisplayClass4_0          MatrixGold             System.Object
+    3  MatrixGold.Views.WindowContentManager/<>c                   MatrixGold             System.Object
+   10  MatrixGold.ViewModels.AnimationStudioViewModel/<>c          MatrixGold             System.Object
+    3  MatrixGold.ViewModels.AnimationStudioViewModel/            MatrixGold             System.Object
+    5  MatrixGold.ViewModels.AnimationStudioViewModel/            MatrixGold             System.Object
+    3  MatrixGold.ViewModels.AnimationStudioViewModel/            MatrixGold             System.Object
+    2  MatrixGold.ViewModels.AnimationStudioViewModel/            MatrixGold             System.Object
+   21  MatrixGold.ViewModels.BuildersViewModel/<>c                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    4  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    4  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    8  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuildersViewModel/                   MatrixGold             System.Object
+   14  MatrixGold.ViewModels.BuilderViewModel/<>c                  MatrixGold             System.Object
+    2  MatrixGold.ViewModels.BuilderViewModel/<>c__DisplayClass15  MatrixGold             System.Object
+   14  MatrixGold.ViewModels.CollectionsManagerViewModel/<>c       MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.ValueType
+    5  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    3  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    3  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.CollectionsManagerViewModel/         MatrixGold             System.Object
+    4  MatrixGold.ViewModels.DirectoryInfo/<>c                     MatrixGold             System.Object
+    4  MatrixGold.ViewModels.DisplayModesViewModel/               MatrixGold             System.Object
+    3  MatrixGold.ViewModels.DisplayModesViewModel/               MatrixGold             System.Object
+    2  MatrixGold.ViewModels.DisplayModesViewModel/               MatrixGold             System.Object
+    3  MatrixGold.ViewModels.DisplayModesViewModel/<>c             MatrixGold             System.Object
+    2  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    3  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    8  MatrixGold.ViewModels.DynamicGroupsViewModel/<>c            MatrixGold             System.Object
+    2  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    3  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    3  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.DynamicGroupsViewModel/              MatrixGold             System.Object
+   10  .                                                         MatrixGold             Stuller.Mvvm.ViewModelBase
+    6  MatrixGold.ViewModels.GemInfoItemGroup/<>c                  MatrixGold             System.Object
+   11  MatrixGold.ViewModels.GemReportViewModel/<>c                MatrixGold             System.Object
+    2  MatrixGold.ViewModels.GemReportViewModel/                  MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.GemReportViewModel/                  MatrixGold             System.Object
+    2  MatrixGold.ViewModels.GemReportViewModel/                  MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.GemReportViewModel/                  MatrixGold             System.Object
+    2  MatrixGold.ViewModels.GemReportViewModel/                  MatrixGold             System.Object
+    3  MatrixGold.ViewModels.GemReportViewModel/                  MatrixGold             System.Object
+    3  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    5  MatrixGold.ViewModels.LayersViewModel/<>c                   MatrixGold             System.Object
+    0  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.ValueType
+    0  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LayersViewModel/                     MatrixGold             System.Object
+   11  MatrixGold.ViewModels.MovieMakerViewModel/<>c               MatrixGold             System.Object
+    2  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    4  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MovieMakerViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.MovieFrameGroup/<>c                   MatrixGold             System.Object
+   66  MatrixGold.ViewModels.ProjectsViewModel/<>c                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    4  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    4  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    4  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ProjectsViewModel/                   MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    4  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    4  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+   32  MatrixGold.ViewModels.RenderViewModel/<>c                   MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.ValueType
+    6  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.ValueType
+    5  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    5  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RenderViewModel/                     MatrixGold             System.Object
+    7  MatrixGold.ViewModels.RingResizerViewModel/<>c              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RingResizerViewModel/                MatrixGold             System.Object
+    2  MatrixGold.ViewModels.RingResizerViewModel/                MatrixGold             System.Object
+   61  .                                                         MatrixGold             Stuller.Mvvm.ViewModelBase
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    3  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.Object
+    3  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.ValueType
+    4  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.Object
+    2  MatrixGold.ViewModels.LibraryManagerViewModel/             MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.LibraryManagerViewModel/<>c           MatrixGold             System.Object
+    6  MatrixGold.ViewModels.MainViewModel/<>c                     MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MainViewModel/                       MatrixGold             System.Object
+    2  MatrixGold.ViewModels.MainViewModel/                       MatrixGold             System.Object
+    3  MatrixGold.ViewModels.MainViewModel/                       MatrixGold             System.Object
+    2  MatrixGold.ViewModels.MainViewModel/                       MatrixGold             System.Object
+    4  MatrixGold.ViewModels.MetalWeightsViewModel/<>c             MatrixGold             System.Object
+    2  MatrixGold.ViewModels.MetalWeightsViewModel/               MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.MetalWeightsViewModel/               MatrixGold             System.ValueType
+   67  MatrixGold.ViewModels.ObjectContextMenuViewModel/<>c        MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ObjectContextMenuViewModel/          MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ObjectContextMenuViewModel/          MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ObjectContextMenuViewModel/          MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ObjectContextMenuViewModel/          MatrixGold             System.Object
+    3  MatrixGold.ViewModels.QuickCommandsViewModel/<>c            MatrixGold             System.Object
+    3  MatrixGold.ViewModels.QuickCommandsViewModel/              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.QuickCommandsViewModel/              MatrixGold             System.Object
+    3  MatrixGold.ViewModels.QuickCommandsViewModel/              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.QuickCommandsViewModel/              MatrixGold             System.Object
+    3  MatrixGold.ViewModels.SelectionPropertiesViewModel/        MatrixGold             System.Object
+   10  MatrixGold.ViewModels.SelectionPropertiesViewModel/<>c      MatrixGold             System.Object
+    2  MatrixGold.ViewModels.SelectionPropertiesViewModel/        MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.SelectionPropertiesViewModel/        MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.SelectionPropertiesViewModel/        MatrixGold             System.ValueType
+    9  MatrixGold.ViewModels.SuperSelectViewModel/<>c              MatrixGold             System.Object
+    2  MatrixGold.ViewModels.TechReportViewModel/                 MatrixGold             System.ValueType
+    4  MatrixGold.ViewModels.TechReportViewModel/<>c               MatrixGold             System.Object
+    2  MatrixGold.ViewModels.TechReportViewModel/                 MatrixGold             System.ValueType
+    2  MatrixGold.ViewModels.TechReportViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.TechReportViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.TechReportViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.TechReportViewModel/                 MatrixGold             System.ValueType
+   98  MatrixGold.ViewModels.ToolRibbonViewModel/<>c               MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    5  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    4  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    4  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    4  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    2  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.Object
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    3  MatrixGold.ViewModels.ToolRibbonViewModel/                 MatrixGold             System.ValueType
+    0  .                                                         MatrixGold             System.Enum
+   12  MatrixGold.ViewModels.WindowCommandEditorViewModel/        MatrixGold             System.Object
+    5  MatrixGold.ViewModels.WindowCommandEditorViewModel/<>c      MatrixGold             System.Object
+   31  .                                                         MatrixGold             Stuller.Mvvm.ViewModelBase
+    5  ./                                                       MatrixGold             System.Object
+   23  .                                                         MatrixGold             Stuller.Mvvm.ViewModelBase
+    5  MatrixGold.ViewModels.MatchAttributesViewModel/<>c          MatrixGold             System.Object
+   41  .                                                         MatrixGold             Stuller.Mvvm.ViewModelBase
+    2  ./                                                       MatrixGold             System.Object
+    3  ./                                                       MatrixGold             System.Object
+    0  MatrixGold.ViewModels.WindowPreferencesViewModel/CommandBa  MatrixGold             System.Enum
+    3  MatrixGold.ViewModels.WindowPreferencesViewModel/          MatrixGold             System.Object
+    2  MatrixGold.ViewModels.WindowPreferencesViewModel/          MatrixGold             System.Object
+   21  MatrixGold.ViewModels.WindowPreferencesViewModel/<>c        MatrixGold             System.Object
+    3  MatrixGold.ViewModels.WindowPreferencesViewModel/          MatrixGold             System.Object
+    0  MatrixGold.ViewModels.WindowSaveContentViewModel/          MatrixGold             System.Enum
+    5  MatrixGold.ViewModels.WindowSaveContentViewModel/<>c        MatrixGold             System.Object
+    4  MatrixGold.ViewModels.WindowLegacyImportViewModel/<>c       MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    4  .                                                         MatrixGold             System.Object
+    1  MatrixGold.Utilities.RECT                                   MatrixGold             System.ValueType
+    1  MatrixGold.Utilities.POINT                                  MatrixGold             System.ValueType
+    0  MatrixGold.Utilities.WINDOWPLACEMENT                        MatrixGold             System.ValueType
+    7  .                                                         MatrixGold             System.Object
+    9  MatrixGold.TriggerActions.SetPropertyAction                 MatrixGold             Microsoft.Xaml.Behaviors.TriggerAction`1<System.Windows.FrameworkElement>
+    2  .                                                         MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    3  ./                                                       MatrixGold             System.Object
+    8  MatrixGold.StyleSheets.BulkProcessing.DetailedDirectoryInf  MatrixGold             System.Object
+    3  MatrixGold.StyleSheets.BulkProcessing.DetailedDirectoryInf  MatrixGold             System.Object
+    0  MatrixGold.RhinoServiceReference.LegacyObjectType           MatrixGold             System.Enum
+  508  MatrixGold.RhinoServiceReference.IRhinoService              MatrixGold             
+   62  .                                                         MatrixGold             
+    2  MatrixGold.RhinoServiceReference.RemoveNonVolumizableItems  MatrixGold             System.Object
+    2  MatrixGold.RhinoServiceReference.RemoveNonVolumizableItems  MatrixGold             System.Object
+    0  .                                                         MatrixGold             
+  514  .                                                         MatrixGold             System.ServiceModel.DuplexClientBase`1<MatrixGold.RhinoServiceReference.IRhinoService>
+    4  MatrixGold.Resources.BuilderDataTemplates                   MatrixGold             System.Windows.ResourceDictionary
+    7  MatrixGold.Resources.ContentManagerResources                MatrixGold             System.Windows.ResourceDictionary
+    2  MatrixGold.Resources.ContentManagerResources/<>c__DisplayC  MatrixGold             System.Object
+    3  MatrixGold.Models.BreadCrumbNavigator/<>c                   MatrixGold             System.Object
+   16  .                                                         MatrixGold             System.Object
+    2  MatrixGold.Models.LayerViewItemBase/                       MatrixGold             System.ValueType
+    2  MatrixGold.Models.LayerViewItemBase/                       MatrixGold             System.ValueType
+    2  MatrixGold.Models.LayerViewItemBase/                       MatrixGold             System.ValueType
+    0  MatrixGold.Models.MatrixFileInfo/JsonReadResult             MatrixGold             System.Enum
+    3  MatrixGold.Models.MatrixFileInfo/<>c__DisplayClass107_0     MatrixGold             System.Object
+    2  MatrixGold.Models.MatrixFileInfo/<>c__DisplayClass110_0     MatrixGold             System.Object
+    3  MatrixGold.Models.MatrixFileInfo/<>c__DisplayClass110_1     MatrixGold             System.Object
+    7  .                                                         MatrixGold             System.Object
+    7  MatrixGold.Models.ObjectContextMenu/<>c                     MatrixGold             System.Object
+    3  MatrixGold.Models.ObjectContextMenuGroup/<>c                MatrixGold             System.Object
+    3  MatrixGold.Models.ObjectContextMenuItem/                   MatrixGold             System.Object
+    6  MatrixGold.Models.ProjectManagerMetadataInfo/<>c            MatrixGold             System.Object
+    2  MatrixGold.Models.TabItem/                                 MatrixGold             System.Object
+    3  MatrixGold.Models.ToolRibbonItem/<>c                        MatrixGold             System.Object
+    2  MatrixGold.Models.ToolRibbonItem/<InvokeCommand>d__103      MatrixGold             System.ValueType
+    3  MatrixGold.Models.ToolRibbonItem/<InvokeTheCommand>d__104   MatrixGold             System.ValueType
+    2  MatrixGold.Models.ToolRibbonItem/<InvokeSecondaryCommand>d  MatrixGold             System.ValueType
+    2  MatrixGold.Models.LayerViewItem/<AddSelectionToLayer>d__18  MatrixGold             System.ValueType
+    2  MatrixGold.Models.LayerViewItem/<SelectLayer>d__19          MatrixGold             System.ValueType
+    2  MatrixGold.Models.LayerViewItem/<SetAsActiveLayer>d__20     MatrixGold             System.ValueType
+    6  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    7  MatrixGold.MockData.MockGraphProvider                       MatrixGold             System.Object
+    0  MatrixGold.MockData.MockGraphProvider/                     MatrixGold             System.Enum
+    3  MatrixGold.MockData.MockGraphProvider/<>c                   MatrixGold             System.Object
+    2  MatrixGold.MockData.MockGraphProvider/                     MatrixGold             System.Object
+    2  MatrixGold.MockData.MockGraphProvider/                     MatrixGold             System.Object
+   14  .                                                         MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+   12  .                                                         MatrixGold             System.Object
+   11  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    7  .                                                         MatrixGold             System.Object
+    1  .                                                         MatrixGold             System.Object
+    1  .                                                         MatrixGold             System.Object
+    4  .                                                         MatrixGold             System.Object
+    2  MatrixGold.Extensions.ListExtensions                        MatrixGold             System.Object
+    3  MatrixGold.Extensions.ListExtensions/<>c__0`1               MatrixGold             System.Object
+    5  .                                                         MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    6  .                                                         MatrixGold             System.Object
+    9  ./                                                       MatrixGold             System.Object
+    6  .                                                         MatrixGold             System.Object
+    6  MatrixGold.Helpers.CommandCreationHelper                    MatrixGold             System.Object
+    2  MatrixGold.Helpers.CommandCreationHelper/                  MatrixGold             System.Object
+    5  MatrixGold.Helpers.CommandCreationHelper/                  MatrixGold             System.Object
+    3  MatrixGold.Helpers.CommandCreationHelper/<>c                MatrixGold             System.Object
+    2  MatrixGold.Helpers.CommandCreationHelper/                  MatrixGold             System.Object
+    2  MatrixGold.Helpers.CommandCreationHelper/                  MatrixGold             System.Object
+   18  MatrixGold.Helpers.ContentManagerHelper                     MatrixGold             System.Object
+   17  MatrixGold.Helpers.ContentManagerHelper/<>c                 MatrixGold             System.Object
+    3  MatrixGold.Helpers.ContentManagerHelper/                   MatrixGold             System.Object
+    3  MatrixGold.Helpers.ContentManagerHelper/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.ContentManagerHelper/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.ContentManagerHelper/                   MatrixGold             System.Object
+    3  MatrixGold.Helpers.ContentManagerHelper/                   MatrixGold             System.Object
+    3  MatrixGold.Helpers.ContentManagerHelper/                   MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    8  MatrixGold.Helpers.ProjectCache                             MatrixGold             System.Object
+    2  MatrixGold.Helpers.ProjectCache/                           MatrixGold             System.Object
+    2  MatrixGold.Helpers.ProjectCache/                           MatrixGold             System.Object
+    4  MatrixGold.Helpers.ProjectCache/<>c                         MatrixGold             System.Object
+    4  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    3  MatrixGold.Helpers.CommandCheckHelper                       MatrixGold             System.Object
+    5  MatrixGold.Helpers.FileAccessHelper                         MatrixGold             System.Object
+    3  MatrixGold.Helpers.FileAccessHelper/                       MatrixGold             System.Object
+    3  MatrixGold.Helpers.FileAccessHelper/<>c                     MatrixGold             System.Object
+    2  MatrixGold.Helpers.FileAccessHelper/                       MatrixGold             System.Object
+    2  MatrixGold.Helpers.FileAccessHelper/                       MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    7  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             
+    6  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    1  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    1  ./                                                       MatrixGold             System.Object
+   11  ./                                                       MatrixGold             System.ValueType
+   15  .                                                         MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    6  MatrixGold.Helpers.MetalWeightsUIHelper                     MatrixGold             System.Object
+    4  MatrixGold.Helpers.MetalWeightsUIHelper/<>c                 MatrixGold             System.Object
+    2  MatrixGold.Helpers.MetalWeightsUIHelper/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.MetalWeightsUIHelper/                   MatrixGold             System.Object
+    4  MatrixGold.Helpers.MetalWeightsUIHelper/                   MatrixGold             System.Object
+    6  MatrixGold.Helpers.MouseHelper                              MatrixGold             System.Object
+    7  MatrixGold.Helpers.MouseHelper/<>c                          MatrixGold             System.Object
+   11  MatrixGold.Helpers.MovieMakerHelper                         MatrixGold             System.Object
+    5  MatrixGold.Helpers.MovieMakerHelper/                       MatrixGold             System.Object
+    9  MatrixGold.Helpers.MovieMakerHelper/<>c                     MatrixGold             System.Object
+    3  MatrixGold.Helpers.MovieMakerHelper/                       MatrixGold             System.Object
+    3  MatrixGold.Helpers.MovieMakerHelper/                       MatrixGold             System.Object
+    9  .                                                         MatrixGold             System.Object
+    3  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+   10  .                                                         MatrixGold             System.Object
+    3  ./                                                       MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+   10  MatrixGold.Helpers.RenderUIHelper                           MatrixGold             System.Object
+    7  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+    2  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+    2  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+    2  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+    2  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+   12  MatrixGold.Helpers.RenderUIHelper/<>c                       MatrixGold             System.Object
+    3  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+    3  MatrixGold.Helpers.RenderUIHelper/                         MatrixGold             System.Object
+    5  .                                                         MatrixGold             System.Object
+   64  MatrixGold.Helpers.RhinoServiceCallback                     MatrixGold             System.Object
+    7  MatrixGold.Helpers.RhinoServiceCallback/<>c                 MatrixGold             System.Object
+    2  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    3  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    3  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.RhinoServiceCallback/                   MatrixGold             System.Object
+    6  MatrixGold.Helpers.StringComparisonHelper                   MatrixGold             System.Object
+    2  MatrixGold.Helpers.StringComparisonHelper/                 MatrixGold             System.Object
+    4  MatrixGold.Helpers.StringComparisonHelper/<>c               MatrixGold             System.Object
+    2  MatrixGold.Helpers.StringComparisonHelper/                 MatrixGold             System.Object
+    0  MatrixGold.Helpers.ToastType                                MatrixGold             System.Enum
+    6  MatrixGold.Helpers.Toast                                    MatrixGold             System.Object
+    8  .                                                         MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  ./                                                       MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    0  ./                                                       MatrixGold             System.Enum
+    0  ./                                                       MatrixGold             System.Enum
+    0  ./                                                       MatrixGold             System.ValueType
+   23  .                                                         MatrixGold             System.Object
+    9  ./                                                       MatrixGold             System.Object
+   10  ./                                                       MatrixGold             System.Object
+    9  ./                                                       MatrixGold             System.Object
+    5  MatrixGold.Helpers.WpfPrintHelper                           MatrixGold             System.Object
+    3  MatrixGold.Helpers.WpfPrintHelper/<>c                       MatrixGold             System.Object
+   10  MatrixGold.Helpers.WpfScreen                                MatrixGold             System.Object
+    8  MatrixGold.Helpers.WpfScreen/                              MatrixGold             System.Object
+    6  MatrixGold.Helpers.DocumentHelper                           MatrixGold             System.Object
+    3  MatrixGold.Helpers.DocumentHelper/<>c                       MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    1  .                                                         MatrixGold             System.Object
+    6  .                                                         MatrixGold             System.Object
+    0  ./EventTypes                                              MatrixGold             System.Enum
+    3  ./                                                       MatrixGold             System.ValueType
+    2  .                                                         MatrixGold             System.Object
+   18  MatrixGold.Helpers.RhinoServiceHelper                       MatrixGold             System.Object
+    3  MatrixGold.Helpers.RhinoServiceHelper/<>c                   MatrixGold             System.Object
+    4  MatrixGold.Helpers.HighlightDelayHelper                     MatrixGold             System.Object
+    4  MatrixGold.Helpers.HighlightDelayHelper/<>c                 MatrixGold             System.Object
+    4  MatrixGold.Helpers.GemReportHighlightDelayHelper            MatrixGold             System.Object
+    4  MatrixGold.Helpers.GemReportHighlightDelayHelper/<>c        MatrixGold             System.Object
+   13  .                                                         MatrixGold             System.Object
+    0  ./DISPLAY_DEVICE_STATE_FLAGS                              MatrixGold             System.Enum
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    4  ./                                                       MatrixGold             System.MulticastDelegate
+    1  ./                                                       MatrixGold             System.Object
+    1  ./                                                       MatrixGold             System.ValueType
+   11  ./                                                       MatrixGold             System.ValueType
+    9  .                                                         MatrixGold             System.Object
+   61  MatrixGold.Helpers.UIHelper                                 MatrixGold             System.Object
+    3  MatrixGold.Helpers.UIHelper/<>c                             MatrixGold             System.Object
+    1  MatrixGold.Converters.MathConverter/IExpression             MatrixGold             
+    3  MatrixGold.Converters.MathConverter/Constant                MatrixGold             System.Object
+    4  MatrixGold.Converters.MathConverter/Variable                MatrixGold             System.Object
+    3  MatrixGold.Converters.MathConverter/BinaryOperation         MatrixGold             System.Object
+    6  MatrixGold.Converters.MathConverter/BinaryOperation/<>c     MatrixGold             System.Object
+    2  MatrixGold.Converters.MathConverter/Negate                  MatrixGold             System.Object
+   10  MatrixGold.Converters.MathConverter/Parser                  MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    3  .                                                         MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+    2  MatrixGold.Converters.CollectionsItemPreviewConverter/<>c_  MatrixGold             System.Object
+    3  MatrixGold.Converters.MultiBooleanToBoolConverter/<>c__Dis  MatrixGold             System.Object
+    3  MatrixGold.Converters.MultiBooleanToVisibilityConverter/<>  MatrixGold             System.Object
+    4  .                                                         MatrixGold             System.Object
+    2  MatrixGold.Converters.RingSizeDataItemToTextConverter/<>c_  MatrixGold             System.Object
+    4  .                                                         MatrixGold             System.Windows.Markup.MarkupExtension
+    3  MatrixGold.Converters.WrapPanelItemWidthConverter/<>c       MatrixGold             System.Object
+    0  .                                                         MatrixGold             System.Enum
+   14  .                                                         MatrixGold             System.Windows.Controls.ContentControl
+    2  ./                                                       MatrixGold             System.Object
+   27  MatrixGold.Controls.CustomMenu                              MatrixGold             System.Windows.Controls.Control
+    5  MatrixGold.Controls.CustomMenu/<>c                          MatrixGold             System.Object
+    2  MatrixGold.Controls.CustomMenu/<OnMouseLeave>d__34          MatrixGold             System.ValueType
+    2  MatrixGold.Controls.CustomMenu/<>c__DisplayClass35_0        MatrixGold             System.Object
+   14  MatrixGold.Controls.GridListBox                             MatrixGold             System.Windows.Controls.ListBox
+    3  MatrixGold.Controls.GridListBox/<>c                         MatrixGold             System.Object
+    6  .                                                         MatrixGold             System.Windows.Controls.DataTemplateSelector
+   66  MatrixGold.Controls.MessageDialog                           MatrixGold             System.Windows.Controls.Control
+    2  MatrixGold.Controls.MessageDialog/<>c__DisplayClass63_0     MatrixGold             System.Object
+    2  MatrixGold.Controls.MessageDialog/<AcceptCommandWork>d__10  MatrixGold             System.ValueType
+    2  MatrixGold.Controls.MessageDialog/<ExtraOption>d__108       MatrixGold             System.ValueType
+    2  MatrixGold.Controls.MessageDialog/<Negative>d__110          MatrixGold             System.ValueType
+    0  .                                                         MatrixGold             System.Enum
+   36  MatrixGold.Controls.NumericUpDown                           MatrixGold             System.Windows.Controls.Control
+    3  MatrixGold.Controls.NumericUpDown/<>c                       MatrixGold             System.Object
+    2  MatrixGold.Controls.NumericUpDown/<>c__DisplayClass58_0     MatrixGold             System.Object
+    3  MatrixGold.Controls.NumericUpDown/<>c__DisplayClass66_0     MatrixGold             System.Object
+    6  MatrixGold.Controls.ThisOrThat                              MatrixGold             System.Windows.Controls.CheckBox
+   24  MatrixGold.Controls.ProgressRing                            MatrixGold             System.Windows.Controls.Control
+    2  MatrixGold.Controls.ProgressRing/<>c__DisplayClass2_0       MatrixGold             System.Object
+    4  MatrixGold.Controls.ProgressRing/<>c                        MatrixGold             System.Object
+    4  MatrixGold.Collections.CollectionProcessingHelper           MatrixGold             System.Object
+    5  MatrixGold.Collections.CollectionProcessingHelper/<>c       MatrixGold             System.Object
+    2  MatrixGold.Collections.CollectionProcessingHelper/         MatrixGold             System.Object
+    3  MatrixGold.Collections.CollectionProcessingHelper/         MatrixGold             System.Object
+    5  MatrixGold.Behaviors.ListBoxBehaviorMouseWheelScrollVertic  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ListBox>
+   10  MatrixGold.Behaviors.VerticalScrollViewerBinding            MatrixGold             System.Object
+    3  MatrixGold.Behaviors.VerticalScrollViewerBinding/<>c__Disp  MatrixGold             System.Object
+    6  MatrixGold.Behaviors.VerticalScrollViewerBinding/<>c        MatrixGold             System.Object
+    2  MatrixGold.Behaviors.VerticalScrollViewerBinding/<>c__Disp  MatrixGold             System.Object
+    4  MatrixGold.Behaviors.ScrollViewerHorizontalScrollMouseWhee  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ScrollViewer>
+    6  MatrixGold.Behaviors.ScrollViewerScrollBoundItemIntoView    MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ScrollViewer>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.UIElement>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.UIElement>
+    4  MatrixGold.Behaviors.UIElementBehaviorRedirectMouseWheelTo  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.UIElement>
+    9  MatrixGold.Behaviors.AutoScrollBehavior                     MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ListBox>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ListBox>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.Button>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.Button>
+    4  MatrixGold.Behaviors.DragWindowBehavior                     MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.UIElement>
+    9  MatrixGold.Behaviors.FrameworkElementBehaviorBindActualSiz  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.FrameworkElement>
+    7  MatrixGold.Behaviors.ListBoxBehaviorScrollSelectedItemInto  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ListBox>
+    5  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ListBox>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ScrollViewer>
+    4  MatrixGold.Behaviors.ScrollViewerBehaviorBringLastItemInto  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.ScrollViewer>
+    6  MatrixGold.Behaviors.TextBoxBehaviorLimitInputToNumericVal  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.TextBox>
+   11  MatrixGold.Behaviors.TextBoxBehaviorMouseWheel              MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.TextBox>
+    6  MatrixGold.Behaviors.TextBoxBehaviorSelectAllTextWhenFocus  MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.TextBox>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.TextBox>
+    8  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.Controls.TreeView>
+    4  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.UIElement>
+    9  .                                                         MatrixGold             Microsoft.Xaml.Behaviors.Behavior`1<System.Windows.UIElement>
+    6  .                                                         MatrixGold             System.Windows.DependencyObject
+    3  ./                                                       MatrixGold             System.Object
+    6  MatrixGold.AttachedProperties.PopupGroupBehavior            MatrixGold             System.Object
+    3  MatrixGold.AttachedProperties.PopupGroupBehavior/<>c__Disp  MatrixGold             System.Object
+    4  MatrixGold.AttachedProperties.StateManager                  MatrixGold             System.Windows.DependencyObject
+    3  MatrixGold.AttachedProperties.StateManager/<>c              MatrixGold             System.Object
+    8  MatrixGold.AttachedProperties.TextBlockService              MatrixGold             System.Object
+    6  .                                                         MatrixGold             System.Object
+    5  ./                                                       MatrixGold             System.Diagnostics.TraceListener
+    5  ./                                                       MatrixGold             System.Windows.Media.Animation.Storyboard
+    0  ./                                                       MatrixGold             System.Enum
+    1  .                                                         MatrixGold             System.Object
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    0  .                                                         MatrixGold             
+    3  .                                                         MatrixGold             
+    2  .                                                         MatrixGold             
+    4  .                                                         MatrixGold             
+    1  .                                                         MatrixGold             
+    6  .                                                         MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.MulticastDelegate
+   12  CommonAuthentication.LoginWindow                            MatrixGold             System.Windows.Window
+    5  .                                                         MatrixGold             System.Object
+    3  CommonAuthentication.Properties.Settings                    MatrixGold             System.Configuration.ApplicationSettingsBase
+    2  CommonAuthentication.ViewModel.Locator                      MatrixGold             System.Object
+    3  CommonAuthentication.ViewModel.Locator/<>c                  MatrixGold             System.Object
+   24  .                                                         MatrixGold             GalaSoft.MvvmLight.ViewModelBase
+    3  ./                                                       MatrixGold             System.ValueType
+    6  .                                                         MatrixGold             System.Object
+    3  ./                                                       MatrixGold             System.Object
+   14  CommonAuthentication.Helpers.PackageHelper                  MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.PackageHelper/                MatrixGold             System.Object
+    5  CommonAuthentication.Helpers.PackageHelper/<>c              MatrixGold             System.Object
+    2  .                                                         MatrixGold             System.Object
+  101  CommonAuthentication.Helpers.SecurityHelper                 MatrixGold             System.Object
+   15  CommonAuthentication.Helpers.SecurityHelper/<>c             MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    2  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    2  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    4  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    0  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    0  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    0  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    0  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    0  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.Object
+    3  CommonAuthentication.Helpers.SecurityHelper/               MatrixGold             System.ValueType
+    1  .                                                         MatrixGold             System.Attribute
+    2  .                                                         MatrixGold             System.Object
+    1  SmartAssembly.HouseOfCards.Strings                          MatrixGold             System.Object
+    4  SmartAssembly.Delegates.GetString                           MatrixGold             System.MulticastDelegate
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    0  .                                                         MatrixGold             System.Object
+    0  ./                                                       MatrixGold             System.ValueType
+    6  .                                                         MatrixGold             System.Object
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    1  .                                                         MatrixGold             System.Attribute
+    0  .                                                         MatrixGold             System.Enum
+    6  .                                                         MatrixGold             System.Object
+    5  ./                                                       MatrixGold             System.Object
+   10  ./                                                       MatrixGold             System.Object
+   10  ./                                                       MatrixGold             System.Object
+    4  ./                                                       MatrixGold             System.Object
+    5  ./                                                       MatrixGold             System.Object
+    7  ./                                                       MatrixGold             System.Object
+   13  ./                                                       MatrixGold             System.Object
+    9  .//                                                     MatrixGold             System.Object
+   10  ./                                                       MatrixGold             System.Object
+    8  ./                                                       MatrixGold             System.Object
+    6  ./                                                       MatrixGold             System.IO.MemoryStream
+    0  .                                                         MatrixGold             System.Object
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    0  ./                                                       MatrixGold             System.ValueType
+    0  <Module>                                                    GemvisionWebhook       
+    1  GemvisionWebhook.ColorExtensions                            GemvisionWebhook       System.Object
+    5  GemvisionWebhook.GemvisionWebhookClient                     GemvisionWebhook       System.Object
+    2  GemvisionWebhook.GemvisionWebhookClient/<>c__DisplayClass3  GemvisionWebhook       System.Object
+    2  GemvisionWebhook.GemvisionWebhookClient/<PostMessage>d__3   GemvisionWebhook       System.ValueType
+    2  GemvisionWebhook.GemvisionWebhookClient/<>c__DisplayClass4  GemvisionWebhook       System.Object
+    2  GemvisionWebhook.GemvisionWebhookClient/<PostMessage>d__4   GemvisionWebhook       System.ValueType
+    2  GemvisionWebhook.GemvisionWebhookClient/<PostMessageAux>d_  GemvisionWebhook       System.ValueType
+    9  GemvisionWebhook.Payload                                    GemvisionWebhook       System.Object
+    0  <Module>                                                    MatrixGoldPlugin       
+   12  MatrixControls.HSV                                          MatrixGoldPlugin       System.Object
+   25  MatrixControls.MControl                                     MatrixGoldPlugin       System.Windows.Forms.Control
+    0  MatrixControls.MControl/MouseStatus                         MatrixGoldPlugin       System.Enum
+    0  MatrixControls.MControl/MColorPicks                         MatrixGoldPlugin       System.Enum
+    0  MatrixControls.MControl/MBorderStyle                        MatrixGoldPlugin       System.Enum
+    0  MatrixControls.MControl/TextBgType                          MatrixGoldPlugin       System.Enum
+    0  MatrixControls.MControl/ControlType                         MatrixGoldPlugin       System.Enum
+   28  MatrixControls.MSliderSimple                                MatrixGoldPlugin       MatrixControls.MControl
+    0  MatrixControls.MSliderSimple/                              MatrixGoldPlugin       System.Enum
+    8  MatrixGoldPlugin.ClayooAssembly                             MatrixGoldPlugin       System.Object
+  254  MatrixGoldPlugin.IRhinoService                              MatrixGoldPlugin       
+   31  MatrixGoldPlugin.RhinoEventHandler                          MatrixGoldPlugin       System.Object
+   62  MatrixGoldPlugin.IMatrixGoldUiCallback                      MatrixGoldPlugin       
+    8  MatrixGoldPlugin.RhinoMouseCallback                         MatrixGoldPlugin       Rhino.UI.MouseCallback
+   15  MatrixGoldPlugin.MatrixGoldPlugIn                           MatrixGoldPlugin       Rhino.PlugIns.PlugIn
+    3  MatrixGoldPlugin.MatrixGoldPlugIn/                         MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.MatrixGoldPlugIn/<>c                       MatrixGoldPlugin       System.Object
+  304  MatrixGoldPlugin.RhinoService                               MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+   62  MatrixGoldPlugin.RhinoService/<>c                           MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService//                           MatrixGoldPlugin       System.ValueType
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.RhinoService/                             MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.SelectionEventHandler                      MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.SelectionEventHandler/<>c                  MatrixGoldPlugin       System.Object
+   17  MatrixGoldPlugin.TechReport.CSGemGroup                      MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.TechReport.MetalGroup                      MatrixGoldPlugin       System.Object
+   15  MatrixGoldPlugin.TechReport.TechReportHelper                MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.TechReport.TechReportHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.TechReport.TechReportHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.TechReport.TechReportHelper/              MatrixGoldPlugin       System.Object
+   12  MatrixGoldPlugin.SV.SuperViewForm                           MatrixGoldPlugin       System.Windows.Forms.Form
+   10  .                                                         MatrixGoldPlugin       System.Object
+    7  .                                                         MatrixGoldPlugin       System.Object
+   65  .                                                         MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.UITest.frmBuilder                          MatrixGoldPlugin       System.Windows.Forms.Form
+    7  MatrixGoldPlugin.UITest.frmCommands                         MatrixGoldPlugin       System.Windows.Forms.Form
+    2  MatrixGoldPlugin.UITest.UICore                              MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Interfaces.AES                             MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Interfaces.COMInterface                    MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Helpers.GetReferencedAssemblies            MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Helpers.GetReferencedAssemblies/MissingAs  MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Helpers.GetReferencedAssemblies/<>c        MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Helpers.ContentManagerHelper               MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.ContentManagerHelper/<>c           MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.ContentManagerHelper/             MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.ContentManagerHelper/             MatrixGoldPlugin       System.ValueType
+    2  MatrixGoldPlugin.Helpers.ContentManagerHelper/             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.CoreHelper                         MatrixGoldPlugin       System.Object
+   18  MatrixGoldPlugin.Helpers.DisplayMaterialHelper              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayMaterialHelper/            MatrixGoldPlugin       System.Object
+    8  MatrixGoldPlugin.Helpers.DisplayModesHelper                 MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Helpers.DisplayModesHelper/<>c             MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.DisplayModesHelper/               MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayModesHelper/               MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayModesHelper/               MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DisplayModesHelper/               MatrixGoldPlugin       System.Object
+   20  MatrixGoldPlugin.Helpers.DynamicGroupsHelper                MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+   20  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/<>c            MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DynamicGroupsHelper/              MatrixGoldPlugin       System.Object
+    1  .                                                         MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.GemReportHelper                    MatrixGoldPlugin       System.Object
+    6  .                                                         MatrixGoldPlugin       System.Object
+    2  ./                                                       MatrixGoldPlugin       System.Object
+    0  MatrixGoldPlugin.Helpers.LegacyObjectType                   MatrixGoldPlugin       System.Enum
+   13  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper          MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/        MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/<>c      MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/        MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/        MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/        MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/        MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.LegacyProfileImportHelper/        MatrixGoldPlugin       System.Object
+   17  MatrixGoldPlugin.Helpers.CptProfile                         MatrixGoldPlugin       System.Object
+    5  .                                                         MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Helpers.DocumentHelper                     MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.DocumentHelper/                   MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.DocumentHelper/<>c                 MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.ObjectActionsHelper                MatrixGoldPlugin       System.Object
+   11  MatrixGoldPlugin.Helpers.ObjectsVolumeHelper                MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Helpers.RhinoDisplayHelper                 MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.RhinoDisplayHelper/               MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.RhinoDisplayHelper/               MatrixGoldPlugin       System.Object
+    2  .                                                         MatrixGoldPlugin       System.Object
+   43  MatrixGoldPlugin.Helpers.RhinoOptionsHelper                 MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.RhinoOptionsHelper/<>c             MatrixGoldPlugin       System.Object
+   24  MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper             MatrixGoldPlugin       System.Object
+   20  MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper/<>c         MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper/           MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper/           MatrixGoldPlugin       System.Object
+    8  MatrixGoldPlugin.Helpers.RhinoViewHelper                    MatrixGoldPlugin       System.Object
+   14  MatrixGoldPlugin.Helpers.RhinoViewHelper/<>c                MatrixGoldPlugin       System.Object
+   24  MatrixGoldPlugin.Helpers.RingResizerHelper                  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.RingResizerHelper/                MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Helpers.RingResizerHelper/<>c              MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Helpers.StyleSheetHelper                   MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.StyleSheetHelper/                 MatrixGoldPlugin       System.Object
+   12  MatrixGoldPlugin.Helpers.StyleSheetHelper/<>c               MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.StyleSheetHelper/                 MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.StyleSheetHelper/                 MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.StyleSheetHelper/                 MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Helpers.StyleSheetHelper/                 MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Helpers.ThreeDMImageHelper                 MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.ThreeDMMetaDataHelper              MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.RhinoCaptureHelper                 MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.RhinoCaptureHelper/<>c             MatrixGoldPlugin       System.Object
+   19  MatrixGoldPlugin.Helpers.RhinoLayersHelper                  MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.RhinoLayersHelper/                MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Helpers.RhinoLayersHelper/                MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.RhinoLayersHelper/                MatrixGoldPlugin       System.Object
+    8  MatrixGoldPlugin.Helpers.RhinoLayersHelper/<>c              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.RhinoUIHelper                      MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Helpers.ServerHelper                       MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.ServerHelper/<>c                   MatrixGoldPlugin       System.Object
+   27  MatrixGoldPlugin.Helpers.UIControlHelper                    MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    8  MatrixGoldPlugin.Helpers.UIControlHelper/<>c                MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.UIControlHelper/                  MatrixGoldPlugin       System.Object
+   21  MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper    MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper/  MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper/<  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper/  MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.GemMap.GemMapMakeImage                     MatrixGoldPlugin       System.Object
+   22  MatrixGoldPlugin.GemMap.GemMap                              MatrixGoldPlugin       System.Object
+    0  MatrixGoldPlugin.GemMap.GemMap/                            MatrixGoldPlugin       System.ValueType
+    1  MatrixGoldPlugin.GemMap.GemMap/                            MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.AddProfileToLibrary               MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.BreakHistory                      MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.CenterObjects                     MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.RemoveDisplayModes                MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.ResetDisplayModes                 MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.Explode                           MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.FixLayers                         MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.GemOverride                       MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.GemView                           MatrixGoldPlugin       Rhino.Commands.Command
+    7  MatrixGoldPlugin.Commands.Edit                              MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.Hide                              MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.SuperSelect                       MatrixGoldPlugin       Rhino.Commands.Command
+    9  MatrixGoldPlugin.Commands.OrientCPlane                      MatrixGoldPlugin       Rhino.Commands.Command
+   12  MatrixGoldPlugin.Commands.SmartCurveCommand                 MatrixGoldPlugin       Rhino.Commands.Command
+    1  MatrixGoldPlugin.Commands.SmartCurveCommand/               MatrixGoldPlugin       System.ValueType
+    3  MatrixGoldPlugin.Commands.SmartCurveCommand/<>c             MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.SuperViewCommand                  MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.ToggleDrawBackfaces               MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.ToggleMatrixMaterials             MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.ToggleViewportRing                MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.SetViewportRing                   MatrixGoldPlugin       Rhino.Commands.Command
+    8  MatrixGoldPlugin.Commands.MetalWeights                      MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.MetalWeights/<>c                  MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.SurfaceView                       MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.ObjectActions                     MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.ToggleWorldAxis                   MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.ToggleWorldAxis/<>c               MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.Troubleshooting.ReApplyMGSkin     MatrixGoldPlugin       Rhino.Commands.Command
+    9  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustAng  MatrixGoldPlugin       Rhino.Commands.Command
+    2  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustAng  MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustAng  MatrixGoldPlugin       Rhino.Commands.Command
+    2  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustAng  MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustAng  MatrixGoldPlugin       Rhino.Commands.Command
+    2  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustAng  MatrixGoldPlugin       System.Object
+    8  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustRad  MatrixGoldPlugin       Rhino.Commands.Command
+    2  MatrixGoldPlugin.Commands.RingResizer.RingResizerAdjustRad  MatrixGoldPlugin       System.Object
+   18  MatrixGoldPlugin.Commands.RingResizer.RingResizerSelectRin  MatrixGoldPlugin       Rhino.Commands.Command
+    8  MatrixGoldPlugin.Commands.RingResizer.RingResizerSelectRin  MatrixGoldPlugin       System.Object
+   11  MatrixGoldPlugin.Commands.RingResizer.RingResizerSelectRin  MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Commands.Pave.NumericValidationRules       MatrixGoldPlugin       System.Windows.Controls.ValidationRule
+    4  MatrixGoldPlugin.Commands.Pave.PaveParameters               MatrixGoldPlugin       System.Object
+    0  MatrixGoldPlugin.Commands.Pave.PaveParameters/LayoutType    MatrixGoldPlugin       System.Enum
+    6  MatrixGoldPlugin.Commands.Pave.PavePanelHost                MatrixGoldPlugin       System.Windows.Forms.UserControl
+    6  MatrixGoldPlugin.Commands.Pave.PaveWpf                      MatrixGoldPlugin       System.Windows.Controls.UserControl
+   65  .                                                         MatrixGoldPlugin       Rhino.UI.ViewModel
+   12  MatrixGoldPlugin.Commands.Pave.TypeNumberDialog             MatrixGoldPlugin       System.Windows.Window
+   24  MatrixGoldPlugin.Commands.Pave.PaveGemInformation           MatrixGoldPlugin       System.Object
+   23  MatrixGoldPlugin.Commands.Pave.PaveCommand                  MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.Pave.PaveCommand/<>c              MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Commands.Pave.PaveCommand/                MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Commands.Pave.PaveCommand/                MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Commands.Pave.PaveCommand/                MatrixGoldPlugin       System.Object
+   32  MatrixGoldPlugin.Commands.Pave.PaveRTree                    MatrixGoldPlugin       Rhino.UI.MouseCallback
+   11  MatrixGoldPlugin.Commands.Pave.PaveRTree/                  MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.StudoPreview.StudioPreviewComman  MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.Render.BatchRenderCommand         MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.Render.RenderCommand              MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributes   MatrixGoldPlugin       Rhino.Commands.Command
+    4  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributes/  MatrixGoldPlugin       System.Object
+    9  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributesA  MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributesA  MatrixGoldPlugin       System.Object
+    3  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributesA  MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributesA  MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributeSe  MatrixGoldPlugin       System.Object
+   23  MatrixGoldPlugin.Commands.Jali.JaliCommand                  MatrixGoldPlugin       Rhino.Commands.Command
+    7  MatrixGoldPlugin.Commands.Jali.JaliCommand/<>c              MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Commands.Jali.JaliCommand/                MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Commands.Jali.JaliCommand/                MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Commands.Jali.JaliPanelHost                MatrixGoldPlugin       System.Windows.Forms.UserControl
+    3  MatrixGoldPlugin.Commands.Jali.JaliParameters               MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.Jali.JaliWpf                      MatrixGoldPlugin       System.Windows.Controls.UserControl
+   44  .                                                         MatrixGoldPlugin       Rhino.UI.ViewModel
+    6  .                                                         MatrixGoldPlugin       System.Object
+    6  .                                                         MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.Internal.TestEnableDebug          MatrixGoldPlugin       Rhino.Commands.Command
+    7  MatrixGoldPlugin.Commands.Internal.TestReportLoadTime       MatrixGoldPlugin       Rhino.Commands.Command
+    7  MatrixGoldPlugin.Commands.Internal.TestDataDump             MatrixGoldPlugin       Rhino.Commands.Command
+    7  MatrixGoldPlugin.Commands.Hidden.DevMaterialProcessing      MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.Hidden.ConsolidationGemInstanceD  MatrixGoldPlugin       Rhino.Commands.Command
+    4  MatrixGoldPlugin.Commands.Hidden.gvCurrentMaterials         MatrixGoldPlugin       Rhino.Commands.Command
+    4  MatrixGoldPlugin.Commands.Hidden.gvFileMaterials            MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.Hidden.SetProfileEditor           MatrixGoldPlugin       Rhino.Commands.Command
+    4  MatrixGoldPlugin.Commands.Hidden.SystemDpi                  MatrixGoldPlugin       Rhino.Commands.Command
+    6  MatrixGoldPlugin.Commands.Hidden.UpdateGemInstanceDefiniti  MatrixGoldPlugin       Rhino.Commands.Command
+   11  MatrixGoldPlugin.Commands.GemSprings.BaseSurface            MatrixGoldPlugin       System.Object
+   10  MatrixGoldPlugin.Commands.GemSprings.Edge                   MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Commands.GemSprings.EdgeKey                MatrixGoldPlugin       System.Tuple`2<System.Int32,System.Int32>
+   10  MatrixGoldPlugin.Commands.GemSprings.GemNode                MatrixGoldPlugin       System.Object
+   35  MatrixGoldPlugin.Commands.GemSprings.GemSprings             MatrixGoldPlugin       Rhino.UI.MouseCallback
+   11  MatrixGoldPlugin.Commands.GemSprings.GemSpringsCommand      MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.GemSprings.GemSpringsCommand/<>c  MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.GemSprings.GemSpringsPanelHost    MatrixGoldPlugin       System.Windows.Forms.UserControl
+   27  MatrixGoldPlugin.Commands.GemSprings.GemSpringsParams       MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.GemSprings.GemSpringsWpf          MatrixGoldPlugin       System.Windows.Controls.UserControl
+   47  .                                                         MatrixGoldPlugin       Rhino.UI.ViewModel
+    5  ./                                                       MatrixGoldPlugin       System.Object
+   14  .                                                         MatrixGoldPlugin       System.Object
+    1  MatrixGoldPlugin.Commands.GemsPlacer.GemOnSurfaceParameter  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Commands.GemsPlacer.GemPlacerControllerPa  MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.GemsPlacer.GemPlacerPanelHost     MatrixGoldPlugin       System.Windows.Forms.UserControl
+    2  MatrixGoldPlugin.Commands.GemsPlacer.GemPlacerParameters    MatrixGoldPlugin       System.Object
+    0  MatrixGoldPlugin.Commands.GemsPlacer.GemPlacerParameters/P  MatrixGoldPlugin       System.Enum
+   50  .                                                         MatrixGoldPlugin       Rhino.UI.ViewModel
+    5  MatrixGoldPlugin.Commands.GemsPlacer.GemRelation            MatrixGoldPlugin       System.Object
+    8  MatrixGoldPlugin.Commands.GemsPlacer.GemRelations           MatrixGoldPlugin       System.Object
+    3  .                                                         MatrixGoldPlugin       System.Object
+    1  .                                                         MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.GemsPlacer.GemPlacerUI            MatrixGoldPlugin       System.Windows.Controls.UserControl
+   16  MatrixGoldPlugin.Commands.GemsPlacer.gvGemPlacer            MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.GemsPlacer.gvGemPlacer/<>c        MatrixGoldPlugin       System.Object
+   17  .                                                         MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Commands.GemsPlacer.MouseOverObjects       MatrixGoldPlugin       System.Object
+    0  MatrixGoldPlugin.Commands.GemsPlacer.MouseOverObjects/     MatrixGoldPlugin       System.Enum
+    3  .                                                         MatrixGoldPlugin       System.Object
+   11  MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuild  MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuild  MatrixGoldPlugin       Rhino.Display.DisplayConduit
+    3  MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuild  MatrixGoldPlugin       System.Object
+    2  MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuild  MatrixGoldPlugin       System.Object
+    6  MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuild  MatrixGoldPlugin       System.Windows.Controls.UserControl
+    6  MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuild  MatrixGoldPlugin       System.Windows.Forms.UserControl
+   55  .                                                         MatrixGoldPlugin       Rhino.UI.ViewModel
+    8  MatrixGoldPlugin.Commands.CustomGemCommands.ScannedGemConv  MatrixGoldPlugin       Rhino.Commands.Command
+    4  MatrixGoldPlugin.Commands.CustomGemCommands.ScannedGemConv  MatrixGoldPlugin       Rhino.Display.DisplayConduit
+    5  MatrixGoldPlugin.Commands.CustomGemCommands.ScannedGemConv  MatrixGoldPlugin       Rhino.Input.Custom.GetTransform
+    3  MatrixGoldPlugin.Commands.CustomGemCommands.ScannedGemConv  MatrixGoldPlugin       System.Object
+    4  MatrixGoldPlugin.Commands.Compatibility.ImportMatrixGem     MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.Compatibility.ImportMatrixGem/<>  MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Commands.Compatibility.ImportRhinoGoldGem  MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.Compatibility.ImportRhinoGoldGem  MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Commands.Compatibility.PatchwireGenerator  MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Commands.Compatibility.ImportMatrixRingRa  MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.Compatibility.ImportMatrixRingRa  MatrixGoldPlugin       System.Object
+    7  MatrixGoldPlugin.Commands.Compatibility.ImportRhinoGoldRin  MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.Compatibility.ImportRhinoGoldRin  MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioC  MatrixGoldPlugin       Rhino.Commands.Command
+    3  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioC  MatrixGoldPlugin       System.Object
+    5  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioS  MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioG  MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioG  MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioS  MatrixGoldPlugin       Rhino.Commands.Command
+    5  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioS  MatrixGoldPlugin       Rhino.Commands.Command
+    7  MatrixGoldPlugin.Commands.AnimationStudio.AnimationStudioS  MatrixGoldPlugin       System.Object
+    1  .                                                         MatrixGoldPlugin       System.Object
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    2  .                                                         MatrixGoldPlugin       System.Object
+    1  SmartAssembly.HouseOfCards.Strings                          MatrixGoldPlugin       System.Object
+    4  SmartAssembly.Delegates.GetString                           MatrixGoldPlugin       System.MulticastDelegate
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    0  .                                                         MatrixGoldPlugin       System.Object
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    6  .                                                         MatrixGoldPlugin       System.Object
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    1  .                                                         MatrixGoldPlugin       System.Attribute
+    0  .                                                         MatrixGoldPlugin       System.Enum
+    6  .                                                         MatrixGoldPlugin       System.Object
+    5  ./                                                       MatrixGoldPlugin       System.Object
+   10  ./                                                       MatrixGoldPlugin       System.Object
+   10  ./                                                       MatrixGoldPlugin       System.Object
+    4  ./                                                       MatrixGoldPlugin       System.Object
+    5  ./                                                       MatrixGoldPlugin       System.Object
+    7  ./                                                       MatrixGoldPlugin       System.Object
+   13  ./                                                       MatrixGoldPlugin       System.Object
+    9  .//                                                     MatrixGoldPlugin       System.Object
+   10  ./                                                       MatrixGoldPlugin       System.Object
+    8  ./                                                       MatrixGoldPlugin       System.Object
+    6  ./                                                       MatrixGoldPlugin       System.IO.MemoryStream
+    0  .                                                         MatrixGoldPlugin       System.Object
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    0  ./                                                       MatrixGoldPlugin       System.ValueType
+    2  dummy_ptr.{c6ab6638-2ad7-4ab0-95de-866b0059d86a}            MatrixGoldPlugin       System.Object
+    0  <Module>                                                    MatrixGoldSkin         
+   18  MatrixGoldSkin.MatrixGoldSkin                               MatrixGoldSkin         Rhino.Runtime.Skin
+    3  MatrixGoldSkin.MatrixGoldSkin/<>c                           MatrixGoldSkin         System.Object
+    2  MatrixGoldSkin.MatrixGoldSkin/<>c__DisplayClass21_0         MatrixGoldSkin         System.Object
+    5  MatrixGoldSkin.Resources                                    MatrixGoldSkin         System.Object
+    0  <Module>                                                    Stuller.Mvvm           
+    6  <>f__AnonymousType0`2                                       Stuller.Mvvm           System.Object
+    3  Stuller.Mvvm.ActivationException                            Stuller.Mvvm           System.Exception
+    7  Stuller.Mvvm.DesignerLibrary                                Stuller.Mvvm           System.Object
+    3  Stuller.Mvvm.DesignerLibrary/<>c                            Stuller.Mvvm           System.Object
+    7  Stuller.Mvvm.DispatcherHelper                               Stuller.Mvvm           System.Object
+    5  Stuller.Mvvm.GenericMessage`1                               Stuller.Mvvm           Stuller.Mvvm.MessageBase
+    1  Stuller.Mvvm.ICleanup                                       Stuller.Mvvm           
+    3  Stuller.Mvvm.IExecuteWithObject                             Stuller.Mvvm           
+    1  Stuller.Mvvm.IExecuteWithObjectAndResult                    Stuller.Mvvm           
+   12  Stuller.Mvvm.IMessenger                                     Stuller.Mvvm           
+   16  Stuller.Mvvm.ISimpleIoc                                     Stuller.Mvvm           
+    7  Stuller.Mvvm.MessageBase                                    Stuller.Mvvm           System.Object
+   25  Stuller.Mvvm.Messenger                                      Stuller.Mvvm           System.Object
+    0  Stuller.Mvvm.Messenger/WeakActionAndToken                   Stuller.Mvvm           System.ValueType
+    2  Stuller.Mvvm.Messenger/<>c__DisplayClass16_0                Stuller.Mvvm           System.Object
+    3  Stuller.Mvvm.Messenger/<>c                                  Stuller.Mvvm           System.Object
+    0  Stuller.Mvvm.DesignerPlatformLibrary                        Stuller.Mvvm           System.Enum
+    5  Stuller.Mvvm.NotificationMessage`1                          Stuller.Mvvm           Stuller.Mvvm.GenericMessage`1<T>
+    5  Stuller.Mvvm.NotificationMessage                            Stuller.Mvvm           Stuller.Mvvm.MessageBase
+   11  Stuller.Mvvm.ObservableObject                               Stuller.Mvvm           System.Object
+    1  Stuller.Mvvm.PreferredConstructorAttribute                  Stuller.Mvvm           System.Attribute
+    7  Stuller.Mvvm.PropertyChangedMessage`1                       Stuller.Mvvm           Stuller.Mvvm.PropertyChangedMessageBase
+    5  Stuller.Mvvm.PropertyChangedMessageBase                     Stuller.Mvvm           Stuller.Mvvm.MessageBase
+    7  Stuller.Mvvm.RelayCommand                                   Stuller.Mvvm           System.Object
+    7  Stuller.Mvvm.RelayCommand`1                                 Stuller.Mvvm           System.Object
+   37  Stuller.Mvvm.SimpleIoc                                      Stuller.Mvvm           System.Object
+    2  Stuller.Mvvm.SimpleIoc/<>c__DisplayClass25_0`1              Stuller.Mvvm           System.Object
+    2  Stuller.Mvvm.SimpleIoc/<>c__DisplayClass26_0`1              Stuller.Mvvm           System.Object
+    8  Stuller.Mvvm.SimpleIoc/<>c                                  Stuller.Mvvm           System.Object
+    3  Stuller.Mvvm.SimpleIoc/<>c__33`1                            Stuller.Mvvm           System.Object
+    3  Stuller.Mvvm.SimpleIoc/<>c__36`1                            Stuller.Mvvm           System.Object
+   13  Stuller.Mvvm.ViewModelBase                                  Stuller.Mvvm           Stuller.Mvvm.ObservableObject
+    8  Stuller.Mvvm.WeakAction`1                                   Stuller.Mvvm           Stuller.Mvvm.WeakAction
+   18  Stuller.Mvvm.WeakAction                                     Stuller.Mvvm           System.Object
+    8  Stuller.Mvvm.WeakFunc`2                                     Stuller.Mvvm           Stuller.Mvvm.WeakFunc`1<TResult>
+   18  Stuller.Mvvm.WeakFunc`1                                     Stuller.Mvvm           System.Object
+
+== READABLE METHOD NAMES (non-obfuscated) ==
+CreateUIControlFromGraphObject                 | GV.CounterSketch.Shared.Model.UIControl MatrixGoldPlugin.Helpers.UIControlHelper::CreateUIControlFromGraphObject(CS.CSObjects.CSObject,CS.CSUICategory
+GeneratePoints                                 | System.Boolean MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuilder::GeneratePoints(Rhino.Geometry.Curve,System.Collections.Generic.List`1<Rhi
+RunCommand                                     | Rhino.Commands.Result MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuilder::RunCommand(Rhino.RhinoDoc,Rhino.Commands.RunMode)
+.cctor                                         | System.Void MatrixGold.Helpers.ContentManagerHelper::.cctor()
+BuildGemPartsFromPoints                        | System.Collections.Generic.List`1<Rhino.Geometry.Brep> MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuilder::BuildGemPartsFromPoints()
+CaptureStylePreviewFromPatchwire               | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.StyleSheetHelper::CaptureStylePreviewFromPatchwire(System.Collections.Generic.List`1<System.Guid>,Syste
+GetSelectedRhinoObjects                        | System.Collections.Generic.List`1<GV.MatrixCommon.Models.SelectedRhinoObject> MatrixGoldPlugin.Helpers.ObjectActionsHelper::GetSelectedRhinoObjects()
+GetPreviewImageFromObjects                     | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.DynamicGroupsHelper::GetPreviewImageFromObjects(System.Collections.Generic.List`1<System.Guid>,System.S
+GetDocumentSuperSelectInfo                     | System.Collections.Generic.List`1<GV.MatrixCommon.Models.SuperSelectInfo> MatrixGoldPlugin.RhinoService::GetDocumentSuperSelectInfo()
+DisplayGems                                    | System.Drawing.Bitmap MatrixGoldPlugin.GemMap.GemMapMakeImage::DisplayGems(GemvisionGeometry.GemMap.GemMapData,System.Int32,System.Int32,System.Drawin
+SetShortcuts                                   | System.Void MatrixGoldSkin.MatrixGoldSkin::SetShortcuts()
+GetPreviewImageForProfile                      | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::GetPreviewImageForProfile(System.Guid)
+System.Windows.Markup.IComponentConnector.Connect | System.Void MatrixGold.MainWindow::System.Windows.Markup.IComponentConnector.Connect(System.Int32,System.Object)
+ConvertGemStringToStudioGemShape               | GV.CounterSketch.Shared.Pricing.Enums.StudioGemShape MatrixGoldPlugin.Helpers.UIControlHelper::ConvertGemStringToStudioGemShape(System.String)
+SetEnvironmentHdr                              | Common.CyclesModels.MGEnvironment MatrixGoldPlugin.RhinoService::SetEnvironmentHdr(System.String,System.String,System.String)
+.ctor                                          | System.Void MatrixGoldPlugin.Commands.GemsPlacer.gvGemPlacer::.ctor()
+MoveNext                                       | System.Void MatrixGold.Models.ToolRibbonItem/<InvokeTheCommand>d__104::MoveNext()
+CaptureViewportToBitmapForTargetedObjects      | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::CaptureViewportToBitmapForTargetedObjects(System.Collections.Generic.List`1<Sys
+ChangeViewToObject                             | System.Boolean MatrixGoldPlugin.Helpers.RhinoViewHelper::ChangeViewToObject(System.Boolean)
+GetSelectedObjectsPreviewImage                 | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.DynamicGroupsHelper::GetSelectedObjectsPreviewImage()
+GetPoint_DynamicDraw                           | System.Void MatrixGoldPlugin.Helpers.RingResizerHelper::GetPoint_DynamicDraw(Rhino.Input.Custom.GetPointDrawEventArgs,System.Double,System.Double,Syst
+GetGemReport                                   | System.Collections.Generic.List`1<GV.MatrixCommon.Models.GemInfoItem> MatrixGoldPlugin.Helpers.GemReportHelper::GetGemReport(Rhino.RhinoDoc)
+MainWindow_ContentRendered                     | System.Void MatrixGold.MainWindow::MainWindow_ContentRendered(System.Object,System.EventArgs)
+GetPreviewForSelectedObjectsInAllViews         | System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<GV.MatrixCommon.Models.MatrixViewport,System.String>> MatrixGoldPlugin.Rhi
+ResetRenderMaterial                            | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::ResetRenderMaterial(Common.CyclesModels.MGMaterial)
+OnMouseMove                                    | System.Void MatrixGoldPlugin.Commands.GemSprings.GemSprings::OnMouseMove(Rhino.UI.MouseCallbackEventArgs)
+OnKeyboardEvent                                | System.Void MatrixGoldPlugin.Commands.GemsPlacer.gvGemPlacer::OnKeyboardEvent(System.Int32)
+ComputePoint                                   | System.Boolean MatrixGoldPlugin.Commands.GemsPlacer.MouseOverObjects::ComputePoint(Rhino.Input.Custom.GetPointMouseEventArgs,Rhino.Geometry.Point3d&,R
+Orient3Point                                   | Rhino.Geometry.Transform MatrixGoldPlugin.Helpers.RingResizerHelper::Orient3Point(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d,Rhino.Geometry.Vector
+ImportLegacyObjectTypes                        | System.Void MatrixGoldPlugin.RhinoService::ImportLegacyObjectTypes(System.Collections.Generic.List`1<MatrixGoldPlugin.Helpers.LegacyObjectType>)
+CreatePreviewForLibraryFiles                   | System.Void MatrixGoldPlugin.Helpers.RhinoCaptureHelper::CreatePreviewForLibraryFiles(System.Collections.Generic.List`1<System.Collections.Generic.Key
+InterrogateGroup                               | GV.MatrixCommon.Models.DynamicGroup MatrixGoldPlugin.Helpers.DynamicGroupsHelper::InterrogateGroup(GV.MatrixCommon.Models.DynamicGroup)
+Draw                                           | System.Void MatrixGoldPlugin.Commands.GemSprings.GemSprings::Draw(System.Object,Rhino.Display.DrawEventArgs)
+ParseFactor                                    | MatrixGold.Converters.MathConverter/IExpression MatrixGold.Converters.MathConverter/Parser::ParseFactor()
+UpdateUIControlForCSValueGemParamListInstance  | System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl> MatrixGoldPlugin.Helpers.UIControlHelper::UpdateUIControlForCSValueGemParam
+ProcessMessage                                 | System.Void MatrixGold.MainWindow::ProcessMessage(System.String)
+GetSelectedColors                              | System.Void MatrixControls.MControl::GetSelectedColors(MatrixControls.MControl/MouseStatus,MatrixControls.MControl/TextBgType,MatrixControls.MControl/
+GetCyclesRenderDevice                          | System.Collections.Generic.List`1<System.String> MatrixGoldPlugin.Helpers.RhinoOptionsHelper::GetCyclesRenderDevice()
+ApplyMatchAttributesFromSettings               | System.Void MatrixGoldPlugin.Commands.MatchAttributes.MatchAttributesApply::ApplyMatchAttributesFromSettings(MatrixGoldPlugin.Commands.MatchAttributes
+SetUIColors                                    | System.Void MatrixGoldSkin.MatrixGoldSkin::SetUIColors()
+AssignDefaultRenderMaterialsToLayers           | System.Void MatrixGoldPlugin.Helpers.DisplayMaterialHelper::AssignDefaultRenderMaterialsToLayers(Rhino.RhinoDoc,System.Boolean)
+HighlightBuilderInViewport                     | System.Void MatrixGoldPlugin.RhinoService::HighlightBuilderInViewport(System.Guid,System.Boolean)
+RhinoObjectsSelected                           | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoObjectsSelected(GV.MatrixCommon.Models.MatrixObjectSelectionEventArgs,System.Boolean)
+RestoreViews                                   | System.Void MatrixGoldPlugin.Helpers.RhinoViewHelper::RestoreViews()
+Shutdown                                       | System.Void MatrixGoldPlugin.RhinoService::Shutdown()
+AnalyzeObjectMaterials                         | System.Void MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::AnalyzeObjectMaterials(System.Collections.Generic.List`1<System.Collections.Gene
+ComputeOneObject                               | System.Void MatrixGoldPlugin.Helpers.ObjectsVolumeHelper::ComputeOneObject()
+LoadUI                                         | System.Void MatrixGoldPlugin.UITest.frmBuilder::LoadUI(System.Guid)
+JobbagInfoPopup_Opened                         | System.Void MatrixGold.Resources.ContentManagerResources::JobbagInfoPopup_Opened(System.Object,System.EventArgs)
+ResizeRing                                     | System.Boolean MatrixGoldPlugin.Helpers.RingResizerHelper::ResizeRing(GV.MatrixCommon.Models.RingResizerData)
+GetUIControlsForCSValueGemParamListInstance    | System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl> MatrixGoldPlugin.Helpers.UIControlHelper::GetUIControlsForCSValueGemParamLi
+OnScaleValueChanged                            | System.Void MatrixGold.Controls.ScalableWindow::OnScaleValueChanged(System.Double,System.Double)
+CptProfileFromFile                             | MatrixGoldPlugin.Helpers.CptProfile MatrixGoldPlugin.Helpers.LegacyProfileImportHelper::CptProfileFromFile(System.String)
+GetVolume                                      | System.Int32 MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::GetVolume(Rhino.DocObjects.RhinoObject,System.Double&)
+Connect                                        | System.Void MatrixGoldPlugin.RhinoEventHandler::Connect()
+ShutDown                                       | System.Void MatrixGoldPlugin.RhinoEventHandler::ShutDown()
+RhinoDocumentOpened                            | System.Void MatrixGold.Helpers.RhinoServiceCallback::RhinoDocumentOpened(System.String,System.Boolean)
+SendToTargetOrType                             | System.Void Stuller.Mvvm.Messenger::SendToTargetOrType(TMessage,System.Type,System.Object)
+GenerateGemMesh                                | Rhino.Geometry.Mesh MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuilder::GenerateGemMesh(Rhino.Geometry.Curve,System.Collections.Generic.List
+SplitMaterialNameAndKilatage                   | System.Tuple`2<System.String,System.String> MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::SplitMaterialNameAndKilatage(System.String)
+GetDocumentProperties                          | System.Collections.Generic.Dictionary`2<System.String,System.Collections.Generic.Dictionary`2<System.String,System.String>> MatrixGoldPlugin.Helpers.T
+IsInDesignModeNet                              | System.Boolean Stuller.Mvvm.DesignerLibrary::IsInDesignModeNet()
+GetGemOutline                                  | System.Collections.Generic.List`1<System.Drawing.PointF> MatrixGoldPlugin.GemMap.GemMapMakeImage::GetGemOutline(GemvisionGeometry.GemMap.GemMapLocatio
+CreateCommands                                 | System.Void MatrixGoldPlugin.MatrixGoldPlugIn::CreateCommands()
+DoGetService                                   | System.Object Stuller.Mvvm.SimpleIoc::DoGetService(System.Type,System.String,System.Boolean)
+RingResizerRingSelected                        | System.Void MatrixGold.Helpers.RhinoServiceCallback::RingResizerRingSelected(GV.MatrixCommon.Models.RingResizerSelectRingModelArgs)
+ReadContentManagerInfoFromFile                 | System.String MatrixGoldPlugin.Helpers.ContentManagerHelper::ReadContentManagerInfoFromFile(System.String,System.Int32)
+OnPaint                                        | System.Void MatrixControls.MSliderSimple::OnPaint(System.Windows.Forms.PaintEventArgs)
+AnalyzeObjects                                 | System.Boolean MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::AnalyzeObjects(System.Collections.Generic.IEnumerable`1<Rhino.DocObjects.Rhin
+ActivateBuilderFrom3dm                         | System.Guid MatrixGoldPlugin.Helpers.StyleSheetHelper::ActivateBuilderFrom3dm()
+CreateGetStringDelegate                        | System.Void SmartAssembly.HouseOfCards.Strings::CreateGetStringDelegate(System.Type)
+GetConstructorInfo                             | System.Reflection.ConstructorInfo Stuller.Mvvm.SimpleIoc::GetConstructorInfo(System.Type)
+LoadWindowLayout                               | System.Void MatrixGold.MainWindow::LoadWindowLayout(System.Boolean,System.String)
+OnMouseUp                                      | System.Void MatrixGoldPlugin.Commands.Pave.PaveRTree::OnMouseUp(Rhino.UI.MouseCallbackEventArgs)
+ShadeActiveViewport                            | System.Void MatrixGoldPlugin.Helpers.RhinoDisplayHelper::ShadeActiveViewport(System.String)
+ShadeViewport                                  | System.Void MatrixGoldPlugin.Helpers.RhinoDisplayHelper::ShadeViewport(Rhino.Display.RhinoViewport,System.String)
+MainWindow_StateChanged                        | System.Void MatrixGold.MainWindow::MainWindow_StateChanged(System.Object,System.EventArgs)
+Application_DispatcherUnhandledException       | System.Void MatrixGold.App::Application_DispatcherUnhandledException(System.Object,System.Windows.Threading.DispatcherUnhandledExceptionEventArgs)
+UpdateFocalBlur                                | System.Void MatrixGoldPlugin.RhinoService::UpdateFocalBlur(System.Double,System.String,System.Boolean)
+GetGumballAlignment                            | GV.MatrixCommon.Models.GumballAlignment MatrixGoldPlugin.Helpers.RhinoOptionsHelper::GetGumballAlignment()
+CleanupList                                    | System.Void Stuller.Mvvm.Messenger::CleanupList(System.Collections.Generic.IDictionary`2<System.Type,System.Collections.Generic.List`1<Stuller.Mvvm.Me
+UpdateMaxPopupWidth                            | System.Void MatrixGold.Controls.CustomMenu::UpdateMaxPopupWidth()
+GetRingRailInfoFromDocument                    | System.String MatrixGoldPlugin.Helpers.ContentManagerHelper::GetRingRailInfoFromDocument()
+UpdateDisplayMaterialsFromStyle                | System.Void MatrixGoldPlugin.Helpers.DisplayMaterialHelper::UpdateDisplayMaterialsFromStyle(System.String)
+MainWindow_Closing                             | System.Void MatrixGold.MainWindow::MainWindow_Closing(System.Object,System.ComponentModel.CancelEventArgs)
+GetPatchwireNameFromInstanceGuid               | System.String MatrixGoldPlugin.RhinoService::GetPatchwireNameFromInstanceGuid(System.Guid)
+MainWindow_Loaded                              | System.Void MatrixGold.MainWindow::MainWindow_Loaded(System.Object,System.Windows.RoutedEventArgs)
+GetColorForBuilderFromUIClassification         | System.Windows.Media.Color MatrixGold.Helpers.UIHelper::GetColorForBuilderFromUIClassification(GV.MatrixCommon.UIClassification)
+GetViewportCaptures                            | System.Collections.Generic.Dictionary`2<System.String,System.Drawing.Bitmap> MatrixGoldPlugin.TechReport.TechReportHelper::GetViewportCaptures()
+Register                                       | System.Void Stuller.Mvvm.SimpleIoc::Register(System.Boolean)
+GetRhinoObjects                                | System.Collections.Generic.IEnumerable`1<Rhino.DocObjects.RhinoObject> MatrixGoldPlugin.Helpers.RingResizerHelper::GetRhinoObjects(System.Collections.
+CreateDefaultWindowLayouts                     | System.Void MatrixGold.MainWindow::CreateDefaultWindowLayouts()
+GetObjectsWeightUserSelectedMaterials          | System.Tuple`2<System.Double,System.String> MatrixGoldPlugin.RhinoService::GetObjectsWeightUserSelectedMaterials(System.Collections.Generic.IEnumerabl
+AdvancedOpenMaterialInRhinoEditor              | System.Void MatrixGoldPlugin.RhinoService::AdvancedOpenMaterialInRhinoEditor(Common.CyclesModels.MGMaterial)
+GetPreviewFromObjectGuids                      | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::GetPreviewFromObjectGuids(System.Collections.Generic.List`1<System.Guid>,System
+Unregister                                     | System.Void Stuller.Mvvm.SimpleIoc::Unregister(System.String)
+SendToList                                     | System.Void Stuller.Mvvm.Messenger::SendToList(TMessage,System.Collections.Generic.IEnumerable`1<Stuller.Mvvm.Messenger/WeakActionAndToken>,System.Typ
+GetObjectsWeight                               | System.Tuple`2<System.Double,System.String> MatrixGoldPlugin.RhinoService::GetObjectsWeight(System.Collections.Generic.IEnumerable`1<System.Guid>,Syst
+AddToExistingGroup                             | GV.MatrixCommon.Models.DynamicGroup MatrixGoldPlugin.Helpers.DynamicGroupsHelper::AddToExistingGroup(GV.MatrixCommon.Models.DynamicGroup)
+SaveProfileToLibrary                           | System.Void MatrixGoldPlugin.RhinoService::SaveProfileToLibrary(System.Guid,System.String,System.Byte[])
+UpdateCenterGemControlIdentifier               | System.Void MatrixGoldPlugin.Helpers.UIControlHelper::UpdateCenterGemControlIdentifier(System.Guid,System.Nullable`1<System.Int32>)
+RemoveFromExistingGroup                        | GV.MatrixCommon.Models.DynamicGroup MatrixGoldPlugin.Helpers.DynamicGroupsHelper::RemoveFromExistingGroup(GV.MatrixCommon.Models.DynamicGroup)
+GetObjectsInDocument                           | System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Guid,System.String>> MatrixGoldPlugin.Helpers.RhinoOptionsHelper::G
+SetCurvesThickness                             | System.Void MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::SetCurvesThickness(Rhino.Display.DisplayModeDescription,System.Drawing.Color&,System.Draw
+OnLoad                                         | Rhino.PlugIns.LoadReturnCode MatrixGoldPlugin.MatrixGoldPlugIn::OnLoad(System.String&)
+GetFirstSetLayersId                            | System.Collections.Generic.IEnumerable`1<System.String> MatrixGoldPlugin.RhinoService::GetFirstSetLayersId()
+GetGemMapBitmap                                | System.Drawing.Bitmap MatrixGoldPlugin.GemMap.GemMap::GetGemMapBitmap(System.Int32,System.Int32,System.Boolean)
+SaveDocumentAsCounterSketchFile                | System.Boolean MatrixGoldPlugin.RhinoService::SaveDocumentAsCounterSketchFile(System.String)
+UnregisterFromLists                            | System.Void Stuller.Mvvm.Messenger::UnregisterFromLists(System.Object,System.Object,System.Action`1<TMessage>,System.Collections.Generic.Dictionary`2<
+WriteContentManagerInfoToFile                  | System.Void MatrixGoldPlugin.Helpers.ContentManagerHelper::WriteContentManagerInfoToFile(System.String,System.String)
+DrawShadedRectangle                            | System.Void MatrixControls.MControl::DrawShadedRectangle(System.Drawing.Graphics,System.Drawing.Color,System.Int32,System.Int32,System.Int32,System.In
+UpdateLayerMaterial                            | System.Void MatrixGoldPlugin.Helpers.DisplayMaterialHelper::UpdateLayerMaterial(System.String,Common.CyclesModels.MGMaterial)
+DeleteBuilder                                  | System.Void MatrixGoldPlugin.RhinoService::DeleteBuilder(System.Guid)
+TestRender                                     | System.Void MatrixGoldPlugin.RhinoService::TestRender(System.Int32,System.Int32,System.Int32,System.String,System.Double)
+LoadCameraPathFromPreset                       | System.Void MatrixGoldPlugin.RhinoService::LoadCameraPathFromPreset(System.Guid,System.String)
+GetGemsForReport                               | System.Collections.Generic.List`1<GV.MatrixCommon.Models.GemGroup> MatrixGoldPlugin.TechReport.TechReportHelper::GetGemsForReport(System.Collections.G
+GetVisibleObjectsPreview                       | System.Byte[] MatrixGoldPlugin.Helpers.ContentManagerHelper::GetVisibleObjectsPreview()
+AssociatedObjectOnMouseWheel                   | System.Void MatrixGold.Behaviors.TextBoxBehaviorMouseWheel::AssociatedObjectOnMouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)
+ToolTipHandler                                 | System.Void MatrixGold.App::ToolTipHandler(System.Object,System.Windows.Controls.ToolTipEventArgs)
+CreateGemObject                                | System.Void MatrixGoldPlugin.Commands.Compatibility.PatchwireGenerator::CreateGemObject(System.Collections.Generic.List`1<CS.Utilities.Helpers.GemPara
+DeleteRenderMaterialFromDocument               | System.Boolean MatrixGoldPlugin.RhinoService::DeleteRenderMaterialFromDocument(Common.CyclesModels.MGMaterial)
+ScrollViewerOnScrollChanged                    | System.Void MatrixGold.Behaviors.VerticalScrollViewerBinding::ScrollViewerOnScrollChanged(System.Object,System.Windows.Controls.ScrollChangedEventArgs
+GetForce                                       | Rhino.Geometry.Vector3d MatrixGoldPlugin.Commands.GemSprings.Edge::GetForce(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d,System.Double,System.Double)
+Init                                           | System.Void MatrixGoldPlugin.Helpers.CoreHelper::Init()
+TryApplyFirstRunScheme                         | System.Boolean MatrixGoldPlugin.Helpers.RhinoUIHelper::TryApplyFirstRunScheme(System.String&)
+GetPreferredConstructorInfo                    | System.Reflection.ConstructorInfo Stuller.Mvvm.SimpleIoc::GetPreferredConstructorInfo(System.Collections.Generic.IEnumerable`1<System.Reflection.Const
+CommandStarted                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::CommandStarted(GV.MatrixCommon.Models.StringEventArgs)
+ApplyOptionsToRhino                            | System.Void MatrixGold.Helpers.UIHelper::ApplyOptionsToRhino()
+IsValid                                        | System.Boolean MatrixGoldPlugin.Commands.RingResizer.RingResizerSelectRingModel/RingRailInfo::IsValid()
+RemoveMatrixGoldDisplayModes                   | System.Void MatrixGoldPlugin.Helpers.DisplayModesHelper::RemoveMatrixGoldDisplayModes()
+ReSize                                         | System.Void MatrixGoldPlugin.Commands.GemSprings.GemNode::ReSize(System.Double)
+MakeInstance                                   | TClass Stuller.Mvvm.SimpleIoc::MakeInstance()
+GetAllInstances                                | System.Collections.Generic.IEnumerable`1<System.Object> Stuller.Mvvm.SimpleIoc::GetAllInstances(System.Type)
+StyleSheet_MouseDown                           | System.Void MatrixGold.Resources.ContentManagerResources::StyleSheet_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)
+OnScrollChangedCommandChanged                  | System.Void MatrixGold.Behaviors.VerticalScrollViewerBinding::OnScrollChangedCommandChanged(System.Windows.DependencyObject,System.Windows.DependencyP
+MyGetReferencedAssembliesRecursive             | System.Collections.Generic.Dictionary`2<System.String,System.Reflection.Assembly> MatrixGoldPlugin.Helpers.GetReferencedAssemblies::MyGetReferencedAss
+RemoveNonVolumizableItemsFromList              | System.Int32 MatrixGoldPlugin.RhinoService::RemoveNonVolumizableItemsFromList(System.Collections.Generic.List`1<System.Guid>&)
+DoTransform                                    | System.Void MatrixGoldPlugin.Commands.GemSprings.GemNode::DoTransform(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d)
+ApplySkinFirstRun                              | System.Void MatrixGoldSkin.MatrixGoldSkin::ApplySkinFirstRun()
+DrawBorder                                     | System.Void MatrixControls.MControl::DrawBorder(System.Drawing.Graphics)
+AdjustMaterialHueSatLum                        | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::AdjustMaterialHueSatLum(Common.CyclesModels.MGMaterial,Common.CyclesModels.MGMaterial,Co
+OnEndLoadAtStartPlugIns                        | System.Void MatrixGoldSkin.MatrixGoldSkin::OnEndLoadAtStartPlugIns()
+SaveWindowLayout                               | System.Void MatrixGold.MainWindow::SaveWindowLayout(System.Boolean,System.String)
+AdjustGroundPlaneAppearance                    | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::AdjustGroundPlaneAppearance(Common.CyclesModels.MGMaterial,Common.CyclesModels.MaterialM
+OnMouseDown                                    | System.Void MatrixGoldPlugin.Commands.GemSprings.GemSprings::OnMouseDown(Rhino.UI.MouseCallbackEventArgs)
+SetMaxHeight                                   | System.Void MatrixGold.Controls.ScalableWindow::SetMaxHeight()
+GetObjectsWeightByGravity                      | System.Double MatrixGoldPlugin.RhinoService::GetObjectsWeightByGravity(System.Collections.Generic.IEnumerable`1<System.Guid>,System.Double,System.Bool
+AdjustSpecificGravity                          | System.Void MatrixGoldPlugin.RhinoService::AdjustSpecificGravity(Common.CyclesModels.MGMaterial)
+DrawOverlay                                    | System.Void MatrixGoldPlugin.Commands.CustomGemCommands.CustomGemBuilder/DrawGemLines::DrawOverlay(Rhino.Display.DrawEventArgs)
+ToString                                       | System.String <>f__AnonymousType0`2::ToString()
+GetSolidObjectsFromDoc                         | System.Collections.Generic.List`1<Rhino.DocObjects.RhinoObject> MatrixGoldPlugin.TechReport.TechReportHelper::GetSolidObjectsFromDoc()
+WriteMacrosToDisk                              | System.Boolean MatrixGoldPlugin.Helpers.RhinoOptionsHelper::WriteMacrosToDisk(System.Boolean)
+GetNewMGMaterialsInDocument                    | System.Collections.Generic.List`1<Common.CyclesModels.MGMaterial> MatrixGoldPlugin.RhinoService::GetNewMGMaterialsInDocument(System.Boolean,System.Col
+DocumentViews                                  | System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.String,Rhino.Display.RhinoView>> MatrixGoldPlugin.Helpers.RhinoView
+AdjustReflectiveColor                          | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::AdjustReflectiveColor(Common.CyclesModels.MGMaterial)
+Validate                                       | System.Windows.Controls.ValidationResult MatrixGoldPlugin.Commands.Pave.NumericValidationRules::Validate(System.Object,System.Globalization.CultureInf
+ReplaceStyleSheetImages                        | System.Void MatrixGoldPlugin.Helpers.StyleSheetHelper::ReplaceStyleSheetImages(System.Collections.Generic.List`1<System.String>,System.Collections.Gen
+OnVerticalOffsetPropertyChanged                | System.Void MatrixGold.Behaviors.VerticalScrollViewerBinding::OnVerticalOffsetPropertyChanged(System.Windows.DependencyObject,System.Windows.Dependenc
+Execute                                        | System.Void Stuller.Mvvm.RelayCommand`1::Execute(System.Object)
+<ProcessMessage>b__0                           | System.Void MatrixGold.Views.ViewBuilders/<>c__DisplayClass1_0::<ProcessMessage>b__0()
+Default                                        | MatrixGoldPlugin.Commands.Pave.PaveParameters MatrixGoldPlugin.Commands.Pave.PaveParameters::Default()
+GetParameters                                  | CS.Utilities.Helpers.GemParameters MatrixGoldPlugin.Commands.GemSprings.GemNode::GetParameters()
+CaptureViewportToBitmapForTargetedObjectsAtLibraryPerspective | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::CaptureViewportToBitmapForTargetedObjectsAtLibraryPerspective(System.Collection
+HideStandardToolbar                            | System.Void MatrixGoldSkin.MatrixGoldSkin::HideStandardToolbar()
+AssociatedObjectOnLoaded                       | System.Void MatrixGold.Behaviors.AutoScrollBehavior::AssociatedObjectOnLoaded(System.Object,System.Windows.RoutedEventArgs)
+RenderWithFocalDistance                        | System.Void MatrixGoldPlugin.RhinoService::RenderWithFocalDistance(System.Int32,System.Int32,System.Int32,System.String,System.Double)
+ToggleSafeFrame                                | System.Void MatrixGoldPlugin.RhinoService::ToggleSafeFrame(System.Boolean,System.Int32,System.Int32)
+ResetBuildersVM                                | System.Void MatrixGold.Helpers.RhinoServiceCallback::ResetBuildersVM()
+CoerceValue                                    | System.Object MatrixGold.Controls.NumericUpDown::CoerceValue(System.Windows.DependencyObject,System.Object)
+ImportDisplayModeByName                        | System.Guid MatrixGoldPlugin.Helpers.RhinoDisplayHelper::ImportDisplayModeByName(System.String)
+AngleOfPointD                                  | System.Double MatrixGoldPlugin.Helpers.RingResizerHelper::AngleOfPointD(System.Double,System.Double)
+GetObjectsVolume                               | System.Double MatrixGoldPlugin.RhinoService::GetObjectsVolume(System.Collections.Generic.List`1<System.Guid>)
+RestoreMacro                                   | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::RestoreMacro(System.Windows.Input.Key)
+SelectObjectsInLayer                           | System.Void MatrixGoldPlugin.Helpers.RhinoLayersHelper::SelectObjectsInLayer(Rhino.RhinoDoc,System.Guid)
+ResetDisplayModesToDefault                     | System.Void MatrixGoldPlugin.Helpers.DisplayModesHelper::ResetDisplayModesToDefault()
+TryCalculateRingBoundingBox                    | System.Boolean MatrixGoldPlugin.Helpers.RingResizerHelper::TryCalculateRingBoundingBox(System.Collections.Generic.IEnumerable`1<Rhino.DocObjects.Rhino
+HighlightObjectsInConduit                      | System.Void MatrixGoldPlugin.RhinoService::HighlightObjectsInConduit(System.Collections.Generic.List`1<System.Guid>,System.Boolean)
+GetNewDynamicGroup                             | GV.MatrixCommon.Models.DynamicGroup MatrixGoldPlugin.Helpers.DynamicGroupsHelper::GetNewDynamicGroup(System.String)
+OnEndMouseMove                                 | System.Void MatrixGoldPlugin.Commands.Pave.PaveRTree::OnEndMouseMove(Rhino.UI.MouseCallbackEventArgs)
+EnableEvents                                   | System.Void MatrixGoldPlugin.Commands.GemSprings.GemSprings::EnableEvents(System.Boolean)
+AssociatedObjectOnUnloaded                     | System.Void MatrixGold.Behaviors.AutoScrollBehavior::AssociatedObjectOnUnloaded(System.Object,System.Windows.RoutedEventArgs)
+CanExecute                                     | System.Boolean Stuller.Mvvm.RelayCommand`1::CanExecute(System.Object)
+<UpdateMetalInfo>b__1                          | System.Void MatrixGold.Models.MatrixFileInfo/<>c__DisplayClass110_1::<UpdateMetalInfo>b__1(GV.MatrixCommon.Models.MetalKInfo)
+OnOpenStateChanged                             | System.Void MatrixGold.Controls.CustomMenu::OnOpenStateChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+CalculateIsTextTrimmed                         | System.Boolean MatrixGold.AttachedProperties.TextBlockService::CalculateIsTextTrimmed(System.Windows.Controls.TextBlock)
+GetAllObjectsVolumeSum                         | System.Double MatrixGoldPlugin.RhinoService::GetAllObjectsVolumeSum()
+GetGemDataFromDoc                              | System.Collections.Generic.List`1<CSDatas.CSGemData> MatrixGoldPlugin.TechReport.TechReportHelper::GetGemDataFromDoc()
+ShowToastMessageEvent                          | System.Void MatrixGold.Helpers.RhinoServiceCallback::ShowToastMessageEvent(GV.MatrixCommon.Models.ToastEventArgs)
+LabelValue_MouseWheel                          | System.Void MatrixGoldPlugin.Commands.Pave.TypeNumberDialog::LabelValue_MouseWheel(System.Object,System.Windows.Input.MouseWheelEventArgs)
+SelectedBuilderStylePreviewImage               | System.Byte[] MatrixGoldPlugin.Helpers.StyleSheetHelper::SelectedBuilderStylePreviewImage(System.Guid,System.Boolean)
+AdjustMetalFinish                              | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::AdjustMetalFinish(Common.CyclesModels.MGMaterial)
+ResetSavedSettings                             | System.Void MatrixGold.Helpers.UIHelper::ResetSavedSettings()
+GetInternalCommands                            | System.Collections.Generic.List`1<System.String> MatrixGoldPlugin.RhinoService::GetInternalCommands()
+OnStartup                                      | System.Void MatrixGold.App::OnStartup(System.Windows.StartupEventArgs)
+ShadeAllViewports                              | System.Void MatrixGoldPlugin.Helpers.RhinoDisplayHelper::ShadeAllViewports(System.String)
+ToolWindow_OnIsVisibleChanged                  | System.Void MatrixGold.MainWindow::ToolWindow_OnIsVisibleChanged(System.Object,System.Windows.DependencyPropertyChangedEventArgs)
+GetAllBuilderGuids                             | System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.Guid,System.Guid>> MatrixGoldPlugin.RhinoService::GetAllBuilderGuid
+GetErroredPatchwires                           | System.Collections.Generic.List`1<System.Tuple`2<System.Guid,System.String>> MatrixGoldPlugin.RhinoService::GetErroredPatchwires()
+GetStatusBarSettings                           | GV.MatrixCommon.Models.IdleStatusBarEventArgs MatrixGoldPlugin.Helpers.RhinoOptionsHelper::GetStatusBarSettings()
+Require                                        | System.Void MatrixGold.Converters.MathConverter/Parser::Require(System.Char)
+Transform                                      | System.Void MatrixGoldPlugin.GemMap.GemMapMakeImage::Transform(System.Collections.Generic.List`1<System.Drawing.PointF>,Rhino.Geometry.Transform)
+OnAttached                                     | System.Void MatrixGold.Behaviors.ListBoxBehaviorScrollSelectedItemIntoView::OnAttached()
+GetSumWeightMetalList                          | GV.MatrixCommon.Models.MetalObject MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::GetSumWeightMetalList(System.Collections.Generic.List`1<S
+GetVisualChild                                 | T MatrixGold.Behaviors.ListBoxBehaviorMouseWheelScrollVertical::GetVisualChild(System.Windows.UIElement)
+GetUIControlsRelatedToPatchwire                | System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl> MatrixGoldPlugin.RhinoService::GetUIControlsRelatedToPatchwire(System.Guid)
+StoreMacroFromKey                              | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::StoreMacroFromKey(System.Windows.Input.Key,System.String)
+FilterGemsFromSelection                        | System.Void MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::FilterGemsFromSelection(System.Collections.Generic.List`1<Rhino.DocObjects.Rhino
+NormalAtPoint                                  | Rhino.Geometry.Vector3d MatrixGoldPlugin.Commands.GemSprings.BaseSurface::NormalAtPoint(Rhino.Geometry.Point3d,Rhino.Geometry.Point3d&)
+OnGotFocus                                     | System.Void MatrixGold.Controls.NumericUpDown::OnGotFocus(System.Windows.RoutedEventArgs)
+Popup_Opened                                   | System.Void MatrixGold.AttachedProperties.PopupGroupBehavior::Popup_Opened(System.Object,System.EventArgs)
+PropertyChangedCallback                        | System.Void MatrixGold.Controls.MessageDialog::PropertyChangedCallback(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventAr
+AssociatedObject_PreviewTextInput              | System.Void MatrixGold.Behaviors.TextBoxBehaviorLimitInputToNumericValuesTextBoxBehavior::AssociatedObject_PreviewTextInput(System.Object,System.Windo
+ApplyUserMaterial                              | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::ApplyUserMaterial(Common.CyclesModels.MGMaterial)
+GetViewportPreviews                            | System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<System.String,System.Byte[]>> MatrixGoldPlugin.Helpers.RhinoViewCaptureHel
+TopViewFromDoc                                 | Rhino.Display.RhinoView MatrixGoldPlugin.Helpers.RhinoViewHelper::TopViewFromDoc()
+FrontViewFromDoc                               | Rhino.Display.RhinoView MatrixGoldPlugin.Helpers.RhinoViewHelper::FrontViewFromDoc()
+SideViewFromDoc                                | Rhino.Display.RhinoView MatrixGoldPlugin.Helpers.RhinoViewHelper::SideViewFromDoc()
+PerspectiveViewFromDoc                         | Rhino.Display.RhinoView MatrixGoldPlugin.Helpers.RhinoViewHelper::PerspectiveViewFromDoc()
+RenderWithAlphaObjects                         | System.Void MatrixGoldPlugin.RhinoService::RenderWithAlphaObjects(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List`1<Common.Cycl
+ExecuteBuilderCommand                          | System.Void MatrixGoldPlugin.RhinoService::ExecuteBuilderCommand(System.Guid)
+ViewportControlHandleUpdated                   | System.Void MatrixGold.Helpers.RhinoServiceCallback::ViewportControlHandleUpdated(System.Guid)
+OpenItem                                       | System.Void MatrixGold.Controls.CustomMenu::OpenItem(MatrixGold.Models.ToolRibbonItem)
+Render                                         | System.Void MatrixGoldPlugin.RhinoService::Render(System.Int32,System.Int32,System.Int32)
+ApplyGroundPlane                               | System.Void MatrixGoldPlugin.RhinoService::ApplyGroundPlane(Common.CyclesModels.MGMaterial)
+SetupUIScale                                   | System.Void MatrixGold.Controls.ScalableWindow::SetupUIScale()
+ScrollSelectedItemIntoView                     | System.Void MatrixGold.Behaviors.ListBoxBehaviorScrollSelectedItemIntoView::ScrollSelectedItemIntoView()
+LoadDisplayModes                               | System.Void MatrixGoldPlugin.Helpers.DisplayModesHelper::LoadDisplayModes()
+UpdateWeights                                  | System.Tuple`2<GV.MatrixCommon.Models.MetalObject,System.Collections.Generic.List`1<GV.MatrixCommon.Models.MetalMaterialObjectList>> MatrixGoldPlugin.
+FindSymmetryUV                                 | Rhino.Geometry.Point3d MatrixGoldPlugin.Commands.GemSprings.BaseSurface::FindSymmetryUV(Rhino.Geometry.Point3d,Rhino.Geometry.Vector3d&)
+AssociatedObject_ScrollChanged                 | System.Void MatrixGold.Behaviors.ScrollViewerBehaviorBringLastItemIntoView::AssociatedObject_ScrollChanged(System.Object,System.Windows.Controls.Scrol
+RemoveSelectionFromMetalWeights                | System.Tuple`2<GV.MatrixCommon.Models.MetalObject,System.Collections.Generic.List`1<GV.MatrixCommon.Models.MetalMaterialObjectList>> MatrixGoldPlugin.
+TryGetRingRailInfoFromDiameter                 | System.Boolean MatrixGoldPlugin.Commands.RingResizer.RingResizerSelectRingModel/RingRailInfo::TryGetRingRailInfoFromDiameter(System.Double,MatrixGoldP
+ParseExpression                                | MatrixGold.Converters.MathConverter/IExpression MatrixGold.Converters.MathConverter/Parser::ParseExpression()
+ParseTerm                                      | MatrixGold.Converters.MathConverter/IExpression MatrixGold.Converters.MathConverter/Parser::ParseTerm()
+PostMessage                                    | System.Threading.Tasks.Task`1<System.Boolean> GemvisionWebhook.GemvisionWebhookClient::PostMessage(System.Drawing.Color,System.String,System.String,Sy
+ScrollItemIntoView                             | System.Void MatrixGold.Behaviors.ScrollViewerScrollBoundItemIntoView::ScrollItemIntoView(System.Object)
+MyGetReferencedAssembliesFlat                  | System.Collections.Generic.List`1<System.String> MatrixGoldPlugin.Helpers.GetReferencedAssemblies::MyGetReferencedAssembliesFlat(System.Type)
+GetViewportPreview                             | System.Byte[] MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::GetViewportPreview(GV.MatrixCommon.Models.MatrixViewport)
+GetUIControlsFromGraphObjects                  | System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl> MatrixGoldPlugin.Helpers.UIControlHelper::GetUIControlsFromGraphObjects(Sys
+PointFArrayToPolygon                           | System.Collections.Generic.List`1<GemvisionGeometry.Helpers.IntPoint> MatrixGoldPlugin.GemMap.GemMapMakeImage::PointFArrayToPolygon(System.Collections
+DuplicateRenderMaterial                        | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::DuplicateRenderMaterial(Common.CyclesModels.MGMaterial)
+SetGumballAlignment                            | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::SetGumballAlignment(GV.MatrixCommon.Models.GumballAlignment)
+get_IsAlive                                    | System.Boolean Stuller.Mvvm.WeakAction::get_IsAlive()
+MainWindow_Deactivated                         | System.Void MatrixGold.MainWindow::MainWindow_Deactivated(System.Object,System.EventArgs)
+AnimationCreationCompleted                     | System.Void MatrixGold.Helpers.RhinoServiceCallback::AnimationCreationCompleted(GV.MatrixCommon.Models.AnimationResultEventArgs)
+SetSingleMapValue                              | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::SetSingleMapValue(Common.CyclesModels.MGMaterial,Common.CyclesModels.MaterialChannel,Com
+RequireEndOfText                               | System.Void MatrixGold.Converters.MathConverter/Parser::RequireEndOfText()
+BindVerticalOffset                             | System.Void MatrixGold.Behaviors.VerticalScrollViewerBinding::BindVerticalOffset(System.Windows.Controls.ScrollViewer)
+CptProfilesFromDirectory                       | System.Collections.Generic.List`1<MatrixGoldPlugin.Helpers.CptProfile> MatrixGoldPlugin.Helpers.LegacyProfileImportHelper::CptProfilesFromDirectory(Sy
+CreateGemPatchwireAndObject                    | System.Void MatrixGoldPlugin.Commands.Compatibility.PatchwireGenerator::CreateGemPatchwireAndObject(System.Collections.Generic.List`1<CS.Utilities.Hel
+RequestCleanup                                 | System.Void Stuller.Mvvm.Messenger::RequestCleanup()
+RingResizerAngleAdjusted                       | System.Void MatrixGold.Helpers.RhinoServiceCallback::RingResizerAngleAdjusted(GV.MatrixCommon.Models.Angle,GV.MatrixCommon.Models.RingResizerAdjustAng
+BindableWidthCallback                          | System.Void MatrixGold.Controls.ProgressRing::BindableWidthCallback(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+set_ToolTip                                    | System.Void MatrixControls.MControl::set_ToolTip(System.String)
+ExecuteScriptAsAlias                           | System.Void MatrixGoldPlugin.RhinoService::ExecuteScriptAsAlias(System.String)
+GetChangedUIControlsFromGraphObjects           | System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl> MatrixGoldPlugin.Helpers.UIControlHelper::GetChangedUIControlsFromGraphObje
+CreateRingRailPatchwireAndObject               | System.Void MatrixGoldPlugin.Commands.Compatibility.PatchwireGenerator::CreateRingRailPatchwireAndObject(CSLegacyObjects.MatrixGold.RingRailParameters
+GetSolidObjectsFromList                        | System.Collections.Generic.List`1<System.Collections.Generic.KeyValuePair`2<Rhino.DocObjects.RhinoObject,System.Double>> MatrixGoldPlugin.Helpers.Meta
+Compute                                        | System.Void MatrixGoldPlugin.Commands.Pave.PaveRTree::Compute()
+SetCategoryChangedEvent                        | System.Void MatrixGoldPlugin.RhinoService::SetCategoryChangedEvent(System.String)
+<UpdateActiveState>b__0                        | System.Void MatrixGold.Controls.NumericUpDown/<>c__DisplayClass66_0::<UpdateActiveState>b__0()
+<BindableWidthCallback>b__0                    | System.Void MatrixGold.Controls.ProgressRing/<>c__DisplayClass2_0::<BindableWidthCallback>b__0()
+set_Value                                      | System.Void MatrixControls.MSliderSimple::set_Value(System.Double)
+ToggleFocalPointVisibility                     | System.Void MatrixGoldPlugin.RhinoService::ToggleFocalPointVisibility(System.Boolean)
+OnEndCommand                                   | System.Void MatrixGoldPlugin.Helpers.ObjectsVolumeHelper::OnEndCommand(System.Boolean)
+DoRegister                                     | System.Void Stuller.Mvvm.SimpleIoc::DoRegister(System.Type,System.Func`1<TClass>,System.String)
+PolygonToPointFArray                           | System.Drawing.PointF[] MatrixGoldPlugin.GemMap.GemMapMakeImage::PolygonToPointFArray(System.Collections.Generic.IList`1<GemvisionGeometry.Helpers.Int
+UpdateGroupsFromUndo                           | System.Collections.Generic.List`1<GV.MatrixCommon.Models.DynamicGroup> MatrixGoldPlugin.Helpers.DynamicGroupsHelper::UpdateGroupsFromUndo(System.Colle
+SetEnableControlPointsOnCurveSelection         | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::SetEnableControlPointsOnCurveSelection(System.Boolean)
+SetSearchPath                                  | System.Void MatrixGoldSkin.MatrixGoldSkin::SetSearchPath(System.String)
+ImportLegacyProfiles                           | System.Void MatrixGoldPlugin.Helpers.LegacyProfileImportHelper::ImportLegacyProfiles(System.Collections.Generic.List`1<System.Collections.Generic.KeyV
+RestoreCurveThickness                          | System.Void MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::RestoreCurveThickness(Rhino.Display.DisplayModeDescription,System.Drawing.Color,System.Dr
+MaterialNameFromRhinoObject                    | System.String MatrixGoldPlugin.Helpers.MetalWeights.MetalWeightsHelper::MaterialNameFromRhinoObject(Rhino.DocObjects.RhinoObject,System.String&,System
+GetPropertyName                                | System.String Stuller.Mvvm.ObservableObject::GetPropertyName(System.Linq.Expressions.Expression`1<System.Func`1<T>>)
+WindowSourceInitialized                        | System.Void MatrixGold.MainWindow::WindowSourceInitialized(System.Object,System.EventArgs)
+Parse                                          | MatrixGold.Converters.MathConverter/IExpression MatrixGold.Converters.MathConverter/Parser::Parse(System.String)
+AddSelectionToMetalWeights                     | System.Tuple`2<GV.MatrixCommon.Models.MetalObject,System.Collections.Generic.List`1<GV.MatrixCommon.Models.MetalMaterialObjectList>> MatrixGoldPlugin.
+OnDetaching                                    | System.Void MatrixGold.Behaviors.TextBoxBehaviorSelectAllTextWhenFocused::OnDetaching()
+SwapToHidden                                   | System.Void MatrixGoldPlugin.RhinoService::SwapToHidden()
+FromRhinoObject                                | CSDatas.CSGemData MatrixGoldPlugin.TechReport.TechReportHelper::FromRhinoObject(Rhino.DocObjects.RhinoObject)
+AddSelectionToLayer                            | System.Void MatrixGoldPlugin.Helpers.RhinoLayersHelper::AddSelectionToLayer(Rhino.RhinoDoc,System.Guid)
+BuilderRemoved                                 | System.Void MatrixGold.Helpers.RhinoServiceCallback::BuilderRemoved(System.Guid)
+OnEnter                                        | System.Void MatrixGold.Controls.NumericUpDown::OnEnter()
+RenderAnimationFrame                           | System.Void MatrixGoldPlugin.RhinoService::RenderAnimationFrame(System.Int32,System.Int32,System.Int32,System.Guid)
+SelectObjectsDocument                          | System.Void MatrixGoldPlugin.Helpers.DynamicGroupsHelper::SelectObjectsDocument(System.Collections.Generic.List`1<System.Guid>,System.Boolean)
+ContainsCreated                                | System.Boolean Stuller.Mvvm.SimpleIoc::ContainsCreated(System.String)
+DoEvents                                       | System.Void MatrixGold.Helpers.UIHelper::DoEvents()
+ApplyMGMaterial                                | System.Boolean MatrixGoldPlugin.RhinoService::ApplyMGMaterial(Common.CyclesModels.MGMaterial)
+<.cctor>b__27_0                                | System.Void MatrixGold.Controls.ProgressRing/<>c::<.cctor>b__27_0(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)
+CaptureRhinoViewToBitmap                       | System.Byte[] MatrixGoldPlugin.Helpers.RhinoCaptureHelper::CaptureRhinoViewToBitmap()
+AssociatedObject_PreviewMouseWheel             | System.Void MatrixGold.Behaviors.UIElementBehaviorRedirectMouseWheelToParentScrollViewer::AssociatedObject_PreviewMouseWheel(System.Object,System.Wind
+ApplyMaterial                                  | System.Void MatrixGoldPlugin.RhinoService::ApplyMaterial(Common.CyclesModels.MGMaterial)
+ChangeMapType                                  | System.Void MatrixGoldPlugin.RhinoService::ChangeMapType(Common.CyclesModels.MGMaterial,System.Int32)
+OpenProfileEditor                              | System.Void MatrixGoldPlugin.RhinoService::OpenProfileEditor(System.Guid)
+ClosestPoint                                   | Rhino.Geometry.Point3d MatrixGoldPlugin.Commands.GemSprings.BaseSurface::ClosestPoint(Rhino.Geometry.Point3d)
+SelectPattern                                  | System.Void MatrixGold.Helpers.RhinoServiceCallback::SelectPattern()
+Eval                                           | System.Decimal MatrixGold.Converters.MathConverter/Variable::Eval(System.Object[])
+CheckBox_KeyDown                               | System.Void MatrixGold.App::CheckBox_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)
+DeleteProfile                                  | System.Void MatrixGoldPlugin.RhinoService::DeleteProfile(System.Guid)
+UpdateHasRhinoObjectsSelected                  | System.Boolean MatrixGoldPlugin.RhinoService::UpdateHasRhinoObjectsSelected()
+ChangeGroundPlaneImage                         | Common.CyclesModels.MGMaterial MatrixGoldPlugin.RhinoService::ChangeGroundPlaneImage(Common.CyclesModels.MGMaterial,System.String,System.Int32)
+AnalyzeDeletedObjects                          | System.Boolean MatrixGoldPlugin.Helpers.DynamicGroupsHelper::AnalyzeDeletedObjects()
+SetEnableAutosave                              | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::SetEnableAutosave(System.Boolean)
+UpdateGraphFromUIControl                       | System.Collections.Generic.List`1<GV.CounterSketch.Shared.Model.UIControl> MatrixGoldPlugin.Helpers.UIControlHelper::UpdateGraphFromUIControl(GV.Count
+OnApplyTemplate                                | System.Void MatrixGold.Controls.ProgressRing::OnApplyTemplate()
+AdjustShine                                    | System.Void MatrixGoldPlugin.RhinoService::AdjustShine(Common.CyclesModels.MGMaterial)
+SaveRenderMaterial                             | System.Boolean MatrixGoldPlugin.RhinoService::SaveRenderMaterial(Common.CyclesModels.MGMaterial,System.String)
+GetUpdatedImageBytesFromGemMap                 | System.Byte[] MatrixGoldPlugin.RhinoService::GetUpdatedImageBytesFromGemMap(System.Int32,System.Int32,System.Boolean)
+GetUIClassificationForCommandId                | GV.MatrixCommon.UIClassification MatrixGoldPlugin.RhinoService::GetUIClassificationForCommandId(System.Guid)
+CaptureViewportToBitmapForTargetedObjectsAtFront | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::CaptureViewportToBitmapForTargetedObjectsAtFront(System.Collections.Generic.Lis
+CaptureViewportToBitmapForTargetedObjectsAtSide | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::CaptureViewportToBitmapForTargetedObjectsAtSide(System.Collections.Generic.List
+CaptureViewportToBitmapForTargetedObjectsAtTop | System.Drawing.Bitmap MatrixGoldPlugin.Helpers.RhinoViewCaptureHelper::CaptureViewportToBitmapForTargetedObjectsAtTop(System.Collections.Generic.List`
+ExportImage                                    | System.Byte[] MatrixGoldPlugin.Helpers.ThreeDMImageHelper::ExportImage(System.String)
+GetRunningCommandName                          | System.String MatrixGoldPlugin.RhinoService::GetRunningCommandName()
+SetPatchwireNameFromInstanceGuid               | System.Void MatrixGoldPlugin.RhinoService::SetPatchwireNameFromInstanceGuid(System.Guid,System.String)
+GetUIClassificationFromInstanceGuid            | System.String MatrixGoldPlugin.RhinoService::GetUIClassificationFromInstanceGuid(System.Guid)
+UpdateHistorySettings                          | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::UpdateHistorySettings(System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+ToHex                                          | System.String GemvisionWebhook.ColorExtensions::ToHex(System.Drawing.Color)
+Bright                                         | System.Drawing.Color MatrixControls.MControl::Bright(System.Drawing.Color,System.Double)
+SetGridSnapSpacing                             | System.Void MatrixGoldPlugin.Helpers.RhinoOptionsHelper::SetGridSnapSpacing(System.Double)
+PostMessageAux                                 | System.Threading.Tasks.Task`1<System.Boolean> GemvisionWebhook.GemvisionWebhookClient::PostMessageAux(GemvisionWebhook.Payload)
+
+== PROPERTIES ==
+distinct=621
+  AcceptButtonText | AcceptButtonVisible | AccessToken | ActionReference | ActionTarget | Add
+  AndSavedAt | AnimationUserPath | AnonymousProperty | ApplicationName | Attribute | AutoPlace
+  AutosaveDisabled | AutosaveEnabledEvery | AvailableBits | AvailableBytes | BackColor | BaseGem
+  BaseMetal | BasePath | BaseType | BindableWidth | BitCount | BorderColor
+  BorderHeight | BorderStyle | BorderWidth | BottomCustomPopupPlacementCallback | BoundItem | BoundingBox
+  BreadCrumb | BreadCrumbNav | CalculatingObjectVolumeMessage | CallBack | CanMove | CancelButtonText
+  CancelButtonVisible | CancelSource | Carats | CenterObjectMessage | CenterObjectMethod | CenterObjectMethodBoundingBox
+  CenterObjectMethodVolume | CenterObjectOptions | CenterObjectSpace | CenterObjectSpaceCPlane | CenterObjectSpaceWorld | CenterObjectX
+  CenterObjectY | CenterObjectZ | CheckBoxChecked | CheckBoxMessage | CheckBoxVisible | CircleBbox
+  CircleCurve | CitrinePreview | Client | Closest | CollectionAccessType | CollectionSubFolders
+  Color | CommandAccept | CommandButtonPress | CommandCancel | CommandClearSelectedItem | CommandClose
+  CommandCloseAndReset | CommandDeleteFolder | CommandDeleteStyleSheet | CommandExtraOption | CommandItemCache | CommandLogin
+  CommandMoveDeleteFiles | CommandNegative | CommandNewFolder | CommandOnEnter | CommandOnEscape | CommandOpenBreadCrumbDirectory
+  CommandOpenDirectory | CommandOpenItem | CommandParameter | CommandPrint | CommandRenameFolder | CommandRenameStyleSheet
+  CommandResizeImage | CommandSaveStyle | CommandSelectStyleSheet | CommandUpdateGraphFromUI | CommandUpdateImage | Command_CreateBox
+  Command_CreateBoxFromPrompt | Command_CreateMeshSphere | Command_CreateSphere | Command_CreateSphereLarge | Command_CreateSphereWithRadius | Comment
+  ConditionType | Connected | Content | ContentManagerMargin | Contract | ControlColor
+  ControlType | CreateConstructorReferences | CrownAngle | CrownHeight | CuletDepth | Culture
+  CurrentBuilderStyleImage | CurrentContentManagerPosition | CurrentPrincipal | CurrentRhinoPosition | CurrentUiControl | CustomBox
+  CustomBoxes | CustomMeshSphere | CustomMeshSpheres | CustomSphere | CustomSpheres | Cut
+  DWTTotalWeight | Data | Debugger | DecimalPlaces | Default | Degree
+  Delete | DeleteInputObjects | DeletedObjects | Depth | DescriptionText | DetectedDesignerLibrary
+  DeviceBounds | DeviceName | DialogStyle | Diameter | DiamondPreview | DirectoryPath
+  DisableRunScript | DisplayModeNamesAndPaths | DisplayModesFolder | Distance | DistanceBackground | DistanceBetweenGems
+  DistanceBound | DistanceFromBorder | DistanceGap | DistanceLines | DistanceMaxBound | DistanceMaxUnion
+  DistanceMinBound | DistanceToBoundaries | Domain | DoubleClickCommand | DrawHeight | DrawWidth
+  Editable | ElementActualHeight | ElementActualWidth | EllipseDiameter | EllipseDiameterScale | EllipseOffset
+  EllipsisPosition | EnablePreviewRenderShading | Enabled | EnglishCategoryName | EnglishName | ExplodeGemWarning
+  ExplodeSelectObject | Expression | ExtendedRepair | ExtraAGroupGuid | ExtraBGroupGuid | ExtraButtonVisible
+  ExtraCGroupGuid | FacetNumber | FavoriteMaterials | FieldName | FilePath | Files
+  Flip | ForceFullStates | ForeColor | Format | FormatParameterName | FuncReference
+  FuncTarget | GemAddingMode | GemBase | GemDiameter | GemGroupGuid | GemInformation
+  GemMapImageSource | GemShape | GemShapeUIControl | GemSize | GemSizeUIControl | GemType
+  GemsInGroup | GirdleThickness | GramTotalWeight | GraphBoundingBox | GridViewModeItemTemplate | GroupIfPossible
+  HasCustomMaterial | HasErrors | Header | Height | HitCount | IconSize
+  Identity | Index | Input | Instance | InternalCommands | IsActive
+  IsAlive | IsApplicationReady | IsAuthenticated | IsBusy | IsCommandRunning | IsConnectedToRhino
+  IsCurrentNodeLocked | IsEmergencyShutdown | IsEmpty | IsExclusive | IsFinished | IsFlushed
+  IsGridViewMode | IsInDesignMode | IsInDesignModeStatic | IsLock | IsMatrixGold | IsModeVisible
+  IsNeedingInput | IsOpen | IsPasswordEmpty | IsPickerWindow | IsPinned | IsPrimary
+  IsRhino6 | IsRhino7 | IsStatic | IsStreaming | IsUserMode | IsUsernameEmpty
+  IsWindowOpen | ItemSize | Items | Knots | LargeChange | LastAuthenticationSucceeded
+  Left | Length | Library | LibrarySystemPath | LibraryUserPath | Line
+  ListViewModeItemTemplate | LiveReference | LoadFileOnStartup | LoadTime | LocalName | LocalProcesses
+  Location | LoginVM | MGBaseGem | MGBaseMetalMap | Magnet | MainIcon
+  MainRhinoIcon | MainText | MainWindow | Material | MatrixGold | MatrixGoldOptions
+  Max | MaxNumericCrownAngle | MaxNumericCrownHeight | MaxNumericCuletDepth | MaxNumericDistance | MaxNumericDistanceBetweenGems
+  MaxNumericDistanceFromBorder | MaxNumericFacetNumber | MaxNumericGemDiameter | MaxNumericGirdleThickness | MaxNumericPavillionAmount | MaxNumericRotation
+  MaxNumericTableHeight | MaxNumericToleranceAboveDistance | MaxNumericToleranceBelowDistance | MaxNumericTranslationX | MaxNumericTranslationY | MaxSideLength
+  MaxSliderCrownAngle | MaxSliderCrownHeight | MaxSliderCuletDepth | MaxSliderDiameter | MaxSliderDistance | MaxSliderDistanceBetweenGems
+  MaxSliderDistanceFromBorder | MaxSliderFacetNumber | MaxSliderGemDiameter | MaxSliderGirdleThickness | MaxSliderPavillionAmount | MaxSliderPlacement
+  MaxSliderRotation | MaxSliderSpacingDistance | MaxSliderTableHeight | MaxSliderToleranceAboveDistance | MaxSliderToleranceBelowDistance | MaxSliderTranslationX
+  MaxSliderTranslationY | Maximum | MeshRepairCommandPrompt | MeshRepairCreatingMeshesMessage | MeshRepairMeshFailed | MeshRepairMeshInvalid
+  MeshRepairRepairingMessage | MeshRepairSucceeded | MeshReparCommandLineMessage | MeshTolerance | Message | MessengerInstance
+  MetalGroupGuid | MetalQuality | MetalWeightCalculationCanceled | MetalWeightInstance | MetalWeightsGemFilterMessage | MetalWeightsLotsOfObjectsWarning
+  MetalWeightsWarningTitle | Method | MethodName | MigrainGridCount | Min | MinHeight
+  MinNumericCrownAngle | MinNumericCrownHeight | MinNumericCuletDepth | MinNumericDistance | MinNumericDistanceBetweenGems | MinNumericDistanceFromBorder
+  MinNumericFacetNumber | MinNumericGemDiameter | MinNumericGirdleThickness | MinNumericPavillionAmount | MinNumericRotation | MinNumericTableHeight
+  MinNumericToleranceAboveDistance | MinNumericToleranceBelowDistance | MinNumericTranslationX | MinNumericTranslationY | MinSliderCrownAngle | MinSliderCrownHeight
+  MinSliderCuletDepth | MinSliderDiameter | MinSliderDistance | MinSliderDistanceBetweenGems | MinSliderDistanceFromBorder | MinSliderFacetNumber
+  MinSliderGemDiameter | MinSliderGirdleThickness | MinSliderPavillionAmount | MinSliderPlacement | MinSliderRotation | MinSliderSpacingDistance
+  MinSliderTableHeight | MinSliderToleranceAboveDistance | MinSliderToleranceBelowDistance | MinSliderTranslationX | MinSliderTranslationY | MinWidth
+  Minimum | Minutes | MirrorX | MirrorY | MirrorZ | MissingAssemblyName
+  MissingAssemblyNameParent | MockCollectionsFolder | MockStyleSheetsFolder | MovePatternU | MovePatternV | Name
+  NewDescription | NewName | NewValue | No | NoPrev | NoRelatedStyles
+  Notification | ObjectGroupGuid | ObjectsAreInvalid | ObjectsAreOpen | ObjectsNoVolume | ObjectsToApplyTo
+  OldValue | OptimizeMilgrain | OptionButtonText | OutputLines | OverrideMax | OverrideMin
+  OwnerWindow | ParameterName | ParentProcessId | ParentWindow | PathToPlugin | PatternImage
+  PatternName | PauseRepositioning | PauseViewportRestore | PavillionAmount | PickObjectsToWeigh | PickerFinishing
+  PixelSensibility | Placement | PlacementCulet | PlacementGirdle | PlacementTable | Points
+  PopupWidth | PreviewImagePath | PreviousHeight | PreviousLeft | PreviousMinHeight | PreviousMinWidth
+  PreviousTop | PreviousWidth | Primary | ProcessID | ProfileLibrarySystemPath | ProfileLibraryUserPath
+  ProgressBarVisible | ProgressHandler | ProgressMessage | ProgressValue | Project | ProjectFiles
+  Projects | PropertyChangedHandler | PropertyName | PropertyValue | RadioHex | RadioStraight
+  Radius | Redo | Reference | RefreshToken | RegionAbrv | RenderGroupGuid
+  RenderMaterialPreview | Required | ResourceManager | Result | RhinoVersion | RhinoVersionString
+  RightCustomPopupPlacementCallback | Rigid | RingResizerOutputPath | RoleIdList | Roles | Rotation
+  Scale | ScaleFactorAdjustment | ScaleValue | SelectGemsToOrientTo | SelectObjectToApplyStyleSheetTo | SelectObjectToTakeStyleFrom
+  SelectPatternCommand | SelectSurfaceCommand | SelectedFolder | SelectedItem | SelectedStyleSheet | SelectedTabIndex
+  SelectionBox | Sender | ServerProcessId | Shape | ShowGridModeButtons | ShowInput
+  ShowSystemFileWarning | SimplePlanes | Size | SizeX | SizeY | SizeZ
+  SmallChange | SortByLayer | SortByMaterial | SortBySize | SpacingDistance | SplashWindow
+  StartingSaveName | Step | StepDiameter | StepPlacement | StepRotation | StepSpacingDistance
+  StoryboardType | StreamingTokenLocation | StullerAPIEndpoint | StullerAllowFreezePriceForFreehandParts | StullerBillToAccountNumber | StullerCompany
+  StullerCustomerObject | StullerEverAndEverUser | StullerHasShowcaseMarkups | StullerJewelerShowcaseURL | StullerPunchoutId | StullerShipToAccountNumber
+  StyleSheetFiles | StyleSheets | StyleSheetsPaths | StyleSheetsSystemPath | StyleSheetsUserPath | SubFolders
+  SubscriptionEndDate | Summary | SurfaceImage | SymmetryU | SymmetryUV | SymmetryV
+  System.Collections.Generic.IEnumerator<MatrixGold.Helpers.WpfScreen>.Current | System.Collections.Generic.IEnumerator<System.Windows.DependencyObject>.Current | System.Collections.Generic.IEnumerator<T>.Current | System.Collections.IEnumerator.Current | System.Security.Principal.IPrincipal.Identity | SystemAnimationPresetsPath
+  SystemCollectionsPath | SystemFileCount | SystemFileWarning | SystemMaterialsPath | SystemRenderStylesPath | TableHeight
+  TagName | Target | TargetFlags | TargetObject | TempStylePaths | Text
+  That | TheCommand | ThemeColor | This | Title | ToastMessage
+  ToastType | ToggleOff | ToggleOn | TokenExpirationDate | ToleranceAbove | ToleranceAboveDistance
+  ToleranceBelow | ToleranceBelowDistance | ToolTip | Top | TopazPreview | TotalOut
+  TotalWeight | Transformation | TranslationEndU | TranslationEndV | TranslationStartU | TranslationStartV
+  TranslationX | TranslationY | TriggerBase | Type | UIDispatcher | UIProcessId
+  Undo | Units | UseHundredthsAccuracy | UseKindFlags | UserAnimationPresetsPath | UserCollectionsPath
+  UserGroupGuid | UserLayerDataPath | UserLayers | UserObjectMaterial | UserRenderBatchPath | UserRenderEnvironmentsPath
+  UserRenderMaterialsPath | UserRenderStylesPath | UserSharedRendersPath | Username | Value | ValueComesFromViewModel
+  Version | VersionChanged | VersionString | View | ViewModel | ViewportInfo
+  Weights | WhiteGold | Width | Window | WindowContentManagerLocation | WindowContentManagerPlacement
+  WindowContentManagerPlacementPinned | WindowContentManagerSize | WindowHandle | WindowMainWindowPlacement | WorkingArea | YellowGold
+  Yes | attribute | cut | depth | expr | hand_2
+  hand_2_clicked | length | material | matrix | refreshToken | shape
+  t | username | width
+
+== STRINGS (len>=5, deduped, top 220) ==
+   4  Selected compression algorithm is not supported.
+   3  .cctor
+   3  propertyExpression
+   2  version
+   2  Unknown Header
+   2  algorithm
+   2  ERR 2003: 
+   2  MatrixGold
+   2  MatrixGoldSkin
+   2  ! _Scale1d
+   2  execute
+   2  Cannot register: No public constructor found in {0}.
+   1  TACROMATOM
+   1  {603c1742-c468-4d3e-88cf-6dad83ca10e1}
+   1  application/json
+   1  {85eb9933-48a6-4957-b7b8-a1dadada256c}
+   1  Gemvision\MatrixGold\MatrixGoldOptions.txt
+   1  MatrixGoldPlugin
+   1  Resources
+   1  Templates
+   1  ApplyFirstRunSkin
+   1  Blank.3dm
+   1  MatrixGoldTemplate_mm.3dm
+   1  OnEndLoadAtStartPlugIns
+   1  Run Counter: {0}
+   1  ApplySkinFirstRun
+   1  !_gvObjectActions
+   1  !_4View
+   1  -_Options _Appearance _Visibility _StatusBar=_Hide _EnterEnd
+   1  Standard
+   1  Standard Toolbar Group
+   1  SetShortcuts
+   1  _Help
+   1  !_CommandHistory
+   1  -_Zoom _Selected _Enter
+   1  0,0,0
+   1  !-_gvEdit
+   1  !-_gvObjectActions
+   1  noecho -_DocumentProperties _Grid _ShowGrid _ShowGridAxes !
+   1  _Ortho
+   1  noecho -readviewportsfromfile "
+   1  !_PointsOn
+   1  !_PointsOff
+   1  ! _Mirror _Y _Enter
+   1  ! _Mirror _X _Enter
+   1  ! _History
+   1  ! _HistoryPurge
+   1  _SelAll
+   1  ! _BooleanDifference
+   1  '_CopyToClipboard
+   1  _Mirror
+   1  !_gvRPSupportSprue height=4
+   1  ! _Hide
+   1  ! _Insert
+   1  ! _Join
+   1  ! _Lock
+   1  '_MaxViewport
+   1  ! _New
+   1  ! _Open
+   1  ! _Print
+   1  _Group
+   1  _Rotate
+   1  _Save
+   1  _Properties
+   1  !_gvCenterObjects x=on y=on z=on method=bb space=cplane enter
+   1  '_Paste
+   1  _Ungroup
+   1  !_Cut
+   1  ! _Redo
+   1  ! _Undo
+   1  _BooleanUnion
+   1  _ChangeLayer
+   1  ! _BlendCRV
+   1  ! _Ungroup
+   1  ! _ShowSelected
+   1  ! _UnlockSelected
+   1  _Rotate3d
+   1  ! _Split
+   1  _Trim
+   1  _Polyline
+   1  ! _Explode
+   1  ! -_CageEdit _BoundingBox _Enter
+   1  ! -_gvCenterObjects _Enter
+   1  ! _gvSmartBlend
+   1  ! _GhostedViewport
+   1  ! _Show
+   1  ! _Unlock
+   1  _SetActiveViewport Perspective _gvVrayRender
+   1  ! _Split _Point _Enter
+   1  ! _WireframeViewport
+   1  ! _XrayViewport
+   1  _Lock
+   1  _Unlock
+   1  ! _Sweep1
+   1  ! _Sweep2
+   1  '_UndoView
+   1  '_RedoView
+   1  SetToolTipOptions
+   1  SetUIColors
+   1  #131214
+   1  #1e1d20
+   1  #2F2D33
+   1  #4C4B50
+   1  #3B3A40
+   1  #ABABAD
+   1  #C6C7C7
+   1  #E3E3E4
+   1  #256f6f
+   1  default
+   1  MatrixGoldSkin.Resources
+   1  matrix
+   1  {{ t = {0}, attribute = {1} }}
+   1  DesignModeEnabled
+   1  IsInDesignModeProperty
+   1  FromProperty
+   1  Metadata
+   1  DefaultValue
+   1  IsInDesignTool
+   1  The DispatcherHelper is not initialized.
+   1  Call DispatcherHelper.Initialize() in the static App constructor.
+   1  Property not found
+   1  Invalid argument
+   1  Argument is not a property
+   1  There is already a class registered for {0}.
+   1  An interface cannot be registered alone.
+   1  Class {0} is already registered.
+   1  factory
+   1  There is already a factory registered for {0}.
+   1  There is already a factory registered for {0} with key {1}.
+   1  Type not found in cache without a key: {0}
+   1  This method cannot be called with an empty string
+   1  propertyName
