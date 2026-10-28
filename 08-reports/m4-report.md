@@ -56,17 +56,20 @@ and was used to inspect the band in three views before the app build.
 * **Swift tests** — `testGalleryRailMatchesGoldenVectors` compares the rail
   height, both outlines and the band counts. The existing cage test now also
   compares `sideX`/`sideY`. **6** head-geometry tests, **29** tests in total.
-* **CI** — all three gates on `495fd39`:
+* **CI** — all three gates on `4d11b6b`:
 
 | Gate | Run | Result |
 |---|---|---|
-| linux (validator, M2, geometry/provenance, operation catalog) | 40637365245 | success |
-| macos (package build + 29 tests) | 40637365259 | success |
-| ios-simulator (iPhone + iPad app) | 40637365273 | success |
+| linux (validator, M2, geometry/provenance, operation catalog) | 40639481304 | success |
+| macos (package build + 29 tests) | 40639731199 | success |
+| ios-simulator (iPhone + iPad app) | 40639481336 | success |
 
-The macOS log records `HeadGeometryTests` executing 6 cases; the Linux log
-records `12 constants traced to IL` and `operation catalog matches the
-capability matrix`.
+The macOS log records 29 tests with 0 failures, including 6
+`HeadGeometryTests` cases; the Linux log records `12 constants traced to IL`
+and `operation catalog matches the capability matrix`. The simulator gate
+uploads the `.app`; it does **not** launch it. A bounded `simctl`
+boot/install/launch/screenshot attempt stalled inside CoreSimulator on the
+hosted runner and was removed rather than reported as a runtime pass.
 
 ## The app shell
 
