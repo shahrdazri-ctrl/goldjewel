@@ -79,7 +79,9 @@ bezel reconstructed · haloSeats recovered · haloBand reconstructed · haloGems
 | iOS simulator CI | **success** — GoldJewel built for iPhone and iPad simulator |
 
 The green run for the geometry and app commit is `548a01b` (linux
-40645122595, macos 40645122756, ios-simulator 40645122734). The simulator job
+40645122595, macos 40645122756, ios-simulator 40645122734). The report and
+wired-operation commit `90b24a2` is also green on all three gates (linux
+40645522493, macos 40645522375, ios-simulator 40645522505). The simulator job
 builds and uploads the `.app`; it does **not** launch it, so this is a compile
 gate, not a runtime pass. There is no macOS host on this machine.
 
