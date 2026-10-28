@@ -1,0 +1,40 @@
+name: linux
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: linux-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  artefacts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate committed evidence against the Swift package
+        run: python 04-index/validate_handoff.py
+
+  package:
+    runs-on: ubuntu-latest
+    container: swift:6.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: Portable targets stay Foundation-only
+        run: |
+          if grep -rnE '^import (UIKit|SwiftUI|AppKit|RealityKit)' 07-ios-handoff/JewelryKit/Sources; then
+            echo "::error::JewelryKit must stay Foundation-only to build on Linux"
+            exit 1
+          fi
+      - name: Build
+        working-directory: 07-ios-handoff/JewelryKit
+        run: swift build
+      - name: Test
+        working-directory: 07-ios-handoff/JewelryKit
+        run: swift test

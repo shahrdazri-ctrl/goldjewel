@@ -7,19 +7,28 @@ import os
 import re
 import sys
 
-ROOT = r"D:\REA-LAB"
-VEC = os.path.join(ROOT, r"05-evidence\vectors\ring-sizes.json")
-PKG_JSON = os.path.join(ROOT, r"07-ios-handoff\JewelryKit\Sources\JewelryKit\Resources\ring-sizes.json")
-MIRROR = os.path.join(ROOT, r"01-target\mirror\Main\MatrixGold")
-SWIFT = os.path.join(ROOT, r"07-ios-handoff\JewelryKit\Sources\JewelryKit")
-SWIFT_TESTS = os.path.join(ROOT, r"07-ios-handoff\JewelryKit\Tests\JewelryKitTests")
+# Paths resolve from this file, so the same validator runs in the lab (D:) and
+# from a git checkout in CI. R() keeps the historical Windows-style literals
+# readable while joining with the host separator.
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def R(path):
+    return os.path.join(ROOT, *path.split("\\"))
+
+
+VEC = R(r"05-evidence\vectors\ring-sizes.json")
+PKG_JSON = R(r"07-ios-handoff\JewelryKit\Sources\JewelryKit\Resources\ring-sizes.json")
+MIRROR = R(r"01-target\mirror\Main\MatrixGold")
+HAS_MIRROR = os.path.isdir(MIRROR)
+HAS_DECOMPILED = os.path.isdir(R(r"03-decompiled"))
+SWIFT = R(r"07-ios-handoff\JewelryKit\Sources\JewelryKit")
+SWIFT_TESTS = R(r"07-ios-handoff\JewelryKit\Tests\JewelryKitTests")
 REAL_FIXTURES = [
-    os.path.join(SWIFT_TESTS, r"Fixtures\real-groundplane.mgm"),
-    os.path.join(SWIFT_TESTS, r"Fixtures\real-metal.mgm"),
+    R(r"07-ios-handoff\JewelryKit\Tests\JewelryKitTests\Fixtures\real-groundplane.mgm"),
+    R(r"07-ios-handoff\JewelryKit\Tests\JewelryKitTests\Fixtures\real-metal.mgm"),
 ]
-CS_REGION = os.path.join(
-    ROOT, r"03-decompiled\raw\CSRingSizes\CSRingSizes.Enumerations\RingSizeRegion.cs"
-)
+CS_REGION = R(r"03-decompiled\raw\CSRingSizes\CSRingSizes.Enumerations\RingSizeRegion.cs")
 CS_ENUMS = {
     "MaterialOwner": "MaterialOwner.cs",
     "MaterialType": "MaterialType.cs",
@@ -29,7 +38,7 @@ CS_ENUMS = {
     "MaterialSubType": "MaterialSubType.cs",
     "RenderTextureType": "RenderTextureType.cs",
 }
-CS_ENUM_DIR = os.path.join(ROOT, r"03-decompiled\raw\Common\Common.CyclesModels")
+CS_ENUM_DIR = R(r"03-decompiled\raw\Common\Common.CyclesModels")
 
 d = json.load(open(VEC, encoding="utf-8"))
 regions = {r["region"]: r for r in d["regions"]}
@@ -69,6 +78,11 @@ def size_name(region, i):
 
 fails = 0
 checked = 0
+skipped = []
+if not HAS_DECOMPILED:
+    skipped.append("C# enum sources (03-decompiled absent from this checkout)")
+if not HAS_MIRROR:
+    skipped.append("257-file .mgm corpus (01-target absent from this checkout)")
 # 1. formula regions must match every vector exactly
 for region, fn in FORMULA.items():
     for row in regions[region]["sizes"]:
@@ -270,6 +284,8 @@ def issue(message, count=1):
 # value. This also covers values absent from the 257-file corpus (MaterialOwner
 # User/Public, for example), which a purely data-driven check cannot see.
 for enum_name, filename in CS_ENUMS.items():
+    if not HAS_DECOMPILED:
+        break
     path = os.path.join(CS_ENUM_DIR, filename)
     if not os.path.exists(path):
         issue(f"{enum_name}: missing assembly source {path}")
@@ -385,7 +401,7 @@ def check_object(obj, struct_name, source, counts=None):
 
 
 mg_files = sorted(glob.glob(os.path.join(MIRROR, "**", "*.mgm"), recursive=True))
-if len(mg_files) != 257:
+if HAS_MIRROR and len(mg_files) != 257:
     issue(f"MGM CORPUS: expected 257 files, found {len(mg_files)}")
 
 top_counts = collections.Counter()
@@ -418,6 +434,8 @@ for path in mg_files:
 # Every declared top-level key must be observed at least once; a declared key
 # that never appears in the 257-file corpus is a schema ghost, not a decode path.
 for json_key in material_schema["by_json"]:
+    if not mg_files:
+        break
     if top_counts[json_key] == 0:
         issue(
             f"MGMaterial: declared key {json_key!r} is not present in any of the "
@@ -454,8 +472,10 @@ if len(region_raw) != len(regions):
         f"RingSizeRegion: {len(region_raw)} cases but catalog has {len(regions)} regions"
     )
 
-if not os.path.exists(CS_REGION):
+if not os.path.exists(CS_REGION) and HAS_DECOMPILED:
     issue(f"RingSizeRegion: missing assembly source {CS_REGION}")
+elif not HAS_DECOMPILED:
+    pass
 else:
     cs_body = decl_body(read_text(CS_REGION), "enum", "RingSizeRegion")
     cs_cases = re.findall(r"(?m)^\s*([A-Za-z_]\w*),?\s*$", cs_body or "")
@@ -533,8 +553,8 @@ print()
 print("formula vectors checked :", checked)
 print("catalog rows checked    :", total)
 print("package JSON identical  :", same)
-print("mgm parsed              :", mg_ok, "/", len(mg_files))
-print("swift material files    :", len(mg_files))
+print("mgm parsed              :", mg_ok, "/", len(mg_files) if HAS_MIRROR else "skipped")
+print("swift material sources  :", len(glob.glob(os.path.join(SWIFT, "MaterialIO", "*.swift"))))
 print("swift material keys     :", len(material_schema["by_json"]))
 print("swift map keys          :", len(map_schema["by_json"]))
 print("swift region cases      :", len(region_raw), "/ catalog", len(regions))
@@ -542,6 +562,8 @@ print("swift conformance       :", "clean" if swift_fails == 0 else f"{swift_fai
 print("failures                :", fails + swift_fails)
 if mg_bad:
     print("mgm issues (first 5)    :", mg_bad[:5])
+if skipped:
+    print("skipped                 :", "; ".join(skipped))
 if issues:
     print("swift issues (first 12) :")
     for message in issues[:12]:

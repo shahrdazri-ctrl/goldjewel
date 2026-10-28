@@ -1,0 +1,37 @@
+name: GoldJewel
+options:
+  bundleIdPrefix: com.shahrdazri
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: false
+packages:
+  JewelryKit:
+    path: ../JewelryKit
+targets:
+  GoldJewel:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - package: JewelryKit
+        product: JewelryKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shahrdazri.goldjewel
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: GoldJewel
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SWIFT_VERSION: "6.0"
+        SUPPORTS_MACCATALYST: NO
+schemes:
+  GoldJewel:
+    build:
+      targets:
+        GoldJewel: all
+    run:
+      config: Debug

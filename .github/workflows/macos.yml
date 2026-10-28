@@ -1,0 +1,26 @@
+name: macos
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - "07-ios-handoff/**"
+      - ".github/workflows/macos.yml"
+
+concurrency:
+  group: macos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  package:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: |
+          swift --version
+          xcodebuild -version
+      - name: Build and test
+        working-directory: 07-ios-handoff/JewelryKit
+        run: swift test

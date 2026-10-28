@@ -12,6 +12,12 @@ __pycache__/
 _snapshots/
 04-index/raw/
 04-index/symbols.sqlite
+# Swift build products and XcodeGen output (regenerated in CI)
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj
+
 *.dll
 *.exe
 *.mgp
