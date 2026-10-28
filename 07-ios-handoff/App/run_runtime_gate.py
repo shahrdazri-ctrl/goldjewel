@@ -1,0 +1,254 @@
+#!/usr/bin/env python3
+"""Run the GoldJewel UI tests on one iPhone and one iPad simulator.
+
+The gate builds the test bundle once, then runs the same runtime test against
+each device. A test run that does not finish inside the timeout is treated as a
+failure, not as a reason to skip: the simulator is shut down, the run is retried
+once after five seconds, and the second failure is reported with the log tail.
+
+Screenshots are XCTAttachments in the result bundle. They are exported to
+`build/runtime-evidence/<kind>/` so CI can publish them as artifacts; the run
+fails if a passing test produced no screenshots.
+"""
+from __future__ import annotations
+
+import json
+import os
+import shutil
+import signal
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(os.path.dirname(APP_DIR))
+BUILD_DIR = os.path.join(APP_DIR, "build")
+PROJECT = os.path.join(APP_DIR, "GoldJewel.xcodeproj")
+SCHEME = "GoldJewel"
+RUN_TIMEOUT = 900
+BUILD_TIMEOUT = 900
+
+
+def run(cmd: list[str], timeout: int, log_path: str | None = None):
+    """Run a command with a hard timeout and optional combined log."""
+    if log_path:
+        handle = open(log_path, "w", encoding="utf-8", newline="\n")
+        output = handle
+    else:
+        handle = None
+        output = subprocess.PIPE
+    process = subprocess.Popen(
+        cmd,
+        cwd=APP_DIR,
+        stdout=output,
+        stderr=subprocess.STDOUT,
+        text=True,
+        start_new_session=True,
+    )
+    try:
+        stdout, _ = process.communicate(timeout=timeout)
+        return process.returncode, stdout or ""
+    except subprocess.TimeoutExpired:
+        os.killpg(os.getpgid(process.pid), signal.SIGTERM)
+        try:
+            process.wait(timeout=15)
+        except subprocess.TimeoutExpired:
+            os.killpg(os.getpgid(process.pid), signal.SIGKILL)
+            process.wait(timeout=15)
+        return 124, "timed out"
+    finally:
+        if handle is not None:
+            handle.close()
+
+
+def simulator_devices() -> list[dict]:
+    code, output = run(
+        ["xcrun", "simctl", "list", "devices", "available", "-j"],
+        timeout=60,
+    )
+    if code != 0:
+        raise RuntimeError(f"simctl list failed: {output[-2000:]}")
+    payload = json.loads(output)
+    devices = []
+    for runtime, entries in payload.get("devices", {}).items():
+        if "iOS" not in runtime:
+            continue
+        version = runtime.rsplit("-", 1)[-1].replace("_", ".")
+        for entry in entries:
+            if entry.get("isAvailable", True):
+                devices.append({
+                    "name": entry["name"],
+                    "udid": entry["udid"],
+                    "runtime": runtime,
+                    "version": version,
+                })
+    return devices
+
+
+def pick_device(devices: list[dict], kind: str) -> dict:
+    token = "iPad" if kind == "ipad" else "iPhone"
+    candidates = [device for device in devices if token in device["name"]]
+    if not candidates:
+        raise RuntimeError(f"no {token} simulator is available")
+    candidates.sort(key=lambda device: (device["version"], device["name"]), reverse=True)
+    return candidates[0]
+
+
+def build_for_testing() -> None:
+    os.makedirs(BUILD_DIR, exist_ok=True)
+    log = os.path.join(BUILD_DIR, "runtime-build.log")
+    code, output = run(
+        [
+            "xcodebuild",
+            "build-for-testing",
+            "-project", PROJECT,
+            "-scheme", SCHEME,
+            "-destination", "generic/platform=iOS Simulator",
+            "-derivedDataPath", BUILD_DIR,
+            "CODE_SIGNING_ALLOWED=NO",
+        ],
+        timeout=BUILD_TIMEOUT,
+        log_path=log,
+    )
+    if code != 0:
+        print(output[-4000:] if output else "")
+        print(f"runtime gate: build-for-testing failed; see {log}", file=sys.stderr)
+        raise SystemExit(1)
+    print("runtime gate: built test bundle")
+
+
+def shutdown(udid: str) -> None:
+    run(["xcrun", "simctl", "shutdown", udid], timeout=60)
+
+
+def export_screenshots(result_bundle: str, kind: str) -> list[str]:
+    evidence = os.path.join(BUILD_DIR, "runtime-evidence", kind)
+    if os.path.isdir(evidence):
+        shutil.rmtree(evidence)
+    os.makedirs(evidence, exist_ok=True)
+    exported = os.path.join(evidence, "attachments")
+    code, output = run(
+        [
+            "xcrun", "xcresulttool", "export", "attachments",
+            "--path", result_bundle,
+            "--output-path", exported,
+        ],
+        timeout=180,
+    )
+    if code != 0:
+        print(output[-2000:] if output else "")
+        return []
+    screenshots = []
+    for root, _, files in os.walk(exported):
+        for name in files:
+            if name.lower().endswith(".png"):
+                source = os.path.join(root, name)
+                destination = os.path.join(evidence, name)
+                shutil.copy2(source, destination)
+                screenshots.append(destination)
+    return screenshots
+
+
+def run_device(device: dict, kind: str) -> dict:
+    result_bundle = os.path.join(BUILD_DIR, f"runtime-{kind}.xcresult")
+    log_path = os.path.join(BUILD_DIR, f"runtime-{kind}.log")
+    if os.path.exists(result_bundle):
+        shutil.rmtree(result_bundle)
+
+    command = [
+        "xcodebuild",
+        "test-without-building",
+        "-project", PROJECT,
+        "-scheme", SCHEME,
+        "-destination", f"platform=iOS Simulator,id={device['udid']}",
+        "-derivedDataPath", BUILD_DIR,
+        "-resultBundlePath", result_bundle,
+        "-only-testing:GoldJewelUITests/GoldJewelRuntimeTests",
+        "CODE_SIGNING_ALLOWED=NO",
+    ]
+    attempt = 1
+    code = 1
+    while attempt <= 2:
+        print(f"runtime gate: {kind} attempt {attempt} on {device['name']} ({device['udid']})")
+        code, output = run(command, timeout=RUN_TIMEOUT, log_path=log_path)
+        if code == 0:
+            break
+        print(f"runtime gate: {kind} attempt {attempt} failed (exit {code})")
+        if output:
+            print(output[-3000:])
+        if os.path.exists(log_path):
+            with open(log_path, encoding="utf-8", errors="replace") as handle:
+                tail = handle.readlines()[-120:]
+            print("".join(tail))
+        shutdown(device["udid"])
+        attempt += 1
+        if attempt <= 2:
+            time.sleep(5)
+
+    if code != 0:
+        return {
+            "kind": kind,
+            "device": device["name"],
+            "udid": device["udid"],
+            "status": "failed",
+            "screenshots": [],
+        }
+
+    screenshots = export_screenshots(result_bundle, kind)
+    if not screenshots:
+        print(f"runtime gate: {kind} passed but exported no screenshots", file=sys.stderr)
+        return {
+            "kind": kind,
+            "device": device["name"],
+            "udid": device["udid"],
+            "status": "failed-no-screenshots",
+            "screenshots": [],
+        }
+    for path in screenshots:
+        print(f"runtime gate: screenshot {os.path.relpath(path, REPO_ROOT)}")
+    return {
+        "kind": kind,
+        "device": device["name"],
+        "udid": device["udid"],
+        "status": "passed",
+        "screenshots": [os.path.relpath(path, REPO_ROOT) for path in screenshots],
+    }
+
+
+def main() -> int:
+    os.makedirs(BUILD_DIR, exist_ok=True)
+    devices = simulator_devices()
+    selected = {
+        "iphone": pick_device(devices, "iphone"),
+        "ipad": pick_device(devices, "ipad"),
+    }
+    for kind, device in selected.items():
+        print(f"runtime gate: {kind} -> {device['name']} ({device['runtime']})")
+
+    build_for_testing()
+    results = [run_device(selected[kind], kind) for kind in ("iphone", "ipad")]
+
+    summary = {
+        "schema": "goldjewel.runtime-gate/1",
+        "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "results": results,
+    }
+    evidence_dir = os.path.join(BUILD_DIR, "runtime-evidence")
+    os.makedirs(evidence_dir, exist_ok=True)
+    with open(os.path.join(evidence_dir, "summary.json"), "w", encoding="utf-8", newline="\n") as handle:
+        json.dump(summary, handle, indent=2)
+        handle.write("\n")
+
+    failed = [result for result in results if result["status"] != "passed"]
+    if failed:
+        for result in failed:
+            print(f"runtime gate: FAILED {result['kind']} on {result['device']} ({result['status']})",
+                  file=sys.stderr)
+        return 1
+    print("runtime gate: both devices passed")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -7,6 +7,7 @@ struct ProjectEditorView: View {
     var onOpenOperations: () -> Void
 
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    @FocusState private var nameFieldFocused: Bool
 
     private var assembly: HeadAssembly? { project.assembly }
 
@@ -36,6 +37,11 @@ struct ProjectEditorView: View {
                 } label: {
                     Label("Operations", systemImage: "square.stack.3d.up")
                 }
+            }
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                Button("Done") { nameFieldFocused = false }
+                    .accessibilityIdentifier("dismiss-keyboard")
             }
         }
         .onChange(of: project) { _, _ in
@@ -109,6 +115,10 @@ struct ProjectEditorView: View {
             VStack(alignment: .leading, spacing: 10) {
                 TextField("Name", text: $project.name)
                     .textFieldStyle(.roundedBorder)
+                    .focused($nameFieldFocused)
+                    .submitLabel(.done)
+                    .onSubmit { nameFieldFocused = false }
+                    .accessibilityIdentifier("project-name")
                 HStack {
                     Text("Saved documents")
                         .font(.caption)
@@ -133,7 +143,8 @@ struct ProjectEditorView: View {
                 }
                 .pickerStyle(.segmented)
 
-                slider("Gem diameter", $project.gemDiameterMM, 4...12, step: 0.1, suffix: "mm")
+                slider("Gem diameter", $project.gemDiameterMM, 4...12, step: 0.1, suffix: "mm",
+                       identifier: "gem-diameter")
                 slider("Head height", $project.headHeightMM, -6...0, step: 0.1, suffix: "mm")
                 slider("Prong height", $project.prongHeightMM, 0.2...4, step: 0.1, suffix: "mm")
                 slider("Side angle X", $project.angleXDegrees, 0...30, step: 0.5, suffix: "°")
@@ -144,8 +155,10 @@ struct ProjectEditorView: View {
 
                 Divider()
                 Toggle("Prong dome caps", isOn: $project.dome.enabled)
+                    .accessibilityIdentifier("dome-toggle")
                 if project.dome.enabled {
-                    slider("Dome height", $project.dome.height, 0.1...2, step: 0.05, suffix: "mm")
+                    slider("Dome height", $project.dome.height, 0.1...2, step: 0.05, suffix: "mm",
+                           identifier: "dome-height")
                     slider("Dome setting distance", $project.dome.settingDistance, -1...1, step: 0.05, suffix: "mm")
                     slider("Dome setting angle", $project.dome.settingAngle, -30...30, step: 1, suffix: "°")
                 }
@@ -193,6 +206,7 @@ struct ProjectEditorView: View {
         GroupBox("Gallery rail") {
             VStack(alignment: .leading, spacing: 12) {
                 Toggle("Show gallery rail", isOn: $project.rail.enabled)
+                    .accessibilityIdentifier("rail-toggle")
                 if project.rail.enabled {
                     slider("Height along rail", $project.rail.position, 0...1, step: 0.01, suffix: "")
                     slider("Width", $project.rail.width, 0.2...1.5, step: 0.05, suffix: "mm")
@@ -211,8 +225,10 @@ struct ProjectEditorView: View {
                     get: { project.bezel != nil },
                     set: { project.bezel = $0 ? .standard : nil }
                 ))
+                .accessibilityIdentifier("bezel-toggle")
                 if project.bezel != nil {
-                    slider("Seat height", bezelBinding(\.seatHeight), 0.1...1.5, step: 0.05, suffix: "mm")
+                    slider("Seat height", bezelBinding(\.seatHeight), 0.1...1.5, step: 0.05, suffix: "mm",
+                           identifier: "bezel-seat-height")
                     slider("Seat length", bezelBinding(\.seatLength), 0.1...1.2, step: 0.05, suffix: "mm")
                     slider("Seat angle", bezelBinding(\.seatAngle), 0...45, step: 1, suffix: "°")
                     Text("Seat construction is recovered from BezelProfile; the collar wall and radial normal are reconstructed/inferred.")
@@ -231,8 +247,10 @@ struct ProjectEditorView: View {
                     get: { project.halo != nil },
                     set: { project.halo = $0 ? .standard : nil }
                 ))
+                .accessibilityIdentifier("halo-toggle")
                 if project.halo != nil {
-                    slider("Melee diameter", haloBinding(\.gemDiameter), 0.8...3, step: 0.05, suffix: "mm")
+                    slider("Melee diameter", haloBinding(\.gemDiameter), 0.8...3, step: 0.05, suffix: "mm",
+                           identifier: "halo-diameter")
                     slider("Stone spacing", haloBinding(\.spacing), 0.05...0.6, step: 0.01, suffix: "mm")
                     slider("Rail offset", haloBinding(\.offsetRailX), 0.2...2.5, step: 0.05, suffix: "mm")
                     slider("Rail height", haloBinding(\.offsetRailZ), -0.5...0.8, step: 0.05, suffix: "mm")
@@ -308,7 +326,8 @@ struct ProjectEditorView: View {
         _ value: Binding<Double>,
         _ range: ClosedRange<Double>,
         step: Double,
-        suffix: String
+        suffix: String,
+        identifier: String? = nil
     ) -> some View {
         VStack(alignment: .leading, spacing: 2) {
             HStack {
@@ -320,6 +339,7 @@ struct ProjectEditorView: View {
                     .foregroundStyle(.secondary)
             }
             Slider(value: value, in: range, step: step)
+                .accessibilityIdentifier(identifier ?? title)
         }
     }
 }

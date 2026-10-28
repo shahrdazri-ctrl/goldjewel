@@ -39,6 +39,8 @@ struct HeadPreviewView: View {
                 }
                 .onEnded { _ in dragStart = nil }
         )
+        .accessibilityElement(children: .ignore)
+        .accessibilityIdentifier("head-preview")
         .accessibilityLabel("Parametric ring head preview")
         .accessibilityValue("\(assembly.prongs.count) prongs, \(assembly.partTiers.count) graded parts, \(assembly.triangleCount) triangles")
     }

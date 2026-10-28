@@ -37,3 +37,20 @@ jobs:
           name: GoldJewel-simulator-app
           path: 07-ios-handoff/App/build/Build/Products/Debug-iphonesimulator/GoldJewel.app
           if-no-files-found: error
+      - name: Run iPhone and iPad runtime tests
+        working-directory: 07-ios-handoff/App
+        run: python3 run_runtime_gate.py
+      - name: Upload runtime screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: GoldJewel-runtime-screenshots
+          path: 07-ios-handoff/App/build/runtime-evidence/
+          if-no-files-found: warn
+      - name: Upload runtime result bundles
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: GoldJewel-runtime-xcresult
+          path: 07-ios-handoff/App/build/runtime-*.xcresult
+          if-no-files-found: warn

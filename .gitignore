@@ -21,6 +21,7 @@ _snapshots/
 .swiftpm/
 DerivedData/
 *.xcodeproj
+07-ios-handoff/App/build/
 
 *.dll
 *.exe

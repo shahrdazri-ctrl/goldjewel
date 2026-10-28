@@ -29,10 +29,30 @@ targets:
         TARGETED_DEVICE_FAMILY: "1,2"
         SWIFT_VERSION: "6.0"
         SUPPORTS_MACCATALYST: NO
+  GoldJewelUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: UITests
+    dependencies:
+      - target: GoldJewel
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.shahrdazri.goldjewel.uitests
+        TEST_TARGET_NAME: GoldJewel
+        GENERATE_INFOPLIST_FILE: YES
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO
 schemes:
   GoldJewel:
     build:
       targets:
         GoldJewel: all
+        GoldJewelUITests: [test]
     run:
       config: Debug
+    test:
+      config: Debug
+      targets:
+        - GoldJewelUITests

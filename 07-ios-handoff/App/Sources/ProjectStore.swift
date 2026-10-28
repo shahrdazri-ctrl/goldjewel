@@ -25,6 +25,11 @@ final class ProjectStore: ObservableObject {
             .appending(path: "GoldJewel", directoryHint: .isDirectory)
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         self.fileURL = fileURL ?? directory.appending(path: "projects.json")
+        // Runtime tests start from a clean document. This is a launch-argument
+        // switch so it cannot be triggered by normal app usage.
+        if ProcessInfo.processInfo.arguments.contains("-reset-projects") {
+            try? FileManager.default.removeItem(at: self.fileURL)
+        }
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         if

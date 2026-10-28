@@ -28,6 +28,7 @@ struct RootView: View {
                         } label: {
                             Label("New project", systemImage: "plus")
                         }
+                        .accessibilityIdentifier("new-project")
                     }
                 }
         } detail: {
@@ -75,6 +76,9 @@ struct ProjectListView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityIdentifier("project-row")
+                .accessibilityValue(project.id.uuidString)
                 .tag(project.id)
                 .swipeActions {
                     Button(role: .destructive) {
