@@ -64,7 +64,9 @@ jobs:
             UDID=$2
             if [ -z "$UDID" ]; then echo "no $NAME simulator available"; exit 1; fi
             xcrun simctl boot "$UDID" || true
-            xcrun simctl bootstatus "$UDID" -b
+            # bootstatus has hung on hosted runners; a bounded wait is enough
+            # for install to report a useful error if the device is not ready.
+            sleep 25
             xcrun simctl install "$UDID" "$APP"
             xcrun simctl launch "$UDID" com.shahrdazri.goldjewel
             sleep 3
