@@ -243,6 +243,37 @@ def build(parameters):
     }
 
 
+def first_difference(expected, actual, path=""):
+    """Structural comparison with the same 1e-9 tolerance the Swift tests use.
+
+    libm differs between Windows and Linux in the last bits, so exact float
+    equality would make the gate depend on the runner's C library.
+    """
+    if isinstance(expected, dict) and isinstance(actual, dict):
+        if set(expected) != set(actual):
+            return f"{path or 'root'}: keys differ"
+        for key in expected:
+            found = first_difference(expected[key], actual[key], f"{path}.{key}" if path else key)
+            if found:
+                return found
+        return None
+    if isinstance(expected, list) and isinstance(actual, list):
+        if len(expected) != len(actual):
+            return f"{path}: length {len(actual)} != {len(expected)}"
+        for index, (left, right) in enumerate(zip(expected, actual)):
+            found = first_difference(left, right, f"{path}[{index}]")
+            if found:
+                return found
+        return None
+    if isinstance(expected, bool) or isinstance(actual, bool):
+        return None if expected == actual else f"{path}: {actual!r} != {expected!r}"
+    if isinstance(expected, (int, float)) and isinstance(actual, (int, float)):
+        if abs(float(expected) - float(actual)) > 1e-9:
+            return f"{path}: {actual!r} != {expected!r}"
+        return None
+    return None if expected == actual else f"{path}: {actual!r} != {expected!r}"
+
+
 def verify_provenance():
     corpus = json.load(open(CORPUS, encoding="utf-8"))
     methods = {}
@@ -290,7 +321,8 @@ def main() -> int:
         "parameters": PARAMETERS,
         "expected": build(PARAMETERS),
     }
-    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    text = json.dumps(payload, indent=2, sort_keys=True) + "\n"  # committed formatting
+
 
     entries, failures = verify_provenance()
     if failures:
@@ -311,8 +343,9 @@ def main() -> int:
             except json.JSONDecodeError as error:
                 failures.append(f"{os.path.relpath(path, ROOT)} is not JSON: {error}")
                 continue
-            if committed != payload:
-                failures.append(f"{os.path.relpath(path, ROOT)} is stale; regenerate")
+            difference = first_difference(payload, committed)
+            if difference is not None:
+                failures.append(f"{os.path.relpath(path, ROOT)} is stale: {difference}")
         if failures:
             for failure in failures:
                 print(f"FAIL {failure}", file=sys.stderr)
