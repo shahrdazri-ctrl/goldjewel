@@ -158,7 +158,7 @@ struct ProjectEditorView: View {
                 Toggle("Show gallery rail", isOn: $project.rail.enabled)
                 if project.rail.enabled {
                     slider("Height along rail", $project.rail.position, 0...1, step: 0.01, suffix: "")
-                    slider("Width", $project.rail.width, 0.2...2, step: 0.05, suffix: "mm")
+                    slider("Width", $project.rail.width, 0.2...1.5, step: 0.05, suffix: "mm")
                     slider("Thickness", $project.rail.height, 0.1...1.2, step: 0.05, suffix: "mm")
                     slider("Gem offset", $project.rail.offset, -0.4...0.6, step: 0.05, suffix: "mm")
                 }

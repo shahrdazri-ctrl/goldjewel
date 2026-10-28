@@ -30,8 +30,8 @@
 7. `07-ring-sizing.md` — 22 regions, exact closed-form formulas, table semantics, **7,005 executed golden vectors**.
 8. `08-content-localization-settings.md` — 81 patchwire vocabulary, content taxonomy, 18 locales, settings that change behaviour, extraction backlog.
 
-### Swift package (`07-ios-handoff/JewelryKit`)
-`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, tests with real `.mgm` fixtures. CI compiles and tests the package on Linux and macOS 15 and builds the app for the iPhone/iPad simulator; device builds need a signing team.
+### Swift package (`07-ios-handoff/JewelryKit`) and app (`07-ios-handoff/App`)
+`Package.swift` (iOS 17 / macOS 14), `RingSizing` (22 regions, 7,005 sizes, banker's rounding), `MaterialIO` (`MGMaterial` Codable, 257/257 corpus conformance checked on Windows), `JewelryDomain`, `ParametricKit`, `HeadGeometry` (recovered cage, prong and gallery rails), tests with real `.mgm` fixtures. The app is a project-based iPhone/iPad shell: JSON-backed projects, live head/gem/ring/rail controls and a generated catalog of all 88 v1 operations. CI compiles and tests the package on Linux and macOS 15 and builds the app for the iPhone/iPad simulator; device builds need a signing team and no runtime test has been performed.
 
 ### Evidence (`04-index`, `05-evidence`)
 * `symbols.sqlite` — 225 managed assemblies, 35,645 types, 303,780 methods, 75,497 properties, 155,009 fields, 91,902 strings, 1,379,497 call edges.
@@ -44,6 +44,7 @@
 * `08-reports/m2-report.md` — the measured M2 counts and the reproduce commands.
 * `05-evidence/vectors/head-geometry.json` — golden head cage, prong rails and mesh counts, recomputed independently from the decompiled formulas.
 * `08-reports/m3-report.md` — the head slice: what renders, what was checked against IL, and the explicit inference list.
+* `08-reports/m4-report.md` — gallery rail, the stopped families, and the app-shell boundary.
 * `03-decompiled/il/` — per-assembly CIL for all 35 first-party assemblies (41,460 `.method` directives, 111.6 MB).
 
 ---
@@ -67,6 +68,7 @@ Run from `D:\REA-LAB`. Each row is one stage and one entry point. Run the ledger
 | Golden vectors | `02-toolchain/RingVectors/build.ps1` | `powershell -ExecutionPolicy Bypass -File D:\REA-LAB\02-toolchain\RingVectors\build.ps1` | `05-evidence/vectors/ring-sizes.json` |
 | Oracle corpus + ledgers (M2) | `Tools/m2.py` | `python Tools/m2.py` (capture) / `python Tools/m2.py --check` (verify) | `05-evidence/corpus/v1/`, `08-reports/triage-*`, `capability-matrix.csv`, `m2-report.md` |
 | Validation | `04-index/validate_handoff.py` | `python D:\REA-LAB\04-index\validate_handoff.py` | console report; exit 0 on success |
+| App operation catalog | `Tools/operation_catalog.py` | `python D:\REA-LAB\Tools\operation_catalog.py` (`--check` in CI) | `07-ios-handoff/App/Sources/OperationCatalog.swift` |
 | Dossiers | `06-dossiers/*.md` | none — authored from the index and evidence | eight dossier files |
 
 `04-index/raw/` is the SymbolScan JSONL cache. It is disposable after the ledger stage finishes; delete it and re-run the index stage to regenerate it. `symbols.sqlite` is kept because the coverage report and dossiers cite it.
