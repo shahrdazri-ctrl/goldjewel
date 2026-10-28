@@ -44,6 +44,10 @@ handlers, `strings`, `constants`, `calls`, `field_access`.
 `03-decompiled/raw/CSBlocks`, which is where the algorithm is read and the Swift
 port is written from.
 
+Hashes are SHA-256 over canonical LF text (`hash_mode` in the manifest), because
+the .NET writer emits CRLF on Windows while Git stores the blob with LF. The raw
+on-disk hash is recorded too, and only the canonical hash is verified in CI.
+
 ## Scope, stated plainly
 
 * The head corpus is the `CSBlocks.Settings.Heads.CSHeadBuilderV2` subtree (35

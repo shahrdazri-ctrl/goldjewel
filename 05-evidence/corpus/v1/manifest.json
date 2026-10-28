@@ -1,7 +1,8 @@
 {
   "schema": "goldjewel.oracle.corpus/1",
-  "generated_at_utc": "2026-10-28T04:36:25.729913+00:00",
+  "generated_at_utc": "2026-10-28T04:41:27.127986+00:00",
   "mode": "il-static-no-execution",
+  "hash_mode": "sha256 over canonical LF text; sha256_raw is the on-disk bytes",
   "execution": {
     "status": "not-run",
     "reason": "CSBlocks.mgp is a mixed-mode Rhino plugin. Loading it outside Rhino fails in Rhino_DotNet.dll initialisation with 0x8007045A (ERROR_DLL_INIT_FAILED). No vendor method is executed by this capture; IL operands are the ground truth."
@@ -22,7 +23,8 @@
   "corpora": {
     "head-builder": {
       "path": "05-evidence/corpus/v1/head-builder.il.json",
-      "sha256": "691df39e8f8d35d8e645d87475d980b5757feb507cbd6a80fa38fd354805ef3f",
+      "sha256": "377d1d49eb64b1f7cc73decd1a28e5c336e59bb06417c4350893032ae3bd7841",
+      "sha256_raw": "c95993cf3fdf69bce7e1dd6c8ef27926ba03eeee6e28b5f3201742b9745d97d4",
       "bytes": 4008058,
       "targets": [
         "CSBlocks.Settings.Heads.CSHeadBuilderV2"
@@ -38,7 +40,8 @@
     },
     "prong-family": {
       "path": "05-evidence/corpus/v1/prong-family.il.json",
-      "sha256": "79282f3b69d647ba7478e860b4627494aeab381d24456089dd47a6c15d149fae",
+      "sha256": "801a6930bd7016cb4fc535d55432e0a23e40eba47d2201858b44ef3ca3a7e746",
+      "sha256_raw": "fc0cab419728e2190c28354c148b12140a523fa7143a17a6f22174497e940c58",
       "bytes": 1149308,
       "targets": [
         "CSBlocks.Settings.CSProngPlacerGC",

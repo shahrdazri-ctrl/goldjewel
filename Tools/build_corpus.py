@@ -57,6 +57,17 @@ def sha256(path: str) -> str:
     return digest.hexdigest()
 
 
+def sha256_lf(path: str) -> str:
+    """Hash the text with canonical LF endings.
+
+    The .NET writer emits CRLF on Windows and Git normalises the blob to LF, so
+    the checked-out bytes differ by platform. The manifest must verify on both,
+    so text artefacts are hashed over their canonical LF form.
+    """
+    with open(path, "rb") as fh:
+        return hashlib.sha256(fh.read().replace(b"\r\n", b"\n")).hexdigest()
+
+
 def tool_env() -> dict:
     env = os.environ.copy()
     env.update(
@@ -207,7 +218,8 @@ def capture(check: bool) -> int:
         payload = json.load(open(out, encoding="utf-8"))
         wrote[name] = {
             "path": rel(out),
-            "sha256": sha256(out),
+            "sha256": sha256_lf(out),
+            "sha256_raw": sha256(out),
             "bytes": os.path.getsize(out),
             "targets": prefixes,
             "summary": payload["summary"],
@@ -229,6 +241,7 @@ def capture(check: bool) -> int:
         "schema": SCHEMA,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "mode": "il-static-no-execution",
+        "hash_mode": "sha256 over canonical LF text; sha256_raw is the on-disk bytes",
         "execution": {
             "status": "not-run",
             "reason": (
@@ -300,7 +313,7 @@ def check_corpus() -> int:
         if not os.path.exists(path):
             failures.append(f"{name}: missing {record['path']}")
             continue
-        if sha256(path) != record["sha256"]:
+        if sha256_lf(path) != record["sha256"]:
             failures.append(f"{name}: sha256 does not match manifest")
         payload = json.load(open(path, encoding="utf-8"))
         if payload.get("schema") != SCHEMA:
