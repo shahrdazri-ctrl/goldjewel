@@ -112,6 +112,19 @@ Recorded in `limitations.md` #17–#18:
    no macOS host on this machine, so navigation, autosave and controls are
    build-verified only; no screenshot or interaction test exists.
 
+## Executed here versus only inferred
+
+| Check | Status |
+|---|---|
+| `Tools/head_geometry_vectors.py --check` | **Executed**: golden vectors match; 12 constants resolved in corpus v1. |
+| `Tools/operation_catalog.py --check` | **Executed**: the Swift catalog matches all 88 v1 matrix rows. |
+| `04-index/validate_handoff.py` | **Executed**: 0 failures (materials, ring vectors, regions). |
+| `Tools/m2.py --check` | **Executed**: corpus hashes, 50,134-method triage and 254-operation matrix all match. |
+| Offline mesh render (`09-logs/render_check.py`) | **Executed**: the gallery band was inspected in three views. |
+| Linux / macOS / simulator CI | **Executed**: green at `4d11b6b`; Linux re-ran on the final tree `c275ec4`. |
+| App launch and interaction | **Not executed**: no macOS host here; the hosted `simctl` attempt stalled and was removed. |
+| Rhino geometry | **Not executed**: licensed Rhino is still unavailable (limitation #4). |
+
 ## Reproduce
 
 ```
