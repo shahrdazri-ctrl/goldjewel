@@ -17,6 +17,13 @@ def R(path):
     return os.path.join(ROOT, *path.split("\\"))
 
 
+def J(base, *fragments):
+    parts = []
+    for fragment in fragments:
+        parts.extend(fragment.split("\\"))
+    return os.path.join(base, *parts)
+
+
 VEC = R(r"05-evidence\vectors\ring-sizes.json")
 PKG_JSON = R(r"07-ios-handoff\JewelryKit\Sources\JewelryKit\Resources\ring-sizes.json")
 MIRROR = R(r"01-target\mirror\Main\MatrixGold")
@@ -245,9 +252,9 @@ def make_schema(text, struct_name):
     return {"props": props, "by_json": by_json}
 
 
-material_text = strip_comments(read_text(os.path.join(SWIFT, r"MaterialIO\MGMaterial.swift")))
-ring_text = strip_comments(read_text(os.path.join(SWIFT, r"RingSizing\RingSizeRegion.swift")))
-math_text = strip_comments(read_text(os.path.join(SWIFT, r"RingSizing\RingSizeMath.swift")))
+material_text = strip_comments(read_text(J(SWIFT, r"MaterialIO\MGMaterial.swift")))
+ring_text = strip_comments(read_text(J(SWIFT, r"RingSizing\RingSizeRegion.swift")))
+math_text = strip_comments(read_text(J(SWIFT, r"RingSizing\RingSizeMath.swift")))
 
 material_schema = make_schema(material_text, "MGMaterial")
 map_schema = make_schema(material_text, "MaterialMapData")
@@ -445,7 +452,7 @@ for json_key in material_schema["by_json"]:
 # Nested map records are null in the real corpus; the synthetic fixture is the
 # only object-bearing sample, so check it separately rather than calling every
 # real-file absence a failure.
-for path in REAL_FIXTURES + [os.path.join(SWIFT_TESTS, r"Fixtures\sample.mgm")]:
+for path in REAL_FIXTURES + [J(SWIFT_TESTS, r"Fixtures\sample.mgm")]:
     if not os.path.exists(path):
         issue(f"FIXTURE: missing {os.path.basename(path)}")
         continue
