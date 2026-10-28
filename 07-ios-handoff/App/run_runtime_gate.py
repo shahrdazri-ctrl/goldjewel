@@ -107,7 +107,15 @@ def simulator_devices() -> list[dict]:
     )
     if code != 0:
         raise RuntimeError(f"simctl list failed: {output[-2000:]}")
-    payload = json.loads(output)
+    # simctl can print a diagnostic around its JSON document. Parse the first
+    # document and report anything after it rather than failing the whole gate.
+    start = output.find("{")
+    if start < 0:
+        raise RuntimeError(f"simctl list produced no JSON: {output[:500]!r}")
+    payload, consumed = json.JSONDecoder().raw_decode(output[start:])
+    trailing = output[start + consumed:].strip()
+    if trailing:
+        print(f"runtime gate: ignored simctl trailing text: {trailing[:200]!r}")
     devices = []
     for runtime, entries in payload.get("devices", {}).items():
         if "iOS" not in runtime:
