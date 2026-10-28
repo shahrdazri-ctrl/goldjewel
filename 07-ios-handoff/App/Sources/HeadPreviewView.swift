@@ -88,9 +88,10 @@ struct HeadPreviewView: View {
         faces.reserveCapacity(assembly.combined.triangles.count)
 
         var vertexOffset = 0
-        let meshes = [assembly.basket] + assembly.prongs
-        for (partIndex, mesh) in meshes.enumerated() {
-            let gold = partIndex == 0 ? (0.78, 0.62, 0.30) : (0.95, 0.78, 0.38)
+        var meshes: [(Mesh3D, (Double, Double, Double))] = [(assembly.basket, (0.78, 0.62, 0.30))]
+        meshes.append(contentsOf: assembly.prongs.map { ($0, (0.95, 0.78, 0.38)) })
+        meshes.append(contentsOf: assembly.rails.map { ($0.mesh, (0.70, 0.54, 0.26)) })
+        for (mesh, gold) in meshes {
             for triangle in mesh.triangles {
                 let a = mesh.vertices[triangle.a]
                 let b = mesh.vertices[triangle.b]

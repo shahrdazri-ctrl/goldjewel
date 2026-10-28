@@ -224,6 +224,8 @@ def build(parameters):
             [point[0] * scale_base[0], point[1] * scale_base[1], drop],
         ])
 
+    side_x = rail(0.0)
+    side_y = rail(math.pi / 2)
     return {
         "dropMM": drop,
         "scaleBase": scale_base,
@@ -232,6 +234,9 @@ def build(parameters):
         "girdle": ring([1.0, 1.0, 1.0], 0.0),
         "rails": [rail(radians(prong["angleDegrees"])) for prong in parameters["prongs"]],
         "bezelRail": rail(parameters["bezelParameter"] * 2 * math.pi),
+        "sideX": side_x,
+        "sideY": side_y,
+        "gallery": build_gallery(drop, side_x, side_y),
         "mesh": {
             "ringSamples": RING_SAMPLES,
             "railSamples": RAIL_SAMPLES,
@@ -239,6 +244,79 @@ def build(parameters):
             "basketTriangles": (4 - 1) * RING_SAMPLES * 2,
             "prongVertices": RAIL_SAMPLES * 36 + 2,
             "prongTriangles": (RAIL_SAMPLES - 1) * 36 * 2 + 2 * 36,
+            "galleryVertices": GALLERY["samples"] * 4,
+            "galleryTriangles": GALLERY["samples"] * 8,
+        },
+    }
+
+
+GALLERY = {
+    "position": 0.85,
+    "width": 0.55,
+    "height": 0.35,
+    "offset": 0.15,
+    "samples": 128,
+}
+
+
+def build_gallery(drop, side_x, side_y):
+    """`GalleryRail_V1` placement with the profile replaced by a band.
+
+    The IL fixes the height (`end.z * (1 - RailPos)`), the ray intersections,
+    and the two offsets. The horizontal intersection here interpolates the
+    sampled spline; the ellipse offset adds to both radii. Both are recorded
+    as inferred in the dossier.
+    """
+    position = GALLERY["position"]
+    width = GALLERY["width"]
+    height = GALLERY["height"]
+    offset = GALLERY["offset"]
+    samples = GALLERY["samples"]
+    z = side_x[-1][2] * (1.0 - position)
+
+    def intersect(curve, axis):
+        for index in range(len(curve) - 1):
+            a = curve[index]
+            b = curve[index + 1]
+            span = b[2] - a[2]
+            if abs(span) < 1e-12:
+                continue
+            t = (z - a[2]) / span
+            if 0.0 <= t <= 1.0:
+                return a[axis] + (b[axis] - a[axis]) * t
+        raise ValueError("rail outside head")
+
+    gem_x_max = PARAMETERS["gemXSizeMM"] / 2.0
+    gem_y_max = PARAMETERS["gemYSizeMM"] / 2.0
+    x = intersect(side_x, 0)
+    y = intersect(side_y, 1)
+    scale_x = x / gem_x_max
+    scale_y = y / gem_y_max
+    outer_x = gem_x_max * scale_x + offset
+    outer_y = gem_y_max * scale_y + offset
+    inner_x = outer_x - width
+    inner_y = outer_y - width
+    outer = []
+    inner = []
+    for index in range(samples):
+        angle = 2.0 * math.pi * index / samples
+        outer.append([outer_x * math.cos(angle), outer_y * math.sin(angle), z])
+        inner.append([inner_x * math.cos(angle), inner_y * math.sin(angle), z])
+    return {
+        "parameters": {
+            "position": position,
+            "width": width,
+            "height": height,
+            "offset": offset,
+            "samples": samples,
+        },
+        "z": z,
+        "scale": [scale_x, scale_y],
+        "outerFirst": outer[0],
+        "innerFirst": inner[0],
+        "mesh": {
+            "vertices": samples * 4,
+            "triangles": samples * 8,
         },
     }
 

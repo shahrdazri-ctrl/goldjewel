@@ -116,6 +116,11 @@ public struct HeadCage: Sendable {
     public var top: [Vec3]
     public var prongRails: [[Vec3]]
     public var bezelRail: [Vec3]
+    /// `outHeadSideX` / `outHeadSideY` from `HeadShape`: the same four-point
+    /// rail evaluated on the gem's X and Y axes. The gallery rail intersects
+    /// these curves to find its radius at a given height.
+    public var sideX: [Vec3]
+    public var sideY: [Vec3]
     public var dropMM: Double
     /// Scale factors applied to the girdle outline at the three heights.
     public var scaleBase: Vec3
@@ -216,6 +221,8 @@ public enum HeadShapeBuilder {
         let prongRails = parameters.prongs.map { rail(polarAngle: radians($0.angleDegrees)) }
         let bezelAngle = parameters.bezelParameter * 2 * Double.pi
         let bezelRail = rail(polarAngle: bezelAngle)
+        let sideX = rail(polarAngle: 0)
+        let sideY = rail(polarAngle: Double.pi / 2)
 
         return HeadCage(
             girdle: girdle,
@@ -224,6 +231,8 @@ public enum HeadShapeBuilder {
             top: top,
             prongRails: prongRails,
             bezelRail: bezelRail,
+            sideX: sideX,
+            sideY: sideY,
             dropMM: drop,
             scaleBase: scaleBase,
             scaleMiddle: scaleMiddle,

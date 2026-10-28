@@ -37,13 +37,14 @@ public struct HeadAssembly: Sendable {
     public var cage: HeadCage
     public var basket: Mesh3D
     public var prongs: [Mesh3D]
+    public var rails: [GalleryRail]
     public var combined: Mesh3D
     public var provenance: [ProvenanceEntry]
 
     public var triangleCount: Int { combined.triangles.count }
     public var vertexCount: Int { combined.vertices.count }
 
-    public init(parameters: HeadShapeParameters) throws {
+    public init(parameters: HeadShapeParameters, railParameters: [RailParameters] = []) throws {
         self.parameters = parameters
         let cage = try HeadShapeBuilder.build(parameters)
         self.cage = cage
@@ -63,8 +64,13 @@ public struct HeadAssembly: Sendable {
             ProngSweeper.solid(rail: rail, prong: prong)
         }
 
+        self.rails = try railParameters
+            .filter(\.enabled)
+            .map { try GalleryRailBuilder.build(cage: cage, parameters: parameters, rail: $0) }
+
         var combined = basket
         for prong in prongs { combined.append(prong) }
+        for rail in rails { combined.append(rail.mesh) }
         self.combined = combined
         self.provenance = HeadProvenance.all
     }

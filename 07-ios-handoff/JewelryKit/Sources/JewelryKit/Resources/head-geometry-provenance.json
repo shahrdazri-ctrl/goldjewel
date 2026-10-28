@@ -64,6 +64,27 @@
       "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.ProngInterpCurve",
       "il_offset": 124,
       "use": "midpoint parameter when only two rail points survive"
+    },
+    {
+      "name": "galleryHeightFraction",
+      "value": 1.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
+      "il_offset": 74,
+      "use": "rail height is sideX.end.z * (1.0 - RailPos)"
+    },
+    {
+      "name": "galleryRayLengthMM",
+      "value": 100.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
+      "il_offset": 178,
+      "use": "length of the horizontal ray that intersects the side rail"
+    },
+    {
+      "name": "galleryIntersectionToleranceMM",
+      "value": 0.01,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadGalleryRails.GalleryRail_V1",
+      "il_offset": 212,
+      "use": "curve/ray intersection tolerance for the gallery rail"
     }
   ]
 }

@@ -3,97 +3,109 @@ import SwiftUI
 
 @main
 struct GoldJewelApp: App {
+    @StateObject private var store = ProjectStore()
+
     var body: some Scene {
         WindowGroup {
-            RootView()
+            RootView(store: store)
         }
     }
 }
 
 struct RootView: View {
-    private let gemSizes = [6.0, 6.5, 7.0, 7.5, 8.0]
-    @State private var gemSizeIndex = 1
-    @State private var prongCount = 4
-
-    private var parameters: HeadShapeParameters {
-        let gem = gemSizes[gemSizeIndex]
-        let base = HeadShapeParameters.solitaire
-        let step = 360.0 / Double(prongCount)
-        let prongs = (0..<prongCount).map { index in
-            ProngPlacement(
-                angleDegrees: 45 + step * Double(index),
-                topX: 0.9, topY: 0.6, baseX: 1.0, baseY: 0.7
-            )
-        }
-        return HeadShapeParameters(
-            gemXSizeMM: gem,
-            gemYSizeMM: gem,
-            headHeightMM: base.headHeightMM,
-            baseOffsetMM: base.baseOffsetMM,
-            prongHeightMM: base.prongHeightMM,
-            angleXDegrees: base.angleXDegrees,
-            angleYDegrees: base.angleYDegrees,
-            topAngleDegrees: base.topAngleDegrees,
-            baseAngleDegrees: base.baseAngleDegrees,
-            baseAnglePosition: base.baseAnglePosition,
-            bezelParameter: base.bezelParameter,
-            prongs: prongs
-        )
-    }
-
-    private var assembly: HeadAssembly? {
-        try? HeadAssembly(parameters: parameters)
-    }
+    @ObservedObject var store: ProjectStore
+    @State private var columnVisibility: NavigationSplitViewVisibility = .all
+    @State private var showOperations = false
 
     var body: some View {
-        VStack(spacing: 12) {
-            VStack(spacing: 2) {
-                Text("GoldJewel")
-                    .font(.largeTitle.weight(.semibold))
-                Text("Recovered head builder")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            }
-
-            if let assembly {
-                HeadPreviewView(assembly: assembly)
-                    .frame(maxWidth: 560)
-                    .aspectRatio(1.05, contentMode: .fit)
-                    .id("\(gemSizeIndex)-\(prongCount)")
-
-                HStack(spacing: 18) {
-                    Label("\(assembly.prongs.count) prongs", systemImage: "circle.grid.2x2")
-                    Label("\(assembly.triangleCount.formatted()) triangles", systemImage: "triangle")
-                    Label("\(RingSizeRegion.allCases.count) ring regions", systemImage: "circle.dashed")
-                }
-                .font(.footnote)
-                .foregroundStyle(.secondary)
-
-                Text("\(assembly.provenance.count) literals traced to IL · \(assembly.parameters.gemXSizeMM.formatted()) mm round")
-                    .font(.caption2)
-                    .foregroundStyle(.tertiary)
-            } else {
-                Text("Unable to build head")
-                    .foregroundStyle(.red)
-            }
-
-            VStack(spacing: 10) {
-                Picker("Gem size", selection: $gemSizeIndex) {
-                    ForEach(gemSizes.indices, id: \.self) { index in
-                        Text("\(gemSizes[index].formatted()) mm").tag(index)
+        NavigationSplitView(columnVisibility: $columnVisibility) {
+            ProjectListView(store: store)
+                .navigationTitle("Projects")
+                .toolbar {
+                    ToolbarItem(placement: .primaryAction) {
+                        Button {
+                            store.addProject()
+                        } label: {
+                            Label("New project", systemImage: "plus")
+                        }
                     }
                 }
-                .pickerStyle(.segmented)
-
-                Picker("Prongs", selection: $prongCount) {
-                    Text("4").tag(4)
-                    Text("6").tag(6)
-                    Text("8").tag(8)
-                }
-                .pickerStyle(.segmented)
+        } detail: {
+            if let id = store.selectedID, let index = store.index(of: id) {
+                ProjectEditorView(project: $store.projects[index], onSave: { store.save() })
+            } else {
+                ContentUnavailableView(
+                    "No project selected",
+                    systemImage: "diamond",
+                    description: Text("Choose a project or create one.")
+                )
             }
-            .frame(maxWidth: 420)
         }
-        .padding(20)
+        .sheet(isPresented: $showOperations) {
+            OperationsView(store: store)
+        }
+        .alert(
+            "GoldJewel",
+            isPresented: Binding(
+                get: { store.statusMessage != nil },
+                set: { if !$0 { store.clearStatus() } }
+            )
+        ) {
+            Button("OK") { store.clearStatus() }
+        } message: {
+            Text(store.statusMessage ?? "")
+        }
+        .environment(\.openOperations, { showOperations = true })
+    }
+}
+
+struct OpenOperationsKey: EnvironmentKey {
+    static let defaultValue: () -> Void = {}
+}
+
+extension EnvironmentValues {
+    var openOperations: () -> Void {
+        get { self[OpenOperationsKey.self] }
+        set { self[OpenOperationsKey.self] = newValue }
+    }
+}
+
+struct ProjectListView: View {
+    @ObservedObject var store: ProjectStore
+
+    var body: some View {
+        List(selection: $store.selectedID) {
+            ForEach(store.projects) { project in
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(project.name)
+                        .font(.headline)
+                    Text("\(project.gemDiameterMM.formatted()) mm · \(project.prongCount) prongs")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+                .tag(project.id)
+                .swipeActions {
+                    Button(role: .destructive) {
+                        store.delete(project.id)
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
+            }
+        }
+        .safeAreaInset(edge: .bottom) {
+            VStack(spacing: 4) {
+                Text("\(OperationCatalog.all.count) v1 operations · \(OperationCatalog.wired.count) wired")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
+                Text(store.lastSaved.map { "Saved \($0.formatted(date: .omitted, time: .shortened))" }
+                     ?? "Autosaved")
+                    .font(.caption2)
+                    .foregroundStyle(.tertiary)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 6)
+            .background(.bar)
+        }
     }
 }

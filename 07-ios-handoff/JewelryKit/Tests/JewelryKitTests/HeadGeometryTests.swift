@@ -19,7 +19,32 @@ final class HeadGeometryTests: XCTestCase {
         var girdle: [[Double]]
         var rails: [[[Double]]]
         var bezelRail: [[Double]]
+        var sideX: [[Double]]
+        var sideY: [[Double]]
+        var gallery: GalleryExpectation
         var mesh: MeshExpectation
+    }
+
+    private struct GalleryExpectation: Decodable {
+        var parameters: GalleryParameters
+        var z: Double
+        var scale: [Double]
+        var outerFirst: [Double]
+        var innerFirst: [Double]
+        var mesh: GalleryMesh
+    }
+
+    private struct GalleryParameters: Decodable {
+        var position: Double
+        var width: Double
+        var height: Double
+        var offset: Double
+        var samples: Int
+    }
+
+    private struct GalleryMesh: Decodable {
+        var vertices: Int
+        var triangles: Int
     }
 
     private struct MeshExpectation: Decodable {
@@ -29,6 +54,8 @@ final class HeadGeometryTests: XCTestCase {
         var basketTriangles: Int
         var prongVertices: Int
         var prongTriangles: Int
+        var galleryVertices: Int
+        var galleryTriangles: Int
     }
 
     private func golden() throws -> Golden {
@@ -66,6 +93,49 @@ final class HeadGeometryTests: XCTestCase {
         for index in 0..<min(cage.bezelRail.count, expected.bezelRail.count) {
             assertClose(cage.bezelRail[index], expected.bezelRail[index], label: "bezel[\(index)]")
         }
+
+        XCTAssertEqual(cage.sideX.count, expected.sideX.count)
+        for index in 0..<min(cage.sideX.count, expected.sideX.count) {
+            assertClose(cage.sideX[index], expected.sideX[index], label: "sideX[\(index)]")
+        }
+        XCTAssertEqual(cage.sideY.count, expected.sideY.count)
+        for index in 0..<min(cage.sideY.count, expected.sideY.count) {
+            assertClose(cage.sideY[index], expected.sideY[index], label: "sideY[\(index)]")
+        }
+    }
+
+    func testGalleryRailMatchesGoldenVectors() throws {
+        let golden = try golden()
+        let expected = golden.expected.gallery
+        let parameters = golden.parameters
+        let rail = RailParameters(
+            enabled: true,
+            position: expected.parameters.position,
+            width: expected.parameters.width,
+            height: expected.parameters.height,
+            offset: expected.parameters.offset
+        )
+        let cage = try HeadShapeBuilder.build(parameters)
+        let gallery = try GalleryRailBuilder.build(cage: cage, parameters: parameters, rail: rail)
+
+        XCTAssertEqual(gallery.heightMM, expected.z, accuracy: 1e-12)
+        XCTAssertEqual(gallery.outer.count, expected.parameters.samples)
+        XCTAssertEqual(gallery.inner.count, expected.parameters.samples)
+        assertClose(gallery.outer[0], expected.outerFirst, label: "outer[0]")
+        assertClose(gallery.inner[0], expected.innerFirst, label: "inner[0]")
+        XCTAssertEqual(gallery.mesh.vertices.count, expected.mesh.vertices)
+        XCTAssertEqual(gallery.mesh.triangles.count, expected.mesh.triangles)
+
+        let assembly = try HeadAssembly(parameters: parameters, railParameters: [rail])
+        XCTAssertEqual(assembly.rails.count, 1)
+        XCTAssertEqual(assembly.combined.vertices.count,
+                       golden.expected.mesh.basketVertices
+                       + golden.expected.mesh.prongVertices * parameters.prongs.count
+                       + expected.mesh.vertices)
+        XCTAssertEqual(assembly.combined.triangles.count,
+                       golden.expected.mesh.basketTriangles
+                       + golden.expected.mesh.prongTriangles * parameters.prongs.count
+                       + expected.mesh.triangles)
     }
 
     func testAssemblyStructureAndMeshCounts() throws {
@@ -131,7 +201,7 @@ final class HeadGeometryTests: XCTestCase {
     }
 
     func testProvenanceIsPresent() throws {
-        XCTAssertEqual(HeadProvenance.all.count, 9)
+        XCTAssertEqual(HeadProvenance.all.count, 12)
         for entry in HeadProvenance.all {
             XCTAssertFalse(entry.method.isEmpty)
             XCTAssertGreaterThanOrEqual(entry.ilOffset, 0)
