@@ -7,7 +7,7 @@ struct AppOperation: Identifiable, Hashable {
     let cluster: String
     let reason: String
 
-    var isWired: Bool { OperationCatalog.wired.contains(id) || id == "ResizeRing" }
+    var isWired: Bool { OperationCatalog.wired.contains(id) }
 }
 
 enum WiredOperation: String, CaseIterable, Sendable {
