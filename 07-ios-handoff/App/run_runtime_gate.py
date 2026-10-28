@@ -228,6 +228,13 @@ def capture(cmd: list[str], timeout: int = 60):
     return completed.returncode, (completed.stdout or "") + (completed.stderr or "")
 
 
+def runtime_version(runtime: str) -> str:
+    """Turn a simctl runtime key such as iOS-18-6 into 18.6."""
+    if "iOS-" in runtime:
+        return runtime.rsplit("iOS-", 1)[-1].replace("-", ".")
+    return runtime.rsplit("-", 1)[-1].replace("_", ".")
+
+
 def simulator_devices() -> list[dict]:
     # CoreSimulatorService can be slow to answer on a cold runner. A hung list
     # is retried a bounded number of times rather than failing the gate or
@@ -273,7 +280,7 @@ def simulator_devices() -> list[dict]:
     for runtime, entries in payload.get("devices", {}).items():
         if "iOS" not in runtime:
             continue
-        version = runtime.rsplit("-", 1)[-1].replace("_", ".")
+        version = runtime_version(runtime)
         for entry in entries:
             if entry.get("isAvailable", True):
                 devices.append({
