@@ -100,22 +100,35 @@ def compiler_errors(log_path: str) -> list[str]:
     return selected[-40:]
 
 
+def capture(cmd: list[str], timeout: int = 60):
+    """Capture a short command's stdout and stderr as one string.
+
+    Device discovery needs the exact bytes simctl printed. It is kept separate
+    from the streaming `run`, whose merged line pump is for xcodebuild logs.
+    """
+    completed = subprocess.run(
+        cmd,
+        cwd=APP_DIR,
+        capture_output=True,
+        text=True,
+        timeout=timeout,
+    )
+    return completed.returncode, (completed.stdout or "") + (completed.stderr or "")
+
+
 def simulator_devices() -> list[dict]:
-    code, output = run(
+    code, output = capture(
         ["xcrun", "simctl", "list", "devices", "available", "-j"],
         timeout=60,
     )
     if code != 0:
         raise RuntimeError(f"simctl list failed: {output[-2000:]}")
-    # simctl can print a diagnostic around its JSON document. Parse the first
-    # document and report anything after it rather than failing the whole gate.
-    start = output.find("{")
-    if start < 0:
-        raise RuntimeError(f"simctl list produced no JSON: {output[:500]!r}")
-    payload, consumed = json.JSONDecoder().raw_decode(output[start:])
-    trailing = output[start + consumed:].strip()
-    if trailing:
-        print(f"runtime gate: ignored simctl trailing text: {trailing[:200]!r}")
+    try:
+        payload = json.loads(output)
+    except json.JSONDecodeError as error:
+        raise RuntimeError(
+            f"simctl list produced unparseable JSON ({error}): {output[:800]!r}"
+        ) from error
     devices = []
     for runtime, entries in payload.get("devices", {}).items():
         if "iOS" not in runtime:
