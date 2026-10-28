@@ -1,0 +1,69 @@
+{
+  "schema": "goldjewel.head-geometry.provenance/1",
+  "comment": "Values are IL literals from oracle corpus v1. Tools/head_geometry_vectors.py verifies each (method, offset) pair against 05-evidence/corpus/v1/head-builder.il.json.",
+  "constants": [
+    {
+      "name": "minimumProngHeightMM",
+      "value": 0.01,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 56,
+      "use": "HeadShape clamps prongHeight to 0.01 before any transform"
+    },
+    {
+      "name": "diameterOffsetMultiplier",
+      "value": 2.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 241,
+      "use": "offset is applied to both sides of the gem: gemXSize + num * 2"
+    },
+    {
+      "name": "unitZScale",
+      "value": 1.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 286,
+      "use": "Transform.Scale z factor for the base outline"
+    },
+    {
+      "name": "baseAnglePositionMinimum",
+      "value": 0.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 1471,
+      "use": "clamp of baseAnglePosition"
+    },
+    {
+      "name": "baseAnglePositionMaximum",
+      "value": 1.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 1530,
+      "use": "clamp of baseAnglePosition"
+    },
+    {
+      "name": "radialRayLengthMM",
+      "value": 50.0,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 1168,
+      "use": "length of the ray that finds the prong point on the girdle outline"
+    },
+    {
+      "name": "prongPointIntersectionToleranceMM",
+      "value": 0.001,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.HeadShape",
+      "il_offset": 1225,
+      "use": "curve/ray intersection tolerance"
+    },
+    {
+      "name": "railDedupeDistanceMM",
+      "value": 0.01,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.ProngInterpCurve",
+      "il_offset": 28,
+      "use": "consecutive rail points closer than this are removed"
+    },
+    {
+      "name": "railMidParameter",
+      "value": 0.1,
+      "method": "CSBlocks.Settings.Heads.CSHeadBuilderV2.CSHeadShape.ProngInterpCurve",
+      "il_offset": 124,
+      "use": "midpoint parameter when only two rail points survive"
+    }
+  ]
+}
